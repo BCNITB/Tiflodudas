@@ -32,8 +32,6 @@ export class NewEntryPage implements OnInit {
     private modalCtrl: ModalController
   ) { 
     
-    //this.category = "";
-
     this.counter1 = 0;
     this.counter2 = 0;
     this.counter3 = 0;
@@ -57,7 +55,7 @@ export class NewEntryPage implements OnInit {
 
   initForm(){
     this.formItem = this.fbBuilder.group({
-      category: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]),
+      category: new FormControl('', Validators.required),
       item: new FormControl('', Validators.required),
       classification: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]),
       consult: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
@@ -84,7 +82,7 @@ export class NewEntryPage implements OnInit {
     componentProps: {
       'category': this.formItem.get('category')?.value,
       'item': this.formItem.get('item')?.value,
-      'classification': this.formItem.get('category')?.value,
+      'classification': this.formItem.get('classification')?.value,
       'consult': this.formItem.get('consult')?.value,
       'answer': this.formItem.get('answer')?.value,
       'historic': this.formItem.get('historic')?.value,
