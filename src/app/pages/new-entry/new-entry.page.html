@@ -3,14 +3,112 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>  
-    <ion-title>new-entry</ion-title>
+    <ion-title>Formulario nueva entrada</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">new-entry</ion-title>
+      <ion-title size="large">Formulario de nueva entrada</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <form [formGroup]="formItem" (submit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-select label="Selecciona una colección de la consulta" 
+        aria-label="Selecciona una colección de la consulta" required="true" 
+        labelPlacement="floating" 
+        formControlName="item"><abbr title="Campo obligatorio">*</abbr>
+          <!--<ion-select-option [value]="'braille hablado'">Braille Hablado</ion-select-option>
+          <ion-select-option [value]="'orbit reader 20'" >Orbit Reader 20</ion-select-option>
+          <ion-select-option [value]="'impacto'" >Impacto</ion-select-option>
+          <ion-select-option [value]="'index everest-d v5'" >Index Everest-D V5</ion-select-option>
+          <ion-select-option [value]="'portathiel'" >PortaThiel</ion-select-option>
+          <ion-select-option [value]="'jaws'" >Jaws</ion-select-option>
+          <ion-select-option [value]="'narrador'" >Narrador</ion-select-option>
+          <ion-select-option [value]="'nvda'" >NVDA</ion-select-option>
+          <ion-select-option [value]="'talkback'" >TalkBack</ion-select-option>
+          <ion-select-option [value]="'voiceaccess'" >VoiceAccess</ion-select-option>
+          <ion-select-option [value]="'voiceassistant'" >VoiceAssistant</ion-select-option>
+          <ion-select-option [value]="'voiceover'" >VoiceOver</ion-select-option>
+          <ion-select-option [value]="'alva'" >Alva</ion-select-option>
+          <ion-select-option [value]="'eco'" >ECO</ion-select-option>
+          <ion-select-option [value]="'focus'" >Focus</ion-select-option>
+          <ion-select-option [value]="'varioultra'" >VarioUltra</ion-select-option>
+          <ion-select-option [value]="'ampliación android'" >Ampliación Android</ion-select-option>
+          <ion-select-option [value]="'ampliación macos'" >Ampliación MacOs</ion-select-option>
+          <ion-select-option [value]="'ampliación ios'" >Ampliación iOs</ion-select-option>
+          <ion-select-option [value]="'lupa windows'" >Lupa Windows</ion-select-option>
+          <ion-select-option [value]="'zoomtext'" >ZoomText</ion-select-option>
+          <ion-select-option [value]="'alexa'" >Alexa</ion-select-option>
+          <ion-select-option [value]="'blindshell'">BlindShell</ion-select-option>
+          <ion-select-option [value]="'bme'" ><abbr title="Braille Muscial Edition">BME</abbr></ion-select-option>
+          <ion-select-option [value]="'edico'" >Edico</ion-select-option>
+          <ion-select-option [value]="'google assistant'" >Google Assistant</ion-select-option>
+          <ion-select-option [value]="'mecanet'" >Mecanet</ion-select-option>
+          <ion-select-option [value]="'mekanta'" >Mekanta</ion-select-option>
+          <ion-select-option [value]="'siri'" >Siri</ion-select-option>
+          <ion-select-option [value]="'teclado 2.0'" >Teclado 2.0</ion-select-option>
+          <ion-select-option [value]="'finereader'" >FineReader</ion-select-option>
+          <ion-select-option [value]="'omnipage'" >OmniPage</ion-select-option>
+          <ion-select-option [value]="'gestor once libros digitales'">Gestor <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr> Libros Digitales</ion-select-option>
+          <ion-select-option [value]="'milestone'" >Milestone</ion-select-option>
+          <ion-select-option [value]="'plextalk'">PlexTalk</ion-select-option>
+          <ion-select-option [value]="'victor reader stream 2'">Victor Reader Stream 2</ion-select-option>
+          <ion-select-option [value]="'victor reader stratuss'">Victor Reader Stratuss</ion-select-option>
+          <ion-select-option [value]="'portal once'">PortalONCE</ion-select-option>-->
+          <ion-select-option *ngFor="let category of categories" [value]="category.value">{{ category.item }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+
+        
+        <!--<ion-label for="item" position="floating"></ion-label>
+        <ion-select></ion-select>
+        <ion-input name="item" formControlName="item" readOnly></ion-input>
+      </ion-item>-->
+    
+      <ion-item>
+        <ion-label id="categoryLbl" for="category" position="floating">Categoría<abbr title="Campo obligatorio">*</abbr></ion-label>
+        <ion-input labelledby="categoryLbl category comment01" type="text" formControlName="category" id="category" name="category"
+        placeholder="Categoría de la consulta" required class="txt"></ion-input> 
+        <div>
+          <span>{{ counter1 }}/150</span>
+          <span *ngIf="formItem.invalid && counter1 < 3" id="comment01">La longitud mínima es de 3 caracteres</span>
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <ion-label for="consult" position="floating">Consulta<abbr title="Campo obligatorio">*</abbr></ion-label>
+        <ion-textarea aria-labelledby="consultLbl consult comment02" id="consult" name="consult" type="text" formControlName="consult"
+        (keyup)="onKey($event, 2)" class="txt"></ion-textarea>
+        <div>
+          <span>{{ counter2 }}/300</span>
+          <span *ngIf="formItem.invalid && counter2 < 5" id="comment02">La longitud mínima es de 5 caracteres</span>
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <ion-label for="answer" position="floating">Solucion</ion-label>
+        <ion-textarea type="text" formControlName="answer" id="answer" name="answer" type="text"
+        placeholder="Resolución de la consulta, si se conoce" (keyup)="onKey($event, 3)" class="txt"></ion-textarea>
+        <span>{{ counter3 }}/300</span>
+      </ion-item>
+
+      <ion-item>
+        <ion-checkbox justify="start" role="checkbox" formControlName="historic" id="checkLbl" name="checkLbl" aria-checked="true" checked="true">Histórico</ion-checkbox>
+        <ion-label for="checkLbl">Histórico</ion-label>
+      </ion-item>
+    </ion-list>
+    
+    <ion-row>
+      <ion-col class="flex-container">
+        <button class="felx-item" type="submit" shape="round" name="submit" [disabled]="formItem.invalid" role="button" id="success">Enviar</button>
+        <button type="reset" class="danger"  id="cancel">Borrar</button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>

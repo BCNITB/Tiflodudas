@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'new-entry',
     loadChildren: () => import('./pages/new-entry/new-entry.module').then( m => m.NewEntryPageModule)
   },
+  {
+    path: 'form-modal',
+    loadChildren: () => import('./modals/form-modal/form-modal.module').then( m => m.FormModalPageModule)
+  },
 ];
 
 @NgModule({

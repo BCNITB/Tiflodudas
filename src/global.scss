@@ -68,6 +68,8 @@ button{
     will-change: transform,opacity;
     z-index: 0;
 
+    margin-left: 1vw;
+    margin-right: 1vw;
     //margin-top: 1em;
     background-color: green;
     color: #fff;
@@ -87,4 +89,8 @@ button:focus-visible, .focus:focus-visible{
 
 .danger:focus-visible{
     border: yellow solid 0.5em;
+}
+
+.flex-container button{
+    margin-top: 2vh;
 }
