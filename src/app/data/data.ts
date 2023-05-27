@@ -1,151 +1,156 @@
 export const CATEGORIES = [
     {
-        category:   'Anotadores electrónicos',
+        category:   'anotadores electrónicos',
         item:       'Orbit Reader 20',
         value:      'orbit reader 20'
     },
     {
-        category:   'Anotadores electrónicos',
+        category:   'anotadores electrónicos',
         item:       'Braille Hablado',
         value:      'braille hablado'
     },
     {
-        category:   'Impresoras Braille',
+        category:   'impresoras braille',
         item:       'Impacto',
         value:      'impacto'
     },
     {
-        category:   'Impresoras Braille',
+        category:   'impresoras braille',
         item:       'Index Everest-D V5',
         value:      'index everest-d v5'
     },
     {
-        category:   'Impresoras Braille',
+        category:   'impresoras braille',
         item:       'PortaThiel',
         value:      'portathiel'
     },
     {
-        category:   'Lectores de Pantalla',
+        category:   'lectores de pantalla',
         item:       'Jaws',
         value:      'jaws'
     },
     {
-        category:   'Lectores de Pantalla',
+        category:   'lectores de pantalla',
         item:       'Narrador',
         value:      'narrador'
     },
     {
-        category:   'Lectores de Pantalla',
+        category:   'lectores de pantalla',
         item:       'NVDA',
         value:      'nvda'
     },
     {
-        category:   'Lectores de Pantalla',
+        category:   'lectores de pantalla',
         item:       'TalkBack',
         value:      'talkback'
     },
     {
-        category:   'Lectores de Pantalla',
+        category:   'lectores de pantalla',
         item:       'VoiceAccess',
         value:      'voiceaccess'
     },
     {
-        category:   'Lectores de Pantalla',
+        category:   'lectores de pantalla',
         item:       'VoicAssistant',
         value:      'voiceassistant'
     },
     {
-        category:   'Lectores de Pantalla',
+        category:   'lectores de pantalla',
         item:       'VoiceOver',
         value:      'voiceover'
     },
     {
-        category:   'Línea/Teclado Braille',
+        category:   'línea/teclado braille',
         item:       'Alva',
         value:      'alva'
     },
     {
-        category:   'Línea/Teclado Braille',
+        category:   'línea/teclado braille',
         item:       'ECO',
         value:      'eco'
     },
     {
-        category:   'Línea/Teclado Braille',
+        category:   'línea/teclado braille',
         item:       'Focus',
         value:      'focus'
     },
     {
-        category:   'Línea/Teclado Braille',
+        category:   'línea/teclado braille',
         item:       'VarioUltra',
         value:      'varioultra'
     },
     {
-        category:   'Magnificadores de pantalla',
+        category:   'magnificadores de pantalla',
         item:       'Ampliación Android',
         value:      'ampliación android'
     },
     {
-        category:   'Magnificadores de pantalla',
+        category:   'magnificadores de pantalla',
         item:       'Ampliación MacOs',
         value:      'ampliación macos'
     },
     {
-        category:   'Magnificadores de pantalla',
+        category:   'magnificadores de pantalla',
         item:       'Ampliación iOs',
         value:      'ampliación ios'
     },
     {
-        category:   'Magnificadores de pantalla',
+        category:   'magnificadores de pantalla',
         item:       'Lupa Windows',
         value:      'lupa windows'
     },
     {
-        category:   'Magnificadores de pantalla',
+        category:   'magnificadores de pantalla',
         item:       'ZoomText',
         value:      'zoomtext'
     },
     {
-        category:   'Software de apoyo (didáctico, asistente de voz y comunicación)',
+        category:   'asistente inteligente',
         item:       'Alexa',
         value:      'alexa'
     },
     {
-        category:   'Software de apoyo (didáctico, asistente de voz y comunicación)',
+        category:   'telefonía',
         item:       'BlindShell',
         value:      'blindShell'
     },
     {
-        category:   'Software de apoyo (didáctico, asistente de voz y comunicación)',
+        category:   'software de apoyo didáctico',
         item:       'BME',
         value:      'bme'
     },
     {
-        category:   'Software de apoyo (didáctico, asistente de voz y comunicación)',
+        category:   'software de apoyo didáctico',
+        item:       'Ebrai',
+        value:      'ebrai'
+    },
+    {
+        category:   'software de apoyo didáctico',
         item:       'Edico',
         value:      'edico'
     },
     {
-        category:   'Software de apoyo (didáctico, asistente de voz y comunicación)',
+        category:   'asistente inteligente',
         item:       'Google Assistant',
         value:      'google assistant'
     },
     {
-        category:   'Software de apoyo (didáctico, asistente de voz y comunicación)',
+        category:   'mecanografía',
         item:       'Mecanet',
         value:      'mecanet'
     },
     {
-        category:   'Software de apoyo (didáctico, asistente de voz y comunicación)',
+        category:   'mecanografía',
         item:       'Mekanta',
         value:      'mekanta'
     },
     {
-        category:   'Software de apoyo (didáctico, asistente de voz y comunicación)',
+        category:   'asistente inteligente',
         item:       'Siri',
         value:      'siri'
     },
     {
-        category:   'Software de apoyo (didáctico, asistente de voz y comunicación)',
+        category:   'mecanografía',
         item:       'Teclado 2.0',
         value:      'teclado 2.0'
     },
