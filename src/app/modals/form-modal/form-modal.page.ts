@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ModalController, NavController, NavParams } from '@ionic/angular';
+
 import { ItemService } from 'src/app/services/item.service';
+import { InteractionService } from 'src/app/services/interaction.service';
 
 @Component({
   selector: 'app-form-modal',
@@ -28,7 +30,7 @@ export class FormModalPage implements OnInit {
     private route: ActivatedRoute, 
     private navParams: NavParams,
     private modalCtrl: ModalController,
-    //private interctionSrvc: InteractionService
+    private interactionSrvc: InteractionService
   ) {
     this.id = navParams.get('iid');
     this.category = navParams.get('category');  
@@ -42,6 +44,28 @@ export class FormModalPage implements OnInit {
    }
 
   ngOnInit() {
+    this.formItem = this.fbBuilder.group({
+      category: new FormControl(this.category, ),
+      item: new FormControl(this.item, ),
+      classification: new FormControl(this.classification, ),
+      consult: new FormControl(this.consult, ),
+      answer: new FormControl(this.answer, ),
+      historic: new FormControl(this.historic, )
+    });
   }
 
+  dismiss(){
+    this.modalCtrl.dismiss({
+      'dismissed': true,
+    });
+  }
+
+  async success(){
+    const response = await this.itemSrvc.addItem(this.formItem.value);
+
+    this.interactionSrvc.presentToast('Registro subido correctamente.', 2000);
+    this.navCtrl.navigateForward('/new-entry');
+
+    this.dismiss();
+  }
 }
