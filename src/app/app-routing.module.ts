@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'form-modal',
     loadChildren: () => import('./modals/form-modal/form-modal.module').then( m => m.FormModalPageModule)
   },
+  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'consult',
+    loadChildren: () => import('./pages/consult/consult.module').then( m => m.ConsultPageModule)
+  },
 ];
 
 @NgModule({
