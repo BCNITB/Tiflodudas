@@ -86,9 +86,9 @@
       </ion-item>-->
     
       <ion-item>
-        <ion-label id="categoryLbl" for="clasification" position="floating">Clasificación<abbr title="Campo obligatorio">*</abbr></ion-label>
-        <ion-input labelledby="categoryLbl clasification comment01" type="text" formControlName="clasification" id="clasification" name="clasification"
-        placeholder="Categoría de la consulta" required class="txt"></ion-input> 
+        <ion-label id="classLbl" for="classification" position="floating">Clasificación<abbr title="Campo obligatorio">*</abbr></ion-label>
+        <ion-input labelledby="classLbl classification comment01" type="text" formControlName="classification" id="classification" name="classification"
+        placeholder="Voces de Jaws" required class="txt" (keyup)="onKey($event, 1)"></ion-input> 
         <div>
           <span>{{ counter1 }}/150</span>
           <span *ngIf="formItem.invalid && counter1 < 3" id="comment01">La longitud mínima es de 3 caracteres</span>
@@ -97,8 +97,9 @@
 
       <ion-item>
         <ion-label for="consult" position="floating">Consulta<abbr title="Campo obligatorio">*</abbr></ion-label>
-        <ion-textarea aria-labelledby="consultLbl consult comment02" id="consult" name="consult" type="text" formControlName="consult"
-        (keyup)="onKey($event, 2)" class="txt"></ion-textarea>
+        
+        <ion-textarea type="text" formControlName="consult" id="consult" name="consult" type="text"
+        placeholder="Jaws o lee textos en inglés" (keyup)="onKey($event, 2)" class="txt"></ion-textarea>
         <div>
           <span>{{ counter2 }}/300</span>
           <span *ngIf="formItem.invalid && counter2 < 5" id="comment02">La longitud mínima es de 5 caracteres</span>
@@ -108,7 +109,7 @@
       <ion-item>
         <ion-label for="answer" position="floating">Solucion</ion-label>
         <ion-textarea type="text" formControlName="answer" id="answer" name="answer" type="text"
-        placeholder="Resolución de la consulta, si se conoce" (keyup)="onKey($event, 3)" class="txt"></ion-textarea>
+        placeholder="Reinstalar las voces en inglés" (keyup)="onKey($event, 3)" class="txt"></ion-textarea>
         <span>{{ counter3 }}/300</span>
       </ion-item>
 

@@ -55,8 +55,9 @@ export class NewEntryPage implements OnInit {
 
   initForm(){
     this.formItem = this.fbBuilder.group({
-      item: new FormControl('', Validators.required),
       category: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]),
+      item: new FormControl('', Validators.required),
+      classification: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]),
       consult: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
       answer: new FormControl(''),
       historic: new FormControl('')
@@ -79,8 +80,9 @@ export class NewEntryPage implements OnInit {
   const modal = await this.modalCtrl.create({
     component: FormModalPage,
     componentProps: {
-      'item': this.formItem.get('item')?.value,
       'category': this.formItem.get('category')?.value,
+      'item': this.formItem.get('item')?.value,
+      'classification': this.formItem.get('category')?.value,
       'consult': this.formItem.get('consult')?.value,
       'answer': this.formItem.get('answer')?.value,
       'historic': this.formItem.get('historic')?.value,
