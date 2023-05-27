@@ -20,7 +20,7 @@ export class NewEntryPage implements OnInit {
 
   categories: Categories[];
 
-
+  category: any;
   /*itemcollectcion:  string;*/
 
   counter1: number;
@@ -32,6 +32,8 @@ export class NewEntryPage implements OnInit {
     private modalCtrl: ModalController
   ) { 
     
+    //this.category = "";
+
     this.counter1 = 0;
     this.counter2 = 0;
     this.counter3 = 0;

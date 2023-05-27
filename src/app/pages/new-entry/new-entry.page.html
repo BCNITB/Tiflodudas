@@ -20,20 +20,24 @@
         <ion-select label="Selecciona una categoría" 
           aria-label="Selecciona una categoría para la consulta" required="true" 
           labelPlacement="floating" 
-          formControlName="category"><abbr title="Campo obligatorio">*</abbr> 
-          <ion-select-option [value]="'anotadores electrónicos'" >Anotadores Rlectrónicos</ion-select-option>
+          formControlName="category" [(ngModel)]="category"><abbr title="Campo obligatorio">*</abbr> 
+          <ion-select-option [value]="'anotadores electrónicos'" >Anotadores Electrónicos</ion-select-option>
           <ion-select-option [value]="'comunicadores personas con sordoceguera'" >Comunicadores personas con sordoceguera</ion-select-option>
           <ion-select-option [value]="'conversores'" >Conversores</ion-select-option>
           <ion-select-option [value]="'impresoras braille'">Impresoras Braille</ion-select-option>
           <ion-select-option [value]="'lectores de pantalla'">Lectores de Pantalla</ion-select-option>
           <ion-select-option [value]="'línea/teclado braille'">Línea<span aria-hidden="true">/</span>Teclado Braille</ion-select-option>
-          <ion-select-option [value]="'magnificadores de pntalla'">Magnificadores de Pantalla</ion-select-option>
-          <ion-select-option [value]="'software de apoyo (dicáctico, asistente de voz y comunicación)'">Software de Apoyo (Dicáctico, Asistente de voz y Comunicación)</ion-select-option>
+          <ion-select-option [value]="'magnificadores de pantalla'">Magnificadores de Pantalla</ion-select-option>
+          <ion-select-option [value]="'asistente inteligente'">Asistente Inteligente</ion-select-option>
+          <ion-select-option [value]="'software de apoyo didáctico'">Software de Apoyo Dicáctico</ion-select-option>
+          <ion-select-option [value]="'mecanografía'">Mecanografía</ion-select-option>
+          <ion-select-option [value]="'telefonía'">telefonía</ion-select-option>
           <ion-select-option [value]="'Reconocedores ópticos de caracteres (ocr)'">Reconocedores Ópticos de Caracteres (OCR)</ion-select-option>
           <ion-select-option [value]="'reproductores/grabadoras digitales'">Reproductores<span aria-hidden="true">/</span>Grabadoras Digitales</ion-select-option>
           <ion-select-option [value]="'software once'">Software ONCE</ion-select-option>
         </ion-select>
       </ion-item>
+
       <ion-item>
         <ion-select label="Selecciona una colección de la consulta" 
         aria-label="Selecciona una colección de la consulta" required="true" 
@@ -77,8 +81,10 @@
           <ion-select-option [value]="'victor reader stream 2'">Victor Reader Stream 2</ion-select-option>
           <ion-select-option [value]="'victor reader stratuss'">Victor Reader Stratuss</ion-select-option>
           <ion-select-option [value]="'portal once'">PortalONCE</ion-select-option>-->
-          <ion-select-option *ngFor="let category of categories" [value]="category.value">{{ category.item }}</ion-select-option>
-        </ion-select>
+          <div *ngFor="let cat of categories">
+            <ion-select-option *ngIf="cat.category == category" [value]="cat.value">{{ cat.item }}</ion-select-option>
+          </div>
+          </ion-select>
       </ion-item>        
         <!--<ion-label for="item" position="floating"></ion-label>
         <ion-select></ion-select>
