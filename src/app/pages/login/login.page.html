@@ -24,9 +24,8 @@
 
   <app-acces *ngIf="logged == 'No'"></app-acces>
   
-  <div *ngIf="logged == 'Sí'">
-    <button (click)="logout()" title="Cerrar sesión">Cerrar Sesión</button>
+  <div *ngIf="logged == 'Sí'" class="flex-container">
     <button routerLink="'/new-entry'" titl="Nueva entrada">Nueva Entrada</button>
-    <button routerLink="'edit'" title="Editar">Editar</button>
+    <button (click)="logout()" title="Cerrar sesión" class="danger">Cerrar Sesión</button>
   </div>
 </ion-content>

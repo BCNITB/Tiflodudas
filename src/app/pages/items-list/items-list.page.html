@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Incidencias sobre {{ cat }}</ion-title>
@@ -21,7 +21,6 @@
       <abbr title="Pregunta">P</abbr>: {{ item.consult }}
       <span *ngIf="item.item == cat && item.answer == ''" class="super">Solución no disponible</span>
     </p>
-    <hr>
-    <button (click)="show(item.id)" title="Consultar">Consultar</button>
+    <button *ngIf="item.item == cat" (click)="show(item.id)" title="Consultar">Consultar</button>
   </div>
 </ion-content>

@@ -10,7 +10,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">details</ion-title>
@@ -19,9 +19,15 @@
 
   <div *ngFor="let item of items">
     <p *ngIf="item.id == cat">Consulta: {{ item.consult }}</p>
-    <p *ngIf="item.id == cat && item.answer != ''">Solución: {{ item.answer }}</p>
-    <button *ngIf="item.id == cat && item.answer == ''" title="Enviar" (onclick)="sendSol(item.id)">Enviar una solución</button>
-    <p *ngIf="item.id == cat && item.comments != ''">Comentarios: {{ item.comments }}</p>
-    <p *ngIf="item.id == cat && item.comments == ''">Comentarios: No hay comentarios.</p>
+    <p *ngIf="item.id == cat && item.answer != ''"><b>Solución</b>: {{ item.answer }}</p>
+    <p *ngIf="item.id == cat && item.answer == ''"><b>Solución</b>: Ahora mismo no conocemos niguna posibles solución, si conoce alguno, por favor, envíela y la probaremos. ¡Muchas gracias!ss</p>
+    <p *ngIf="item.id == cat && item.comments != ''"><b>Comentarios</b>: {{ item.comments }}</p>
+    <p *ngIf="item.id == cat && item.comments == ''"><b>Comentarios</b>: No hay comentarios.</p>
+  
+    <div class="flex-container">
+      <button *ngIf="item.id == cat && item.answer == ''" title="Enviar" (onclick)="sendSol(item.id)">Enviar una solución</button>
+      <button *ngIf="item.id == cat" (click)="edit(cat)" title="Editar Entrada">Editar Entrada</button>
+      <button *ngIf="item.id == cat" (click)="erase(item)" title="Borrar Entrada" class="danger">Borrar Entrada</button>
+    </div>
   </div>
 </ion-content>
