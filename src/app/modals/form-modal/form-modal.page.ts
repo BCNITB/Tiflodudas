@@ -13,13 +13,14 @@ import { InteractionService } from 'src/app/services/interaction.service';
 })
 export class FormModalPage implements OnInit {
 
-  id: string;
-  category: string;
-  item: string;
+  id:             string;
+  category:       string;
+  item:           string;
   classification: string;
-  consult: string;
-  answer: string;
-  historic: boolean;
+  consult:        string;
+  answer:         string;
+  comments:       string;
+  historic:       boolean;
 
   public formItem: FormGroup;
 
@@ -38,6 +39,7 @@ export class FormModalPage implements OnInit {
       this.classification = navParams.get('classification');
       this.consult = navParams.get('consult');
       this.answer = navParams.get('answer');
+      this.comments = navParams.get('comments');
       this.historic = navParams.get('historic');
 
       this.formItem = new FormGroup({});
@@ -50,6 +52,7 @@ export class FormModalPage implements OnInit {
       classification: new FormControl(this.classification, ),
       consult: new FormControl(this.consult, ),
       answer: new FormControl(this.answer, ),
+      comments: new FormControl(this.comments, ),
       historic: new FormControl(this.historic, )
     });
   }
@@ -64,7 +67,7 @@ export class FormModalPage implements OnInit {
     const response = await this.itemSrvc.addItem(this.formItem.value);
 
     this.interactionSrvc.presentToast('Registro subido correctamente.', 2000);
-    this.navCtrl.navigateForward('/new-entry');
+    this.navCtrl.navigateForward('/home');
 
     this.dismiss();
   }

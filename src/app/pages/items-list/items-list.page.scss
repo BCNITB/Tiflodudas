@@ -1,0 +1,28 @@
+.super{
+    vertical-align: super;
+    font-size: 0.5em;
+}
+
+.flex-container{
+    display: block;
+    margin-left: 0.5em;
+}
+
+p{
+    border-top: 0.05em solid black;
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+button{
+    margin-top: 0;
+    background-color: green;
+    color: #fff;
+    padding: 0.5em 0.5em;
+    border-radius: 0.2rem;
+}
+
+ion-content ion-header, ion-toolbar{
+    margin-left: 0.5em;
+}

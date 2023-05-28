@@ -5,5 +5,6 @@ export interface Items {
     clasification:  string;
     consult:        string;
     answer:         string;
+    comments:       string;
     historic:       boolean;
 }

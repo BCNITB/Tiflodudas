@@ -27,6 +27,18 @@ const routes: Routes = [
     path: 'consult',
     loadChildren: () => import('./pages/consult/consult.module').then( m => m.ConsultPageModule)
   },
+  {
+    path: 'items-list/:id',
+    loadChildren: () => import('./pages/items-list/items-list.module').then( m => m.ItemsListPageModule)
+  },
+  {
+    path: 'details/:id',
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
+  },
+  {
+    path: 'send-sol',
+    loadChildren: () => import('./modals/send-sol/send-sol.module').then( m => m.SendSolPageModule)
+  },
 ];
 
 @NgModule({

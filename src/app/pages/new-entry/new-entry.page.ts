@@ -26,6 +26,7 @@ export class NewEntryPage implements OnInit {
   counter1: number;
   counter2: number;
   counter3: number;
+  counter4: number;
 
   constructor(
     private fbBuilder: FormBuilder,
@@ -35,6 +36,7 @@ export class NewEntryPage implements OnInit {
     this.counter1 = 0;
     this.counter2 = 0;
     this.counter3 = 0;
+    this.counter4 = 0;
 
     this.formItem = new FormGroup({});
     this.categories = CATEGORIES;
@@ -51,6 +53,8 @@ export class NewEntryPage implements OnInit {
       this.counter2 = event.target.value.length;
     if(pos == 3)
       this.counter3 = event.target.value.length;
+      if(pos == 4)
+      this.counter4 = event.target.value.length;
    }
 
   initForm(){
@@ -60,6 +64,7 @@ export class NewEntryPage implements OnInit {
       classification: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]),
       consult: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
       answer: new FormControl(''),
+      comments: new FormControl(''),
       historic: new FormControl('')
     })
   }
@@ -85,6 +90,7 @@ export class NewEntryPage implements OnInit {
       'classification': this.formItem.get('classification')?.value,
       'consult': this.formItem.get('consult')?.value,
       'answer': this.formItem.get('answer')?.value,
+      'comments': this.formItem.get('comments')?.value,
       'historic': this.formItem.get('historic')?.value,
     }
   });

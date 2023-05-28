@@ -120,6 +120,13 @@
       </ion-item>
 
       <ion-item>
+        <ion-label for="comments" position="floating">Comentarios</ion-label>
+        <ion-textarea type="text" formControlName="comments" id="comments" name="comments" type="text"
+        placeholder="Solución temporal" (keyup)="onKey($event, 4)" class="txt"></ion-textarea>
+        <span>{{ counter4 }}/300</span>
+      </ion-item>
+
+      <ion-item>
         <ion-checkbox justify="start" role="checkbox" formControlName="historic" id="checkLbl" name="checkLbl" aria-checked="true" checked="true">Histórico</ion-checkbox>
         <ion-label for="checkLbl">Histórico</ion-label>
       </ion-item>
