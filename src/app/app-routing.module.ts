@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'send-solionic',
     loadChildren: () => import('./modals/send-solionic/send-solionic.module').then( m => m.SendSolionicPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
 ];
 
 @NgModule({

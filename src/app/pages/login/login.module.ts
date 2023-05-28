@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SendSolionicPageRoutingModule } from './send-solionic-routing.module';
+import { LoginPageRoutingModule } from './login-routing.module';
 
-import { SendSolionicPage } from './send-solionic.page';
+import { LoginPage } from './login.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SendSolionicPageRoutingModule
+    LoginPageRoutingModule
   ],
-  declarations: [SendSolionicPage]
+  declarations: [LoginPage]
 })
-export class SendSolionicPageModule {}
+export class LoginPageModule {}
