@@ -1,13 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Iniciar Sesión</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">login</ion-title>
+      <ion-title size="large">Iniciar Sesión</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <p>
+    Para poder iniciar sesión debes de estar registrado como administrador de la apliación.
+  </p>
+  <p>
+    Si eres administrados podrás modificar las entradas y crear nuevas. Si no eres administrador podrás realizar consultas
+    y enviar dudas, así como colaborar con las consultas aún no solucionadas o aportar nuevas soluciones.
+  </p>
+
+  <app-acces *ngIf="logged == 'No'"></app-acces>
+  
+  <div *ngIf="logged == 'Sí'">
+    <button (click)="logout()" title="Cerrar sesión">Cerrar Sesión</button>
+    <button routerLink="'/new-entry'" titl="Nueva entrada">Nueva Entrada</button>
+    <button routerLink="'edit'" title="Editar">Editar</button>
+  </div>
 </ion-content>

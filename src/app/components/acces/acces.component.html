@@ -1,0 +1,23 @@
+<form [formGroup]="formLogin" (submit)="onSubmit()" >
+  <ion-list>
+    <ion-item  class="l-txt">
+      <ion-label for="email" position="floating">Introduce el correo electrónico</ion-label>
+      <ion-input name="email" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item  class="normal-txt">
+      <ion-label for="password" position="floating">Contraseña</ion-label>
+      <ion-input name="password" formControlName="password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="submitAttempt">
+      <p class="error">{{ msgLabel }}</p>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col class="flex-container"> 
+      <button type="submit" shape="round" name="submit" [disabled]="formLogin.invalid" role="button" id="success" tabindex="1">Enviar</button>
+      <button type="reset" shape="round" class="danger" tabindex="1" id="cancel">Borrar</button>
+    </ion-col>
+  </ion-row>
+</form>

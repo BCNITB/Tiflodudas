@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+import { canActivate,redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+
 const routes: Routes = [
   {
     path: 'home',
@@ -13,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'new-entry',
-    loadChildren: () => import('./pages/new-entry/new-entry.module').then( m => m.NewEntryPageModule)
+    loadChildren: () => import('./pages/new-entry/new-entry.module').then( m => m.NewEntryPageModule), ...canActivate(()=> redirectUnauthorizedTo(['/login']))
   },
   {
     path: 'form-modal',
@@ -40,12 +42,8 @@ const routes: Routes = [
     loadChildren: () => import('./modals/send-sol/send-sol.module').then( m => m.SendSolPageModule)
   },
   {
-    path: 'send-solionic',
-    loadChildren: () => import('./modals/send-solionic/send-solionic.module').then( m => m.SendSolionicPageModule)
-  },
-  {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
   },
 ];
 
