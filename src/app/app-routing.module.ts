@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'send-sol',
     loadChildren: () => import('./modals/send-sol/send-sol.module').then( m => m.SendSolPageModule)
   },
+  {
+    path: 'send-solionic',
+    loadChildren: () => import('./modals/send-solionic/send-solionic.module').then( m => m.SendSolionicPageModule)
+  },
 ];
 
 @NgModule({
