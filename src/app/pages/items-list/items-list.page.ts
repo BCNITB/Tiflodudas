@@ -45,5 +45,7 @@ export class ItemsListPage implements OnInit {
     this.navCtrl.navigateForward('/details/'+page);
   }
   
-  senSol(){}
+  goBack(){
+    this.navCtrl.back();
+  }
 }
