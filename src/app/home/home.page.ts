@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  logged: string;
+
+  constructor() {
+    this.logged = "";
+  }
+
+  ionViewWillEnter(){
+    this.logged = String(localStorage.getItem('state'));
+  }
 
 }

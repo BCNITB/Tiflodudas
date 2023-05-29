@@ -5,7 +5,6 @@
 
 .flex-container{
     display: block;
-    //margin-left: 0.5em;
 }
 
 p{
@@ -21,4 +20,10 @@ button{
     color: #fff;
     padding: 0.5em 0.5em;
     border-radius: 0.2rem;
+}
+
+@media screen and (min-width: 660px){
+    .flex-container{
+        display: block;
+    }
 }

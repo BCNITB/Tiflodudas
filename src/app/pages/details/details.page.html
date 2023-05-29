@@ -18,9 +18,9 @@
   </ion-header>
 
   <div *ngFor="let item of items">
-    <p *ngIf="item.id == cat">Consulta: {{ item.consult }}</p>
+    <p *ngIf="item.id == cat"><b>Consulta</b>: {{ item.consult }}</p>
     <p *ngIf="item.id == cat && item.answer != ''"><b>Solución</b>: {{ item.answer }}</p>
-    <p *ngIf="item.id == cat && item.answer == ''"><b>Solución</b>: Ahora mismo no conocemos niguna posibles solución, si conoce alguno, por favor, envíela y la probaremos. ¡Muchas gracias!ss</p>
+    <p *ngIf="item.id == cat && item.answer == ''"><b>Solución</b>: Ahora mismo no conocemos niguna posibles solución, si conoce alguno, por favor, envíela y la probaremos. ¡Muchas gracias!</p>
     <p *ngIf="item.id == cat && item.comments != ''"><b>Comentarios</b>: {{ item.comments }}</p>
     <p *ngIf="item.id == cat && item.comments == ''"><b>Comentarios</b>: No hay comentarios.</p>
   

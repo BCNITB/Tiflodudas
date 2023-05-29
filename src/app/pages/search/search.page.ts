@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+
+import { Items } from 'src/app/interfaces/items';
+import { ItemService } from 'src/app/services/item.service';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPage implements OnInit {
 
-  constructor() { }
+  items: Items[];
+  showTxt: boolean;
 
-  ngOnInit() {
+  constructor(
+    private itemsSrvc: ItemService,
+    private navCtrl: NavController
+  ) { 
+    this.items =[];
+    this.showTxt = false;
   }
 
+  ngOnInit() {
+    this.itemsSrvc.getItems().subscribe(items =>{
+      this.items = items;
+    });
+  }
+
+  show(page: any){
+    this.navCtrl.navigateForward('/details/'+page);
+  }
 }
