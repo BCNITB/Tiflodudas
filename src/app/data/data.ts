@@ -105,11 +105,6 @@ export const CATEGORIES = [
         value:      'zoomtext'
     },
     {
-        category:   'asistente inteligente',
-        item:       'Alexa',
-        value:      'alexa'
-    },
-    {
         category:   'telefonía',
         item:       'BlindShell',
         value:      'blindShell'
@@ -131,8 +126,18 @@ export const CATEGORIES = [
     },
     {
         category:   'asistente inteligente',
+        item:       'Alexa',
+        value:      'alexa'
+    },
+    {
+        category:   'asistente inteligente',
         item:       'Google Assistant',
         value:      'google assistant'
+    },
+    {
+        category:   'asistente inteligente',
+        item:       'Siri',
+        value:      'siri'
     },
     {
         category:   'mecanografía',
@@ -143,11 +148,6 @@ export const CATEGORIES = [
         category:   'mecanografía',
         item:       'Mekanta',
         value:      'mekanta'
-    },
-    {
-        category:   'asistente inteligente',
-        item:       'Siri',
-        value:      'siri'
     },
     {
         category:   'mecanografía',
@@ -181,13 +181,13 @@ export const CATEGORIES = [
     },
     {
         category:   'Reproductores/Grabadoras Digitales',
-        item:       'Victor Reader Stream 2',
-        value:      'victor reader stream 2'
+        item:       'Victor Reader Stratuss',
+        value:      'victor reader stratus'
     },
     {
         category:   'Reproductores/Grabadoras Digitales',
-        item:       'Victor Reader Stratuss',
-        value:      'victor reader stratus'
+        item:       'Victor Reader Stream 2',
+        value:      'victor reader stream 2'
     },
     {
         category:   'Software ONCE',

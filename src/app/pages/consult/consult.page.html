@@ -70,15 +70,15 @@
 
     <!-- IMPRESORAS (hidden btns)-->
     <div *ngIf="showOption == 4" class="flex-container">
-      <button (click)="navigateTo('PortaThiel')" title="PortaThiel, pulsa para consultar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('portathiel')" title="PortaThiel, pulsa para consultar incidencias" role="button" class="flex-item">
         PortaThiel
       </button>
 
-      <button (click)="navigateTo('Index Everest-D V5')" title="Index Everest-D V5, pulsa para consultar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('index everest-d v5')" title="Index Everest-D V5, pulsa para consultar incidencias" role="button" class="flex-item">
         Index Everest-D V5
       </button>
 
-      <button (click)="navigateTo('Impacto')" title="Impacto, pulsa para consultar incidencias" role="button" class="flex-item" disabled>
+      <button (click)="navigateTo('impacto')" title="Impacto, pulsa para consultar incidencias" role="button" class="flex-item" disabled>
         Impacto
       </button>
     </div>
@@ -93,32 +93,32 @@
 
     <!-- LECTORES PANTALLA (hidden btns)-->
     <div *ngIf="showOption == 5" class="flex-container">
-      <button (click)="navigateTo('Jaws')" title="Jaws, pulsa para consultar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('jaws')" title="Jaws, pulsa para consultar incidencias" role="button" class="flex-item">
         JAWS
       </button>
 
-      <button (click)="navigateTo('NVDA')" title="NVDA, pulsa para consultar incidencias" role="button" class="flex-item">
-        <abbr title="NonVisual Desktop Access">NVDA</abbr>
-      </button>
-
-      <button (click)="navigateTo('Narrador')" title="Narrador, pulsa para consultar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('narrador')" title="Narrador, pulsa para consultar incidencias" role="button" class="flex-item">
         Narrador
       </button>
 
-      <button (click)="navigateTo('VoiceOver')" title="VoiceOver, pulsa para consultar incidencias" role="button" class="flex-item">
-        VoiceOver
+      <button (click)="navigateTo('nvda')" title="NVDA, pulsa para consultar incidencias" role="button" class="flex-item">
+        <abbr title="NonVisual Desktop Access">NVDA</abbr>
       </button>
 
-      <button (click)="navigateTo('TalkBack')" title="TalkBack, pulsa para consultar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('talkback')" title="TalkBack, pulsa para consultar incidencias" role="button" class="flex-item">
         TalkBack
       </button>
 
-      <button (click)="navigateTo('VoiceView')" title="VoiceView, pulsa para consultar incidencias" role="button" class="flex-item" disabled aria-disabled>
+      <button (click)="navigateTo('voiceassistant')" title="VoiceAssistant, pulsa para consultar incidencias" role="button" class="flex-item" disabled aria-disabled>
+        VoiceAssistant
+      </button>
+
+      <button (click)="navigateTo('voiceview')" title="VoiceView, pulsa para consultar incidencias" role="button" class="flex-item" disabled aria-disabled>
         VoiceView
       </button>
 
-      <button (click)="navigateTo('VoiceAssistant')" title="VoiceAssistant, pulsa para consultar incidencias" role="button" class="flex-item" disabled aria-disabled>
-        VoiceAssistant
+      <button (click)="navigateTo('voiceover')" title="VoiceOver, pulsa para consultar incidencias" role="button" class="flex-item">
+        VoiceOver
       </button>
     </div>
 
@@ -132,20 +132,20 @@
 
     <!-- LINEA / TECLADO BRAILLE (hidden btns)-->
     <div *ngIf="showOption == 6" class="flex-container">
-      <button (click)="navigateTo('Focus')" title="Focus, pulsa para consultar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('alva')" title="Alva, pulsa para consultar incidencias" role="button" class="flex-item">
+        Alva
+      </button>
+      
+      <button (click)="navigateTo('eco')" title="ECO, pulsa para consultar incidencias" role="button" class="flex-item" disabled>
+        ECO
+      </button>
+      
+      <button (click)="navigateTo('focus')" title="Focus, pulsa para consultar incidencias" role="button" class="flex-item">
         Focus
       </button>
 
-      <button (click)="navigateTo('VarioUltra')" title="VarioUltra, pulsa para consultar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('varioultra')" title="VarioUltra, pulsa para consultar incidencias" role="button" class="flex-item">
         VarioUltra
-      </button>
-
-      <button (click)="navigateTo('ECO')" title="ECO, pulsa para consultar incidencias" role="button" class="flex-item" disabled>
-        ECO
-      </button>
-
-      <button (click)="navigateTo('ECO')" title="Alva, pulsa para consultar incidencias" role="button" class="flex-item">
-        Alva
       </button>
     </div>
 
@@ -159,24 +159,24 @@
 
     <!-- MAGNIFICADORES PANTALLA (hidden btns)-->
     <div *ngIf="showOption == 7" class="flex-container">
-      <button (click)="navigateTo('ZoomText')" title="ZoomText, pulsa para consultar incidencias" role="button" class="flex-item">
-        ZoomText
+      <button (click)="navigateTo('ampliación android')" title="Ampliación Android, pulsa para consultar incidencias" role="button" class="flex-item">
+        Ampliación Android
       </button>
 
-      <button (click)="navigateTo('Lupa de Windows')" title="Lupa de Windows, pulsa para consultar incidencias" role="button" class="flex-item">
-        Lupa de Windows
+      <button (click)="navigateTo('ampliación ios')" title="Ampliación iOS, pulsa para consultar incidencias" role="button" class="flex-item">
+        Ampliación <abbr title="iPhone Operation System">iOS</abbr>
       </button>
-
-      <button (click)="navigateTo('Ampliación MacOS')" title="Ampliación MacOS, pulsa para consultar incidencias" role="button" class="flex-item">
+      
+      <button (click)="navigateTo('ampliación macos')" title="Ampliación MacOS, pulsa para consultar incidencias" role="button" class="flex-item">
         Ampliación MacOS
       </button>
 
-      <button (click)="navigateTo('Ampliación iOS')" title="Ampliación iOS, pulsa para consultar incidencias" role="button" class="flex-item">
-        Ampliación <abbr title="iPhone Operation System">iOS</abbr>
+      <button (click)="navigateTo('lupa windows')" title="Lupa de Windows, pulsa para consultar incidencias" role="button" class="flex-item">
+        Lupa de Windows
       </button>
-
-      <button (click)="navigateTo('Ampliación Android')" title="Ampliación Android, pulsa para consultar incidencias" role="button" class="flex-item">
-        Ampliación Android
+      
+      <button (click)="navigateTo('zoomtext')" title="ZoomText, pulsa para consultar incidencias" role="button" class="flex-item">
+        ZoomText
       </button>
     </div>
 
@@ -190,7 +190,7 @@
 
     <!-- TELEFONOS ADAPTADOS (hidden btns)-->
     <div *ngIf="showOption == 8" class="flex-container">
-      <button (click)="navigateTo('BlindShell')" title="BlindShell, pulsa para mostrar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('blindshell')" title="BlindShell, pulsa para mostrar incidencias" role="button" class="flex-item">
         BlindShell
       </button>
     </div>
@@ -205,16 +205,16 @@
 
     <!-- SOFTWARE DIDATICO (hidden btns)-->
     <div *ngIf="showOption == 9" class="flex-container">
-      <button (click)="navigateTo('Edico')" title="Edico, pulsa para mostrar incidencias" role="button" class="flex-item">
-        <abbr title="Editor Cientifico ONCE">Edico</abbr>
-      </button>
-
-      <button (click)="navigateTo('Lambda')" title="Lambda, pulsa para mostrar incidencias" role="button" class="flex-item" disabled>
-        Lambda
-      </button>
-
-      <button (click)="navigateTo('BME')" title="BME, pulsa para mostrar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('bme')" title="BME, pulsa para mostrar incidencias" role="button" class="flex-item">
         <abbr title="Braille Music Editor">BME</abbr>
+      </button>
+
+      <button (click)="navigateTo('ebrai')" title="Ebrai, pulsa para mostrar incidencias" role="button" class="flex-item">
+        <abbr title="Editor Braille">Ebrai</abbr>
+      </button>
+
+      <button (click)="navigateTo('edico')" title="Edico, pulsa para mostrar incidencias" role="button" class="flex-item">
+        <abbr title="Editor Cientifico ONCE">Edico</abbr>
       </button>
     </div>
 
@@ -229,15 +229,15 @@
     <!-- ASISTENTES INTELIGENTES (hidden btns)-->
     <div *ngIf="showOption == 10" class="flex-container">
 
-      <button (click)="navigateTo('Alexa')" title="Alexa, pulsa prar mostrar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('alexa')" title="Alexa, pulsa prar mostrar incidencias" role="button" class="flex-item">
         Alexa
       </button>
 
-      <button (click)="navigateTo('Google Assistant')" title="Google Assistant, pulsa para mostrar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('google assistant')" title="Google Assistant, pulsa para mostrar incidencias" role="button" class="flex-item">
         Google Assistant
       </button>
 
-      <button (click)="navigateTo('Siri')" title="Siri, pulsa para mostrar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('siri')" title="Siri, pulsa para mostrar incidencias" role="button" class="flex-item">
         Siri
       </button>
     </div>
@@ -252,15 +252,17 @@
 
     <!-- MECANOGRAFÍA (hidden btns)-->
     <div *ngIf="showOption == 11" class="flex-container">
-      <button (click)="navigateTo('Mekanta')" title="Ir a consultas de Mekanta" role="button" class="flex-item">
-        Mekanta
-      </button>
-
-      <button (click)="navigateTo('Mecanet')" title="Mecanet, pulsa para mostrar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('mecanet')" title="Mecanet, pulsa para mostrar incidencias" role="button" class="flex-item">
         Mecanet
       </button>
 
-      <button (click)="navigateTo('Teclado 2.0')" title="Teclado 2.0, pulsa para mostrar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('mekanta')" title="Ir a consultas de Mekanta" role="button" class="flex-item">
+        Mekanta
+      </button>
+
+      
+
+      <button (click)="navigateTo('teclado 2.0')" title="Teclado 2.0, pulsa para mostrar incidencias" role="button" class="flex-item">
         Teclado 2.0
       </button>
     </div>  
@@ -275,12 +277,12 @@
 
       <!--OCR (hidden btns)-->
     <div *ngIf="showOption == 12" class="flex-container">
-      <button (click)="navigateTo('OmniPage')" title="OmniPage, pulsa para mostrar incidencias" role="button" class="flex-item">
-        OmniPage
+      <button (click)="navigateTo('finereader')" title="FineReader, pulsa para mostrar incidencias" role="button" class="flex-item">
+        FineReader
       </button>
 
-      <button (click)="navigateTo('FineReader')" title="FineReader, pulsa para mostrar incidencias" role="button" class="flex-item">
-        FineReader
+      <button (click)="navigateTo('omnipage')" title="OmniPage, pulsa para mostrar incidencias" role="button" class="flex-item">
+        OmniPage
       </button>
     </div>
 
@@ -294,24 +296,25 @@
 
     <!--REPRODUCTORES/GRABADORAS (hidden btns)-->
     <div *ngIf="showOption == 10" class="flex-container">
-      <button (click)="navigateTo('Milestone 312')" title="Milestone, pulsa para mostrar incidencias" role="button" class="flex-item">
-        Milestone
-      </button>
-
-      <button (click)="navigateTo('Victor Reader Stream 2')" title="Victor Reader Stream 2, pulsa para mostrar incidencias" role="button" class="flex-item">
-        Victor Reader Stream 2
-      </button>
-
-      <button (click)="navigateTo('Gestor ONCE Libros Digitales')" title="Gestor ONCE Libros Digitales, pulsa para mostrar incidencias" role="button" class="flex-item">
+      
+      <button (click)="navigateTo('gestor once libros digitales')" title="Gestor ONCE Libros Digitales, pulsa para mostrar incidencias" role="button" class="flex-item">
         Gestor <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr> Libros Digitales
       </button>
 
-      <button (click)="navigateTo('Victor Reader Stratus')" title="Victor Reader Stratus, pulsa para mostrar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('milestone')" title="Milestone, pulsa para mostrar incidencias" role="button" class="flex-item">
+        Milestone
+      </button>
+
+      <button (click)="navigateTo('plextalk')" title="PlexTalk, pulsa para mostrar incidencias" role="button" class="flex-item">
+        PlexTalk
+      </button>
+
+      <button (click)="navigateTo('victor reader stratus')" title="Victor Reader Stratus, pulsa para mostrar incidencias" role="button" class="flex-item">
         Victor Reader Stratus
       </button>
 
-      <button (click)="navigateTo('PlexTalk')" title="PlexTalk, pulsa para mostrar incidencias" role="button" class="flex-item">
-        PlexTalk
+      <button (click)="navigateTo('victor reader stream 2')" title="Victor Reader Stream 2, pulsa para mostrar incidencias" role="button" class="flex-item">
+        Victor Reader Stream 2
       </button>
     </div>
 
@@ -325,7 +328,7 @@
 
     <!-- SOFTWARE ONCE (hidden btns)-->
     <div *ngIf="showOption == 12" class="flex-container">
-      <button (click)="navigateTo('PortalONCE')" title="PortalONCE, pulsa para mostrar incidencias" role="button" class="flex-item">
+      <button (click)="navigateTo('portal once')" title="PortalONCE, pulsa para mostrar incidencias" role="button" class="flex-item">
         PortalONCE
       </button>
     </div>

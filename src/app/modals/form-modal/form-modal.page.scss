@@ -4,6 +4,16 @@
 
 #modalTitle{
     text-align: center;
+}
 
-    //font-weight: bold;
+button{
+    margin-top: 0;
+    background-color: green;
+    color: #fff;
+    padding: 0.5em 0.5em;
+    border-radius: 0.2rem;
+}
+
+.danger{
+    background-color: red;
 }
