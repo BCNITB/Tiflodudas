@@ -2,7 +2,7 @@ export interface Items {
     id?:            string;
     category:       string;
     item:           string;
-    clasification:  string;
+    classification:  string;
     consult:        string;
     answer:         string;
     comments:       string;

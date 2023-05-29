@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SendSolPage } from './send-sol.page';
+import { SendSolutionPage } from './send-solution.page';
 
-describe('SendSolPage', () => {
-  let component: SendSolPage;
-  let fixture: ComponentFixture<SendSolPage>;
+describe('SendSolutionPage', () => {
+  let component: SendSolutionPage;
+  let fixture: ComponentFixture<SendSolutionPage>;
 
   beforeEach(async(() => {
-    fixture = TestBed.createComponent(SendSolPage);
+    fixture = TestBed.createComponent(SendSolutionPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

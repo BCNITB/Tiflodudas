@@ -21,7 +21,6 @@ export class NewEntryPage implements OnInit {
   categories: Categories[];
 
   category: any;
-  /*itemcollectcion:  string;*/
 
   counter1: number;
   counter2: number;
@@ -81,20 +80,20 @@ export class NewEntryPage implements OnInit {
     //this.navCtrl.navigateForward('/form-answer');    
  }
 
- async presentModal(){
-  const modal = await this.modalCtrl.create({
-    component: FormModalPage,
-    componentProps: {
-      'category': this.formItem.get('category')?.value,
-      'item': this.formItem.get('item')?.value,
-      'classification': this.formItem.get('classification')?.value,
-      'consult': this.formItem.get('consult')?.value,
-      'answer': this.formItem.get('answer')?.value,
-      'comments': this.formItem.get('comments')?.value,
-      'historic': this.formItem.get('historic')?.value,
-    }
-  });
+  async presentModal(){
+    const modal = await this.modalCtrl.create({
+      component: FormModalPage,
+      componentProps: {
+        'category': this.formItem.get('category')?.value,
+        'item': this.formItem.get('item')?.value,
+        'classification': this.formItem.get('classification')?.value,
+        'consult': this.formItem.get('consult')?.value,
+        'answer': this.formItem.get('answer')?.value,
+        'comments': this.formItem.get('comments')?.value,
+        'historic': this.formItem.get('historic')?.value,
+      }
+    });
 
-  return await modal.present();
-}
+    return await modal.present();
+  }
 }

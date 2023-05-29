@@ -38,12 +38,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
   },
   {
-    path: 'send-sol',
-    loadChildren: () => import('./modals/send-sol/send-sol.module').then( m => m.SendSolPageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
+  },
+  {
+    path: 'send-solution',
+    loadChildren: () => import('./modals/send-solution/send-solution.module').then( m => m.SendSolutionPageModule)
   },
 ];
 

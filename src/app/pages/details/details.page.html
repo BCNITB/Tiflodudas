@@ -25,7 +25,7 @@
     <p *ngIf="item.id == cat && item.comments == ''"><b>Comentarios</b>: No hay comentarios.</p>
   
     <div class="flex-container">
-      <button *ngIf="item.id == cat && item.answer == ''" title="Enviar" (onclick)="sendSol(item.id)">Enviar una solución</button>
+      <button *ngIf="item.id == cat && item.answer == ''" title="Enviar" (click)="sendSol()">Enviar una solución</button>
       <button *ngIf="item.id == cat" (click)="edit(cat)" title="Editar Entrada">Editar Entrada</button>
       <button *ngIf="item.id == cat" (click)="erase(item)" title="Borrar Entrada" class="danger">Borrar Entrada</button>
     </div>

@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Proponer Solución</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Proponer Solución</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <p>
+    Introduce una propuesta de solución y los comentarios para el siguiente problema detectado:
+  </p>
+  <p>
+    {{ consult }}
+  </p>
+  
+  <form [formGroup]="formItem" (submit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label id="solLbl" for="solution" position="floating">Solución propuesta</ion-label>
+        <ion-input id="solution" formControlName="answer" aria-labelledby="solLbl" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label id="commentLbl" for="comm" position="floating">Comentarios</ion-label>
+        <ion-input id="comment" formControlName="comments" aria-labelledby="commentLbl" type="text"></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col class="flex-container">
+          <button class="felx-item" type="submit" name="submit" [disabled]="formItem.invalid" id="success">Enviar</button>
+          <button type="reset" class="danger"  id="cancel">Borrar</button>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </form>
+</ion-content>

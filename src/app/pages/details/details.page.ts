@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService } from 'src/app/services/item.service';
 import { Items } from 'src/app/interfaces/items';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, ModalController, NavController } from '@ionic/angular';
+
+import { SendSolutionPage } from 'src/app/modals/send-solution/send-solution.page';
 
 @Component({
   selector: 'app-details',
@@ -19,7 +21,8 @@ export class DetailsPage implements OnInit {
     private route: ActivatedRoute,
     private itemsSrvc: ItemService,
     private navCtrl: NavController,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private modalCtrl: ModalController
   ) {
     this.items =[];
     this.cat = String(this.route.snapshot.paramMap.get('id'));
@@ -36,16 +39,20 @@ export class DetailsPage implements OnInit {
     this.logged = String(localStorage.getItem('state'));
   }
 
-  sendSol(id: any){
-
-  }
 
   goBack(){
     this.navCtrl.back();
   }
 
-  edit(id: any){
+ async  edit(id: any){
+    const modal = await this.modalCtrl.create({
+      component: SendSolutionPage,
+      componentProps: {
+        'id': this.cat
+      }
+    });
 
+    return await modal.present();
   }
 
   async erase(item: Items){
@@ -66,5 +73,16 @@ export class DetailsPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  async sendSol(){
+    const modal = await this.modalCtrl.create({
+      component: SendSolutionPage,
+      componentProps: {
+        'id': this.cat
+      }
+    });
+
+    return await modal.present();
   }
 }
