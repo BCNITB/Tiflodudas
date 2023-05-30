@@ -17,7 +17,8 @@ export class LoginPage implements OnInit {
 
   logged: string;
 
-  count:  number;
+  count:    number;
+  countNew: number;
 
   constructor(
     private navCtrl: NavController,
@@ -27,6 +28,7 @@ export class LoginPage implements OnInit {
     this.logged = "";
 
     this.count = 0;
+    this.countNew = 0;
 
     this.items = [];
   }
@@ -44,6 +46,9 @@ export class LoginPage implements OnInit {
         if(i.category == 'Solución Propuesta'){
           this.count = this.count + 1;
         }
+        if(i.category == 'colaboración'){
+          this.countNew = this.countNew + 1;
+        }
       }
     });
   }
@@ -54,9 +59,15 @@ export class LoginPage implements OnInit {
     localStorage.setItem('state', this.logged);
   }
 
-  seeSol(){
-    const page = 'Solución Propuesta';
+  seeSol(id: number){
+    let page = "";
 
+    if(id == 1){
+      page = 'Solución Propuesta';
+    }
+    if(id == 2){
+      page = 'colaboración';
+    }
     this.navCtrl.navigateForward('/items-list/'+page);
   }
 }
