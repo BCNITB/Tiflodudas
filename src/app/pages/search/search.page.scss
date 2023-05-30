@@ -11,9 +11,9 @@ button{
     font-size: 0.5em;
 }
 
-@media screen and (min-width: 660px) {
-    .flex-container {
-      background-color: lightgreen;
-      
-    }
+@media screen and (max-width: 660px) {
+  .flex-container {
+    display: block;
+    background-color: lightgreen;
   }
+}

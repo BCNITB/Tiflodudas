@@ -35,10 +35,10 @@
   </ion-searchbar>
 -->
   <div *ngFor="let item of items; let i = index" class="flex-container">
-    <p class="consult" *ngIf="item.category != 'Solución Propuesta'">
+    <p class="consult" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración'">
       <abbr title="Pregunta">P</abbr>: {{ item.consult }}
       <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
     </p>
-    <button (click)="show(item.id)" title="Consultar" *ngIf="item.category != 'Solución Propuesta'">Consultar</button>
+    <button (click)="show(item.id)" title="Consultar" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración'">Consultar</button>
   </div>
 </ion-content>

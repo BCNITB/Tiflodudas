@@ -7,6 +7,7 @@ import { CATEGORIES } from 'src/app/data/data';
 
 import { ModalController } from '@ionic/angular';
 import { FormModalPage } from 'src/app/modals/form-modal/form-modal.page';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-new-entry',
@@ -15,6 +16,8 @@ import { FormModalPage } from 'src/app/modals/form-modal/form-modal.page';
 })
 
 export class NewEntryPage implements OnInit {
+
+  role: string;
 
   public formItem: FormGroup;
 
@@ -29,8 +32,11 @@ export class NewEntryPage implements OnInit {
 
   constructor(
     private fbBuilder: FormBuilder,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private route: ActivatedRoute,
   ) { 
+
+    this.role = String(this.route.snapshot.paramMap.get('id'));
     
     this.counter1 = 0;
     this.counter2 = 0;
@@ -57,15 +63,27 @@ export class NewEntryPage implements OnInit {
    }
 
   initForm(){
-    this.formItem = this.fbBuilder.group({
-      category: new FormControl('', Validators.required),
-      item: new FormControl('', Validators.required),
-      classification: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]),
-      consult: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
-      answer: new FormControl(''),
-      comments: new FormControl(''),
-      historic: new FormControl('')
-    })
+    if(this.role == 'admin'){
+      this.formItem = this.fbBuilder.group({
+        category: new FormControl('', Validators.required),
+        item: new FormControl('', Validators.required),
+        classification: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]),
+        consult: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
+        answer: new FormControl(''),
+        comments: new FormControl(''),
+        historic: new FormControl('')
+      });
+    } else {
+      this.formItem = this.fbBuilder.group({
+        category: new FormControl('colaboración'),
+        item: new FormControl('', Validators.required),
+        classification: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]),
+        consult: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
+        answer: new FormControl(''),
+        comments: new FormControl(''),
+        historic: new FormControl('')
+      })
+    }
   }
 
   async onSubmit(){

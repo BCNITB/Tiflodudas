@@ -16,7 +16,7 @@
 
   <form [formGroup]="formItem" (submit)="onSubmit()">
     <ion-list>
-      <ion-item>
+      <ion-item *ngIf="role == 'admin'">
         <ion-select label="Selecciona una categoría" 
           aria-label="Selecciona una categoría para la consulta" required="true" 
           labelPlacement="floating" 
@@ -38,7 +38,7 @@
         </ion-select>
       </ion-item>
 
-      <ion-item>
+      <ion-item *ngIf="role == 'admin'">
         <ion-select label="Selecciona una colección de la consulta" 
         aria-label="Selecciona una colección de la consulta" required="true" 
         labelPlacement="floating" 
@@ -85,12 +85,54 @@
             <ion-select-option *ngIf="cat.category == category" [value]="cat.value">{{ cat.item }}</ion-select-option>
           </div>
           </ion-select>
-      </ion-item>        
-        <!--<ion-label for="item" position="floating"></ion-label>
-        <ion-select></ion-select>
-        <ion-input name="item" formControlName="item" readOnly></ion-input>
-      </ion-item>-->
-    
+      </ion-item>
+      
+      <ion-item *ngIf="role != 'admin'">
+        <ion-select label="Selecciona una colección de la consulta" 
+        aria-label="Selecciona una colección de la consulta" required="true" 
+        labelPlacement="floating" 
+        formControlName="item"><abbr title="Campo obligatorio">*</abbr>
+          <ion-select-option [value]="'braille hablado'">Braille Hablado</ion-select-option>
+          <ion-select-option [value]="'orbit reader 20'" >Orbit Reader 20</ion-select-option>
+          <ion-select-option [value]="'impacto'" >Impacto</ion-select-option>
+          <ion-select-option [value]="'index everest-d v5'" >Index Everest-D V5</ion-select-option>
+          <ion-select-option [value]="'portathiel'" >PortaThiel</ion-select-option>
+          <ion-select-option [value]="'jaws'" >Jaws</ion-select-option>
+          <ion-select-option [value]="'narrador'" >Narrador</ion-select-option>
+          <ion-select-option [value]="'nvda'" >NVDA</ion-select-option>
+          <ion-select-option [value]="'talkback'" >TalkBack</ion-select-option>
+          <ion-select-option [value]="'voiceaccess'" >VoiceAccess</ion-select-option>
+          <ion-select-option [value]="'voiceassistant'" >VoiceAssistant</ion-select-option>
+          <ion-select-option [value]="'voiceover'" >VoiceOver</ion-select-option>
+          <ion-select-option [value]="'alva'" >Alva</ion-select-option>
+          <ion-select-option [value]="'eco'" >ECO</ion-select-option>
+          <ion-select-option [value]="'focus'" >Focus</ion-select-option>
+          <ion-select-option [value]="'varioultra'" >VarioUltra</ion-select-option>
+          <ion-select-option [value]="'ampliación android'" >Ampliación Android</ion-select-option>
+          <ion-select-option [value]="'ampliación macos'" >Ampliación MacOs</ion-select-option>
+          <ion-select-option [value]="'ampliación ios'" >Ampliación iOs</ion-select-option>
+          <ion-select-option [value]="'lupa windows'" >Lupa Windows</ion-select-option>
+          <ion-select-option [value]="'zoomtext'" >ZoomText</ion-select-option>
+          <ion-select-option [value]="'alexa'" >Alexa</ion-select-option>
+          <ion-select-option [value]="'blindshell'">BlindShell</ion-select-option>
+          <ion-select-option [value]="'bme'" ><abbr title="Braille Muscial Edition">BME</abbr></ion-select-option>
+          <ion-select-option [value]="'edico'" >Edico</ion-select-option>
+          <ion-select-option [value]="'google assistant'" >Google Assistant</ion-select-option>
+          <ion-select-option [value]="'mecanet'" >Mecanet</ion-select-option>
+          <ion-select-option [value]="'mekanta'" >Mekanta</ion-select-option>
+          <ion-select-option [value]="'siri'" >Siri</ion-select-option>
+          <ion-select-option [value]="'teclado 2.0'" >Teclado 2.0</ion-select-option>
+          <ion-select-option [value]="'finereader'" >FineReader</ion-select-option>
+          <ion-select-option [value]="'omnipage'" >OmniPage</ion-select-option>
+          <ion-select-option [value]="'gestor once libros digitales'">Gestor <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr> Libros Digitales</ion-select-option>
+          <ion-select-option [value]="'milestone'" >Milestone</ion-select-option>
+          <ion-select-option [value]="'plextalk'">PlexTalk</ion-select-option>
+          <ion-select-option [value]="'victor reader stream 2'">Victor Reader Stream 2</ion-select-option>
+          <ion-select-option [value]="'victor reader stratuss'">Victor Reader Stratuss</ion-select-option>
+          <ion-select-option [value]="'portal once'">PortalONCE</ion-select-option>
+        </ion-select>
+      </ion-item>
+
       <ion-item>
         <ion-label id="classLbl" for="classification" position="floating">Clasificación<abbr title="Campo obligatorio">*</abbr></ion-label>
         <ion-input labelledby="classLbl classification comment01" type="text" formControlName="classification" id="classification" name="classification"
