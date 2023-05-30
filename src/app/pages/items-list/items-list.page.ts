@@ -14,7 +14,8 @@ export class ItemsListPage implements OnInit {
   items:      Items[];
   
   cat:       string;
-  
+
+
   constructor(
     private itemsSrvc: ItemService,
     private route: ActivatedRoute,
