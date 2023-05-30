@@ -134,16 +134,19 @@
       </ion-item>
 
       <ion-item>
-        <ion-label id="classLbl" for="classification" position="floating">Clasificación<abbr title="Campo obligatorio">*</abbr></ion-label>
+        <ion-label id="classLbl" for="classification" position="floating">
+          Clasificación<abbr title="Campo obligatorio">*</abbr>
+        </ion-label>
+        
         <ion-input labelledby="classLbl classification comment01" type="text" formControlName="classification" id="classification" name="classification"
-        placeholder="Voces de Jaws" required class="txt" (keyup)="onKey($event, 1)"></ion-input> 
+        placeholder="ej: Voces" required class="txt" (keyup)="onKey($event, 1)"></ion-input> 
         <div>
           <span>{{ counter1 }}/150</span>
           <span *ngIf="formItem.invalid && counter1 < 3" id="comment01">La longitud mínima es de 3 caracteres</span>
         </div>
       </ion-item>
 
-      <ion-item>
+      -<ion-item>
         <ion-label for="consult" position="floating">Consulta<abbr title="Campo obligatorio">*</abbr></ion-label>
         
         <ion-textarea type="text" formControlName="consult" id="consult" name="consult" type="text"
