@@ -15,7 +15,8 @@ const routes: Routes = [
   },
   {
     path: 'new-entry',
-    loadChildren: () => import('./pages/new-entry/new-entry.module').then( m => m.NewEntryPageModule), ...canActivate(()=> redirectUnauthorizedTo(['/login']))
+    loadChildren: () => import('./pages/new-entry/new-entry.module').then( m => m.NewEntryPageModule), 
+    ...canActivate(()=> redirectUnauthorizedTo(['/login']))
   },
   {
     path: 'form-modal',

@@ -24,7 +24,13 @@
 
   <app-acces *ngIf="logged == 'No'"></app-acces>
   
+  <p *ngIf="logged == 'Sí' && count > 0">
+    Hay {{ count }} <span *ngIf="count > 1">soluciones proupuestas</span> <span *ngIf="count == 1">solución proupuesta</span> para revisar.
+  </p>
+
   <div *ngIf="logged == 'Sí'" class="flex-container">
+    <button (click)="seeSol()" titl="Ver Propuestas" *ngIf="count == 1">Ver Propuesta</button>
+    <button (click)="seeSol()" titl="Ver Propuestas" *ngIf="count > 1">Ver Propuestas</button>
     <button routerLink="/new-entry" titl="Nueva entrada">Nueva Entrada</button>
     <button (click)="logout()" title="Cerrar sesión" class="danger">Cerrar Sesión</button>
   </div>
