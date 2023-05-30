@@ -14,9 +14,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+<<<<<<< HEAD
     path: 'new-entry/:id',
     loadChildren: () => import('./pages/new-entry/new-entry.module').then( m => m.NewEntryPageModule), 
     //...canActivate(()=> redirectUnauthorizedTo(['/login']))
+=======
+    path: 'new-entry',
+    loadChildren: () => import('./pages/new-entry/new-entry.module').then( m => m.NewEntryPageModule), 
+    ...canActivate(()=> redirectUnauthorizedTo(['/login']))
+>>>>>>> admin
   },
   {
     path: 'form-modal',

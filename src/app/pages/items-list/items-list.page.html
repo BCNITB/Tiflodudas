@@ -23,4 +23,11 @@
     </p>
     <button *ngIf="item.item == cat && item.category != 'Solución Propuesta'" (click)="show(item.id)" title="Consultar">Consultar</button>
   </div>
+
+  <div *ngFor="let item of items; let i = index" class="flex-container">
+    <p *ngIf="item.category == cat" class="question">
+      <abbr title="Pregunta">P</abbr>: {{ item.consult }}
+    </p>
+    <button *ngIf="item.category == cat" (click)="show(item.id)" title="Consultar">Consultar</button>
+  </div>
 </ion-content>
