@@ -23,8 +23,8 @@
     </p>
   </div>
 
-  <!--<ion-searchbar
-    [(ngModel)]="searchTerm"
+  <ion-searchbar
+    [(ngModel)]="term"
     placeholder="Orbit"
     show-clear-button="focus"
     [debounce]="1000"
@@ -33,8 +33,8 @@
     ">
     <span id="search" class="scr">Introduce el término a buscar</span>
   </ion-searchbar>
--->
-  <div *ngFor="let item of items; let i = index" class="flex-container">
+
+  <div *ngFor="let item of items | filter: term:'consult'" class="flex-container">
     <p class="consult" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración'">
       <abbr title="Pregunta">P</abbr>: {{ item.consult }}
       <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
