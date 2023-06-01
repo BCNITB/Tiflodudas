@@ -17,17 +17,17 @@
   </ion-header>
 
   <div *ngFor="let item of items; let i = index" class="flex-container">
-    <p *ngIf="item.item == cat && item.category != 'Solución Propuesta'" class="question">
+    <p *ngIf="item.item == cat && item.category != 'Solución Propuesta' && i != 0" class="question">
       <abbr title="Pregunta">P</abbr>: {{ item.consult }}
-      <span *ngIf="item.item == cat && item.answer == ''" class="super">Solución no disponible</span>
+      <span *ngIf="item.item == cat && item.answer == '' && i != 0" class="super">Solución no disponible</span>
     </p>
-    <button *ngIf="item.item == cat && item.category != 'Solución Propuesta'" (click)="show(item.id)" title="Consultar">Consultar</button>
+    <button *ngIf="item.item == cat && item.category != 'Solución Propuesta' && i != 0" (click)="show(item.id)" title="Consultar">Consultar</button>
   </div>
 
   <div *ngFor="let item of items; let i = index" class="flex-container">
-    <p *ngIf="item.category == cat" class="question">
+    <p *ngIf="item.category == cat && i != 0" class="question">
       <abbr title="Pregunta">P</abbr>: {{ item.consult }}
     </p>
-    <button *ngIf="item.category == cat" (click)="show(item.id)" title="Consultar">Consultar</button>
+    <button *ngIf="item.category == cat && i != 0" (click)="show(item.id)" title="Consultar">Consultar</button>
   </div>
 </ion-content>
