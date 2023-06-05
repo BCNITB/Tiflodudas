@@ -13,8 +13,8 @@ export class ItemsListPage implements OnInit {
 
   items:      Items[];
   
-  cat:       string;
-
+  cat:        string;
+  logged:     string;
 
   constructor(
     private itemsSrvc: ItemService,
@@ -24,6 +24,8 @@ export class ItemsListPage implements OnInit {
     this.items =[];
 
     this.cat = String(this.route.snapshot.paramMap.get('id'));
+
+    this.logged = "";
   }
 
   ngOnInit() {
@@ -42,6 +44,10 @@ export class ItemsListPage implements OnInit {
     });
   }
 
+  ionViewWillEnter(){
+    this.logged = String(localStorage.getItem('state'));
+  }
+  
   show(page: any){
     this.navCtrl.navigateForward('/details/'+page);
   }

@@ -3,21 +3,27 @@
     font-size: 0.5em;
 }
 
-/*.flex-container{
-    display: block;
-}*/
+.flex-container{
+    border-bottom: 0.05em solid black;
+}
 
 p{
-    border-top: 0.05em solid black;
-    margin-top: 0.5em;
-    padding-top: 0.5em;
-    margin-bottom: 0.5em;
+    //border-top: 0.05em solid black;
+    //margin-top: 0.5em;
+    //padding-top: 0.5em;
+    padding-bottom: 1em;
 }
 
 button{
-    margin-top: 0;
+    //margin-top: 0;
     background-color: green;
     color: #fff;
     padding: 0.5em 0.5em;
     border-radius: 0.2rem;
+}
+
+@media screen and (max-width: 660px){
+    .flex-container{
+        display: block;
+    }
 }

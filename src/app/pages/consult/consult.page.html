@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Consultar Incidencia</ion-title>
@@ -295,7 +295,7 @@
     </button>
 
     <!--REPRODUCTORES/GRABADORAS (hidden btns)-->
-    <div *ngIf="showOption == 10" class="flex-container">
+    <div *ngIf="showOption == 13" class="flex-container">
       
       <button (click)="navigateTo('gestor once libros digitales')" title="Gestor ONCE Libros Digitales, pulsa para mostrar incidencias" role="button" class="flex-item">
         Gestor <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr> Libros Digitales
@@ -318,12 +318,32 @@
       </button>
     </div>
 
-    <!-- SOFTWARE ONCE -->
-    <button role="button" expand="full" (click)="showOptions(14, 'once')" id="once" class="contract-btn" 
-    title="Pulsa para mostrar categorías de Software ONCE" aria-expanded="false">
-      Software <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr>
+    <!-- TELELUPAS -->
+    <button role="button" expand="full" (click)="showOptions(14, 'telelupas')" id="telelupas" class="contract-btn" 
+    title="Telelupas, pulsa para mostrar incidencias">
+      Telelupas
       <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 14" aria-hidden="true"></ion-icon>
       <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 14" aria-hidden="true"></ion-icon>
+    </button>
+
+    <!--TELELUPAS (hidden btns)-->
+    <div *ngIf="showOption == 14" class="flex-container">
+      
+      <button (click)="navigateTo('telelupa')" title="Telelupa, pulsa para mostrar incidencias" role="button" class="flex-item">
+        Telelupa
+      </button>
+
+      <button (click)="navigateTo('student')" title="Student, pulsa para mostrar incidencias" role="button" class="flex-item">
+        Student
+      </button>
+    </div>
+
+    <!-- SOFTWARE ONCE -->
+    <button role="button" expand="full" (click)="showOptions(15, 'once')" id="once" class="contract-btn" 
+    title="Pulsa para mostrar categorías de Software ONCE" aria-expanded="false">
+      Software <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr>
+      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 15" aria-hidden="true"></ion-icon>
+      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 15" aria-hidden="true"></ion-icon>
     </button>
 
     <!-- SOFTWARE ONCE (hidden btns)-->

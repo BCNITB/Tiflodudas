@@ -17,17 +17,29 @@
     </ion-toolbar>
   </ion-header>
 
-  <div *ngFor="let item of items">
-    <p *ngIf="item.id == cat"><b>Consulta</b>: {{ item.consult }}</p>
-    <p *ngIf="item.id == cat && item.answer != ''"><b>Solución</b>: {{ item.answer }}</p>
-    <p *ngIf="item.id == cat && item.answer == ''"><b>Solución</b>: Ahora mismo no conocemos niguna posibles solución, si conoce alguno, por favor, envíela y la probaremos. ¡Muchas gracias!</p>
-    <p *ngIf="item.id == cat && item.comments != ''"><b>Comentarios</b>: {{ item.comments }}</p>
-    <p *ngIf="item.id == cat && item.comments == ''"><b>Comentarios</b>: No hay comentarios.</p>
-  
-    <div class="flex-container">
-      <button *ngIf="item.id == cat && item.answer == ''" title="Enviar" (click)="sendSol()">Enviar una solución</button>
-      <button *ngIf="item.id == cat" (click)="edit(cat)" title="Editar Entrada">Editar Entrada</button>
-      <button *ngIf="item.id == cat" (click)="erase(item)" title="Borrar Entrada" class="danger">Borrar Entrada</button>
+  <ng-container *ngFor="let item of items">
+    <div *ngIf="item.id == cat">
+      <p>
+        <b>Consulta</b>: {{ item.consult }}
+      </p>
+      <p *ngIf="item.answer != ''">
+        <b>Solución</b>: {{ item.answer }}
+      </p>
+      <p *ngIf="item.answer == ''">
+        <b>Solución</b>: Ahora mismo no conocemos niguna posibles solución, si conoce alguno, por favor, envíela y la probaremos. ¡Muchas gracias!
+      </p>
+      <p *ngIf="item.comments != ''">
+        <b>Comentarios</b>: {{ item.comments }}
+      </p>
+      <p *ngIf="item.comments == ''">
+        <b>Comentarios</b>: No hay comentarios.
+      </p>
+    
+      <div class="flex-container">
+        <button *ngIf="item.answer == ''" title="Enviar" (click)="sendSol()">Enviar una solución</button>
+        <button *ngIf="item.id == cat" (click)="edit(cat)" title="Editar Entrada">Editar Entrada</button>
+        <button *ngIf="item.id == cat && logged == 'Sí'" (click)="erase(item)" title="Borrar Entrada" class="danger">Borrar Entrada</button>
+      </div>
     </div>
-  </div>
+  </ng-container>
 </ion-content>

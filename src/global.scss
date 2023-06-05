@@ -55,9 +55,3 @@ button:focus-visible, .focus:focus-visible{
 .flex-container button{
     margin-top: 2vh;
 }
-
-@media screen and (max-width: 660px){
-    .flex-container{
-        display: block;
-    }
-}

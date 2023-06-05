@@ -155,42 +155,52 @@ export const CATEGORIES = [
         value:      'teclado 2.0'
     },
     {
-        category:   'Reconocedores Ópticos de Caracteres',
+        category:   'reconocedores ópticos de caracteres',
         item:       'FineReader',
         value:      'finereader'
     },
     {
-        category:   'Reconocedores Ópticos de Caracteres',
+        category:   'reconocedores ópticos de caracteres',
         item:       'OmniPage',
         value:      'omnipage'
     },
     {
-        category:   'Reproductores/Grabadoras Digitales',
+        category:   'reproductores/grabadoras digitales',
         item:       'Gestor ONCE Libros Digitales',
         value:      'gestor once libros digitales'
     },
     {
-        category:   'Reproductores/Grabadoras Digitales',
+        category:   'reproductores/grabadoras digitales',
         item:       'Milestone',
         value:      'milestone'
     },
     {
-        category:   'Reproductores/Grabadoras Digitales',
+        category:   'reproductores/grabadoras digitales',
         item:       'PlexTalk',
         value:      'plextalk'
     },
     {
-        category:   'Reproductores/Grabadoras Digitales',
+        category:   'reproductores/grabadoras digitales',
         item:       'Victor Reader Stratuss',
         value:      'victor reader stratus'
     },
     {
-        category:   'Reproductores/Grabadoras Digitales',
+        category:   'reproductores/grabadoras digitales',
         item:       'Victor Reader Stream 2',
         value:      'victor reader stream 2'
     },
     {
-        category:   'Software ONCE',
+        category:   'telelupa',
+        item:       'Telelupa',
+        value:      'telelupa'
+    },
+    {
+        category:   'telelupa',
+        item:       'Student',
+        value:      'student'
+    },
+    {
+        category:   'software once',
         item:       'PortalONCE',
         value:      'portal once'
     },

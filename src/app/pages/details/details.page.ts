@@ -39,7 +39,6 @@ export class DetailsPage implements OnInit {
     this.logged = String(localStorage.getItem('state'));
   }
 
-
   goBack(){
     this.navCtrl.back();
   }
