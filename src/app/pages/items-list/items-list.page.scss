@@ -3,9 +3,9 @@
     font-size: 0.5em;
 }
 
-.flex-container{
+/*.flex-container{
     border-bottom: 0.05em solid black;
-}
+}*/
 
 p{
     //border-top: 0.05em solid black;
@@ -14,7 +14,7 @@ p{
     padding-bottom: 1em;
 }
 
-button{
+.btn{
     //margin-top: 0;
     background-color: green;
     color: #fff;
@@ -23,7 +23,10 @@ button{
 }
 
 @media screen and (max-width: 660px){
-    .flex-container{
+    /*.flex-container{
         display: block;
+    }*/
+    p{
+        padding-bottom: 0em;
     }
 }

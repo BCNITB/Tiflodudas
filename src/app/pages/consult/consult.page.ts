@@ -22,7 +22,8 @@ export class ConsultPage implements OnInit {
   showOptions(opt: any, i: string){
     this.showOption = opt;
   
-    document.querySelector('.expand-btn')?.setAttribute('class', 'contract-btn')
+    document.querySelector('.expand-btn')?.setAttribute('class', 'contract-btn');
+    document.querySelector('.expand-btn')?.setAttribute('aria-expanded', 'false');
     document.getElementById(i)?.setAttribute('aria-expanded', 'true');
     document.getElementById(i)?.setAttribute('class', 'expand-btn');
   }

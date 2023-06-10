@@ -1,19 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="goBack()" title="Ir atrás" role="bbutton">
+      <button (click)="goBack()" title="Ir atrás">
         <ion-icon name="arrow-back-outline"></ion-icon>
-      </ion-button>
+      </button>
     </ion-buttons>
 
-    <ion-title>Detalles</ion-title>
+    <ion-title>Consulta</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">details</ion-title>
+      <ion-title size="large">Consulta</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -36,9 +36,15 @@
       </p>
     
       <div class="flex-container">
-        <button *ngIf="item.answer == ''" title="Enviar" (click)="sendSol()">Enviar una solución</button>
-        <button *ngIf="item.id == cat" (click)="edit(cat)" title="Editar Entrada">Editar Entrada</button>
-        <button *ngIf="item.id == cat && logged == 'Sí'" (click)="erase(item)" title="Borrar Entrada" class="danger">Borrar Entrada</button>
+        <button *ngIf="item.answer == ''" title="Enviar" (click)="sendSol()" class="btn">
+          Enviar una solución
+        </button>
+        <button *ngIf="item.id == cat" (click)="edit(cat)" title="Editar Entrada" class="btn">
+          Editar Entrada
+        </button>
+        <button *ngIf="item.id == cat && logged == 'Sí'" (click)="erase(item)" title="Borrar Entrada" class="danger">
+          Borrar Entrada
+        </button>
       </div>
     </div>
   </ng-container>

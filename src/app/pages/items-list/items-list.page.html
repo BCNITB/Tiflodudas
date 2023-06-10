@@ -1,9 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="goBack()" title="Ir atrás" role="bbutton">
+      <button (click)="goBack()" title="Ir atrás" class="back-btn">
         <ion-icon name="arrow-back-outline"></ion-icon>
-      </ion-button>
+      </button>
     </ion-buttons>
     <ion-title>Incidencias sobre {{cat }} </ion-title>
   </ion-toolbar>
@@ -22,7 +22,9 @@
         <abbr title="Pregunta">P</abbr>: {{ item.consult }}
         <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
       </p>
-    <button *ngIf="item.category != 'Solución Propuesta' && i != 0" (click)="show(item.id)" title="Consultar">Consultar</button>
+    <button *ngIf="item.category != 'Solución Propuesta' && i != 0" (click)="show(item.id)" title="Consultar" class="btn">
+      Consultar
+    </button>
   </div>
   </ng-container>
 
@@ -30,6 +32,8 @@
     <p *ngIf="item.category == cat && i != 0" class="question">
       <abbr title="Pregunta">P</abbr>: {{ item.consult }}
     </p>
-    <button *ngIf="item.category == cat && i != 0" (click)="show(item.id)" title="Consultar">Consultar</button>
+    <button *ngIf="item.category == cat && i != 0" (click)="show(item.id)" title="Consultar" class="btn">
+      Consultar
+    </button>
   </div>
 </ion-content>
