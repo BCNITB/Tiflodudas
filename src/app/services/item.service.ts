@@ -58,9 +58,15 @@ export class ItemService {
     return getDoc(itemDocRef);
   }
 
-  updateItem(item: Items, col: string, data: any){
+  /*updateItem(item: Items, col: string, data: any){
     const itemDocRef = doc(this.firestore, `${col}/${item.id}`);
 
     return updateDoc(itemDocRef, data);
-  }
+  }*/
+
+  updateItem(itemId: any, data: any) {
+    const itemDocRef = doc(this.firestore, itemId);
+
+    return updateDoc(itemDocRef, data);
+   }
 }
