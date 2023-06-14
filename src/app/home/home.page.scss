@@ -9,3 +9,10 @@ button{
 .flex-container{
     justify-content: space-around;
 }
+
+@media screen and (max-width: 700px) {
+    .flex-container button{
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+}
