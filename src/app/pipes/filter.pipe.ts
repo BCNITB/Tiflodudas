@@ -13,6 +13,7 @@ export class FilterPipe implements PipeTransform {
 
     return array.filter(product => {
       return  product[column].toLowerCase()
+        //.includes(text.toLowerCase());
         .includes(text.toLowerCase().split(' '));
     });
   }

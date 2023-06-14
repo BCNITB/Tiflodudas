@@ -4,9 +4,9 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button (click)="logout()" title="Cerrar sesión">
-        <ion-icon name="log-out-outline" aria-hidden="true"></ion-icon>
-      </ion-button>
+      <a (click)="logout()" title="Cerrar sesión" role="button">
+        <ion-icon name="log-out-outline" aria-hidden="true" slot="end"></ion-icon>
+      </a>
     </ion-buttons>
     <ion-title>Iniciar Sesión</ion-title>
   </ion-toolbar>
@@ -38,11 +38,11 @@
   </p>
 
   <div class="flex-container">
-    <button (click)="seeSol(1)" titl="Ver Propuesta" *ngIf="count == 1">Ver Propuesta</button>
-    <button (click)="seeSol(1)" titl="Ver Propuestas" *ngIf="count > 1">Ver Propuestas</button>
-    <button (click)="seeSol(2)" titl="Ver Aportación" *ngIf="count == 1">Ver Aportación</button>
-    <button (click)="seeSol(2)" titl="Ver Aportaciones" *ngIf="count > 1">Ver Aportaciones</button>
-    <button routerLink="/new-entry/admin" titl="Nueva entrada">Nueva Entrada</button>
-    <!--<button (click)="logout()" title="Cerrar sesión" class="danger">Cerrar Sesión</button>-->
+    <button (click)="seeSol(1)" *ngIf="count == 1">Ver Propuesta</button>
+    <button (click)="seeSol(1)" *ngIf="count > 1">Ver Propuestas</button>
+    <button (click)="seeSol(2)" *ngIf="count == 1">Ver Aportación</button>
+    <button (click)="seeSol(2)" *ngIf="count > 1">Ver Aportaciones</button>
+    <button routerLink="/new-entry/admin">Nueva Entrada</button>
+    <!--<button (click)="logout()" class="danger">Cerrar Sesión</button>-->
   </div>
 </ion-content>

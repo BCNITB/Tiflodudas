@@ -1,9 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <button (click)="goBack()" title="Ir atrás" class="back-btn">
+      <a (click)="goBack()" title="Ir atrás" class="back-btn" role="button">
         <ion-icon name="arrow-back-outline"></ion-icon>
-      </button>
+      </a>
     </ion-buttons>
     <ion-title>Incidencias sobre {{cat }} </ion-title>
   </ion-toolbar>
@@ -16,24 +16,29 @@
     </ion-toolbar>
   </ion-header>
 
+  <!-- ALL USERS -->
   <ng-container *ngFor="let item of items">
-    <div *ngIf="item.item == cat && item.category != 'Solución Propuesta'" class="flex-container">
-      <p class="question">
+    <div *ngIf="item.item == cat && item.category != 'Solución Propuesta'" class="flex-container" role="list">
+      <p class="question" role="listitem">
         <abbr title="Pregunta">P</abbr>: {{ item.consult }}
         <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
       </p>
-    <button *ngIf="item.category != 'Solución Propuesta' && i != 0" (click)="show(item.id)" title="Consultar" class="btn">
-      Consultar
-    </button>
-  </div>
+      <button *ngIf="item.category != 'Solución Propuesta' && i != 0" (click)="show(item.id)" class="btn">
+        Consultar
+      </button>
+    </div>
   </ng-container>
 
-  <div *ngFor="let item of items; let i = index" class="flex-container">
-    <p *ngIf="item.category == cat && i != 0" class="question">
-      <abbr title="Pregunta">P</abbr>: {{ item.consult }}
-    </p>
-    <button *ngIf="item.category == cat && i != 0" (click)="show(item.id)" title="Consultar" class="btn">
-      Consultar
-    </button>
-  </div>
+  <!-- ONLY ADMIN -->
+  <!--<h2>Propuestas de resolución</h2>-->
+  <ng-container *ngFor="let item of items; let i = index" role="list"> 
+    <div class="flex-container" role="list" role="listitem">
+      <p *ngIf="item.category == cat && i != 0" class="question">
+        <abbr title="Pregunta">P</abbr>: {{ item.consult }}
+      </p>
+      <button *ngIf="item.category == cat && i != 0" (click)="show(item.id)" class="btn">
+        Consultar
+      </button>
+    </div>
+  </ng-container>
 </ion-content>
