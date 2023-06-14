@@ -1,9 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <button (click)="goBack()" title="Ir atrás">
+      <a (click)="goBack()" title="Ir atrás" role="button">
         <ion-icon name="arrow-back-outline"></ion-icon>
-      </button>
+      </a>
     </ion-buttons>
 
     <ion-title>Consulta</ion-title>
@@ -36,13 +36,13 @@
       </p>
     
       <div class="flex-container">
-        <button *ngIf="item.answer == ''" title="Enviar" (click)="sendSol()" class="btn">
+        <button *ngIf="item.answer == ''" (click)="sendSol()" class="btn">
           Enviar una solución
         </button>
-        <button *ngIf="item.id == cat" (click)="edit(cat)" title="Editar Entrada" class="btn">
+        <button *ngIf="item.id == cat" (click)="edit(cat)" class="btn">
           Editar Entrada
         </button>
-        <button *ngIf="item.id == cat && logged == 'Sí'" (click)="erase(item)" title="Borrar Entrada" class="danger">
+        <button *ngIf="item.id == cat && logged == 'Sí'" (click)="erase(item)" class="danger">
           Borrar Entrada
         </button>
       </div>
