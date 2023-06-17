@@ -47,7 +47,7 @@ export class DetailsPage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: SendSolutionPage,
       componentProps: {
-        'id': this.cat
+        'id': id
       }
     });
 

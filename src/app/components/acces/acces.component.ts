@@ -34,10 +34,14 @@ export class AccesComponent  implements OnInit {
 
   ngOnInit() {}
 
+  ionViewWillEnter(){
+    this.logged = String(localStorage.getItem('state'));
+  }
+
   onSubmit(){
     this.userSrvc.login(this.formLogin.value)
       .then(Response => {
-        window.localStorage.setItem('logged', "true");
+        //localStorage.setItem('logged', "Sí");
         this.interactionSrvc.presentToast('La sesión se ha iniciado de forma correcta', 2000);
         this.saveState();
         this.router.navigate(['/new-entry']);

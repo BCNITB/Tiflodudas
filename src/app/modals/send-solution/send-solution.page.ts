@@ -15,6 +15,8 @@ import { Items } from 'src/app/interfaces/items';
 })
 export class SendSolutionPage implements OnInit {
 
+  logged:   string;
+
   items:    Items[];
 
   id:             string;
@@ -36,6 +38,7 @@ export class SendSolutionPage implements OnInit {
     private modalCtrl: ModalController,
     private interactionSrvc: InteractionService
   ) {
+      this.logged = String(localStorage.getItem('state'));
       this.items = [];
 
       this.id = navParams.get('id');
@@ -97,11 +100,34 @@ export class SendSolutionPage implements OnInit {
     this.success();
   }
 
+  modify(){
+    this.formItem = this.fbBuilder.group({
+      category: new FormControl(this.formItem.get('category')?.value, ),
+      item: new FormControl(this.formItem.get('item')?.value, ),
+      classification: new FormControl(this.formItem.get('classification')?.value, ),
+      consult: new FormControl(this.formItem.get('consult')?.value, ),
+      answer: new FormControl(this.formItem.get('answer')?.value, ),
+      comments: new FormControl(this.formItem.get('comments')?.value, ),
+      historic: new FormControl(this.historic, )
+    });
+
+    this.edit();
+  }
+
   async success(){
     const response = await this.itemsSrvc.addItem(this.formItem.value);
 
     this.interactionSrvc.presentToast('Registro subido correctamente.', 2000);
     this.navCtrl.navigateForward('/home');
+
+    this.dismiss();
+  }
+
+  async edit(){
+    const response = await this.itemsSrvc.updateItem(this.formItem.value, this.id);
+
+    this.interactionSrvc.presentToast('Registro modificado correctamente.', 2000);
+    this.navCtrl.navigateForward('/login');
 
     this.dismiss();
   }

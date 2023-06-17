@@ -1,41 +1,106 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Proponer Solución</ion-title>
+    <ion-title *ngIf="logged == 'No'">Proponer Solución</ion-title>
+    <ion-title *ngIf="logged == 'Sí'">Editar entrada</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Proponer Solución</ion-title>
+      <ion-title *ngIf="logged == 'No'" size="large">Proponer Solución</ion-title>
+      <ion-title *ngIf="logged == 'Sí'" size="large">Editar Entrada</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <p>
-    Introduce una propuesta de solución y los comentarios para el siguiente problema detectado:
-  </p>
-  <p>
-    {{ consult }}
-  </p>
-  
-  <form [formGroup]="formItem" (submit)="onSubmit()">
-    <ion-list>
-      <ion-item>
-        <ion-label id="solLbl" for="solution" position="floating">Solución propuesta</ion-label>
-        <ion-input id="solution" formControlName="answer" aria-labelledby="solLbl" type="text"></ion-input>
-      </ion-item>
+  <div *ngIf="logged == 'No'">
+    <p>
+      Introduce una propuesta de solución y los comentarios para el siguiente problema detectado:
+    </p>
+    <p>
+      {{ consult }}
+    </p>
+    
+    <form [formGroup]="formItem" (submit)="onSubmit()">
+      <ion-list>
+        <ion-item>
+          <ion-label id="solLbl" for="solution" position="floating">Solución propuesta</ion-label>
+          <ion-input id="solution" formControlName="answer" aria-labelledby="solLbl" type="text"></ion-input>
+        </ion-item>
 
-      <ion-item>
-        <ion-label id="commentLbl" for="comm" position="floating">Comentarios</ion-label>
-        <ion-input id="comment" formControlName="comments" aria-labelledby="commentLbl" type="text"></ion-input>
-      </ion-item>
+        <ion-item>
+          <ion-label id="commentLbl" for="comm" position="floating">Comentarios</ion-label>
+          <ion-input id="comment" formControlName="comments" aria-labelledby="commentLbl" type="text"></ion-input>
+        </ion-item>
 
-      <ion-row>
-        <ion-col class="flex-container">
-          <button class="felx-item" type="submit" name="submit" [disabled]="formItem.invalid" id="success">Enviar</button>
-          <button type="reset" class="danger"  id="cancel">Borrar</button>
-        </ion-col>
-      </ion-row>
-    </ion-list>
-  </form>
+        <ion-row>
+          <ion-col class="flex-container">
+            <button class="felx-item" type="submit" name="submit" [disabled]="formItem.invalid" id="success">Enviar</button>
+            <button type="reset" class="danger"  id="cancel">Borrar</button>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </form>
+  </div>
+
+  <div *ngIf="logged == 'Sí'">
+    <form [formGroup]="formItem" (submit)="modify()">
+      <ion-list>
+        <ion-item>
+          <ion-select label="Selecciona una categoría" 
+            aria-label="Selecciona una categoría para la consulta" required="true" 
+            labelPlacement="floating" 
+            formControlName="category" [(ngModel)]="category"><abbr title="Campo obligatorio">*</abbr> 
+            <ion-select-option [value]="'anotadores electrónicos'" >Anotadores Electrónicos</ion-select-option>
+            <ion-select-option [value]="'comunicadores personas con sordoceguera'" >Comunicadores personas con sordoceguera</ion-select-option>
+            <ion-select-option [value]="'conversores'" >Conversores</ion-select-option>
+            <ion-select-option [value]="'impresoras braille'">Impresoras Braille</ion-select-option>
+            <ion-select-option [value]="'lectores de pantalla'">Lectores de Pantalla</ion-select-option>
+            <ion-select-option [value]="'línea/teclado braille'">Línea<span aria-hidden="true">/</span>Teclado Braille</ion-select-option>
+            <ion-select-option [value]="'magnificadores de pantalla'">Magnificadores de Pantalla</ion-select-option>
+            <ion-select-option [value]="'asistente inteligente'">Asistente Inteligente</ion-select-option>
+            <ion-select-option [value]="'software de apoyo didáctico'">Software de Apoyo Dicáctico</ion-select-option>
+            <ion-select-option [value]="'mecanografía'">Mecanografía</ion-select-option>
+            <ion-select-option [value]="'telefonía'">Telefonía</ion-select-option>
+            <ion-select-option [value]="'reconocedores ópticos de caracteres'">Reconocedores Ópticos de Caracteres (OCR)</ion-select-option>
+            <ion-select-option [value]="'reproductores/grabadoras digitales'">Reproductores<span aria-hidden="true">/</span>Grabadoras Digitales</ion-select-option>
+            <ion-select-option [value]="'telelupa'">Telelupa</ion-select-option>
+            <ion-select-option [value]="'software once'">Software ONCE</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label id="itemLbl" for="item" position="floating">Aparato</ion-label>
+          <ion-input formControlName="item" [value]="item" id="item" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label id="classLbl" for="classification" position="floating">Clasificación</ion-label>
+          <ion-input id="classification" formControlName="classification" type="text" [value]="classification"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label id="consultLbl" for="consult" position="floating">Consulta</ion-label>
+          <ion-input id="consult" formControlName="consult" type="text" [value]="consult"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label id="answerLbl" for="answer" position="floating">Solución</ion-label>
+          <ion-input id="answer" formControlName="answer" [value]="answer" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label id="commentLbl" for="comm" position="floating">Comentarios</ion-label>
+          <ion-input id="comment" formControlName="comments" aria-labelledby="commentLbl" type="text"></ion-input>
+        </ion-item>
+
+        <ion-row>
+          <ion-col class="flex-container">
+            <button class="felx-item" type="submit" name="submit" [disabled]="formItem.invalid" id="success">Enviar</button>
+            <button type="reset" class="danger"  id="cancel">Borrar</button>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </form>
+  </div>
 </ion-content>

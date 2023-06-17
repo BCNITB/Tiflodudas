@@ -17,7 +17,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export class NewEntryPage implements OnInit {
 
-  role: string;
+  logged: string;
 
   public formItem: FormGroup;
 
@@ -36,7 +36,7 @@ export class NewEntryPage implements OnInit {
     private route: ActivatedRoute,
   ) { 
 
-    this.role = String(this.route.snapshot.paramMap.get('id'));
+    this.logged = String(this.route.snapshot.paramMap.get('id'));
     
     this.counter1 = 0;
     this.counter2 = 0;
@@ -51,6 +51,10 @@ export class NewEntryPage implements OnInit {
     this.initForm();
   }
 
+  ionViewWillEnter(){
+    this.logged = String(localStorage.getItem('state'));
+  }
+
   onKey(event:any, pos: number){
     if(pos == 1)
       this.counter1 = event.target.value.length;
@@ -63,7 +67,7 @@ export class NewEntryPage implements OnInit {
    }
 
   initForm(){
-    if(this.role == 'admin'){
+    if(this.logged == 'Sí'){
       this.formItem = this.fbBuilder.group({
         category: new FormControl('', Validators.required),
         item: new FormControl('', Validators.required),

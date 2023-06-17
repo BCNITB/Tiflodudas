@@ -5,7 +5,7 @@
         <ion-icon name="arrow-back-outline"></ion-icon>
       </a>
     </ion-buttons>
-    <ion-title>Incidencias sobre {{cat }} </ion-title>
+    <ion-title>Incidencias sobre {{ cat }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -30,10 +30,10 @@
   </ng-container>
 
   <!-- ONLY ADMIN -->
-  <!--<h2>Propuestas de resolución</h2>-->
+  <h2 *ngIf="cat == 'colaboración'">Nuevas propuestas para la Base de Datos</h2>
   <ng-container *ngFor="let item of items; let i = index" role="list"> 
-    <div class="flex-container" role="list" role="listitem">
-      <p *ngIf="item.category == cat && i != 0" class="question">
+    <div *ngIf="item.category == cat && i != 0" class="flex-container" role="list" role="listitem">
+      <p class="question" role="listitem">
         <abbr title="Pregunta">P</abbr>: {{ item.consult }}
       </p>
       <button *ngIf="item.category == cat && i != 0" (click)="show(item.id)" class="btn">

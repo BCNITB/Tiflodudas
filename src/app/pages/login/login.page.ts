@@ -25,7 +25,7 @@ export class LoginPage implements OnInit {
     private itemsSrvc: ItemService,
     private userSrvc: UserService
   ) { 
-    this.logged = "";
+    this.logged = String(localStorage.getItem('state'));
 
     this.count = 0;
     this.countNew = 0;
