@@ -1,19 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title *ngIf="logged == 'No'">Proponer Solución</ion-title>
-    <ion-title *ngIf="logged == 'Sí'">Editar entrada</ion-title>
+    <!-- TODO: ALL USERS --> 
+    <ion-title>Proponer Solución</ion-title>
+    
+    <!-- ADMIN USER -->
+    <!--<ion-title>Editar entrada</ion-title>-->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title *ngIf="logged == 'No'" size="large">Proponer Solución</ion-title>
-      <ion-title *ngIf="logged == 'Sí'" size="large">Editar Entrada</ion-title>
+      <!-- TODO: AL USERS-->
+      <ion-title size="large">Proponer Solución</ion-title>
+      
+      <!-- ADMIN USER -->
+      <!--<ion-title size="large">Editar Entrada</ion-title>-->
     </ion-toolbar>
   </ion-header>
 
-  <div *ngIf="logged == 'No'">
+  <!-- TODO: ALL USERS -->
+  <div>
     <p>
       Introduce una propuesta de solución y los comentarios para el siguiente problema detectado:
     </p>
@@ -43,14 +50,15 @@
     </form>
   </div>
 
-  <div *ngIf="logged == 'Sí'">
+  <!-- TODO; ADMIN USER -->
+  <!--<div>
     <form [formGroup]="formItem" (submit)="modify()">
       <ion-list>
         <ion-item>
           <ion-select label="Selecciona una categoría" 
             aria-label="Selecciona una categoría para la consulta" required="true" 
             labelPlacement="floating" 
-            formControlName="category" [(ngModel)]="category"><abbr title="Campo obligatorio">*</abbr> 
+            formControlName="category"><abbr title="Campo obligatorio">*</abbr> 
             <ion-select-option [value]="'anotadores electrónicos'" >Anotadores Electrónicos</ion-select-option>
             <ion-select-option [value]="'comunicadores personas con sordoceguera'" >Comunicadores personas con sordoceguera</ion-select-option>
             <ion-select-option [value]="'conversores'" >Conversores</ion-select-option>
@@ -102,5 +110,5 @@
         </ion-row>
       </ion-list>
     </form>
-  </div>
+  </div>-->
 </ion-content>

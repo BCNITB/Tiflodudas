@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <a (click)="logout()" title="Cerrar sesión" role="button" *ngIf="logged == 'Sí'">
+      <a (click)="logout()" title="Cerrar sesión" role="button">
         <ion-icon name="log-out-outline" aria-hidden="true" slot="end"></ion-icon>
       </a>
     </ion-buttons>
@@ -31,9 +31,9 @@
   <!--<app-register></app-register>-->
   
   <!-- ADMIN USER -->
-  <app-acces *ngIf="logged === 'No'"></app-acces>
+  <!--<app-acces></app-acces>-->
 
-  <div *ngIf="logged === 'Sí'">
+  <div>
     <p *ngIf="count == 0">
       No hay soluciones propuestas.
     </p>

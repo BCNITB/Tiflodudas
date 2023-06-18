@@ -54,7 +54,7 @@ export class LoginPage implements OnInit {
   }
 
   logout(){
-    this.userSrvc.logout();
+    //this.userSrvc.logout();
     this.logged = "No";
     localStorage.setItem('state', this.logged);
   }
