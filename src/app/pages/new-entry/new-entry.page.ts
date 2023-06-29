@@ -36,7 +36,8 @@ export class NewEntryPage implements OnInit {
     private route: ActivatedRoute,
   ) { 
 
-    this.logged = String(this.route.snapshot.paramMap.get('id'));
+    //this.logged = String(this.route.snapshot.paramMap.get('id'));
+    this.logged = String(localStorage.getItem('state'));
     
     this.counter1 = 0;
     this.counter2 = 0;

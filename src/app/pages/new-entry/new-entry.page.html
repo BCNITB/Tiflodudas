@@ -16,8 +16,8 @@
 
   <form [formGroup]="formItem" (submit)="onSubmit()">
     <ion-list>
-      <!-- TODO: AMIN USER -->
-      <!--<ion-item >
+      <!-- TODO: ADMIN USER *ngIf="logged == 'connected'" -->
+      <!--<ion-item>
         <ion-select label="Selecciona una categoría" 
           aria-label="Selecciona una categoría para la consulta" required="true" 
           labelPlacement="floating" 
@@ -40,7 +40,7 @@
         </ion-select>
       </ion-item>
 
-      <ion-item>
+      <ion-item *ngIf="logged == 'connected'">
         <ion-select label="Selecciona una colección de la consulta" 
         aria-label="Selecciona una colección de la consulta" required="true" 
         labelPlacement="floating" 
@@ -51,7 +51,7 @@
           </ion-select>
       </ion-item>-->
       
-      <!-- TODO: AlL USERS -->
+      <!-- TODO: ALL USERS *ngIf="logged == 'no connected'" -->
       <ion-item>
         <ion-select label="Selecciona una colección de la consulta" 
         aria-label="Selecciona una colección de la consulta" required="true" 
@@ -145,7 +145,8 @@
     <ion-row>
       <ion-col class="flex-container">
         <button class="felx-item" type="submit" name="submit" [disabled]="formItem.invalid" id="success">Enviar</button>
-        <button type="reset" class="danger"  id="cancel">Borrar</button>
+        <button type="reset" class="danger"  id="reset">Borrar</button>
+        <button type="cancelar" id="cancel" routerLink="/home" >Cancelar</button>
       </ion-col>
     </ion-row>
   </form>

@@ -4,9 +4,10 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <a (click)="logout()" title="Cerrar sesión" role="button">
+      <!-- TODO ADMIN USER *ngIf="logged == 'connected'"-->
+      <!--<a (click)="logout()" title="Cerrar sesión" role="button">
         <ion-icon name="log-out-outline" aria-hidden="true" slot="end"></ion-icon>
-      </a>
+      </a>-->
     </ion-buttons>
     <ion-title>Iniciar Sesión</ion-title>
   </ion-toolbar>
@@ -30,8 +31,8 @@
   <!-- ADMIN OF ADMIN USERS -->
   <!--<app-register></app-register>-->
   
-  <!-- ADMIN USER -->
-  <!--<app-acces></app-acces>-->
+  <!-- TODO: ADMIN USER *ngIf="logged == 'no connected'" -->
+  <!--<app-acces></app-acces>
 
   <div>
     <p *ngIf="count == 0">
@@ -61,5 +62,5 @@
       <button (click)="seeSol(2)" *ngIf="countNew > 1">Ver Aportaciones</button>
       <button routerLink="/new-entry/admin">Nueva Entrada</button>
     </div>
-  </div>
+  </div>-->
 </ion-content>

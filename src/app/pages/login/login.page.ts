@@ -25,7 +25,7 @@ export class LoginPage implements OnInit {
     private itemsSrvc: ItemService,
     private userSrvc: UserService
   ) { 
-    this.logged = String(localStorage.getItem('state'));
+    //this.logged = String(localStorage.getItem('state'));
 
     this.count = 0;
     this.countNew = 0;
@@ -55,7 +55,7 @@ export class LoginPage implements OnInit {
 
   logout(){
     //this.userSrvc.logout();
-    this.logged = "No";
+    this.logged = "no connected";
     localStorage.setItem('state', this.logged);
   }
 

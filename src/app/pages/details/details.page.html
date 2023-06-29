@@ -36,17 +36,17 @@
       </p>
     
       <div class="flex-container">
-        <!-- TODO: ALL USERS -->
+        <!-- TODO: ALL USERS && logged == 'no connected' -->
         <button *ngIf="item.answer == ''" (click)="sendSol()" class="btn">
           Enviar una solución
         </button>
 
-        <!-- TODO: ADMIN USER -->
+        <!-- TODO: ADMIN USER && logged == 'connected' -->
         <!--<button *ngIf="item.id == cat" (click)="edit(cat)" class="btn">
           Editar Entrada
         </button>
         
-        <button *ngIf="item.id == cat" (click)="erase(item)" class="danger">
+        <button *ngIf="item.id == cat && logged == 'connected'" (click)="erase(item)" class="danger">
           Borrar Entrada
         </button>-->
       </div>

@@ -41,7 +41,7 @@ export class AccesComponent  implements OnInit {
   onSubmit(){
     this.userSrvc.login(this.formLogin.value)
       .then(Response => {
-        localStorage.setItem('logged', "Sí");
+        localStorage.setItem('state', "connected");
         this.interactionSrvc.presentToast('La sesión se ha iniciado de forma correcta', 2000);
         this.saveState();
         this.router.navigate(['/new-entry']);
@@ -54,7 +54,7 @@ export class AccesComponent  implements OnInit {
   }
   
   saveState() {
-    this.logged = "Sí";
+    this.logged = "connected";
     localStorage.setItem('state', this.logged);
   }
 }

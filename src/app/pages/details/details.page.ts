@@ -26,7 +26,7 @@ export class DetailsPage implements OnInit {
   ) {
     this.items =[];
     this.cat = String(this.route.snapshot.paramMap.get('id'));
-    this.logged = "";
+    this.logged = String(localStorage.getItem('state'));
    }
 
   ngOnInit() {
