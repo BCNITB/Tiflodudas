@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { Items } from 'src/app/interfaces/items';
 
+import { InteractionService } from 'src/app/services/interaction.service';
 import { ItemService } from 'src/app/services/item.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -15,17 +18,28 @@ export class LoginPage implements OnInit {
 
   items: Items[];
 
-  logged: string;
+  mail:           string;
+  pass:           string;
+  msgLabel:       string;
+  submitAttempt:  boolean;
+  logged:         string;
 
   count:    number;
   countNew: number;
-
+  
   constructor(
     private navCtrl: NavController,
     private itemsSrvc: ItemService,
-    private userSrvc: UserService
+    private userSrvc: UserService,
+    private interactionSrvc: InteractionService,
+    private router: Router,
   ) { 
-    //this.logged = String(localStorage.getItem('state'));
+    this.mail = "";
+    this.pass = "";
+
+    this.submitAttempt = false;
+    this.logged = String(localStorage.getItem('state'));
+    this.msgLabel = "";
 
     this.count = 0;
     this.countNew = 0;
@@ -51,6 +65,40 @@ export class LoginPage implements OnInit {
         }
       }
     });
+  }
+
+  login(){
+    console.log("Correo: ", this.mail.valueOf());
+    console.log("Contraseña: ", this.pass.valueOf());
+
+    if(this.mail == "bcn4itb@gmail.com" && this.pass == "Manubles"){
+      this.logged = "connected";
+      this.saveState();
+    } else {
+      if(this.mail != "bcn4itb@gmail.com"){
+        this.interactionSrvc.presentToast('Ha habido problemas al iniciar la sesión', 2000);
+        this.submitAttempt = true;
+        this.msgLabel = "El Correo Electrónico es incorrecto."
+      } else {
+        this.interactionSrvc.presentToast('Ha habido problemas al iniciar la sesión', 2000);
+        this.submitAttempt = true;
+        this.msgLabel = "Ña Contraseña es incorrecta."
+      }
+    }
+  }
+ 
+  erase(){
+    this.mail = "";
+    this.pass = "";
+  }
+
+  cancel(){
+    this.mail = "";
+    this.pass = "";
+  }
+  
+  saveState() {
+    localStorage.setItem('state', this.logged);
   }
 
   logout(){

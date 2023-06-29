@@ -5,9 +5,9 @@
     </ion-buttons>
     <ion-buttons slot="end">
       <!-- TODO ADMIN USER *ngIf="logged == 'connected'"-->
-      <!--<a (click)="logout()" title="Cerrar sesión" role="button">
+      <a (click)="logout()" title="Cerrar sesión" role="button" *ngIf="logged == 'connected'">
         <ion-icon name="log-out-outline" aria-hidden="true" slot="end"></ion-icon>
-      </a>-->
+      </a>
     </ion-buttons>
     <ion-title>Iniciar Sesión</ion-title>
   </ion-toolbar>
@@ -32,9 +32,53 @@
   <!--<app-register></app-register>-->
   
   <!-- TODO: ADMIN USER *ngIf="logged == 'no connected'" -->
-  <!--<app-acces></app-acces>
+  <!--<app-acces></app-acces>-->
+  <!--<form [formGroup]="formLogin" (submit)="onSubmit()" *ngIf="logged == 'no connected'">
+    <ion-list>
+      <ion-item  class="l-txt">
+        <ion-label for="email" position="floating">Introduce el correo electrónico</ion-label>
+        <ion-input name="email" formControlName="email"></ion-input>
+      </ion-item>
+  
+      <ion-item  class="normal-txt">
+        <ion-label for="password" position="floating">Contraseña</ion-label>
+        <ion-input name="password" formControlName="password" type="password"></ion-input>
+      </ion-item>
+  
+      <ion-item *ngIf="submitAttempt">
+        <p class="error">{{ msgLabel }}</p>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col class="flex-container"> 
+        <button type="submit" name="submit" [disabled]="formLogin.invalid" id="success" tabindex="1">Enviar</button>
+        <button type="reset" class="danger" tabindex="1" id="cancel">Borrar</button>
+      </ion-col>
+    </ion-row>
+  </form>-->
+  <form *ngIf="logged == 'no connected'" >
+    <fieldset>
+      <legend>Acceso de usuarios</legend>
+      <div class="flex-container">
+        <label id="mailLbl">Correo Electrónico</label>
+        <input aria-labelledby="mailLbl" ([ngModel])="mail" type="email" reuired>
+      </div>
+      <div class="flex-container">
+        <label id="passLbl">Contraseña</label>
+        <input aria-labelledby="passLbl" ([ngModel])="pass" type="password" reuired>
+      </div>
+      <div class="flex-container">
+        <button title="Acceder" (click)="login()">Acceder</button>
+        <button title="Borrar" (click)="erase()" class="danger">Borrar</button>
+        <button title="Borrar" (click)="cancel()">Cancelar</button>
+      </div>
+    </fieldset>
+  </form>
 
-  <div>
+  <h2>{{mail}}</h2>
+  <h2>{{pass}}</h2>
+
+  <div *ngIf="logged == 'connected'">
     <p *ngIf="count == 0">
       No hay soluciones propuestas.
     </p>
@@ -62,5 +106,5 @@
       <button (click)="seeSol(2)" *ngIf="countNew > 1">Ver Aportaciones</button>
       <button routerLink="/new-entry/admin">Nueva Entrada</button>
     </div>
-  </div>-->
+  </div>
 </ion-content>
