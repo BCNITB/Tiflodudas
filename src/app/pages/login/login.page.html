@@ -28,14 +28,15 @@
     y enviar dudas, así como colaborar con las consultas aún no solucionadas o aportar nuevas soluciones.
   </p>
 
-  <!-- ADMIN OF ADMIN USERS -->
-  <!--<app-register></app-register>-->
-  
   <!-- TODO: ADMIN USER -->
   <app-acces *ngIf="logged == 'no connected'"></app-acces>
   
   <!-- TODO: ADMIN USER -->
   <div *ngIf="logged == 'connected'">
+    
+    <!-- ADMIN OF ADMIN USERS -->
+    <app-register></app-register>
+    
     <p *ngIf="count == 0">
       No hay soluciones propuestas.
     </p>
@@ -61,7 +62,7 @@
       <button (click)="seeSol(1)" *ngIf="count > 1">Ver Propuestas</button>
       <button (click)="seeSol(2)" *ngIf="countNew == 1">Ver Aportación</button>
       <button (click)="seeSol(2)" *ngIf="countNew > 1">Ver Aportaciones</button>
-      <button routerLink="/new-entry/admin">Nueva Entrada</button>
+      <button routerLink="/new-entry/admin" id="new">Nueva Entrada</button>
     </div>
   </div>
 </ion-content>
