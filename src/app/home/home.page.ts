@@ -10,7 +10,10 @@ export class HomePage {
   logged: string;
 
   constructor() {
-    this.logged = "";
+    if(localStorage.getItem('state') == undefined){
+      localStorage.setItem('state', 'no connected');
+      this.logged = "no connected";
+    }
   }
 
   ionViewWillEnter(){

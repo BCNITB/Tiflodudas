@@ -45,6 +45,7 @@ const routes: Routes = [
     path: 'send-solution',
     loadChildren: () => import('./modals/send-solution/send-solution.module').then( m => m.SendSolutionPageModule)
   },
+
 ];
 
 @NgModule({

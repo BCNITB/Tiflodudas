@@ -16,8 +16,8 @@
 
   <form [formGroup]="formItem" (submit)="onSubmit()">
     <ion-list>
-      <!-- TODO: ADMIN USER *ngIf="logged == 'connected'" -->
-      <!--<ion-item>
+      <!-- TODO: ADMIN USER -->
+      <ion-item *ngIf="logged == 'connected'">
         <ion-select label="Selecciona una categoría" 
           aria-label="Selecciona una categoría para la consulta" required="true" 
           labelPlacement="floating" 
@@ -51,8 +51,8 @@
           </ion-select>
       </ion-item>-->
       
-      <!-- TODO: ALL USERS *ngIf="logged == 'no connected'" -->
-      <ion-item>
+      <!-- TODO: ALL USERS -->
+      <ion-item *ngIf="logged == 'no connected'">
         <ion-select label="Selecciona una colección de la consulta" 
         aria-label="Selecciona una colección de la consulta" required="true" 
         labelPlacement="floating" 

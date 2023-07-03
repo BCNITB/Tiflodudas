@@ -2,10 +2,22 @@ button{
     margin-top: 0;
     background-color: green;
     color: #fff;
-    padding: 0.5em 0.5em;
+    padding: 1em 1em;
     border-radius: 0.2rem;
 }
 
 .danger{
     background-color: red;
 }
+
+.flex-container{
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+@media (max-width: 800px) {
+    .flex-container{
+        margin-left: 2vw;
+        margin-right: 2vw;
+    }
+  }

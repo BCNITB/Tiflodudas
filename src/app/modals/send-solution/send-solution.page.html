@@ -1,26 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <!-- TODO: ALL USERS *ngIf="logged == 'no connected'" --> 
-    <ion-title>Proponer Solución</ion-title>
+    <!-- TODO: ALL USERS --> 
+    <ion-title *ngIf="logged == 'no connected'">Proponer Solución</ion-title>
     
-    <!-- ADMIN USER *ngIf="logged == 'connected'" -->
-    <!--<ion-title>Editar entrada</ion-title>-->
+    <!-- ADMIN USER -->
+    <ion-title *ngIf="logged == 'connected'">Editar entrada</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <!-- TODO: ALL USERS *ngIf="logged == 'no connected'" -->
-      <ion-title size="large">Proponer Solución</ion-title>
+      <!-- TODO: ALL USERS -->
+      <ion-title size="large" *ngIf="logged == 'no connected'">Proponer Solución</ion-title>
 
-      <!-- ADMIN USER *ngIf="logged == 'connected'" -->
-      <<!--<ion-title size="large">Editar Entrada</ion-title>-->
+      <!-- ADMIN USER -->
+      <ion-title size="large" *ngIf="logged == 'connected'">Editar Entrada</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <!-- TODO: ALL USERS *ngIf="logged == 'no connected'" -->
-  <div>
+  <!-- TODO: ALL USERS -->
+  <div *ngIf="logged == 'no connected'">
     <p>
       Introduce una propuesta de solución y los comentarios para el siguiente problema detectado:
     </p>
@@ -50,8 +50,8 @@
     </form>
   </div>
 
-  <!-- TODO; ADMIN USER *ngIf="logged == 'connected'" -->
-  <!--<div>
+  <!-- TODO; ADMIN USER -->
+  <div *ngIf="logged == 'connected'">
     <form [formGroup]="formItem" (submit)="modify()">
       <ion-list>
         <ion-item>
@@ -110,5 +110,5 @@
         </ion-row>
       </ion-list>
     </form>
-  </div>-->
+  </div>
 </ion-content>
