@@ -17,27 +17,28 @@
   <div *ngIf="showTxt">
     <h2>Cómo utilizar la búsqueda</h2>
     <p>
-      Para buscar una información en la Base de Datos, introduce una palabra clave o diversas palabras claves a buscar 
-      relacionadas con la incidencia. Por ejemplo: jaws voz
+      Para buscar una información en la Base de Datos, introduce una o tres palabras claves a buscar, por ejemplo: jaws voz
     </p>
     <p>
-      <b>Nota</b>; Se está trabajando en mejorar el filtro de búsqueda para obtener mejor resultados. 
+      <b>Nota</b>; Se debe dejar un espacio después de la palabra para que se produzca la búsqueda. 
+      Se está trabajando en mejorar el filtro de búsqueda. 
     </p>
   </div>
 
   <ion-searchbar
-    [(ngModel)]="term"
+    [(ngModel)]="result"
     placeholder="Orbit"
     show-clear-button="focus"
     [debounce]="1000"
     aria-labelledby="search"
-    role="searchbox
-    ">
+    role="searchbox"
+    naem="result">
     <span id="search" class="scr">Introduce el término a buscar</span>
   </ion-searchbar>
 
   <h2 *ngIf="term.length > 0">Soluciones encontradas para: {{ term }}</h2>
-  <div *ngFor="let item of items | filter: term:'classification'" class="flex-container" role="listitem">
+  <!--<div *ngFor="let item of items | filter: term:'classification'" class="flex-container" role="listitem">-->
+  <div *ngFor="let item of items | filter: result" class="flex-container" role="listitem">
     <p class="consult" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración'">
       <abbr title="Pregunta">P</abbr>: {{ item.consult }}
       <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
