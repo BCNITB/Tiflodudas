@@ -17,6 +17,7 @@ export class SearchPage implements OnInit {
   showTxt:  boolean;
 
   term:     string;
+  result:   string;
 
   constructor(
     private itemsSrvc: ItemService,
@@ -25,6 +26,7 @@ export class SearchPage implements OnInit {
     this.items =[];
     this.showTxt = false;
     this.term = "";
+    this.result = '';
   }
 
   ngOnInit() {
