@@ -83,7 +83,7 @@ export class NewEntryPage implements OnInit {
         category: new FormControl('colaboración'),
         item: new FormControl('', Validators.required),
         classification: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(150)]),
-        consult: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(300)]),
+        consult: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(500)]),
         answer: new FormControl(''),
         comments: new FormControl(''),
         historic: new FormControl('')
