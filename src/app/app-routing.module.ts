@@ -5,12 +5,8 @@ import { canActivate,redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'index',
     pathMatch: 'full'
   },
   {
@@ -45,6 +41,19 @@ const routes: Routes = [
     path: 'send-solution',
     loadChildren: () => import('./modals/send-solution/send-solution.module').then( m => m.SendSolutionPageModule)
   },
+  {
+    path: 'index',
+    loadChildren: () => import('./index/index.module').then( m => m.IndexPageModule)
+  },  {
+    path: 'contact',
+    loadChildren: () => import('./pages/contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'accesibilidad',
+    loadChildren: () => import('./pages/accesibilidad/accesibilidad.module').then( m => m.AccesibilidadPageModule)
+  },
+
+
 
 ];
 

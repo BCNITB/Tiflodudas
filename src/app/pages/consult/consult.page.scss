@@ -1,18 +1,26 @@
 .contract-btn{
-    opacity: 0.7;
+    background-color: #53713d;
+    color: #bcbcbc;
 }
 
 .expand-btn, .contract-btn{
-    width: 100%;
+    
+    width: 95%;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+
+    margin-bottom: 0.5em;
 
     border-radius: 0;
     font-size: 1.25em;
     text-transform: uppercase;
 
-    background-color: #69944a;
-    color: #fff;
+    //background-color: #69944A;
+    //color: #fff;
+}
+
+p{
+    padding-left: 2em;
 }
 
 .flex-item {
@@ -64,6 +72,10 @@ button{
     margin-left: 1vw;
     margin-right: 1vw;
     //margin-top: 1em;
-    background-color: green;
+    background-color: #69944A;
     color: #fff;
+}
+
+ion-icon{
+    margin-left: 0.5em;
 }

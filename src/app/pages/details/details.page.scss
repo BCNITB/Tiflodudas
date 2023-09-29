@@ -9,3 +9,24 @@ button{
 .danger{
     background-color: red;
 }
+
+img{
+    width: 1em;
+    height: auto;
+
+    margin-top: 0.5rem;
+    margin-left: 1em;
+}
+
+img:focus-visible{
+    //border: yellow solid 0.5em;
+
+    outline: red solid 0.5em;
+    outline-offset: 0.2em;
+}
+
+/*.back-btn{
+    width: 0.5em;
+    width: 0.5em;
+    background-color: transparent;
+}*/

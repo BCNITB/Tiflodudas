@@ -1,0 +1,56 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="actualizacion">Actualización</ion-select-option>
+      <ion-select-option value="conexion">Conexión</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='actualizacion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Los drivers no se actualizan correctamente y la impresora entra en un
+         bucle.
+      </p>
+      <p *ngIf="show == 1"><abbr title="Resolucion" class="emphasy">R</abbr>: Mantener pulsado le tecla CHS durante 10 segundos </p>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='conexion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Conocer la IP de la impresora.
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="index_2">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Existen diferentes opciones: </p>
+        <ul>
+          <li>En la impresora Index-D V5:</li>
+          <ul>
+            <li>Para imprimir la IP pulsar: HELP, 1</li>
+            <li>Para que la impresora diga la IP pulsar: HELP, 10</li>
+          </ul>
+
+          <li>En Windows realizar lo siguiente:</li>
+          <ol>
+            <li>Panel de Control.</li>
+            <li>Impresoras.</li>
+            <li>Propiedades de la impresora.</li>
+            <li>Puertos. </li>
+          </ol>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+  </div>
+</div>

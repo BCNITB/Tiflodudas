@@ -1,0 +1,40 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="notas">Notas de voz</ion-select-option>
+      <ion-select-option value="firmware">Firmware</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='notas' || category=='firmware'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Las notas de voz creadas no se registranm pero si qse crean los ficheros mp3.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="milestone_1">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Se debe descargar e instalar la versión más reciente del firmware para el modelo de Milestone.
+        </p>
+        <p>
+          <span class="emphasy">Comentarios</span>: 
+          La versión estable para Milestone 312 es la 
+          <a href="https://cti.once.es/el-rincon-del-conocimiento/tiflo-store/view-ts-item?id=35" 
+          title="Descargar versión 4.47.7 (se abre en una ueva pestaña)" target="_blank">4.47.7</a>.
+          La versión estable para Milestone 312 ACE es la 
+          <a href="https://cti.once.es/el-rincon-del-conocimiento/tiflo-store/view-ts-item?id=36"
+          title="Descargar versión 5.8 (se abre en una nueva pestaña)" target="_blank">5.8</a>.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+</div>

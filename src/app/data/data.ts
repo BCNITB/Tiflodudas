@@ -10,6 +10,11 @@ export const CATEGORIES = [
         value:      'braille hablado'
     },
     {
+        category:   'anotadores electrónicos',
+        item:       'Brailliant  BI',
+        value:      'brailliant bi'
+    },
+    {
         category:   'impresoras braille',
         item:       'Impacto',
         value:      'impacto'
@@ -86,12 +91,12 @@ export const CATEGORIES = [
     },
     {
         category:   'magnificadores de pantalla',
-        item:       'Ampliación MacOs',
+        item:       'Ampliación MacOS',
         value:      'ampliación macos'
     },
     {
         category:   'magnificadores de pantalla',
-        item:       'Ampliación iOs',
+        item:       'Ampliación iOS',
         value:      'ampliación ios'
     },
     {
@@ -200,8 +205,28 @@ export const CATEGORIES = [
         value:      'student'
     },
     {
+        category:   'telelupa',
+        item:       'Transformer',
+        value:      'transformer'
+    },
+    {
+        category:   'software once',
+        item:       'ClubONCE',
+        value:      'club once'
+    },
+    {
         category:   'software once',
         item:       'PortalONCE',
         value:      'portal once'
+    },
+    {
+        category:   'software once',
+        item:       'Apolo ONCE',
+        value:      'apolo'
+    },
+    {
+        category:   'software once',
+        item:       'CTI ONCE',
+        value:      'cti once'
     },
 ]

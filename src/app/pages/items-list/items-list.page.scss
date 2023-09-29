@@ -22,13 +22,28 @@ p{
     border-radius: 0.2rem;
 }
 
-img{
-    width: 1em;
+/*img{
+    width: 100%;
     height: auto;
 
     margin-top: 0.5rem;
     margin-left: 1em;
+}*/
+
+.back-btn{
+    height: 2em;
+    width: 2em;
+
+    margin-left: 1em;
+
+    background-image: '../../../assets/left-arrow.png';
+    //background-image: "../../../assets/left-arrow.png";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    //background-color: red;
 }
+
 
 @media screen and (max-width: 660px){
     /*.flex-container{

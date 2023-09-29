@@ -1,0 +1,96 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button class="focus"></ion-menu-button>
+    </ion-buttons>  
+    <ion-title>
+      Inicio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" role="main" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Inicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <h2>¿Para qué sirve?</h2>
+    <p>
+      La presente aplicación web busca ser una referencia rápida para resolver algunos d los problemas más comunes que se han documentado durante la instalación o la 
+      ejecución de programas para facilitar la accesibilidad a diferentes aparatos:
+    </p>
+    <ul role="list">
+      <li role="listitem">Smartphones.</li>
+      <li role="listitem">Ordenadores.</li>
+      <li role="listitem">BlinsShells.</li>
+      <li role="listitem">Reproductores Daisy.</li>
+      <li role="listitem">Lineas braille.</li>
+      <li role="listitem">Etcétera.</li>
+    </ul>
+  </div>
+
+  <!-- TODO: ONLY WEB PAGE -->
+  <div>
+    <h2>Descarga de la <abbr title="aplicación">app</abbr></h2>
+    <p>
+      Si se quiere, se puede 
+      <a href="https://drive.google.com/file/d/1sEmX5hQTCUghqJkNR59KgK8E9cHTPNzj/view?usp=drive_link" 
+      title="Descargar aplicación para Android (se abre en una nueva ventana)" target="_blank" >
+      descargar fichero apk
+      </a>
+      para instalar la aplicación en un dispositivo Android de forma local.
+    </p> 
+  </div>
+  
+  <div>
+    <h2>¿Consultar o Buscar en la base de datos?</h2>
+    <p>
+      Tanto el a parte inferior de esta página como en el menú lateral existen dos opciones: Consultar la Base de Datos y 
+      Buscar en la Base de Datos. El comportamiento de dichas opciones es diferente.
+    </p>
+
+    <ul>
+      <li>
+        <b>Consultar la Base de Datos</b>: En este apartado se muestra la Base de datos entera, pero de forma local (si se ha 
+        descargado la aplicación) o mediante código <abbr title="Hype Text Markup Lenguage">HTML</abbr> las consultas solucionadas.
+      </li>
+      <li>
+        <b>Buscar en la Base de Datos</b>: En esta apartado se muestran todas las consultas, con o sin solución desde una base de datos, y
+        sólo estarán disposibles si hay acceso a internet.
+      </li>
+    </ul>
+    <p>
+      La idea actualizar la base de datos de forma bisemanal o mensual (dependiendo de las nuevas aportaciones), y actualizar la aplicación
+      cada seis meses (dependiendo de las aportaciones), para que las soluciones esténdisposnibles en la aplicación de forma local
+      y sin necesidad de acceder a internet.
+    </p>
+  </div>
+
+  <div>
+    <h2>Diferentes apartados</h2>
+    <p>
+      Mediante el menú lateral podemos acceder a los diferentes componentes de la página:
+    </p>
+    <ul role="list">
+      <li role="listitem">Consultar incidencias.</li>
+      <li role="listitem">Buscador de incidencias.</li>
+      <li role="listitem">Enviar<span aria-hidden="true">/</span>Resolver incidencia.</li>
+      <li role="listitem">Enviar incidencias con su solución.</li>
+    </ul>
+
+    <div class="flex-container">
+      <button routerLink="/consult">Consultar la Base de Datos</button>
+      <button routerLink="/search">Buscar en la Base de Datos</button>
+    </div>
+  </div>
+</ion-content>
+
+<!-- TODO: ONLY WEB PAGE -->
+<!--
+<ion-footer>
+
+</ion-footer>
+-->

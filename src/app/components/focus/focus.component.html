@@ -1,0 +1,177 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="comandos">Comandos</ion-select-option>
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='comandos' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Configurar entrada y salida con un comando.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="focus_1">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Los comandos de la línea focus son:
+        </p>
+        <ul>
+          <li>Comando para configurar la salida: cor + G.</li>
+          <li>Comando para consigurar la entrada: cor + 2-3-6.</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Escribir línea nueva.
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="focus_2">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: El comando para crear una línea nueva es: cor + 2 + 7 y 8.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        La línea braille dejó de funcionar en el equipo. Cuando se conecta la línea braille al ordenador por puerto USB y se accede
+         a Opciones > braille (em Jaws), el mensaje es: <i>La línea braille activa es ninguna línea</i>. Se verifica que todas las 
+         opciones están bien configuradas, que se ha agregado en más de una ocasión la línea. Se reinicia Jaws, ... 
+      </p>
+      <p>
+        Por otro lado, se ha desinstalado Jaws con los elementos compartidos y procedido a instalar la última versión de Jaws. 
+        El problema continúa. También se comprueba que la línea braille funciona correctamente en otros ordenadores. 
+      </p>
+      <div *ngIf="show == 3" aria-hidden="true" id="focus_3">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Si el equipo tiene actualizaciones pendientes, hay que instalarlas para ver si el fabricante ha resuelto el problema.
+          Si está actualizado, intentar volver a la versión anterior del controlador: 
+        </p>
+        <ol>
+          <li>Administrador de dispositivos.</li>
+          <li>Nos posicionamos sobr el dispositivo que no funciona.</li>
+          <li>Menú contextual.</li>
+          <li>Opciones.</li>
+        </ol>
+        <p>
+          Si permite volver al controlador anterior, inténtalo.
+        </p>
+        <p>
+          Si esto no funciona, consultar la configuración de energía.
+        </p>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Existe otra posible solución para este problema.
+          <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Ver</button>
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Al utilizar una línea braille Focus blue 40 para escribir en Word no se escribe el texto hasta pulsar la tecla espacio.
+      </p>
+      <div *ngIf="show == 4" aria-hidden="true" id="focus_4">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+        </p>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          La línea focus tiene como método de entrada braille de 6 puntos; debe cambiarse a braille de 8 puntos.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='comandos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Cambiar la configuración del teclado de una línea focus a una mano.
+      </p>
+      <div *ngIf="show == 5" aria-hidden="true" id="focus_5">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Utilzar los siguientes comandos para permutar entre una configuración y otra:
+        </p>
+        <ul>
+          <li>Shift izquierdo + 1-2-3-7.</li>
+          <li>Shift derecho + 4-5-6-8.</li>
+        </ul>
+        <p>
+          Si se configura mediante menñus, seguir el siguiente procedimiento para activar o desactivar el modo a una mano:
+        </p>
+        <ol>
+          <li>Pulsar la tecla menú.</li>
+          <li>Para acceder a la opción, pulsar Punto 8.</li>
+          <li>Para cambiar entre <i>activado</i> y <i>desactivado</i> usar el Balancín izquierdo.</li>
+          <li>Para confirmar la opción seleccionada, pulsar Punto 8.</li>
+        </ol>
+        <p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        La línea braille dejó de funcionarle en este equipo.
+      </p> 
+      <div *ngIf="show == 6" aria-hidden="true" id="focus_6">
+        <p><abbr title="Resolución" class="emphasy">R</abbr>:
+          Es un problema de la versión del controlados, seguir el siguiente procedimiento:
+        </p>
+        <ol>
+          <li>Acceder a administrador de dispositivos.</li>
+          <li>Localizar <i>Lib USB-1.0:FreedmScientific [Focus Blue]</i>.</li>
+          <li>Consultar la fecha del  controlador y su versión.</li>
+          <li>Desinstalo el controlador.</li>
+          <li>Reiniciar el ordenador.</li>
+          <li>Conecto la línea braille.</li>
+          <li>Ejecutar Jaws.</li>
+          <li>Acceder a administrador de dispositivos.</li>
+          <li>Localizar <i>Lib USB-1.0:FreedmScientific [Focus Blue]</i>.</li>
+          <li>Consultar la fecha del  controlador y su versión.</li>
+        </ol>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          <a href="https://support.freedomscientific.com/Downloads/Focus/FocusBlueBrailleDisplayDriver" target="_blank" 
+          title="Descarga el driver de Freedom Scientific (se abre en una nueva ventana)">Descarga el driver de Freedom Scientific</a>.
+        </p>
+      </div>
+
+    <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+  </div>
+</div>

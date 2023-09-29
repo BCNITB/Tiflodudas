@@ -1,0 +1,29 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        La impresora impacto no imprime bien a doble espacio los saltos de página. 
+      </p>
+      <p *ngIf="show == 1" aria-hidden="true" id="impacto_1">
+        <abbr title="Resolucion" class="emphasy">R</abbr>: 
+        Se debe modificar la configuración del dispositivo y asignar el modelo correcto de la impresora: impacto texto o 
+        impacto 600
+      </p>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+</div>

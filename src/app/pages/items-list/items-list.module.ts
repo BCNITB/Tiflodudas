@@ -8,12 +8,15 @@ import { ItemsListPageRoutingModule } from './items-list-routing.module';
 
 import { ItemsListPage } from './items-list.page';
 
+import { ComponentsModule } from 'src/app/components/components.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ItemsListPageRoutingModule
+    ItemsListPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [ItemsListPage]
 })

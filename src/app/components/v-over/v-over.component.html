@@ -1,0 +1,833 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="aplicaciones">Aplicaciones</ion-select-option>
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="cookies">Cookies</ion-select-option>
+      <ion-select-option value="correo">Correo Electrónico</ion-select-option>
+      <ion-select-option value="gestos">Gestos</ion-select-option>
+      <ion-select-option value="gold">Gestor <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr> Libros Digitales</ion-select-option>
+      <ion-select-option value="icloud">iCloud</ion-select-option>
+      <ion-select-option value="ipad">iPad</ion-select-option>
+      <ion-select-option value="macbook">MacBook</ion-select-option>
+      <ion-select-option value="portalonce">PortalONCE</ion-select-option>
+      <ion-select-option value="siri">Siri</ion-select-option>
+      <ion-select-option value="vincular">Vincular</ion-select-option>
+      <ion-select-option value="whatsapp">WhatsApp</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='vincular'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: El iPhone no detecta la línea Braille.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="vo_1">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Deben eliminarse dispositivos vinculados de la línea.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gestos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: el iphone no reconoce los flicks.
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="vo_2">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Restablecer ajustes de VoiceOver desde el apartado comandos.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Evitar que Voice Over diga: <i>pantalla bloqueada</i>.
+      </p>
+      <p *ngIf="show == 3" aria-hidden="true" id="vo_3">
+        <abbr title="Resolucion" class="emphasy">R</abbr>: Activar los sonidos del iPhone.
+      </p>
+    </div>
+
+    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: El iPhone no deja modificar la velocidad de la voz.
+      </p>
+      <div *ngIf="show == 4" aria-hidden="true" id="vo_4">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Restablecer ajustes de VoiceOver desde el apartado comandos.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+  </div>
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: El botón de dictado aparece atenuado, aunque puede activarse desde la 
+        línea braille.
+      </p>
+      <div *ngIf="show == 5" aria-hidden="true" id="vo_5">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Restablecer ajustes de Voice Over desde el apartado comandos.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+  </div>
+  
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Al recibir una llamada y descolgar, si se separa el erminal de la oreja salta 
+        automáticamente el altavoz.
+      </p>
+      <div *ngIf="show == 6" aria-hidden="true" id="vo_6">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Deben seguirse los siguientes pasos para desactivar el altavoz:
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>Accesibilidad.</li>
+          <li>VoiceOver.</li>
+          <li>Audio.</li>
+          <li>Altavoz automático.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Cuando se consulta una notificación y entra una llamada o un mensaje, 
+        el nuevo elemento se superpone al antiguo.
+      </p>
+      <div *ngIf="show == 7" aria-hidden="true" id="vo_7">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Deben seguirse los siguientes pasos:
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>Notificaciones.</li>
+        </ol>
+        <p>
+          En la opción <b>mostrar previsualizaciones</b> seleccionar la opción más convniente para el usuario. Otra solución es: 
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>Notificaciones.</li>
+          <li>WhatsApp.</li>
+        </ol>
+        <p>
+          Realizar una selección como en la solución anterior. En esta ocasión esta modificación sólo afectaría a 
+          las notificaciones de WhatsApp.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='ipad'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Conectar por acceso remoto con un iPad.
+      </p>
+      <div *ngIf="show == 8" aria-hidden="true" id="vo_8">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Se debe instalar en el iPad: Fortclient y Microsoft Remote Desktop. 
+        </p>
+        <p>
+          <span class="emphasy">Comentario:</span>Las ayudas visuales deberían funcionar.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='whatsapp'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: VoiceOver no verbaliza la letra al escribirla, ni la palabra cuando en 
+        el rotor se seleccionan navegación por palabras para realizar una corrección (por ejemplo).
+      </p>
+      <div *ngIf="show == 9" aria-hidden="true" id="vo_9">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Desinstalar WhatsApp y volverlo a instalar. 
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='potalonce'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: No se puede utilizar la aplicación de PortalONCE.
+      </p>
+      <div *ngIf="show == 10" aria-hidden="true" id="vo_10">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Una vez descargada la app de la página web (no está en AppStore) se 
+          debe realizar los siguientes pasos: 
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>General.</li>
+          <li>Gestión de Dispositivo.</li>
+          <li>Apps Empresariales.</li>
+          <li>ORGANIZACIÓN NACIONAL DE CIEGOS ESPAÑOLES.</li>
+          <li>Confiar en ORGANIZACIÓN NACIONAL DE CIEGOS ESPAÑOLES.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gold'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: VoiceOver tiene un mal funcionamiento al leer un libro, no responde a 
+        los gestos o lo hace tarde y el terminal se sobrecalienta.
+      </p>
+      <div *ngIf="show == 11" aria-hidden="true" id="vo_11">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:  Comprobar si se trata de un libro ilustrado. 
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gold'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Error en la aplicación con iPod touch; las listas de búsqueda salen vacías.
+      </p>
+      <div *ngIf="show == 12" aria-hidden="true" id="vo_12">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Actualizar la versión de iOS. 
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: El teléfono vibra al realizar un flick.
+      <p>
+      <div *ngIf="show == 13" aria-hidden="true" id="vo_13">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Deben seguirse los siguientes pasos:
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>Accesibilidad.</li>
+          <li>VoiceOver.</li>
+          <li>Audio, Sonido y Vibraciones.</li>
+          <li>Desactivar vibración.</li>
+        </ol>
+        <p>Otra opción es:</p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>Accesibilidad.</li>
+          <li>Tocar y vibración.</li>
+          <li>Desactivar vibración.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(13)" *ngIf="show != 13">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 13">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='siri'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Hay contactos que no aparecen en la agenda pero Siri si que los reconoce.
+      <p>
+      <div *ngIf="show == 14" aria-hidden="true" id="vo_14">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Comprobar que el contacto no fue guardado en iCloud.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(14)" *ngIf="show != 14">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 14">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Como conectar un iPhone con un MAC sin utilizr iTunes.
+      <p>
+      <div *ngIf="show == 15" aria-hidden="true" id="vo_15">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Se ha de buscar el dispositivo en la barra lateral (comando + shift + c). 
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(15)" *ngIf="show != 15">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 15">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='cookies'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Activar/desactivar cokies.
+      <p>
+      <div *ngIf="show == 16" aria-hidden="true" id="vo_16">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Seguir los siguientes pasos:
+        </p>
+        <ol>
+          <li>Borrar las cokies del teléfono.</li>
+          <li>Cerrar de multitareas Safari.</li>
+          <li>Ajustes.</li>
+          <li>Activar/Desactivar las Cokies.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(16)" *ngIf="show != 16">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 16">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: El iPhone no detecta la línea Braille.
+      <p>
+      <div *ngIf="show == 17" aria-hidden="true" id="vo_18">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          <a href="sucdepoma.org/2020/09/02/como-gestionar-la-liberacion-de-espacio-en-icloud-desde-el-iphone/" 
+          title="Enlace para gestinar iCloud (se habre en una nueva pestaña)" target="_blank">
+            Enlace para gestionar iCloud
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(18)" *ngIf="show != 18">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 18">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='siri'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Siri no llama el buzón de voz.
+      <p>
+      <div *ngIf="show == 19" aria-hidden="true" id="vo_19">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Siri sólo llama al 112; se puede configurar un atajo para la llamada 
+          al buzón de voz.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(19)" *ngIf="show != 19">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 19">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: El teléfono no se cuelga al pulsar dos veces con dos dedos.
+      <p>
+      <div *ngIf="show == 20" aria-hidden="true" id="vo_20">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Posiblemente el protector de pantalla no está bien colocado.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(20)" *ngIf="show != 20">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 20">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='correo'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: No entran las notificaciones de correo nuevo.
+      <p>
+      <div *ngIf="show == 21" aria-hidden="true" id="vo_21">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Seguir los siguientes pasos:
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>Mail.</li>
+          <li>Cuentas.</li>
+          <li>Obtener datos: PUSH.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(21)" *ngIf="show != 21">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 21">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Como asignar un acceso a dictado.
+      <p>
+      <div *ngIf="show == 22" aria-hidden="true" id="vo_22">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Seuir los siguientes pasos. En el iPhone:
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>Accesibilidad.</li>
+          <li>VoiceOver.</li>
+          <li>Comandos.</li>
+        </ol>
+        <p>En la Orbit;</p>
+        <ol>
+          <li>Dispositivo modificar gesto para mostrar/ocultar teclado.</li>
+          <li>Cor 4, 5 y 6(al final de pantalla).</li>
+          <li>Dos veces flecha derecha.</li>
+          <li>Ok para empezar el dictado.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(22)" *ngIf="show != 22">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 22">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='macbook'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Ir a inicio y final del documento con un teclado de MacBook Pro.
+      <p>
+      <div *ngIf="show == 23" aria-hidden="true" id="vo_23">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Los comandosdde navegación en un texto son:
+        </p>
+        <ul>
+          <li>Inicio del documento: fn + ctrl + cursor arriba.</li>
+          <li> ir al final del documento: fn + ctrl + cursor abajo.</li>
+          <li>avance de página: fn + ctrl + curor derecha.</li>
+          <li>retroceso de página: fn + ctrl + cursor izquierda.</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(23)" *ngIf="show != 23">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 23">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Como conectar una línea Braille a un Apple Watch.
+      <p>
+      <div *ngIf="show == 24" aria-hidden="true" id="vo_24">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Se deben seguir los siguientes pasos:
+        </p>
+        <ol>
+          <li>Descubrir la Línea Braille.</li>
+          <li>Ajustes.</li>
+          <li>Accesibilidad.</li>
+          <li>VoiceOver.</li>
+          <li>Braille.</li>
+          <li>Conectar la línea Braille.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(24)" *ngIf="show != 24">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 24">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='whatsapp'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Evitar que VvoiceOver, en los grupos de WhassApp, diga: 
+        <i>información del contacto</i> al lado de cada mensaje.
+      <p>
+      <div *ngIf="show == 25" aria-hidden="true" id="vo_25">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Actualizar WhatsApp a su última versión.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(25)" *ngIf="show != 25">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 25">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='imagenes'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: VoiceOver no puede ver las fotos de la galería haciendo flick, las ve 
+        deslizando el dedo por la pantalla (rastreo).
+      <p>
+      <div *ngIf="show == 26" aria-hidden="true" id="vo_26">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Modificar el ajuste de VoiceOver <i>explorar imágenes</i> y dejarlo en: 
+          <i>siempre</i> para poder hacer flick por las fotos.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(26)" *ngIf="show != 26">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 26">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Si se trata de acceder a un enlace para unirse a una reunión de Zoom no resulta posible, no se abre la aplicación Zoom. 
+        Si desactivas VoiceOver el enlace sí se abre. Si el enlace se le envía por correo electrónico, en el mismo iPhone, sí se 
+        puede abrir estando VoiceOver activado.
+      <p>
+      <div *ngIf="show == 27" aria-hidden="true" id="vo_27">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Probar una de las dos opciones;
+        </p>
+        <ul>
+          <li>Acceder por primera vez a una reunión de Zoom con VoiceOver desactivado (los accesos siguientes pueden hacerse con VoiceOver).</li>
+          <li>Registrarse como usuario de zoom.</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(27)" *ngIf="show != 27">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 27">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        VoiceOver verbaliza todos los signos de puntuación: Puntos, comas, dos puntos, 
+          <abbr title="etcétera">etc</abbr>. Y lo hace en cualquier lugar.
+        <p>
+      <div *ngIf="show == 28" aria-hidden="true" id="vo_28">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Formatear el dispositivo a fábrica.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(28)" *ngIf="show != 28">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 28">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Cómo obtener las teclas de función de un MarcBook Pro con TouchBar en un Windows cargado utlizando BoothCamp.
+      </p>
+      <div *ngIf="show == 29" aria-hidden="true" id="vo_29">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Deben seguirse los siguientes pasos:
+        </p>
+        <ol>
+          <li>Entrar en el boton lateral de barra de tareas.</li>
+          <li>Abrir bootcamp.</li>
+          <li>Entrar en panel de control bootcamp.</li>
+          <li>Control de cuentas-Si.</li>
+          <li>Teclado.</li>
+          <li>Buscar la casilla de verificación para utilizar las teclas de función estandar.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(29)" *ngIf="show != 29">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 29">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Hacer que VoiceOver hable más bajo mientras se tiene una conversación telefónica.
+      </p>
+      <div *ngIf="show == 30" aria-hidden="true" id="vo_30">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Se debe atenuar el volumen de VoiceOver, para ello: 
+        </p>
+        <ol>
+          <li>Configuración.</li>
+          <li>Accesibilidad.</li>
+          <li>VoiceOver.</li>
+          <li>Audio.</li>
+          <li>Seleccionar la casilla <i>Atenuación de audio</i>.</li>
+          <li></li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(30)" *ngIf="show != 30">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 30">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Al añadir un contacto con VoiceOver marcando el número, si se valuego a la opción de añadir contacto, la opción del 
+          dictado se queda inhabilitada y no deja ni con pulsación mágica ni con el botón de dictado del teclado.
+      </p>
+      <div *ngIf="show == 31" aria-hidden="true" id="vo_31">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Agregar el contacto desde la aplicación de contactos, no marcando el número desde la aplicación de teléfono y yendo 
+          hasta añadir número.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(31)" *ngIf="show != 31">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 31">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        No se puede hacer un bizum con la app de la Caixa utilizando VoiceOver al estar oculto el botón "continuar".
+      </p>
+      <div *ngIf="show == 32" aria-hidden="true" id="vo_32">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Ocultar el teclado del iPhone para que se muestre el botón.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(32)" *ngIf="show != 32">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 32">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Seleccionar un rango de fila o columna en una hoja de cálculo con VoiceOver en la aplicación hojas de Cálculo de Google.
+      </p>
+      <div *ngIf="show == 33" aria-hidden="true" id="vo_33">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Seguir este procedimiento para seleccionar filas:
+        </p>
+        <ol>
+          <li>Seleccionar en el rotor la opción <b>seleccionar texto</b>.</li>
+          <li>Flic arriba hasta colocarlo en <b>líneas</b>.</li>
+          <li>Flic derecha para ir seleccionando las celdas.</li>
+        </ol>
+        <p>Una vez seleccionadas las filas deseadas:</p>
+        <ol>
+          <li>Opciones de editar del rotor.</li>
+          <li>Seleccionamos copiar.</li>
+        </ol>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          No se ha conseguido realizar esta selección por columnas.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(33)" *ngIf="show != 33">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 33">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        VoiceOver dice <i>muiriel</i> cuando debería decir <i>muriel</i>.
+      </p>
+      <div *ngIf="show == 34" aria-hidden="true" id="vo_34">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Dentro de VoiceOver, en el menú pronunciaciones scribir la palabra y grabar la pronunciación deseada.
+        </p>
+        <p>
+          <span class="emphasy">Comentarios:</span>
+          VoiceOver pronuncia muchas veces los nombres como Muriel que son de origen inglés como se harían en su idioma de origen.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(34)" *ngIf="show != 34">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 34">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='aplicaciones'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        VoiceOver verbaliza el logo, otros, y la hora a la que le han enviado el audio de WhatsApp.
+      </p>
+      <div *ngIf="show == 35" aria-hidden="true" id="vo_35">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Desactivar la descripción de imágenes para WhatsApp del rotor.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(35)" *ngIf="show != 35">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 35">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='aplicaciones'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Al pulsar el botón suprimir en WhatsappVoiceOver verbaliza: suprimir “feliz navidad”.
+      </p>
+      <div *ngIf="show == 36" aria-hidden="true" id="vo_36">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          El problema esté en la descripción de imagen. Cuando posiciones el foco en el botón suprimir, desliza de arriba abajo 
+          hasta explorar la imagen y pulsar dos veces con un dedo.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(36)" *ngIf="show != 36">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 36">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Lee de forma descoordinada la pantalla.
+      </p>
+      <div *ngIf="show == 37" aria-hidden="true" id="vo_37">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Desactivar el reconocimiento de pantalla:
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>Accesibilidad.</li>
+          <li>VoiceOver.</li>
+          <li>Reconocimiento de VoiceOver.</li>
+          <li>Configurar todo lo relativo al reconocimiento de pantalla.</li>
+          <li>Elimina la opción del rotor.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(37)" *ngIf="show != 37">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 37">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='macbook'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Seleccionar un fragmento de texto de un PDF.
+      </p>
+      <div *ngIf="show == 38" aria-hidden="true" id="vo_38">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Leer el texto sin utilizar Vista Previa e ir seleccionando con cursores y shift.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(38)" *ngIf="show != 38">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 38">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Al intentar escribir no se despliega el teclado para poder utilizarlo.
+      </p>
+      <div *ngIf="show == 39" aria-hidden="true" id="vo_39">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Ir a Mensajes y activar APPs oculta:
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>VoiceOver.</li>
+          <li>Braille.</li>
+          <li>Entrada Brailleen pantalla.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(39)" *ngIf="show != 39">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 39">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        La asistencia remota con TeamViewer a un iPhone finaliza en un minuto.
+      </p>
+      <div *ngIf="show == 40" aria-hidden="true" id="vo_40">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Es debido a una característica de las nuevas versiones del sistema operativo iOS. Sucede cuando se utiliza a la vez el 
+          mismo dispositivo para comunicarse entre el técnico y el usuario.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(40)" *ngIf="show != 40">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 40">Ocultar</button>
+  </div>
+</div>

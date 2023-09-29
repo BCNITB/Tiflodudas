@@ -32,11 +32,15 @@
       <button title="Braille Hablado, pulsa para consultar incidencias" (click)="navigateTo('braille hablado')" role="button" class="flex-item">
         Braille Hablado
       </button>
+
+      <button title="Brailliant BI, pulsa para consultar incidencias" (click)="navigateTo('brailliant bi')" role="button" class="flex-item">
+        Brailliant BI
+      </button>
     </div>
 
     <!-- COMUNICADORES SORDOCEGUERA -->
     <button role="button" expand="full" (click)="showOptions(2, 'comunicadores sordoceguera')" id="comunicadores" class="contract-btn" 
-    title="Comunicadores para Sordoceguera, pulsa para mostrar más" disabled aria-expanded="false">
+    title="Comunicadores para Sordoceguera, pulsa para mostrar más" aria-expanded="false">
       Comunicadores personas con Sordoceuera
       <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 2"aria-hidden="true"></ion-icon>
       <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 2" aria-hidden="true"></ion-icon>
@@ -44,12 +48,17 @@
 
     <!-- COMUNICADORES SORDOCEGUERA (hidden btns)-->
     <div *ngIf="showOption == 2" class="flex-container">
-      
+      <p>
+        No se ha reportado ninguan consulta sobre Comunicadores para Sordoceguera. Si quieres registrar una duda o aportar 
+        una solución a un problema detectado, <a href="/new-entry/colaboración" title="Ir a enviar una consulta">Ir a enviar una 
+        nueva consulta</a>. 
+      </p>
+
     </div>
 
     <!-- CONVERSORES -->
     <button role="button" expand="full" (click)="showOptions(3, 'conversores')" id="conversores" class="contract-btn" 
-    title="Conversores, pulsa para mostrar más" disabled aria-expanded="false">
+    title="Conversores, pulsa para mostrar más" aria-expanded="false">
       Conversores
       <ion-icon name="chevron-down-outline" slot="end" aria-hidden="true" *ngIf="showOption != 3"></ion-icon>
       <ion-icon name="chevron-up-outline" slot="end" aria-hidden="true" *ngIf="showOption == 3"></ion-icon>
@@ -57,7 +66,11 @@
   
     <!-- CONVERSORES (hidden btns)-->
     <div *ngIf="showOption == 3" class="flex-container">
-      
+      <p>
+        No se ha reportado ninguan consulta sobre Conversores. Si quieres registrar una duda o aportar 
+        una solución a un problema detectado, <a href="/new-entry/colaboración" title="Ir a enviar una consulta">Ir a enviar una 
+        nueva consulta</a>. 
+      </p>
     </div>
 
     <!-- IMPRESORAS -->
@@ -78,7 +91,7 @@
         Index Everest-D V5
       </button>
 
-      <button (click)="navigateTo('impacto')" title="Impacto, pulsa para consultar incidencias" role="button" class="flex-item" disabled>
+      <button (click)="navigateTo('impacto')" title="Impacto, pulsa para consultar incidencias" role="button" class="flex-item">
         Impacto
       </button>
     </div>
@@ -109,11 +122,11 @@
         TalkBack
       </button>
 
-      <button (click)="navigateTo('voiceassistant')" title="VoiceAssistant, pulsa para consultar incidencias" role="button" class="flex-item" disabled aria-disabled>
+      <button (click)="navigateTo('voiceassistant')" title="VoiceAssistant, pulsa para consultar incidencias" role="button" class="flex-item">
         VoiceAssistant
       </button>
 
-      <button (click)="navigateTo('voiceview')" title="VoiceView, pulsa para consultar incidencias" role="button" class="flex-item" disabled aria-disabled>
+      <button (click)="navigateTo('voiceview')" title="VoiceView, pulsa para consultar incidencias" role="button" class="flex-item">
         VoiceView
       </button>
 
@@ -136,7 +149,7 @@
         Alva
       </button>
       
-      <button (click)="navigateTo('eco')" title="ECO, pulsa para consultar incidencias" role="button" class="flex-item" disabled>
+      <button (click)="navigateTo('eco')" title="ECO, pulsa para consultar incidencias" role="button" class="flex-item">
         ECO
       </button>
       
@@ -336,6 +349,10 @@
       <button (click)="navigateTo('student')" title="Student, pulsa para mostrar incidencias" role="button" class="flex-item">
         Student
       </button>
+
+      <button (click)="navigateTo('transformer')" title="Transformer, pulsa para mostrar incidencias" role="button" class="flex-item">
+        Transformer
+      </button>
     </div>
 
     <!-- SOFTWARE ONCE -->
@@ -348,8 +365,20 @@
 
     <!-- SOFTWARE ONCE (hidden btns)-->
     <div *ngIf="showOption == 15" class="flex-container">
+      <button (click)="navigateTo('club once')" title="ClubONCE, pulsa para mostrar incidencias" role="button" class="flex-item">
+        ClubONCE
+      </button>
+
       <button (click)="navigateTo('portal once')" title="PortalONCE, pulsa para mostrar incidencias" role="button" class="flex-item">
         PortalONCE
+      </button>
+
+      <button (click)="navigateTo('apolo')" title="Apolo ONCE, pulsa para mostrar incidencias" role="button" class="flex-item">
+        Apolo <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr>
+      </button>
+
+      <button (click)="navigateTo('cti')" title="CTI, pulsa para mostrar incidencias" role="button" class="flex-item">
+        <abbr title="Centro de Tecnología e Innovación">CTI</abbr>
       </button>
     </div>
   </ion-list>

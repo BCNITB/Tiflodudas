@@ -1,0 +1,29 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="compatibilidad">Compatibilidad</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='compatibilidad'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: ¿Es compatible la línea braille Alva 570 con un Windows de 64 bits?
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="alva_1">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: No es compatile; es compatible con un Windows de 32 bits pero no con 
+          uno de 64.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+</div>

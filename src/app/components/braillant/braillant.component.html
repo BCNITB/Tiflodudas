@@ -1,0 +1,185 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="actualizcion">Acualización</ion-select-option>
+      <ion-select-option value="comandos">Comandos</ion-select-option>
+      <ion-select-option value="compatibilidad">Compatibilidad</ion-select-option>
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="conexion">Conexión</ion-select-option>
+      <ion-select-option value="linea braille">Línea Braille</ion-select-option>
+      <ion-select-option value="sintesi voz">Síntesis de voz</ion-select-option>
+      
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='actualizcion' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        El menú contextual completo no aparece en la aplicación de Editor. Solo aparecen las opciones: Menú de archivos, 
+        Menú de edición, Menú de marcadores y Cerrar.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="bra_1">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
+          A continuación se detalla cómo proceder para que el menú contextual esté completo:
+        </p>
+          <ol>
+          <li>Desde el menú principal acceder a Opciones 8<i>Espacio + O</i>.</li>
+          <li>Buscar el elemento <b>Cambiar Idioma</b>.</li>
+          <li>Seleccionar el idioma <b>English North America</b>.</li>
+          <li>Pulsar el botón Cerrar.</li>
+          <li>ceptar cuando se pregunta si se quiere reemplazar el perfil Braille por defecto.</li>
+          <li>Aceptar la pregunta para reiniciar.</li>
+        </ol>
+        <p>
+          Una vez hecho esto, el dispositivo se reiniciará y hablará en inglés. Se deberán realizar de nuevo los mismos pasos 
+          para volverlo a poner en Español Europa.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='linea braille' || category=='comandos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Si se pulsa cor + E tras un texto, el mensaje no se envía.
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="bra_2">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Para enviar los mensajes debe utilizarse el mismo procedimiento que con una linea Focus: pulsar el <i>punto 8</i> 
+          y automáticamente se envía.
+        </p>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Para crear una línea nueva: <i>cor + 2 + 7</i> y luego al <i>punto 8</i>.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='sintesi voz'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        La síntesis de voz de Brailliant no lee los textos creados directamente en el Brailliant o añadidos desde un ordenador.
+      </p>
+      <div *ngIf="show == 3" aria-hidden="true" id="bra_3">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Cambiar el idioma a inglés y luego vuelve a cambiarlo a Español Europa. También asegurarse de que en la configuración 
+          estén verificadas las casillas de:
+        </p>
+        <ul>
+          <li>Verbalizar palabra del cursor.
+          <li>Verbalizar el contenido mostrado al desplazarse.
+          <li>Eco de borado.
+          <li>Eco del teclado en cualquiera de los parámetros que vienen menos en el apagado.</li>
+        </ul>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Brailliant sí que lee los textos que se crean o que se importan desde un ordenador en la aplicación de Editor KeyPad. 
+          En la aplicación de editor braille no los lee porque no es texto sino puntos.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Comando o que tecla de Brailliant para acceder a las opciones en un iPhone.
+      </p>
+      <div *ngIf="show == 4" aria-hidden="true" id="bra_4">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          La pulsación equivalente a la tecla de la Focus que no tiene Brailliant es con el comando <b>Cor-3 o cor-6</b>para
+          desplazarse por las opciones del rotor activo, en las listas por defecto esta opción es: Acciones. Para seleccionar la 
+          opción pulsar intro o pulsación en sensores de la línea y <b>Cor-3-6</b> para ejecutarla.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        No me verbaliza el texto que se escribe, ni al navegar por palabras (cor+5 o cor+2), no me lee lo escrito.
+      </p>
+      <div *ngIf="show == 5" aria-hidden="true" id="bra_5">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Cambiar idioma a inglés y volver a cambiarlo a español.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='conexion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Enlazar anotador Brailliant con Android.
+      </p>
+      <div *ngIf="show == 6" aria-hidden="true" id="bra_6">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Brailliant no se puede conectar con dispositivos Android por Bluetooth, se ha de conectar mediante cable.
+        </p>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          No se recomiendo la conexión mediante cable porque, al estar conectado al puerto de carga del móvil, Brailliant 
+          descarga la batería del móvil .
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='compatibilidad'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Abrir un fichero BRA desde los editores del Brailliant BI.
+      </p>
+      <div *ngIf="show == 7" aria-hidden="true" id="bra_7">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Debe convertirse el fichero bra a txt para abrirse como txt.
+        </p>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          No se recomiendo la conexión mediante cable porque, al estar conectado al puerto de carga del móvil, Brailliant 
+          El formato Bra de Braille Hablado no es compatible con el Brailliant, tampoco coincide con el formato que maneja el 
+          editor braille del Brailliant.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+  </div>
+</div>

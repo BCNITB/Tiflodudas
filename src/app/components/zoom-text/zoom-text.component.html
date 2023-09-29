@@ -1,0 +1,319 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="aplicaciones">Aplicaciones</ion-select-option>
+      <ion-select-option value="comandos">Comandos</ion-select-option>
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="forticlient">FortiClient</ion-select-option>
+      <ion-select-option value="no funciona">No funciona</ion-select-option>
+      <ion-select-option value="office">Office</ion-select-option>
+      <ion-select-option value="ztfusion">ZoomText Fusion</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='ampliacion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: ZoomText no amplía.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="zt_1">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Reinstalar ZoomText o probar con una versión anterior.</p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='ampliacion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: En una conexión remota, la magnificación del ZoomText del Pc asistido no 
+        se traslada al PC del asistente.
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="zt_2">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Dependiendo de la versión de ZoomText realizar una de estas dos 
+          acciones:
+        </p>
+        <ul>
+          <li>ZoomText anterior a la version 2022: Ejecutar en el PC asistido el comando Fix-It <b>mageng=comp</b>.</li>
+          <li>ZoomText posterior a la versión 2022: .</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='comandos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Algunas teclas del teclado no funcionan.
+      </p>
+      <p *ngIf="show == 3" aria-hidden="true" id="zt_3">
+        <abbr title="Resolucion" class="emphasy">R</abbr>: Restaurar la configuración por defecto.
+      </p>
+    </div>
+
+    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='ztfusion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Actualización de Zoom Text Fusion.
+      </p>
+      <div *ngIf="show == 4" aria-hidden="true" id="zt_4">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Se ha de actualizar desde el propio programa.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+  </div>
+  
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: ZoomText atenúa su voz cuando se recibe una llamada y está activado el Cisco Jabber.
+      </p>
+      <div *ngIf="show == 5" aria-hidden="true" id="zt_5">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Se deben seguir ls siguiente pasos:
+        </p>
+        <ol>
+          <li>Windows + R.</li>
+          <li>Teclear control.</li>
+          <li>Pulsar S hasta llegar a Sonido.</li>
+          <li>Control + Tabulador hasta Comunicaciones.</li>
+          <li>Situar la opción en <b>No hacer nada</b>.</li>
+          <li>Finalizar.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='no funciona'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: ZoomText deja de funcionar después de una actualización de Windows 10.
+      </p>
+      <div *ngIf="show == 6" aria-hidden="true" id="zt_6">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Desinstalar ZoomText e instalar la última versión del último.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='no funciona'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: La pantalla se pone en negro.
+      </p>
+      <div *ngIf="show == 7" aria-hidden="true" id="zt_7">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Dependiendo de la versión de ZoomText tealizar lo siguiente en el programa:
+        </p>
+        <ul>
+          <li>ZoomText anterior a 2022: </li>
+          <ol>
+            <li>Ayuda de ZoomText.</li>
+            <li>Apoyo Técnico.</li>
+            <li>FixIt.</li>
+            <li>mageng=comp.</li>
+          </ol>
+          <li>En versiones posteriores a ZoomText 2022:</li>
+          <ol>
+            <li>Dedicar una terjeta de vídeo.</li>
+          </ol>
+        </ul>
+        <p>Fuera de Zoomtext:</p>
+        <ul>
+          <li>Añadir ZoomText a las exclusiones del Antivirus.</li>
+          <li>Bajar la escala de la pantalla de 150%.</li>
+          <li>Desactivar/Deshabilitar todas las terjetas gráficas menos una.</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='forticlient'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Al intentar leeer el correo el foco se queda en la barra de tareas.
+      </p>
+      <div *ngIf="show == 8" aria-hidden="true" id="zt_8">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Minimizar la ventana de Forticlient, que hace que no se vea en la barra 
+          de tareas pero sí en la bandeja de sistema como un servicio, no repite la sínstesis del ZT el mensaje de Forticlient. 
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        El programa empieza a ir lento y se congela la pantalla.
+      </p>
+      <div *ngIf="show == 9" aria-hidden="true" id="zt_9">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Realizar alguna de las siguientes acciones:
+        </p>
+        <ol>
+          <li>Comprobar si la opción de aceleración gráfica está activada para los programas más utilizados.</li>
+          <li>En Adobe Reader inhabilitar la opción <i>Modo protegido al iniciar</i>.</li>
+        </ol>
+        <p>
+          <span class="emphasy">Comentarios</span>: 
+          En Microsoft Office está en Opciones Avanzadas denntro del apartado <i>Mostrar</i>.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Portátil con pantalla táctil y sistema operativo Windows 10 con ZoomText instalado (y actualizado). Al 
+        activar ZoomText la pantalla se le va a negro.
+      </p>
+      <div *ngIf="show == 10" aria-hidden="true" id="zt_10">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Desactiva el panel tactil a traves de Administrador de dispositivos de la siguiente forma:
+        </p>
+        <ol>
+          <li>Abrimos el administrador de dispositivos.</li>
+          <li>Nos dirigimos a <i>Dispositivos de interfaz humana</i>.</li>
+          <li>Pulsamos sobre <i>Pantalla táctil compatible con HID</i> con el botón derecho.</li>
+          <li>Pulsamos sobre la opción <i>Desactivar controlador</i>.</li>
+        </ol>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Otras soluciones a probar son:
+        </p>
+        <ul>
+          <li>Comando mageng=comp de Fix-it!.</li>
+          <li>Bajar la resolución de la pantalla.</li>
+          <li>Activar y desactivar ZoomText.</li>
+          <li>Dedicarle una tarjeta grafica.</li>
+          <li>Manipulación del antivirus (aunque tienen el Windows Defender).</li>
+        </ul> 
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Al utilizar ZoomText con aplicaciones de videollamada como Teams, Zoom,... Si se cierra ZoomText y se intentan utilizar 
+        esas aplicaciones, se presenta una pantalla negra que impide sus visualización. 
+      </p>
+      <div *ngIf="show == 11" aria-hidden="true" id="zt_11">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Es un problema de Microsoft. Mientras lo resuelven, si en la configuración de Teams se verifica la opción:
+          <i>Deshabilitar la aceleración de hardware de GPU</i> y se reinicia Teams (lo indica la propia palicación), se resuelve 
+          la incidencia.
+        </p>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Para otras aplicaciones (también puede utilizarse para Teams), se puede solucionat el problema mediante el comando de 
+          Fix-It <i>Mageng=dx</i>.
+        </p> 
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        La inversión de color de ZoomText se desactiva cuando se utiliza en remoto en Vithas mediante Citrix.
+      </p>
+      <div *ngIf="show == 12" aria-hidden="true" id="zt_12">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Se debe a una mala gestión de la tarjeta de vídeo. Seguir el siguiente procedimiento:
+        </p>
+         <ol>
+          <li>En la consola de CITRIX. Cargar la lupa del sistema: Windows + s y escribir lupa.</li>
+          <li>Configurar la lupa al 100%.</li>
+          <li>Activar la inversion de colores con el comando Control + Alt + i.</li>
+          <li>Desactiva la inversion de colores del ZoomText.</li>
+        </ol>
+        <p>
+          Otra opción es activar el modo oscuro del navegador utilizado para realizar el control remoto.
+        </p>
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          En realidad, lo que se está haciendo es utilizar la inversión de colores del Sistema Operativo y no la de ZoomText.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        La interfaz de usuario de ZoomText está en inglés aunque en la configuración aparece que está en castellano.
+      </p>
+      <div *ngIf="show == 13" aria-hidden="true" id="zt_13">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          El problema se soluciona siguiendo el siguiente procedimiento:
+        </p>
+         <ol>
+          <li>Modificando el idioma de la interfaz de usuario a inglés.</li>
+          <li>Aceptar.</li>
+          <li>Reiniciar ZoomText.</li>
+          <li>Modificando el idioma de la interfaz de usuario a castellano.</li>
+          <li>Eeiniciar ZoomText.</li>
+        </ol>        
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+  </div>
+</div>

@@ -1,0 +1,135 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="comandos">Comandos</ion-select-option>
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="test">Test</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='comandos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Cambiar la Orbit de modo <abbr title="Interfaz de Dispositivo Humano">HID</abbr> a local
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="orb_1">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Debemos seguir el siguiente procedimiento: </p>
+        <ol>
+          <li>Seleccionar + flecha arriba</li>.
+          <li>Seleccionar + flecha izquierda</li>.
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: No se puede salir del fichero en uso.
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="orb_2">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Dependiendo de lo que estemos haciendo podemo:
+        </p>
+        <ul>
+          <li>Si se está leyendo el fichero ha de pulsar: <b>el punto 7</b>.</li>
+          <li>Si se está editando se sale pulsando: <b>dos veces select</b> para acceder a un submenú donde debe seleccionarse 
+            la opción <b>Salir (e)</b>.</li>
+          <li>Si no se consigue salir pulsar: <b>espacio + e (puntos 1 5) y el punto 7</b>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: ¿Qué significa Voluta Tarifa?
+      </p>
+      <p *ngIf="show == 3" aria-hidden="true" id="orb_3">
+        <abbr title="Resolucion" class="emphasy">R</abbr>: Permite configurar el autodesplazamiento de la Línea
+      </p>
+    </div>
+
+    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos' || category=='test'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Test de punzones(puntos).
+      </p>
+      <div *ngIf="show == 4" aria-hidden="true" id="orb_4">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Debe seguirse el siguiente procedimiento:
+        </p>
+        <ol>
+          <li>Encender la unidad.</li>
+          <li>Entrar al modo de prueba (manteniendo pulsada la Tecla Espacio y pulsando el botón de Encendido 5 veces).</li>
+          <li>La línea braille muestra el número de serie de la unidad.</li>
+          <li>Elegir entre uno de los siguientes comandos:
+            <ul>
+              <li>Pulsar la tecla de Espacio, esto alternará todos los puntos hacia arriba o hacia abajo con cada pulsación.</li>
+              <li>
+                Pulsar alternativamente la tecla de cada punto (del teclado braille) para que se presenten todos los puntos 
+                correspondientes a ese punto en todas las celdas (es ideal para verificar e indicar a Mantenimiento qué punto y 
+                en qué carácter se encuentra el fallo.
+              </li>
+              <li>
+                Para subir y bajar alternativamente todos los punzones de todos los caracteres, pulsar “Seleccionar + Tecla 
+                Flecha Abajo. Esto también puede ayudar a recuperar los puntos, si están atascados debido al polvo acumulado en 
+                la guía de movimiento del punto.
+              </li>
+            </ul>
+          </li>
+          <li>Tomar nota de los puntos que se comportan mal, si los hay.</li>
+          <li>Permitir que el ejercicio se ejecute durante 4-5 minutos y pulsar “Seleccionar” para detener el proceso.</li>
+          <li>Para salir del test, pulsar la Tecla de Espacio y el botón de Encendido 5 veces, o reiniciar el dispositivo pulsanado el 
+            Punto 8 + la parte inferior de la Tecla de Avance. No hay respuesta aparente al comando.
+          </li>
+          <li>Enciender el dispositivo y verificar, si los puntos atascados se han recuperado.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+  </div>
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='vincular'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: No se consigue vincular Orbit a JAWS.
+      </p>
+      <div *ngIf="show == 5" aria-hidden="true" id="orb_5">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Para poder escribir debe activarse el modo teclado braille. Para ello realizar lo siuiente:
+        </p>
+        <ol>
+          <li>Pulsar flecha derecha + barra espaciadora + punto 6, para habilitar la conexión por USB.</li>
+          <li>Agregar la Orbit Reader a Jaws como si se tratara de una línea braille al uso.</li>
+          <li>Seleccionarla como línea braille predeterminada.</li>
+          <li>Pulsar la barra espaciadora + los puntos del 1 al 6. La Orbit verbalizará el mensaje: modo teclado braille activado.</li>
+        </ol>
+        <p>Este modo braille se utiliza para poder escribir, pero si no se activa, se puede manejar el equipo sin problemas</p>
+        <p>
+          <span class="emphasy">Comentarios</span>: Esta solución tambien serviría para <abbr title="No Visual Desktop Accessibility">NVDA</abbr>.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+  </div>
+</div>

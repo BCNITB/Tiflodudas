@@ -1,0 +1,66 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="aplicaciones">Aplicaciones</ion-select-option>
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Desactivar los menús de contexto en un iPhone.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="ampiOS_1">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Posiblemente se debe a que 3D Touch activado, para desactivarlo:
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>Accesibilidad.</li>
+          <li>Tocar.</li>
+          <li>3D y respuesta áptica.</li>
+          <li>Desactivas 3D Touch.</li>
+        </ol>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Si ha habido una actualización de algún programa o del sistema operativo, actualizar la aplicación.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        La aplicación FichApp no tiene permisos en <abbr title="iPhone Operative System">iOS</abbr>.
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="ampiOS_2">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Se debe activar la opción <i>Confíar en la <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr> como 
+            desarrollador de la <abbr title="aplicación">APP</abbr></i>. Para ello seguir los siguientes pasos: 
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>General.</li>
+          <li><abbr title="Virtual Private Network">VPN</abbr>.</li>
+          <li>Gestión de dispositivos.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+  </div>
+</div>

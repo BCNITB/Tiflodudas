@@ -41,7 +41,12 @@ button:disabled{
 }
 
 button:focus-visible, .focus:focus-visible{
-    border: red solid 0.5em;
+    //border: red solid 0.5em;
+
+    outline: red solid 0.5em;
+    outline-offset: 0.2em;
+
+    z-index: 10;
 }
 
 .danger{
@@ -49,5 +54,8 @@ button:focus-visible, .focus:focus-visible{
 }
 
 .danger:focus-visible{
-    border: yellow solid 0.5em;
+    //border: yellow solid 0.5em;
+
+    outline: red solid 0.5em;
+    outline-offset: 0.2em;
 }

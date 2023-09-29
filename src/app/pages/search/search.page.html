@@ -32,7 +32,7 @@
     [debounce]="1000"
     aria-labelledby="search"
     role="searchbox"
-    naem="result">
+    name="result">
     <span id="search" class="scr">Introduce el término a buscar</span>
   </ion-searchbar>
 
@@ -43,6 +43,11 @@
       <abbr title="Pregunta">P</abbr>: {{ item.consult }}
       <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
     </p>
-    <button (click)="show(item.id)" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración'">Consultar</button>
+    <button (click)="show(item.id)" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración' && item.answer != ''">
+      Consultar
+    </button>
+    <button (click)="show(item.id)" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración' && item.answer == ''">
+      Resolver
+    </button>
   </div>
 </ion-content>

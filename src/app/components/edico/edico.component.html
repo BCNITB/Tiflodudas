@@ -1,0 +1,117 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="instalacion">Instalación</ion-select-option>
+      <ion-select-option value="linea braille">Línea Braille</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='configuracion' || category=='instalacion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        En algunas instalaciones se han detectado problemas con el uso de tipos de letra (fuentes) propias de las aplicaciones, 
+        que hacen que éstas no aparezcan correctamente por restricciones en la seguridad de los equipos donde están instaladas.
+      </p>
+      <p> 
+        En concreto, estos problemas ocurren con la visualización gráfica de <abbr tiile="Editor Científico ONCE">Edico</abbr> en 
+        ordenadores de la Generalitat de Catalunya, pero podrían extenderse a otras plataformas y a otras aplicaciones como 
+        <abbr title="Editor Braille">eBrai</abbr> o los visualizadores de Braille o partituras que también utilizan fuentes propias.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="edico_1">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Realizar los siguientes pasos: 
+        </p>
+        <ol>
+          <li>Iniciar sesión con un usuario que tenga permisos de administrador.</li>
+          <li>Abrir el Editor de directivas locales, pulsando Windows+R.</li>
+          <li>Tecleando gpedit.msc.</li>
+          <li>Pulsar Aceptar.</li>
+          <li>En el árbol de directivas navegar hasta Directiva Equipo local > Configuración del equipo > Plantillas administrativas
+             > Sistema > Opciones de mitigación.</li>
+          <li>
+            En la lista de <i>directivas</i> seleccionar la que se llama <i>Bloqueo de fuentes que no son de confianza</i> y 
+            modificarla. Su estado debe quedar en <i>No configurada</i>.
+          </li>
+          <li>Pulsar <i>Aceptar</i>.</li>
+          <li>
+            Una vez modificada la directiva, se debe reiniciar el PC para que los cambios surtan efecto y que las fuentes de 
+            <abbr title="Editor Científico ONCE">Edico</abbr> o de otras aplicaciones se muestren correctamente.
+          </li>
+        </ol>
+        <p>
+          <span class="emphasy">Comentarios</span>: 
+          <a href="" target="_blank" title="Ver documento en pdf, con imágeners (se abre en una nueva ventana)">
+            Ver documento en pdf (con imágenes)
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='instalacion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Aparece en pantalla el menaje: <i>Cargando aplicación</i>, la ejecución finaliza y la aplicación no arranca.
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="edico_2">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Realizar los siguientes pasos: 
+        </p>
+        <ol>
+          <li>Abrir el Panel de control.</li>
+          <li>Buscar la opción correspondiente a Región.</li>
+          <li>Una vez en la ventana de Región, ir a la pestaña <i>Administrativo.</i>
+          <li>en la zona <i>Idioma para programas no Unicode</i> pulsar el botón <i>Cambiar configuración regional del sistema...</i>.</li>
+          <li>Cambiar el idioma a Español (España), si es otro el que aparece</li>
+          <li>Desactivar la casilla <i>Versión beta: Use UTF-8 Unicode para la compatibilidad de idioma en todo el mundo</i>.</li>
+          <li>Aceptador los cambios en la configuración.</li>
+          <li>Arrancar <abbr title="Editor CientíficoONCE">Edico</abbr>.</li>
+        </ol>
+        <p>
+          El programa debería arrancar de forma correcta.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='linea braille'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Cuando se pulsa un sensir de la línea braille para posicionarse en un lugar determinado de la  misma, el cursor sube 3 
+        líneas.
+      </p>
+      <div *ngIf="show == 3" aria-hidden="true" id="edico_3">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Las siguientes opciones deben estar activadas:
+        </p>
+        <ul>
+          <li>Teclas de la línea braille desplazan el cursor activo.</li>
+          <li>La línea braille sigue el cursor activo.</li>
+        </ul>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Estas configuraciones se encuentran en el gestor de configuración > Braille > General. 
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+  </div>
+</div>

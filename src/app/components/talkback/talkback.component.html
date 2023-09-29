@@ -1,0 +1,134 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="gestos">Gestos</ion-select-option>
+      <ion-select-option value="vincular">Vincular</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='gestos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Descolgar en un Sony Xperia con TalkBack activado.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="tb_1">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Deslizar hacia la derecha con 2 dedos.</p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='dictado'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: El micro del teclado para el dictado aparece atenuado (inactivo).
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="tb_2">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Configurar como predeterminado el teclado de Google (GBoard).
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Activar transcripción de sonidos.
+      </p>
+      <p *ngIf="show == 3" aria-hidden="true" id="tb_3">
+        <abbr title="Resolucion" class="emphasy">R</abbr>: Deben seguirs los siguientes pasos:
+      </p>
+      <ol>
+        <li>Ajustes.</li>
+        <li>Accesibilidad.</li>
+        <li>Transcripción Instánea y Notificaciones de Sonidos.</li>
+      </ol>
+    </div>
+
+    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gestos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Desactivar la voz de TalkBack con un gesto.
+      </p>
+      <div *ngIf="show == 4" aria-hidden="true" id="tb_4">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 3 toques prolongados con 2 dedos.
+        </p>
+        <p>
+          <span class="emphasy">Comentario</span>: Dependiendo de la versión de Android instalada y el modelo 
+          del dispositivo, no existe un gesto para desactivar la voz de Talknack.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+  </div>
+  
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Conexión línea braille con TalkBack.
+      </p>
+      <div *ngIf="show == 5" aria-hidden="true" id="tb_5">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Para añadir una línea braille a Talkback debemos tener instalada 
+          BrailleBack (dependiendo de la versión de Android no está incluido por defecto) y realizar los siguientes pasos:
+        </p>
+        <ol>
+          <li>Activar la conexión mediante Bluetooth.</li>
+          <li>Vicular la línea braille.</li>
+          <li>Ir a:</li>
+          <ol>
+            <li>Ajustes.</li>
+            <li>Accesibilidad.</li>
+            <li>BrailleBack.</li>
+          </ol>
+          <li>Comprobar que la línea braille está enlazada, si no lo est´´a pulsar sobre el desplegable y seleccionarla.</li>
+        </ol>
+        <p class="emphasy">Comentarios:</p>
+          <ul>
+            <li>Actualmente BrailleBack está incluido en la Suite de Accesibilidad de Android.</li>
+            <li>Para que la línea funcione debe estar activado TalkBack.</li>
+          </ul>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='lectura'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Talkback lee la letra N como U.
+      </p>
+      <div *ngIf="show == 6" aria-hidden="true" id="tb_6">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Para añadir una línea braille a Talkback debemos tener instalada 
+          Utilizar el teclado Gboard de Google.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+  </div>
+</div>

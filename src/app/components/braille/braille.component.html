@@ -1,0 +1,124 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="actualizcion">Acualización</ion-select-option>
+      <ion-select-option value="comandos">Comandos</ion-select-option>
+      <ion-select-option value="error">Error</ion-select-option>
+
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='actualizcion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Mensaje reloj no preparado
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="bra_1">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Debemos seguir el siguiente procedimiento: </p>
+        <ol>
+          <li>cor+o</li>
+          <li>s</li>
+          <li>d</li>
+          <li>Introducir la fecha en braille computerizado.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Obtener el número de serie de Braille Hablado 2000.
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="bra_2">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Pulsar la siguiente seguencia de comandos:
+        </p>
+        <ol>
+          <li>Cos + Puntos 1-2-3-4-5-6.</li>
+          <li>Cor + Puntos 1-2-3-4-5-6.</li>
+          <li>Cor + P.</li>
+          <li>Puntos 1-4-5-6.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos' || category=='error'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Error “File system”.
+      </p>
+      <div *ngIf="show == 3" aria-hidden="true" id="bra_3">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          El error en File System a veces se arregla con el reinicio (<i>Cor+i</i>), pero ese arreglo siempre sería provisional. 
+          En cualquier momento volverá a salir.
+        </p>
+        <p>
+          La mejor opción es hacer una copia de respaldo de datos y enviar a CTI. Puede ser tema de baterías o incluso de 
+          resoldaduras de procesador.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Comandos para reaizar una copia de seguridad en Braille hablado 2000 (del BH a la Unidad de disco).
+      </p>
+      <div *ngIf="show == 4" aria-hidden="true" id="bra_4">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          El proceso para realizar una copia de seguridad es:
+        </p>
+        <ol>
+          <li>Cor + S, Y</li>
+          <li>S para enviar.</li>
+          <li>Seleccionar los archivos.</li>
+          <li>Cor + E para enviar</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        ¿Los Comandos copia de seguridad con el Braille hablado 2000 son los mismos en el Braille hablado clásico 2000?
+      </p>
+      <div *ngIf="show == 5" aria-hidden="true" id="bra_5">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Sí.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+  </div>
+</div>

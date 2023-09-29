@@ -1,9 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <a (click)="goBack()" title="Ir atrás" class="back-btn" role="button">
+      <!--<a (click)="goBack()" title="Consultar incidencia ir atrás" class="back-btn" role="button" tabindex="0">
         <img src="../../../assets/left-arrow.png" alt="">  
-      </a>
+      </a>-->
+      <button (click)="goBack()" title="Consultar incidencia ir atrás" class="back-btn">
+        <img src="../../../assets/left-arrow.png" aria-hidden="true">
+      </button>
     </ion-buttons>
     <ion-title>Incidencias sobre {{ cat }} </ion-title>
   </ion-toolbar>
@@ -17,18 +20,97 @@
   </ion-header>
 
   <!-- ALL USERS -->
-  <ng-container *ngFor="let item of items">
-    <div *ngIf="item.item == cat && item.category != 'Solución Propuesta'" class="flex-container" role="list">
-      <p class="question" role="listitem">
-        <abbr title="Pregunta">P</abbr>: {{ item.consult }}
-        <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
-      </p>
-      <button *ngIf="item.category != 'Solución Propuesta' && i != 0" (click)="show(item.id)" class="btn">
-        Consultar
-      </button>
-    </div>
-  </ng-container>
+  <div id="container">
+    <h2>Dudas resueltas</h2>
 
+    <!-- WRITERS -->
+    <app-orbit *ngIf="cat == 'orbit reader 20'"></app-orbit>
+    <app-braille *ngIf="cat == 'braille hablado'"></app-braille>
+    <app-braillant *ngIf="cat == 'brailliant bi'"></app-braillant>
+    
+    <!-- EMBOSSERS -->
+    <app-portathiel *ngIf="cat == 'portathiel'"></app-portathiel>
+    <app-index *ngIf="cat == 'index everest-d v5'"></app-index>
+    <app-impacto *ngIf="cat == 'impacto'"></app-impacto>
+    
+    <!-- SCREEN READERS-->
+    <app-jaws *ngIf="cat == 'jaws'"></app-jaws>
+    <app-narrador *ngIf="cat == 'narrador'"></app-narrador>
+    <app-nvda *ngIf="cat == 'nvda'"></app-nvda>
+    <app-talkback *ngIf="cat == 'talkback'"></app-talkback>
+    <app-v-assistant *ngIf="cat == 'voiceassistant'"></app-v-assistant>
+    <app-v-view *ngIf="cat == 'voiceview'"></app-v-view>
+    <app-v-over *ngIf="cat == 'voiceover'"></app-v-over>
+
+    <!-- Braille Display -->
+    <app-alva *ngIf="cat == 'alva'"></app-alva>
+    <app-eco *ngIf="cat == 'eco'"></app-eco>
+    <app-focus *ngIf="cat == 'focus'"></app-focus>
+    <app-vario-ultra *ngIf="cat == 'varioultra'"></app-vario-ultra>
+
+    <!-- Magnifiers -->
+    <app-amp-android *ngIf="cat == 'ampliación android'"></app-amp-android>
+    <app-amp-ios *ngIf="cat == 'ampliación ios'"></app-amp-ios>
+    <app-amp-mac *ngIf="cat == 'ampliación macos'"></app-amp-mac>
+    <app-lupa-win *ngIf="cat == 'lupa windows'"></app-lupa-win>
+    <app-zoom-text *ngIf="cat == 'zoomtext'"></app-zoom-text>
+    
+    <!-- Phones -->
+    <app-blind-shell *ngIf="cat == 'blindshell'"></app-blind-shell>
+
+    <!-- Educaion Soft -->
+    <app-bme *ngIf="cat == 'bme'"></app-bme>
+    <app-ebrai *ngIf="cat == 'ebrai'"></app-ebrai>
+    <app-edico *ngIf="cat == 'edico'"></app-edico>
+
+    <!-- SmartSpeakers -->
+    <app-alexa *ngIf="cat == 'alexa'"></app-alexa>
+    <app-google-as *ngIf="cat == 'google assistant'"></app-google-as>
+    <app-siri *ngIf="cat == 'siri'"></app-siri>
+
+    <!-- Typing -->
+    <app-mecanet *ngIf="cat == 'mecanet'"></app-mecanet>
+    <app-mekanta *ngIf="cat == 'mekanta'"></app-mekanta>
+    <app-teclado *ngIf="cat == 'teclado 2.0'"></app-teclado>
+  
+    <!-- OCR -->
+    <app-fine-reader *ngIf="cat == 'finereader'"></app-fine-reader>
+    <app-omni-page *ngIf="cat == 'omnipage'"></app-omni-page>
+  
+    <!-- Daisy Players-->
+    <app-gold *ngIf="cat == 'gestor once libros digitales'"></app-gold>
+    <app-milestone *ngIf="cat == 'milestone'"></app-milestone>
+    <app-plextalk *ngIf="cat == 'plextalk'"></app-plextalk>
+    <app-stratus *ngIf="cat == 'victor reader stratus'"></app-stratus>
+    <app-stream *ngIf="cat == 'victor reader stream 2'"></app-stream>
+
+    <!-- Telelupas -->
+    <app-tvlupa *ngIf="cat == 'telelupa'"></app-tvlupa>
+    <app-student *ngIf="cat == 'student'"></app-student>
+    <app-transformer *ngIf="cat == 'transformer'"></app-transformer>
+    
+    <!-- ONCE Soft. -->
+    <app-club-once *ngIf="cat == 'club once'"></app-club-once>
+    <app-portal-once *ngIf="cat == 'portal once'"></app-portal-once>
+    <app-apolo *ngIf="cat == 'apolo'"></app-apolo>
+    <app-cti *ngIf="cat == 'cti'"></app-cti>
+  </div>
+
+  <div> 
+    <h2>Dudas sin resolver</h2>
+  
+    <ng-container *ngFor="let item of items">
+      <div *ngIf="item.item == cat && item.category != 'Solución Propuesta' && item.answer == '' " class="flex-container" role="list">
+        <p class="question" role="listitem">
+          <abbr title="Pregunta">P</abbr>: {{ item.consult }}
+          <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
+        </p>
+        <button *ngIf="item.category != 'Solución Propuesta' && i != 0" (click)="show(item.id)" class="btn">
+          Resolver
+        </button>
+      </div>
+    </ng-container>
+  </div>
   <!-- ONLY ADMIN -->
   <h2 *ngIf="cat == 'colaboración'">Nuevas propuestas para la Base de Datos</h2>
   <ng-container *ngFor="let item of items; let i = index" role="list"> 

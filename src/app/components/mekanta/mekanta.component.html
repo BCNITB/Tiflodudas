@@ -1,0 +1,34 @@
+<p>
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
+</p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="instalacion">Instalación</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='instalacion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Mekanta no se instala.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="mk_1">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Seguir los siguientes pasos:
+        </p>
+        <ol>
+          <li>Reiniciar el equipo.</li>
+          <li>Modificacar la fecha del Sistema Operativo.</li>
+          <li>Desconectarlo de internet el equipo.</li>
+          <li>Volver a instalar.</li>
+        </ol>
+      </div>
+    </div>
+
+    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  </div>
+</div>
