@@ -686,7 +686,7 @@
     <div>
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
-        Al eviar un archivo desde Exce: Archivo > Compartir > Correo electronico > Enviar como datos adjuntos, al escribir la 
+        Al enviar un archivo desde Exce: Archivo > Compartir > Correo electronico > Enviar como datos adjuntos, al escribir la 
         inicial del contacto en el campo <i>Para:</i> aunque se muestra la sugerencia del contacto Jaws no la verbaliza. 
         Ocurre igual cuando se hace con el botón de aplicaciones > enviar a > destinatario de correo.
       </p> 
@@ -1066,25 +1066,31 @@
           <span class="emphasy">Comentarios</span>:
         </p>
       </div>
-
+    </div>
+    
     <button class="btn" (click)="showOpt(46)" *ngIf="show != 46">Consultar</button>
     <button class="btn" (click)="showOpt(0)" *ngIf="show == 46">Ocultar</button>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
     <div>
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
+        Saber en que página estamos en un documento PDF abierto con Adobe Acrobat Reader. 
       </p> 
       <div *ngIf="show == 47" aria-hidden="true" id="jaws_47">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>:
+          Control + Shift + N.
         </p>
         <p>
           <span class="emphasy">Comentarios</span>:
+          Mp es un comando de JAWS, es el comando de navegar a página de Adobe Acrobar Reader, pero JAWS nos dice en 
+          que página estamos.
         </p>
       </div>
-
+    </div>
+    
     <button class="btn" (click)="showOpt(47)" *ngIf="show != 47">Consultar</button>
     <button class="btn" (click)="showOpt(0)" *ngIf="show == 47">Ocultar</button>
   </div>
