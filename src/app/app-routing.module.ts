@@ -52,6 +52,10 @@ const routes: Routes = [
     path: 'accesibilidad',
     loadChildren: () => import('./pages/accesibilidad/accesibilidad.module').then( m => m.AccesibilidadPageModule)
   },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+  },
 
 
 
