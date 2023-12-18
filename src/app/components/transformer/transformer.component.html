@@ -5,13 +5,14 @@
   <ion-item>
     <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
       <ion-select-option value="compatibilidad">Compatibilidad</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
 </ion-list>
 
 <div role="list">
   <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='compatibilidad'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         La lupa transformer vga y su compatinilidad con Windows 11.
@@ -24,12 +25,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='errores'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         A los diez segundos de activar la aplicación y ver la imagen que capta la lupa, si está diez segundos nactiva se 
@@ -43,7 +46,9 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    </div>
   </div>
 </div>

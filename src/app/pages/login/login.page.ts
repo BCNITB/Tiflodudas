@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 import { Items } from 'src/app/interfaces/items';
 
@@ -33,7 +34,11 @@ export class LoginPage implements OnInit {
     private userSrvc: UserService,
     private interactionSrvc: InteractionService,
     private router: Router,
+    private title: Title
   ) { 
+    
+    title.setTitle('Tiflodudas | Área Personal');
+    
     this.mail = "";
     this.pass = "";
 

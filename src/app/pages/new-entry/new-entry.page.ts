@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormArray, Validators, FormBuilder } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 import { Categories } from 'src/app/interfaces/categories';
 import { CATEGORIES } from 'src/app/data/data';
@@ -34,8 +35,10 @@ export class NewEntryPage implements OnInit {
     private fbBuilder: FormBuilder,
     private modalCtrl: ModalController,
     private route: ActivatedRoute,
+    private title: Title
   ) { 
 
+    title.setTitle('Tiflodudas | Consulta');
     //this.logged = String(this.route.snapshot.paramMap.get('id'));
     this.logged = String(localStorage.getItem('state'));
     

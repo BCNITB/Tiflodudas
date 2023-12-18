@@ -1,4 +1,33 @@
 <p>
-  No se ha reportado ninguan consulta sobre el Asstente Inteligente Google Assistant. Si quieres registrar una duda o aportar una
-  solución a un problema detectado, <a href="/new-entry/colaboración" title="Ir a enviar una consulta">Ir a enviar una nueva consulta</a>.
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
 </p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="descarga">Llamadas</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='llamadas'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Al pedirle al asistente de google que llame a un contacto, lo hacemediante whasapp.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="gAss_1">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          La  aplicación predeterminada para las llamadas de voz tiene que ser el teléfono, no WhatsApp.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
+  </div>
+</div>

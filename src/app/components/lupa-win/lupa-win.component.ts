@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-lupa-win',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LupaWinComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private title: Title) {
+    title.setTitle('Magnificación Windows');
+   }
 
   ngOnInit() {}
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-nvda',
@@ -14,7 +15,10 @@ export class NvdaComponent  implements OnInit {
   element: string;
   category: string;
 
-  constructor() { 
+  constructor(private title: Title) {
+    
+    title.setTitle('Non-Visual Desktop Access (NVDA)');
+    
     this.category = 'all';
   }
 

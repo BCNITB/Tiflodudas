@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-edico',
@@ -14,7 +15,9 @@ export class EdicoComponent  implements OnInit {
   element: string;
   category: string;
 
-  constructor() { 
+  constructor(private title: Title) {
+    
+    title.setTitle('Editor Científico ONCE');
     this.category = 'all';
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-braillant',
@@ -14,7 +15,10 @@ export class BraillantComponent  implements OnInit {
   element: string;
   category: string;
 
-  constructor() {
+  constructor(private title: Title) {
+
+    title.setTitle('Braillant');
+    
     this.category='all';
    }
 

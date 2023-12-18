@@ -7,14 +7,14 @@
       <ion-select-option value="actualizcion">Acualización</ion-select-option>
       <ion-select-option value="comandos">Comandos</ion-select-option>
       <ion-select-option value="error">Error</ion-select-option>
-
+      <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
 </ion-list>
 
 <div role="list">
   <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='actualizcion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Mensaje reloj no preparado
       </p>
@@ -29,12 +29,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Obtener el número de serie de Braille Hablado 2000.
@@ -53,12 +55,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos' || category=='error'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Error “File system”.
@@ -76,12 +80,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Comandos para reaizar una copia de seguridad en Braille hablado 2000 (del BH a la Unidad de disco).
@@ -100,12 +106,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         ¿Los Comandos copia de seguridad con el Braille hablado 2000 son los mismos en el Braille hablado clásico 2000?
@@ -118,7 +126,9 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Title } from '@angular/platform-browser';
 
 import { Items } from 'src/app/interfaces/items';
 import { ItemService } from 'src/app/services/item.service';
@@ -21,8 +22,12 @@ export class SearchPage implements OnInit {
 
   constructor(
     private itemsSrvc: ItemService,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private title: Title
   ) { 
+    
+    title.setTitle('Tiflodudas | Búsqueda');
+    
     this.items =[];
     this.showTxt = false;
     this.term = "";

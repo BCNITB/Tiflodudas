@@ -4,6 +4,7 @@
       <!--<a (click)="goBack()" title="Consultar incidencia ir atrás" class="back-btn" role="button" tabindex="0">
         <img src="../../../assets/left-arrow.png" alt="">  
       </a>-->
+      <!--<ion-menu-button></ion-menu-button>-->
       <button (click)="goBack()" title="Consultar incidencia ir atrás" class="back-btn">
         <img src="../../../assets/left-arrow.png" aria-hidden="true">
       </button>
@@ -20,7 +21,7 @@
   </ion-header>
 
   <!-- ALL USERS -->
-  <div id="container">
+  <ion-card class="ion-padding">
     <h2>Dudas resueltas</h2>
 
     <!-- WRITERS -->
@@ -94,23 +95,24 @@
     <app-portal-once *ngIf="cat == 'portal once'"></app-portal-once>
     <app-apolo *ngIf="cat == 'apolo'"></app-apolo>
     <app-cti *ngIf="cat == 'cti'"></app-cti>
-  </div>
+  </ion-card>
 
-  <div> 
+  <ion-card class="ion-padding">
+   
     <h2>Dudas sin resolver</h2>
   
     <ng-container *ngFor="let item of items">
-      <div *ngIf="item.item == cat && item.category != 'Solución Propuesta' && item.answer == '' " class="flex-container" role="list">
+      <div class="flex-container" *ngIf="item.item == cat && item.category != 'Solución Propuesta' && item.answer == '' " class="flex-container" role="list">
         <p class="question" role="listitem">
           <abbr title="Pregunta">P</abbr>: {{ item.consult }}
-          <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
+          <!--<span *ngIf="item.answer == ''" class="super">Solución no disponible</span>-->
         </p>
-        <button *ngIf="item.category != 'Solución Propuesta' && i != 0" (click)="show(item.id)" class="btn">
+        <button *ngIf="item.category != 'Solución Propuesta' && i != 0" (click)="show(item.id)" class="btn flex-btn">
           Resolver
         </button>
       </div>
     </ng-container>
-  </div>
+  </ion-card>
   <!-- ONLY ADMIN -->
   <h2 *ngIf="cat == 'colaboración'">Nuevas propuestas para la Base de Datos</h2>
   <ng-container *ngFor="let item of items; let i = index" role="list"> 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-talkback',
@@ -14,7 +15,9 @@ export class TalkbackComponent  implements OnInit {
   element: string;
   category: string;
 
-  constructor() { 
+  constructor(private title: Title) {
+    
+    title.setTitle('TalkBack');
     this.category="all";
   }
 
@@ -46,9 +49,13 @@ export class TalkbackComponent  implements OnInit {
       this.show = 5;
       break;
     case 6:
-        this.element = "tb_6";
-        this.show = 5;
-        break;
+      this.element = "tb_6";
+      this.show = 5;
+      break;
+    case 7:
+      this.element = "tb_7";
+      this.show = 7;
+      break;
     }
 
     this.elementTemp = this.element;

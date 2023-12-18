@@ -7,6 +7,7 @@
       <ion-select-option value="configuracion">Configuración</ion-select-option>
       <ion-select-option value="gestos">Gestos</ion-select-option>
       <ion-select-option value="vincular">Vincular</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
 </ion-list>
@@ -22,8 +23,10 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='dictado'">
@@ -38,8 +41,10 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
@@ -47,18 +52,22 @@
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Activar transcripción de sonidos.
       </p>
-      <p *ngIf="show == 3" aria-hidden="true" id="tb_3">
-        <abbr title="Resolucion" class="emphasy">R</abbr>: Deben seguirs los siguientes pasos:
-      </p>
-      <ol>
-        <li>Ajustes.</li>
-        <li>Accesibilidad.</li>
-        <li>Transcripción Instánea y Notificaciones de Sonidos.</li>
-      </ol>
+      <div *ngIf="show == 3" aria-hidden="true" id="tb_3">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Deben seguirs los siguientes pasos:
+        </p>
+        <ol>
+          <li>Ajustes.</li>
+          <li>Accesibilidad.</li>
+          <li>Transcripción Instánea y Notificaciones de Sonidos.</li>
+        </ol>
+      </div>
     </div>
 
-    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gestos'">
@@ -77,8 +86,10 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    </div>
   </div>
   
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
@@ -110,8 +121,10 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='lectura'">
@@ -128,7 +141,29 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div>
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        El doble toque no funciona de forma correcta.
+      </p>
+      <div *ngIf="show == 6" aria-hidden="true" id="tb_6">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Para añadir una línea braille a Talkback debemos tener instalada 
+          Reducir el tamaño de la fuente.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+    </div>
   </div>
 </div>

@@ -11,13 +11,14 @@
       <ion-select-option value="no funciona">No funciona</ion-select-option>
       <ion-select-option value="office">Office</ion-select-option>
       <ion-select-option value="ztfusion">ZoomText Fusion</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
 </ion-list>
 
 <div role="list">
   <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='ampliacion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: ZoomText no amplía.
       </p>
@@ -26,12 +27,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='ampliacion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: En una conexión remota, la magnificación del ZoomText del Pc asistido no 
         se traslada al PC del asistente.
@@ -48,12 +51,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='comandos'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Algunas teclas del teclado no funcionan.
       </p>
@@ -62,12 +67,14 @@
       </p>
     </div>
 
-    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='ztfusion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Actualización de Zoom Text Fusion.
       </p>
@@ -78,12 +85,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    </div>
   </div>
   
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: ZoomText atenúa su voz cuando se recibe una llamada y está activado el Cisco Jabber.
       </p>
@@ -102,12 +111,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='no funciona'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: ZoomText deja de funcionar después de una actualización de Windows 10.
       </p>
@@ -118,12 +129,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='no funciona'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: La pantalla se pone en negro.
       </p>
@@ -153,12 +166,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='forticlient'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Al intentar leeer el correo el foco se queda en la barra de tareas.
       </p>
@@ -170,12 +185,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         El programa empieza a ir lento y se congela la pantalla.
@@ -195,12 +212,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Portátil con pantalla táctil y sistema operativo Windows 10 con ZoomText instalado (y actualizado). Al 
@@ -231,12 +250,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Al utilizar ZoomText con aplicaciones de videollamada como Teams, Zoom,... Si se cierra ZoomText y se intentan utilizar 
@@ -257,12 +278,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         La inversión de color de ZoomText se desactiva cuando se utiliza en remoto en Vithas mediante Citrix.
@@ -288,12 +311,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         La interfaz de usuario de ZoomText está en inglés aunque en la configuración aparece que está en castellano.
@@ -313,7 +338,9 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+    </div>
   </div>
 </div>

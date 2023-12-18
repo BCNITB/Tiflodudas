@@ -8,14 +8,14 @@
       <ion-select-option value="lectura">Lectura</ion-select-option>
       <ion-select-option value="movil">Móvil</ion-select-option>
       <ion-select-option value="pausa lectura">Pausa lectura</ion-select-option>
-      <!--<ion-select-option value="configuracion">Configuración</ion-select-option>
-      --></ion-select>
+      <ion-select-option value="all">Todo</ion-select-option>
+    </ion-select>
   </ion-item>
 </ion-list>
 
 <div role="list">
   <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='pausa lectura' || category=='movil'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
         La lectura se pausa cuando se apaga la pantalla del terminal.
@@ -28,13 +28,15 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
   </div>
 
   <div role="list">
     <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura' || category=='movil'">
-      <div>
+      <div class="flex-item txt">
         <p>
           <abbr title="Consulta" class="emphasy">C</abbr>:
           En alguno de los libros descargados cuando se para la lectura, al reanudarla, vuelve al principio de todo.
@@ -57,39 +59,14 @@
         </div>
       </div>
   
-      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
-
-      <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura' || category=='movil'">
-        <div>
-          <p>
-            <abbr title="Consulta" class="emphasy">C</abbr>:
-            En alguno de los libros descargados cuando se para la lectura, al reanudarla, vuelve al principio de todo.
-          </p>
-          <div *ngIf="show == 2" aria-hidden="true" id="gold_2">
-            <p>
-              <abbr title="Resolucion" class="emphasy">R</abbr>:
-              Eliminar la caché de GOLD y reinstalar la aplicación. Para borrar la caché:
-            </p>
-            <ol>
-              <li>Ajustes.</li>
-              <li>Almacenamiento.</li>
-              <li>Otras aplicaciones o Ajustes.</li>
-              <li>Aplicaciones y notificaciones.</li>
-            </ol>
-            <p>
-              <span class="emphasy">Comentarios</span>:
-              ¡Cuidado! Si se pulsa en <b>Borrar almacenamiento</b> se borrarán todos los libros descargados.
-            </p>
-          </div>
-        </div>
-    
+      <div class="flex-btn">
         <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
         <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+      </div>
     </div>
 
     <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='movil'">
-      <div>
+      <div class="flex-item txt">
         <p>
           <abbr title="Consulta" class="emphasy">C</abbr>:
           No se puede descargar libros, da el mensaje: <b>error en la descarga</b>.
@@ -112,12 +89,14 @@
         </div>
       </div>
   
-      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+      <div class="flex-btn">
+        <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+        <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+      </div>
     </div>
 
     <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='movil'">
-      <div>
+      <div class="flex-item txt">
         <p>
           <abbr title="Consulta" class="emphasy">C</abbr>:
           Instalar una versión anterior de una aplicación ya que el iOS es antiguo y no es compatible.
@@ -132,12 +111,14 @@
         </div>
       </div>
   
-      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+      <div class="flex-btn">
+        <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+        <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+      </div>
     </div>
 
     <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='movil'">
-      <div>
+      <div class="flex-item txt">
         <p>
           <abbr title="Consulta" class="emphasy">C</abbr>:
           Al iniciar cuenta en Gestor ONCE Libros Digitales foco se queda atrapado en el campo de edición de texto de usuario.
@@ -151,7 +132,29 @@
         </div>
       </div>
   
-      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+      <div class="flex-btn">
+        <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+        <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+      </div>
+    </div>
+
+    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='descarga'">
+      <div class="flex-item txt">
+        <p>
+          <abbr title="Consulta" class="emphasy">C</abbr>:
+          No se pueden descargar audiolibros en un ordenador.
+        </p>
+        <div *ngIf="show == 5" aria-hidden="true" id="gold_6">
+          <p>
+            <abbr title="Resolucion" class="emphasy">R</abbr>:  
+            Cerrar sesión y volver a iniciarla.
+          </p>
+        </div>
+      </div>
+  
+      <div class="flex-btn">
+        <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+        <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+      </div>
     </div>
 </div>

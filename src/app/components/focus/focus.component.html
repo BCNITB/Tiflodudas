@@ -6,13 +6,14 @@
     <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
       <ion-select-option value="comandos">Comandos</ion-select-option>
       <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
 </ion-list>
 
 <div role="list">
   <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='comandos' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Configurar entrada y salida con un comando.
       </p>
@@ -27,12 +28,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Escribir línea nueva.
       </p>
@@ -43,12 +46,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         La línea braille dejó de funcionar en el equipo. Cuando se conecta la línea braille al ordenador por puerto USB y se accede
@@ -85,12 +90,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Al utilizar una línea braille Focus blue 40 para escribir en Word no se escribe el texto hasta pulsar la tecla espacio.
@@ -106,12 +113,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='comandos'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Cambiar la configuración del teclado de una línea focus a una mano.
@@ -138,12 +147,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
         La línea braille dejó de funcionarle en este equipo.
@@ -170,8 +181,11 @@
           title="Descarga el driver de Freedom Scientific (se abre en una nueva ventana)">Descarga el driver de Freedom Scientific</a>.
         </p>
       </div>
+    </div>
 
-    <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-bme',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BmeComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private title: Title) {
+    title.setTitle('Braille Music Editor');
+   }
 
   ngOnInit() {}
 

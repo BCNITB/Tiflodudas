@@ -8,7 +8,7 @@
       <ion-select-option value="configuracion">Configuración</ion-select-option>
       <ion-select-option value="cookies">Cookies</ion-select-option>
       <ion-select-option value="correo">Correo Electrónico</ion-select-option>
-      <ion-select-option value="gestos">Gestos</ion-select-option>
+      <ion-select-option value="gestos">Gestos/Comandos</ion-select-option>
       <ion-select-option value="gold">Gestor <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr> Libros Digitales</ion-select-option>
       <ion-select-option value="icloud">iCloud</ion-select-option>
       <ion-select-option value="ipad">iPad</ion-select-option>
@@ -17,13 +17,14 @@
       <ion-select-option value="siri">Siri</ion-select-option>
       <ion-select-option value="vincular">Vincular</ion-select-option>
       <ion-select-option value="whatsapp">WhatsApp</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
 </ion-list>
 
 <div role="list">
   <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='vincular'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: El iPhone no detecta la línea Braille.
       </p>
@@ -34,12 +35,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gestos'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: el iphone no reconoce los flicks.
       </p>
@@ -50,12 +53,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Evitar que Voice Over diga: <i>pantalla bloqueada</i>.
       </p>
@@ -64,12 +69,14 @@
       </p>
     </div>
 
-    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: El iPhone no deja modificar la velocidad de la voz.
       </p>
@@ -80,11 +87,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    <div class="flex-btn">>
+      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    </div>
   </div>
+
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: El botón de dictado aparece atenuado, aunque puede activarse desde la 
         línea braille.
@@ -96,12 +106,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    </div>
   </div>
   
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Al recibir una llamada y descolgar, si se separa el erminal de la oreja salta 
         automáticamente el altavoz.
@@ -120,12 +132,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Cuando se consulta una notificación y entra una llamada o un mensaje, 
         el nuevo elemento se superpone al antiguo.
@@ -153,12 +167,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='ipad'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Conectar por acceso remoto con un iPad.
       </p>
@@ -172,12 +188,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='whatsapp'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: VoiceOver no verbaliza la letra al escribirla, ni la palabra cuando en 
         el rotor se seleccionan navegación por palabras para realizar una corrección (por ejemplo).
@@ -189,12 +207,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='potalonce'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: No se puede utilizar la aplicación de PortalONCE.
       </p>
@@ -214,12 +234,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gold'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: VoiceOver tiene un mal funcionamiento al leer un libro, no responde a 
         los gestos o lo hace tarde y el terminal se sobrecalienta.
@@ -231,12 +253,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gold'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Error en la aplicación con iPod touch; las listas de búsqueda salen vacías.
       </p>
@@ -247,12 +271,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: El teléfono vibra al realizar un flick.
       <p>
@@ -277,12 +303,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(13)" *ngIf="show != 13">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 13">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(13)" *ngIf="show != 13">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 13">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='siri'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Hay contactos que no aparecen en la agenda pero Siri si que los reconoce.
       <p>
@@ -293,12 +321,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(14)" *ngIf="show != 14">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 14">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(14)" *ngIf="show != 14">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 14">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Como conectar un iPhone con un MAC sin utilizr iTunes.
       <p>
@@ -309,12 +339,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(15)" *ngIf="show != 15">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 15">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(15)" *ngIf="show != 15">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 15">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='cookies'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Activar/desactivar cokies.
       <p>
@@ -331,12 +363,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(16)" *ngIf="show != 16">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 16">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(16)" *ngIf="show != 16">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 16">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: El iPhone no detecta la línea Braille.
       <p>
@@ -351,12 +385,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(18)" *ngIf="show != 18">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 18">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(18)" *ngIf="show != 18">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 18">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='siri'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Siri no llama el buzón de voz.
       <p>
@@ -368,12 +404,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(19)" *ngIf="show != 19">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 19">Ocultar</button>
-  </div>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(19)" *ngIf="show != 19">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 19">Ocultar</button>
+    </div>
+    </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: El teléfono no se cuelga al pulsar dos veces con dos dedos.
       <p>
@@ -384,12 +422,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(20)" *ngIf="show != 20">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 20">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(20)" *ngIf="show != 20">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 20">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='correo'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: No entran las notificaciones de correo nuevo.
       <p>
@@ -406,12 +446,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(21)" *ngIf="show != 21">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 21">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(21)" *ngIf="show != 21">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 21">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Como asignar un acceso a dictado.
       <p>
@@ -435,12 +477,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(22)" *ngIf="show != 22">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 22">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(22)" *ngIf="show != 22">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 22">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='macbook'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Ir a inicio y final del documento con un teclado de MacBook Pro.
       <p>
@@ -457,12 +501,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(23)" *ngIf="show != 23">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 23">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(23)" *ngIf="show != 23">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 23">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Como conectar una línea Braille a un Apple Watch.
       <p>
@@ -481,12 +527,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(24)" *ngIf="show != 24">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 24">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(24)" *ngIf="show != 24">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 24">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='whatsapp'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Evitar que VvoiceOver, en los grupos de WhassApp, diga: 
         <i>información del contacto</i> al lado de cada mensaje.
@@ -498,12 +546,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(25)" *ngIf="show != 25">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 25">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(25)" *ngIf="show != 25">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 25">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='imagenes'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: VoiceOver no puede ver las fotos de la galería haciendo flick, las ve 
         deslizando el dedo por la pantalla (rastreo).
@@ -516,12 +566,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(26)" *ngIf="show != 26">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 26">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(26)" *ngIf="show != 26">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 26">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Si se trata de acceder a un enlace para unirse a una reunión de Zoom no resulta posible, no se abre la aplicación Zoom. 
@@ -540,12 +592,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(27)" *ngIf="show != 27">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 27">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(27)" *ngIf="show != 27">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 27">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         VoiceOver verbaliza todos los signos de puntuación: Puntos, comas, dos puntos, 
@@ -559,12 +613,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(28)" *ngIf="show != 28">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 28">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(28)" *ngIf="show != 28">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 28">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Cómo obtener las teclas de función de un MarcBook Pro con TouchBar en un Windows cargado utlizando BoothCamp.
@@ -585,12 +641,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(29)" *ngIf="show != 29">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 29">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(29)" *ngIf="show != 29">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 29">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Hacer que VoiceOver hable más bajo mientras se tiene una conversación telefónica.
@@ -611,12 +669,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(30)" *ngIf="show != 30">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 30">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(30)" *ngIf="show != 30">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 30">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Al añadir un contacto con VoiceOver marcando el número, si se valuego a la opción de añadir contacto, la opción del 
@@ -631,12 +691,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(31)" *ngIf="show != 31">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 31">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(31)" *ngIf="show != 31">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 31">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         No se puede hacer un bizum con la app de la Caixa utilizando VoiceOver al estar oculto el botón "continuar".
@@ -649,12 +711,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(32)" *ngIf="show != 32">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 32">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(32)" *ngIf="show != 32">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 32">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Seleccionar un rango de fila o columna en una hoja de cálculo con VoiceOver en la aplicación hojas de Cálculo de Google.
@@ -681,12 +745,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(33)" *ngIf="show != 33">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 33">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(33)" *ngIf="show != 33">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 33">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         VoiceOver dice <i>muiriel</i> cuando debería decir <i>muriel</i>.
@@ -703,12 +769,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(34)" *ngIf="show != 34">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 34">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(34)" *ngIf="show != 34">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 34">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='aplicaciones'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         VoiceOver verbaliza el logo, otros, y la hora a la que le han enviado el audio de WhatsApp.
@@ -721,12 +789,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(35)" *ngIf="show != 35">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 35">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(35)" *ngIf="show != 35">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 35">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='aplicaciones'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Al pulsar el botón suprimir en WhatsappVoiceOver verbaliza: suprimir “feliz navidad”.
@@ -740,12 +810,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(36)" *ngIf="show != 36">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 36">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(36)" *ngIf="show != 36">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 36">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Lee de forma descoordinada la pantalla.
@@ -766,12 +838,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(37)" *ngIf="show != 37">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 37">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(37)" *ngIf="show != 37">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 37">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='macbook'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Seleccionar un fragmento de texto de un PDF.
@@ -784,12 +858,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(38)" *ngIf="show != 38">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 38">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(38)" *ngIf="show != 38">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 38">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Al intentar escribir no se despliega el teclado para poder utilizarlo.
@@ -808,12 +884,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(39)" *ngIf="show != 39">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 39">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(39)" *ngIf="show != 39">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 39">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         La asistencia remota con TeamViewer a un iPhone finaliza en un minuto.
@@ -827,7 +905,42 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(40)" *ngIf="show != 40">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 40">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(40)" *ngIf="show != 40">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 40">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gestos' || category=='macbook'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Comando para activar o desactivar el habla de VoiceOver en un Mac.
+      </p>
+      <div *ngIf="show == 40" aria-hidden="true" id="vo_41">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Para silenciar VoiceOver con comandos seguir el siguiente procedimiento:
+        </p>
+        <ol>
+          <li>Pulsar VO + Comando + Mayúsculas + Flecha derecha hasta que escuches <i>Volumen</i>.</li>
+          <li>Pulsar VO + Comando + Mayúsculas + Flecha abajo repetidamente para bajar el volumen.</li>
+        </ol>
+        <p>
+          Para silencia VoiceOver mediante menú seguir el siguiente procedimiento:
+        </p>
+        <ol>
+          <li>>Abrir Utilidad VoiceOver (pulsa VO + F8 cuando VoiceOver esté activo).</li>
+          <li>Acceder a la categoría <b>Habla</b>.</li>
+          <li>acceder a <b>Voces</b>.</li>
+          <li>Seleccionar <b>Silenciar habla</b>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(41)" *ngIf="show != 41">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 41">Ocultar</button>
+    </div>
   </div>
 </div>

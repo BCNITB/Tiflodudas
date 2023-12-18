@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-gold',
@@ -14,7 +15,10 @@ export class GoldComponent  implements OnInit {
   element: string;
   category: string;
 
-  constructor() { 
+  constructor(private title: Title) {
+    
+    title.setTitle('Gestor ONCE de Libros Digitales');
+    
     this.category = 'all';
   }
 
@@ -42,13 +46,13 @@ export class GoldComponent  implements OnInit {
         this.show = 4;
         break;
       case 5:
-        this.element = "focus_5";
+        this.element = "gold_5";
         this.show = 5;
         break;
-      /*case 6:
-        this.element = "focus_6";
+      case 6:
+        this.element = "gold_6";
         this.show = 6;
-        break;*/
+        break;
     }
 
     this.elementTemp = this.element;

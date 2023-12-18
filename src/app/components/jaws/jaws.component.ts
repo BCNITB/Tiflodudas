@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-jaws',
@@ -14,7 +15,9 @@ export class JawsComponent  implements OnInit {
   element: string;
   category: string;
 
-  constructor() { }
+  constructor(private title: Title) {
+    title.setTitle('JAWS');
+   }
 
   ngOnInit() {
     this.category="all";
@@ -211,6 +214,14 @@ export class JawsComponent  implements OnInit {
       case 47:
         this.element = "jaws_47";
         this.show = 47;
+        break;
+      case 48:
+        this.element = "jaws_48";
+        this.show = 48;
+        break;
+      case 49:
+        this.element = "jaws_49";
+        this.show = 49;
         break;
     }
 

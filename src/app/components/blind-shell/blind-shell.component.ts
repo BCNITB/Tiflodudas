@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blind-shell',
@@ -14,7 +15,10 @@ export class BlindShellComponent  implements OnInit {
   element: string;
   category: string;
 
-  constructor() { 
+  constructor(private title: Title) {
+    
+    title.setTitle('BlindShell');
+    
     this.category = 'all';
   }
 
@@ -73,6 +77,14 @@ export class BlindShellComponent  implements OnInit {
           this.element = "bs_12";
           this.show = 12;
           break;
+        case 13:
+            this.element = "bs_13";
+            this.show = 13;
+            break;
+          case 14:
+            this.element = "bs_14";
+            this.show = 14;
+            break;
     }
 
     this.elementTemp = this.element;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-teclado',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TecladoComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private title: Title) {
+    title.setTitle('Teclado 2.0');
+   }
 
   ngOnInit() {}
 

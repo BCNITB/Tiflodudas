@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-consult',
@@ -11,7 +12,12 @@ export class ConsultPage implements OnInit {
   showOption: any;
   showClass: string;
 
-  constructor(private navCtrl: NavController) {
+  constructor(
+    private navCtrl: NavController,
+    private title: Title) {
+    
+    title.setTitle('Tiflodudas | Consulta Base de Datos');
+
     this.showOption = 1;
     this.showClass = '';
    }

@@ -11,16 +11,17 @@
       <ion-select-option value="contactos">Contactos</ion-select-option>
       <ion-select-option value="control por voz">Control por voz</ion-select-option>
       <ion-select-option value="correo">Correo</ion-select-option>
-      <ion-select-option value="marcacion rapida">Marcación Rápida</ion-select-option>
+      <ion-select-option value="llamadas">Llamadas</ion-select-option>
       <ion-select-option value="notificaciones">Notificaciones</ion-select-option>
       <ion-select-option value="version">Versión</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
 </ion-list>
 
 <div role="list">
   <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='lite' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Blindshell lite, no conserva la fecha, sí la hora, al apagarse.
       </p>
@@ -29,12 +30,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='marcacion rapida' || category=='version'">
-    <div>
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='llamadas' || category=='version'">
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         En la versión Blindshell 5.1.0.13-master, el teléfono en la marcación rápida no dice el nombre de la person a la que 
@@ -45,12 +48,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='control por voz'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         El contro por voz del BlindShell 2 no da tiempo a hablar y dice: <i>hable más alto</i>.
@@ -62,12 +67,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='corro' || category=='notificaciones'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Las notificaciones no muestran los correos nuevos que no se han leído, es necesario acceder a la aplicación de correos.
@@ -84,12 +91,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Configurar en el navegador que cuando se llege a un enlace se escuche un sonido
@@ -106,12 +115,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Modificar pin en BlindShell Lite.
@@ -129,12 +140,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='contactos'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Importar agenda de contacto de iPhone a BlindShell.
@@ -172,12 +185,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         No se pueden borrar los chats (uno a uno) en WhatsApp.
@@ -189,12 +204,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lite' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Cambiar el idioma del teléfono.
@@ -219,12 +236,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Ordenar aplicaicones favoritas en BlindShell.
@@ -238,12 +257,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         ¿Que significa el mensaje código MMI no valido?
@@ -260,12 +281,14 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+    </div>
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Solucionar el error de Código MMI.
@@ -292,7 +315,51 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='llamadas'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Bloqueo de llamadas.
+      </p>
+      <div *ngIf="show == 12" aria-hidden="true" id="bs_13">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          No es posible bloquear llamadas.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(13)" *ngIf="show != 13">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 13">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='classic'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Con la última actualización de WhatsApp (octubre 2023) falla el envío de mensajes de voz. Al mantener pulsado el botón 
+        verde cambia a mensaje de video y falla.
+      </p>
+      <div *ngIf="show == 12" aria-hidden="true" id="bs_14">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>:
+          Para cambiar entre vídeo y audio se utiliza una pulsación breve del botón verde y, una vez que se deja en audio, si 
+          se mantiene la pulsación de este botón, se graba el mensaje de voz sin problemas. 
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(14)" *ngIf="show != 14">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 14">Ocultar</button>
+    </div>
   </div>
 </div>

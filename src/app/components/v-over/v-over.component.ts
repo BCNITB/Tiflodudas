@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-v-over',
@@ -14,7 +15,9 @@ export class VOverComponent  implements OnInit {
   element: string;
   category: string;
 
-  constructor() { 
+  constructor(private title: Title) {
+    
+    title.setTitle('VoiceOver');
     this.category = 'all';
   }
 
@@ -185,6 +188,10 @@ export class VOverComponent  implements OnInit {
         this.element = "vo_40";
         this.show = 40;
         break;
+        case 41:
+          this.element = "vo_41";
+          this.show = 41;
+          break;
     }
 
     this.elementTemp = this.element;

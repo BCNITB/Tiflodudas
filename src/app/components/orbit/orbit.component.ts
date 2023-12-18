@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-orbit',
@@ -13,8 +14,11 @@ export class OrbitComponent  implements OnInit {
   elementTemp: string;
   element: string;
   category: string;
-
-  constructor() { 
+  
+  constructor(private title: Title) {
+    
+    title.setTitle('Orbite Reader');
+    
     this.category="all";
   }
 

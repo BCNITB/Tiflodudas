@@ -36,18 +36,24 @@
     <span id="search" class="scr">Introduce el término a buscar</span>
   </ion-searchbar>
 
-  <h2 *ngIf="term.length > 0">Soluciones encontradas para: {{ term }}</h2>
+  <hr *ngIf="result.length == 0" class="title" role="decorative">
+
+  <div *ngIf="result.length > 0" class="title">
+    <h2>Soluciones encontradas para: {{ result }}</h2>
+  </div>
   <!--<div *ngFor="let item of items | filter: term:'classification'" class="flex-container" role="listitem">-->
   <div *ngFor="let item of items | filter: result" class="flex-container" role="listitem">
     <p class="consult" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración'">
       <abbr title="Pregunta">P</abbr>: {{ item.consult }}
       <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
     </p>
-    <button (click)="show(item.id)" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración' && item.answer != ''">
-      Consultar
-    </button>
-    <button (click)="show(item.id)" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración' && item.answer == ''">
-      Resolver
-    </button>
+    <div class="flex-btn">
+      <button (click)="show(item.id)" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración' && item.answer != ''">
+        Consultar
+      </button>
+      <button (click)="show(item.id)" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración' && item.answer == ''">
+        Resolver
+      </button>
+    </div>
   </div>
 </ion-content>

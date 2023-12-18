@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-index',
@@ -9,7 +10,10 @@ export class IndexPage implements OnInit {
 
   logged: string;
 
-  constructor() { 
+  constructor(private title: Title) {
+    
+    title.setTitle('Tiflodudas');
+    
     if(localStorage.getItem('state') == undefined){
       localStorage.setItem('state', 'no connected');
       this.logged = "no connected";

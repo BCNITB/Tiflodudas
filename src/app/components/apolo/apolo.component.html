@@ -7,9 +7,8 @@
       <ion-select-option value="lite">Lite</ion-select-option>
       <ion-select-option value="fire">Fire TV</ion-select-option>
       <ion-select-option value="instalacion">Instalación</ion-select-option>
-      <!--
-      <ion-select-option value="contactos">Contactos</ion-select-option>
-      <ion-select-option value="control por voz">Control por voz</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
+      <!--<ion-select-option value="control por voz">Control por voz</ion-select-option>
       <ion-select-option value="correo">Correo</ion-select-option>
       <ion-select-option value="marcacion rapida">Marcación Rápida</ion-select-option>
       <ion-select-option value="notificaciones">Notificaciones</ion-select-option>
@@ -20,7 +19,7 @@
 
 <div role="list">
   <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='fire' || category=='instalacion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         No se puede instalar Apolo ONCE en el Fire <abbr title="Televión">TV</abbr>.
@@ -32,6 +31,8 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
   </div>
