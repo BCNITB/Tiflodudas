@@ -8,11 +8,18 @@ import { Title } from '@angular/platform-browser';
 })
 export class ContactPage implements OnInit {
 
+  mail: string = "ing.geol@gmail.com";
+
   constructor(private title: Title) {
     title.setTitle('Tiflodudas | Contacto');
    }
 
   ngOnInit() {
+  }
+
+  sendEmail(){
+    let email = "mail.to" + this.mail;
+    window.open(email, "_system");
   }
 
 }
