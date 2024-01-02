@@ -42,8 +42,8 @@
     </p>
     <p *ngIf="count > 0">
       Hay {{ count }} 
-      <span *ngIf="count > 1">soluciones proupuestas</span>
-      <span *ngIf="count == 1">solución proupuesta</span> 
+      <span *ngIf="count > 1">soluciones proupuestas.</span>
+      <span *ngIf="count == 1">solución proupuesta.</span> 
       para revisar.
     </p>
 
@@ -52,16 +52,32 @@
     </p>
     <p *ngIf="countNew > 0">
       Hay {{ countNew }} 
-      <span *ngIf="countNew > 1">nuevas aportaciones</span>
-      <span *ngIf="countNew == 1">nueva aportación</span> 
+      <span *ngIf="countNew > 1">nuevas aportaciones.</span>
+      <span *ngIf="countNew == 1">nueva aportación.</span> 
+      para revisar.
+    </p>
+
+    <p *ngIf="countContact == 0">
+      No hay mensajes nuevos.
+    </p>
+    <p *ngIf="countContact > 0">
+      Hay {{ countContact }} 
+      <span *ngIf="countContact > 1">mensjes nuevos.</span>
+      <span *ngIf="countContact == 1">mensaje nuevo.</span> 
       para revisar.
     </p>
 
     <div class="flex-container">
       <button (click)="seeSol(1)" *ngIf="count == 1">Ver Propuesta</button>
       <button (click)="seeSol(1)" *ngIf="count > 1">Ver Propuestas</button>
+
       <button (click)="seeSol(2)" *ngIf="countNew == 1">Ver Aportación</button>
       <button (click)="seeSol(2)" *ngIf="countNew > 1">Ver Aportaciones</button>
+
+      <button (click)="seeSol(3)" *ngIf="countContact == 1">Ver Mensje</button>
+      <button (click)="seeSol(3)" *ngIf="countContact > 1">Ver Mensajes</button>
+      <button (click)="seeSol(3)">Ver Mensajes</button>
+
       <button routerLink="/new-entry/admin" id="new">Nueva Entrada</button>
     </div>
   </div>

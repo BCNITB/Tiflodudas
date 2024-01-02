@@ -7,11 +7,11 @@ import { ItemService } from 'src/app/services/item.service';
 import { InteractionService } from 'src/app/services/interaction.service';
 
 @Component({
-  selector: 'app-form-modal',
-  templateUrl: './form-modal.page.html',
-  styleUrls: ['./form-modal.page.scss'],
+  selector: 'app-contact-modal',
+  templateUrl: './contact-modal.page.html',
+  styleUrls: ['./contact-modal.page.scss'],
 })
-export class FormModalPage implements OnInit {
+export class ContactModalPage implements OnInit {
 
   id:             string;
   category:       string;
@@ -33,14 +33,14 @@ export class FormModalPage implements OnInit {
     private modalCtrl: ModalController,
     private interactionSrvc: InteractionService
   ) {
-    this.id = navParams.get('iid');
+    this.id = navParams.get('id');
     this.category = navParams.get('category');  
-    this.item = navParams.get('item');
-      this.classification = navParams.get('classification');
-      this.consult = navParams.get('consult');
-      this.answer = navParams.get('answer');
-      this.comments = navParams.get('comments');
-      this.historic = navParams.get('historic');
+    this.item = navParams.get('mail');
+      /*this.classification = 'It is a contact');
+      this.consult = 'It is a contact';
+      this.answer = 'It is a contact';*/
+      this.comments = navParams.get('msg');
+      this.historic = navParams.get('consent');
 
       this.formItem = new FormGroup({});
    }
@@ -49,9 +49,9 @@ export class FormModalPage implements OnInit {
     this.formItem = this.fbBuilder.group({
       category: new FormControl(this.category, ),
       item: new FormControl(this.item, ),
-      classification: new FormControl(this.classification, ),
+      /*classification: new FormControl(this.classification, ),
       consult: new FormControl(this.consult, ),
-      answer: new FormControl(this.answer, ),
+      answer: new FormControl(this.answer, ),*/
       comments: new FormControl(this.comments, ),
       historic: new FormControl(this.historic, )
     });
@@ -66,7 +66,7 @@ export class FormModalPage implements OnInit {
   async success(){
     const response = await this.itemSrvc.addItem(this.formItem.value);
 
-    this.interactionSrvc.presentToast('Registro subido correctamente.', 2000);
+    this.interactionSrvc.presentToast('Mensaje enviado de forma satisfactoria.', 2000);
     this.navCtrl.navigateForward('/index');
 
     this.dismiss();

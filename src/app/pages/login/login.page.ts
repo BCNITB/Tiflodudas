@@ -25,9 +25,10 @@ export class LoginPage implements OnInit {
   submitAttempt:  boolean;
   logged:         string;
 
-  count:    number;
-  countNew: number;
-  
+  count:        number;
+  countNew:     number;
+  countContact: number;
+
   constructor(
     private navCtrl: NavController,
     private itemsSrvc: ItemService,
@@ -48,6 +49,7 @@ export class LoginPage implements OnInit {
 
     this.count = 0;
     this.countNew = 0;
+    this.countContact = 0;
 
     this.items = [];
   }
@@ -67,6 +69,9 @@ export class LoginPage implements OnInit {
         }
         if(i.category == 'colaboración'){
           this.countNew = this.countNew + 1;
+        }
+        if(i.category == 'contacto'){
+          this.countNew = this.countContact + 1;
         }
       }
     });
@@ -120,6 +125,9 @@ export class LoginPage implements OnInit {
     }
     if(id == 2){
       page = 'colaboración';
+    }
+    if(id == 3){
+      page = 'contacto';
     }
     this.navCtrl.navigateForward('/items-list/'+page);
   }

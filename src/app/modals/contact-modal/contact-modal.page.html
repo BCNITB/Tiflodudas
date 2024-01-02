@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title id="modalTitle">¿Quiere enviar el siguiente mensaje?</ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content [fullscreen]="true" class="ion-padding" [fullscreen]="true" [autofocus]="true" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+  <p>
+    <b>Correo Electrónico:</b> {{ item }}
+  </p>
+  <p>
+    <b>Mensaje:</b> {{ comments }}
+  </p>
+  
+
+  <div class="flex-container">
+    <button role="button" title="Aceptar" (click)="success()" id="success">Aceptar</button>
+    <button role="button" title="Cancelar" (click)="dismiss()" class="danger" id="cancel" class="danger">Cancelar</button>
+  </div>
+</ion-content>
