@@ -101,3 +101,27 @@ details{
 details[open] {
     margin-bottom: 5vh;
 }
+
+@media (max-width: 720px) {
+    button{
+        width: 40%;
+    }    
+}
+
+@media (max-width: 505px) {
+    button{
+        //width: 50%;
+        margin-right: 50%;
+        margin-left: 25%;
+    }
+
+    #index{
+        padding-bottom: 7vh;
+    }
+}
+
+@media (max-width: 400px) {
+    #index{
+        padding-bottom: 10vh;
+    }
+}
