@@ -97,6 +97,7 @@ details{
     margin: 0 2vw 1vh 2vw;
     background-color: inherit;
 }
-/*details[open] > summary{
-    list-style-type: '-';
-}*/
+
+details[open] {
+    margin-bottom: 5vh;
+}
