@@ -16,15 +16,15 @@
 
   <ion-list>
     <!-- ANOTADORES ELECTRÓNICOS -->
-    <button role="button" expand="full" (click)="showOptions(1, 'anotadores')" id="anotadores" class="expand-btn" 
+    <!--<button role="button" expand="full" (click)="showOptions(1, 'anotadores')" id="anotadores" class="expand-btn" 
     aria-expanded="true">
       Anotadores Electrónicos
       <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 1" aria-hidden="true"></ion-icon>
       <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 1" aria-hidden="true"></ion-icon>
-    </button>
+    </button>-->
     
     <!-- ANOTADORES ELECTRÓNICOS (hidden btns)-->
-    <div *ngIf="showOption == 1" class="flex-container">
+    <!--<div *ngIf="showOption == 1" class="flex-container">
       <button title="Orbit, pulsa para consultar incidencias" (click)="navigateTo('orbit reader 20')" role="button" class="flex-item">
         Orbit Reader 20
       </button>
@@ -36,53 +36,47 @@
       <button title="Brailliant BI, pulsa para consultar incidencias" (click)="navigateTo('brailliant bi')" role="button" class="flex-item">
         Brailliant BI
       </button>
-    </div>
+    </div>-->
+
+    <details>
+      <summary>Anotadores Electrónicos</summary>
+        <button title="Orbit, pulsa para consultar incidencias" (click)="navigateTo('orbit reader 20')" role="button" class="flex-item">
+          Orbit Reader 20
+        </button>
+  
+        <button title="Braille Hablado, pulsa para consultar incidencias" (click)="navigateTo('braille hablado')" role="button" class="flex-item">
+          Braille Hablado
+        </button>
+  
+        <button title="Brailliant BI, pulsa para consultar incidencias" (click)="navigateTo('brailliant bi')" role="button" class="flex-item">
+          Brailliant BI
+        </button>
+    </details>
 
     <!-- COMUNICADORES SORDOCEGUERA -->
-    <button role="button" expand="full" (click)="showOptions(2, 'comunicadores sordoceguera')" id="comunicadores" class="contract-btn" 
-    title="Comunicadores para Sordoceguera, pulsa para mostrar más" aria-expanded="false">
-      Comunicadores personas con Sordoceuera
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 2"aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 2" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- COMUNICADORES SORDOCEGUERA (hidden btns)-->
-    <div *ngIf="showOption == 2" class="flex-container">
+    <details>
+      <summary>Comunicadores personas con Sordoceuera</summary>
       <p>
         No se ha reportado ninguan consulta sobre Comunicadores para Sordoceguera. Si quieres registrar una duda o aportar 
         una solución a un problema detectado, <a href="/new-entry/colaboración" title="Ir a enviar una consulta">Ir a enviar una 
         nueva consulta</a>. 
       </p>
-
-    </div>
-
+    </details>
+    
     <!-- CONVERSORES -->
-    <button role="button" expand="full" (click)="showOptions(3, 'conversores')" id="conversores" class="contract-btn" 
-    title="Conversores, pulsa para mostrar más" aria-expanded="false">
-      Conversores
-      <ion-icon name="chevron-down-outline" slot="end" aria-hidden="true" *ngIf="showOption != 3"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" aria-hidden="true" *ngIf="showOption == 3"></ion-icon>
-    </button>
-  
-    <!-- CONVERSORES (hidden btns)-->
-    <div *ngIf="showOption == 3" class="flex-container">
+    <details>
+      <summary>Conversores</summary>
       <p>
         No se ha reportado ninguan consulta sobre Conversores. Si quieres registrar una duda o aportar 
         una solución a un problema detectado, <a href="/new-entry/colaboración" title="Ir a enviar una consulta">Ir a enviar una 
         nueva consulta</a>. 
       </p>
-    </div>
+    </details>
 
     <!-- IMPRESORAS -->
-    <button role="button" expand="full" (click)="showOptions(4, 'impresoras')" id="impresoras" class='contract-btn' 
-    title="Impresoras Braille,pulsa para mostrar más" aria-expanded="false">
-      Impresoras Braille
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 4" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 4" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- IMPRESORAS (hidden btns)-->
-    <div *ngIf="showOption == 4" class="flex-container">
+    <details>
+      <summary>Impresoras Braille</summary>
+      
       <button (click)="navigateTo('portathiel')" title="PortaThiel, pulsa para consultar incidencias" role="button" class="flex-item">
         PortaThiel
       </button>
@@ -94,18 +88,11 @@
       <button (click)="navigateTo('impacto')" title="Impacto, pulsa para consultar incidencias" role="button" class="flex-item">
         Impacto
       </button>
-    </div>
+    </details>
 
     <!-- LECTORES DE PANTALLA -->
-    <button role="button" expand="full" (click)="showOptions(5, 'lectores')" id="lectores" class="contract-btn" 
-    title="Pulsa para mostrar categorías de Lectores de Pantalla" aria-expanded="false">
-      Lectores de Pantalla
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 5" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 5" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- LECTORES PANTALLA (hidden btns)-->
-    <div *ngIf="showOption == 5" class="flex-container">
+    <details>
+    <summary>Lectores de Pantalla</summary>
       <button (click)="navigateTo('jaws')" title="Jaws, pulsa para consultar incidencias" role="button" class="flex-item">
         JAWS
       </button>
@@ -133,18 +120,11 @@
       <button (click)="navigateTo('voiceover')" title="VoiceOver, pulsa para consultar incidencias" role="button" class="flex-item">
         VoiceOver
       </button>
-    </div>
+    </details>
 
     <!-- LINEA / TECLADO BRAILLE -->
-    <button role="button" expand="full" (click)="showOptions(6, 'lineas')" id="lineas" class="contract-btn" 
-    title="Línea/Teclado Braille, pulsa para mostrar más" aria-expanded="false">
-      Línea/Teclado Braille
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 6" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 6" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- LINEA / TECLADO BRAILLE (hidden btns)-->
-    <div *ngIf="showOption == 6" class="flex-container">
+    <details>
+      <summary>Línea/Teclado Braille</summary>
       <button (click)="navigateTo('alva')" title="Alva, pulsa para consultar incidencias" role="button" class="flex-item">
         Alva
       </button>
@@ -160,18 +140,12 @@
       <button (click)="navigateTo('varioultra')" title="VarioUltra, pulsa para consultar incidencias" role="button" class="flex-item">
         VarioUltra
       </button>
-    </div>
+    </details>
 
     <!-- MAGNIFICADORES PANTALLA -->
-    <button role="button" expand="full" (click)="showOptions(7, 'magnificadores')" id="magnificadores" class="contract-btn" 
-    title="Magnificadores de Pantalla, pulsa para mostrar más" aria-expanded="false">
-      Magnificadores de pantalla
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 7" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 7" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- MAGNIFICADORES PANTALLA (hidden btns)-->
-    <div *ngIf="showOption == 7" class="flex-container">
+    <details>
+      <summary>Magnificadores de pantalla</summary>
+      
       <button (click)="navigateTo('ampliación android')" title="Ampliación Android, pulsa para consultar incidencias" role="button" class="flex-item">
         Ampliación Android
       </button>
@@ -191,33 +165,25 @@
       <button (click)="navigateTo('zoomtext')" title="ZoomText, pulsa para consultar incidencias" role="button" class="flex-item">
         ZoomText
       </button>
-    </div>
+    </details>
 
     <!-- TELEFONOS ADAPTADOS -->
-    <button role="button" expand="full" (click)="showOptions(8, 'telefonos')" id="telefonía" class="contract-btn" 
-    title="Telefonía, pulsa para mostrar más" aria-expanded="false">
-      Telefonos Adaptados
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 8" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 8" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- TELEFONOS ADAPTADOS (hidden btns)-->
-    <div *ngIf="showOption == 8" class="flex-container">
+    <details>
+      <summary>Telefonos Adaptados</summary>
+      
       <button (click)="navigateTo('blindshell')" title="BlindShell, pulsa para mostrar incidencias" role="button" class="flex-item">
         BlindShell
       </button>
-    </div>
+
+      <button (click)="navigateTo('kapsys')" title="Kapsys, pulsa para mostrar incidencias" role="button" class="flex-item">
+        Kapsys
+      </button>
+    </details>
 
     <!-- SOFTWARE DIDATICO -->
-    <button role="button" expand="full" (click)="showOptions(9, 'didactico')" id="didactico" class="contract-btn" 
-    title="Software de Apoyo Didáctico, pulsa para mostrar más" aria-expanded="false">
-      Software de Apoyo Didáctico
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 9" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 9" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- SOFTWARE DIDATICO (hidden btns)-->
-    <div *ngIf="showOption == 9" class="flex-container">
+    <details>
+      <summary>Software de Apoyo Didáctico</summary>
+      
       <button (click)="navigateTo('bme')" title="BME, pulsa para mostrar incidencias" role="button" class="flex-item">
         <abbr title="Braille Music Editor">BME</abbr>
       </button>
@@ -229,19 +195,12 @@
       <button (click)="navigateTo('edico')" title="Edico, pulsa para mostrar incidencias" role="button" class="flex-item">
         <abbr title="Editor Cientifico ONCE">Edico</abbr>
       </button>
-    </div>
+    </details>
 
     <!-- ASISTENTES INTELIGENTES -->
-    <button role="button" expand="full" (click)="showOptions(10, 'asistente')" id="asistente" class="contract-btn" 
-    title="Asistente Inteligente, pulsa para mostrar más" aria-expanded="false">
-      Asistente Inteligente
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 10" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 10" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- ASISTENTES INTELIGENTES (hidden btns)-->
-    <div *ngIf="showOption == 10" class="flex-container">
-
+    <details>
+      <summary>Asistente Inteligente</summary>
+      
       <button (click)="navigateTo('alexa')" title="Alexa, pulsa prar mostrar incidencias" role="button" class="flex-item">
         Alexa
       </button>
@@ -253,18 +212,12 @@
       <button (click)="navigateTo('siri')" title="Siri, pulsa para mostrar incidencias" role="button" class="flex-item">
         Siri
       </button>
-    </div>
+    </details>
 
     <!-- MECANOGRAFÍA -->
-    <button role="button" expand="full" (click)="showOptions(11, 'meca')" id="meca" class="contract-btn" 
-    title="Mecanografía, pulsa para mostrar más" aria-expanded="false">
-      Mecanografía
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 11" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 11" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- MECANOGRAFÍA (hidden btns)-->
-    <div *ngIf="showOption == 11" class="flex-container">
+    <details>
+      <summary>Mecanografía</summary>
+      
       <button (click)="navigateTo('mecanet')" title="Mecanet, pulsa para mostrar incidencias" role="button" class="flex-item">
         Mecanet
       </button>
@@ -272,24 +225,18 @@
       <button (click)="navigateTo('mekanta')" title="Ir a consultas de Mekanta" role="button" class="flex-item">
         Mekanta
       </button>
-
       
-
       <button (click)="navigateTo('teclado 2.0')" title="Teclado 2.0, pulsa para mostrar incidencias" role="button" class="flex-item">
         Teclado 2.0
       </button>
-    </div>  
+    </details>  
 
     <!-- OCR -->
-    <button role="button" expand="full" (click)="showOptions(12, 'ocr')" id="ocr" class="contract-btn" 
-    title="Pulsa para mostrar categorías de OCR" aria-expanded="false">
-      <abbr title="Reconocedores Ópticos de Caracteres">OCR</abbr>
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 12" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 12" aria-hidden="true"></ion-icon>
-    </button>
+    <details>
+      <summary>
+        <abbr title="Reconocedores Ópticos de Caracteres">OCR</abbr>
+      </summary>
 
-      <!--OCR (hidden btns)-->
-    <div *ngIf="showOption == 12" class="flex-container">
       <button (click)="navigateTo('finereader')" title="FineReader, pulsa para mostrar incidencias" role="button" class="flex-item">
         FineReader
       </button>
@@ -297,19 +244,14 @@
       <button (click)="navigateTo('omnipage')" title="OmniPage, pulsa para mostrar incidencias" role="button" class="flex-item">
         OmniPage
       </button>
-    </div>
+    </details>
 
-      <!-- REPRODUCTORES/GRABADORAS -->
-    <button role="button" expand="full" (click)="showOptions(13, 'reproductores')" id="reproductores" class="contract-btn" 
-    title="Reproductores Grabadoras Digitales, pulsa para mostrar incidencias">
-      Reproductores<span aria-hidden="true">/</span>Grabadoras Digitales
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 13" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 13" aria-hidden="true"></ion-icon>
-    </button>
+    <!-- REPRODUCTORES/GRABADORAS -->
+    <details>
+      <summary>
+        Reproductores<span aria-hidden="true">/</span>Grabadoras Digitales
+      </summary>
 
-    <!--REPRODUCTORES/GRABADORAS (hidden btns)-->
-    <div *ngIf="showOption == 13" class="flex-container">
-      
       <button (click)="navigateTo('gestor once libros digitales')" title="Gestor ONCE Libros Digitales, pulsa para mostrar incidencias" role="button" class="flex-item">
         Gestor <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr> Libros Digitales
       </button>
@@ -329,18 +271,11 @@
       <button (click)="navigateTo('victor reader stream 2')" title="Victor Reader Stream 2, pulsa para mostrar incidencias" role="button" class="flex-item">
         Victor Reader Stream 2
       </button>
-    </div>
+    </details>
 
     <!-- TELELUPAS -->
-    <button role="button" expand="full" (click)="showOptions(14, 'telelupas')" id="telelupas" class="contract-btn" 
-    title="Telelupas, pulsa para mostrar incidencias">
-      Telelupas
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 14" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 14" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!--TELELUPAS (hidden btns)-->
-    <div *ngIf="showOption == 14" class="flex-container">
+    <details>
+      <summary>Telelupas</summary>
       
       <button (click)="navigateTo('telelupa')" title="Telelupa, pulsa para mostrar incidencias" role="button" class="flex-item">
         Telelupa
@@ -353,18 +288,14 @@
       <button (click)="navigateTo('transformer')" title="Transformer, pulsa para mostrar incidencias" role="button" class="flex-item">
         Transformer
       </button>
-    </div>
+    </details>
 
     <!-- SOFTWARE ONCE -->
-    <button role="button" expand="full" (click)="showOptions(15, 'once')" id="once" class="contract-btn" 
-    title="Pulsa para mostrar categorías de Software ONCE" aria-expanded="false">
-      Software <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr>
-      <ion-icon name="chevron-down-outline" slot="end" *ngIf="showOption != 15" aria-hidden="true"></ion-icon>
-      <ion-icon name="chevron-up-outline" slot="end" *ngIf="showOption == 15" aria-hidden="true"></ion-icon>
-    </button>
-
-    <!-- SOFTWARE ONCE (hidden btns)-->
-    <div *ngIf="showOption == 15" class="flex-container">
+    <details>
+      <summary>
+        Software <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr>
+      </summary>
+      
       <button (click)="navigateTo('club once')" title="ClubONCE, pulsa para mostrar incidencias" role="button" class="flex-item">
         ClubONCE
       </button>
@@ -380,6 +311,6 @@
       <button (click)="navigateTo('cti')" title="CTI, pulsa para mostrar incidencias" role="button" class="flex-item">
         <abbr title="Centro de Tecnología e Innovación">CTI</abbr>
       </button>
-    </div>
+    </details>
   </ion-list>
 </ion-content>
