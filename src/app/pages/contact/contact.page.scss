@@ -1,0 +1,52 @@
+.scr-only{
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
+}
+
+form{
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+ion-input{
+    border-bottom: 1em;
+    border-color: black;
+}
+
+form ion-input{
+    border-bottom: 1em;
+    columns: black;
+}
+
+form ion-item span{
+    font-size: 0.75em;
+
+    margin-left: 0.5em;
+}
+
+#checkLbl{
+    margin-right: 0.5em;
+}
+
+.flex-container{
+    display: flex;
+
+    padding-bottom: 1em;
+
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+button{
+    margin-top: 0;
+    background-color: green;
+    color: #fff;
+    padding: 1em 1em;
+    border-radius: 0.2rem;
+}
+
+.danger{
+    background-color: red;
+}

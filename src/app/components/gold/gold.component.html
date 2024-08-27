@@ -5,9 +5,10 @@
   <ion-item>
     <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
       <ion-select-option value="descarga">Descarga</ion-select-option>
+      <ion-select-option value="eliminar">Eliminar</ion-select-option>
       <ion-select-option value="lectura">Lectura</ion-select-option>
       <ion-select-option value="movil">Móvil</ion-select-option>
-      <ion-select-option value="pausa lectura">Pausa lectura</ion-select-option>
+      <ion-select-option value="pausa lectura">Pausar lectura</ion-select-option>
       <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
@@ -144,7 +145,7 @@
           <abbr title="Consulta" class="emphasy">C</abbr>:
           No se pueden descargar audiolibros en un ordenador.
         </p>
-        <div *ngIf="show == 5" aria-hidden="true" id="gold_6">
+        <div *ngIf="show == 6" aria-hidden="true" id="gold_6">
           <p>
             <abbr title="Resolucion" class="emphasy">R</abbr>:  
             Cerrar sesión y volver a iniciarla.
@@ -155,6 +156,38 @@
       <div class="flex-btn">
         <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
         <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+      </div>
+    </div>
+
+    <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' 
+    || category=='pausar lectura' || category=='eliminar'">
+      <div class="flex-item txt">
+        <p>
+          <abbr title="Consulta" class="emphasy">C</abbr>:
+          No se puede eliminar un audiolibro desde la aplicación del móvil o la tablet. El libro tampoco
+          guarda el punto de lectura.
+        </p>
+        <div *ngIf="show == 7" aria-hidden="true" id="gold_7">
+          <p>
+            <abbr title="Resolucion" class="emphasy">R</abbr>:
+            Si el dispositivo contiene un atarjeta MicroSD, seguramente esté dañada. Para comprobarlo
+            seguir el siguiente procedimiento:
+          </p>
+          <ol>
+            <li>Estraer la tarjeta MicroSD.</li>
+            <li>Descargar un libro.</li>
+            <li>Eliminar el libro.</li>
+          </ol>
+          <p>
+            <span class="emphasy">Comentarios</span>:
+            Esta solución es temporal. El usuario deberá reemplazar la tarjeta MicroSD por otra.
+          </p>
+        </div>
+      </div>
+  
+      <div class="flex-btn">
+        <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+        <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
       </div>
     </div>
 </div>

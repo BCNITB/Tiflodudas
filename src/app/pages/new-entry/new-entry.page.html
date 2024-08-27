@@ -107,7 +107,7 @@
         placeholder="ej: Voces" required class="txt" (keyup)="onKey($event, 1)"></ion-input> 
         <div>
           <span>{{ counter1 }}/150</span>
-          <span *ngIf="formItem.invalid && counter1 < 3" id="comment01">La longitud mínima es de 3 caracteres</span>
+          <span *ngIf="formItem.invalid && counter1 < 3 && formItem.touched" id="comment01">La longitud mínima es de 3 caracteres</span>
         </div>
       </ion-item>
 
@@ -118,7 +118,7 @@
         placeholder="Jaws o lee textos en inglés" (keyup)="onKey($event, 2)" class="txt"></ion-textarea>
         <div>
           <span>{{ counter2 }}/300</span>
-          <span *ngIf="formItem.invalid && counter2 < 5" id="comment02">La longitud mínima es de 5 caracteres</span>
+          <span *ngIf="formItem.invalid && counter2 < 5 && formItem.touched" id="comment02">La longitud mínima es de 5 caracteres</span>
         </div>
       </ion-item>
 
@@ -146,7 +146,7 @@
       <ion-col class="flex-container">
         <button class="felx-item" type="submit" name="submit" [disabled]="formItem.invalid" id="success">Enviar</button>
         <button type="reset" class="danger"  id="reset">Borrar</button>
-        <button type="cancelar" id="cancel" routerLink="/home" >Cancelar</button>
+        <button type="cancelar" id="cancel" routerLink="/index" >Cancelar</button>
       </ion-col>
     </ion-row>
   </form>

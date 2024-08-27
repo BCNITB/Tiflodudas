@@ -56,6 +56,10 @@ const routes: Routes = [
     path: 'about',
     loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
+  {
+    path: 'contact-modal',
+    loadChildren: () => import('./modals/contact-modal/contact-modal.module').then( m => m.ContactModalPageModule)
+  },
 
 
 

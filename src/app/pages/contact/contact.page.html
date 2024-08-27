@@ -1,13 +1,75 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>contact</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>  
+    <ion-title>Formulario de contacto</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">contact</ion-title>
+      <ion-title size="large">Formulario de contacto</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <p class="only-web">
+    Si tiene alguna duda sobre el uso del sitio web, o tiene alguna queja sobre la accesiblidad o sobre alguna 
+    sección del sitio web, por favor rellene el siguiente formulario y se le responderá con la mayor brevedad posible. 
+  </p>
+
+  <p class="only-phone">
+    Si tiene alguna duda sobre el uso de la aplicación, o tiene alguna queja sobre la accesiblidad o sobre alguna 
+    sección de la aplicación, por favor rellene el siguiente formulario y se le responderá con la mayor brevedad posible. 
+  </p>
+
+  <form [formGroup]="formItem" (submit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label id="mailLbl" for="mail" position="floating">
+          Corrreo electrónico<abbr title="Campo obligatorio">*</abbr>
+        </ion-label>
+        
+        <ion-input labelledby="mailLbl mail" type="email" formControlName="mail" id="mail" name="mail"
+        placeholder="John@Doe.com" required class="txt" (keyup)="onKey($event, 1)"></ion-input> 
+        <div>
+          <span>{{ counter1 }}/150</span>
+          <span *ngIf="formItem.invalid && formItem.touched" id="comment01">Introduce una dirección válida.</span>
+        </div>
+      </ion-item>
+
+      <ion-item>
+        <ion-label for="msg" position="floating">
+          Consulta<abbr title="Campo obligatorio">*</abbr>
+        </ion-label>
+
+        <ion-textarea type="text" formControlName="msg" id="msg" name="msg" type="text"
+        placeholder="La sección de Buscar ..." (keyup)="onKey($event, 2)" class="txt"></ion-textarea>
+        <div>
+          <span>{{ counter2 }}</span>
+          <span *ngIf="formItem.invalid && counter2 < 5 && formItem.touched" id="comment02">La longitud mínima es de 5 caracteres</span>
+        </div>
+      </ion-item>
+    
+      <ion-item>
+        <ion-checkbox justify="start" role="checkbox" formControlName="consent" id="checkLbl" name="checkLbl" aria-checked="false"
+         checked="false">
+          Consiento el tratamiento del uso de los datos según la 
+          <a>
+            Política de Privacidad
+          </a>.
+        </ion-checkbox>
+        <ion-label for="checkLbl">Consentimiento</ion-label>
+      </ion-item>
+    </ion-list>
+  
+    <ion-row>
+      <ion-col class="flex-container">
+        <button class="felx-item" type="submit" name="submit" [disabled]="formItem.invalid" id="success">Enviar</button>
+        <button type="reset" class="danger"  id="reset">Borrar</button>
+        <button type="cancelar" id="cancel" routerLink="/index" >Cancelar</button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>

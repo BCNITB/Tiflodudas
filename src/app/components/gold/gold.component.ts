@@ -53,6 +53,10 @@ export class GoldComponent  implements OnInit {
         this.element = "gold_6";
         this.show = 6;
         break;
+      case 7:
+        this.element = "gold_7";
+        this.show = 7;
+        break;
     }
 
     this.elementTemp = this.element;

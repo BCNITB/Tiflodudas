@@ -118,7 +118,7 @@ export class SendSolutionPage implements OnInit {
     const response = await this.itemsSrvc.addItem(this.formItem.value);
 
     this.interactionSrvc.presentToast('Registro subido correctamente.', 2000);
-    this.navCtrl.navigateForward('/home');
+    this.navCtrl.navigateForward('/index');
 
     this.dismiss();
   }
