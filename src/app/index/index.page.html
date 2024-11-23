@@ -3,9 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button class="focus"></ion-menu-button>
     </ion-buttons>  
+    <!-- TODO: PHONE  ONLY -->
+    <!--
     <ion-title>
-      Inicio
+      Tiflodudas
     </ion-title>
+  -->
   </ion-toolbar>
 </ion-header>
 
@@ -16,74 +19,90 @@
     </ion-toolbar>
   </ion-header>
 
-  <div>
-    <h2>¿Para qué sirve?</h2>
-    <p>
-      La presente aplicación web busca ser una referencia rápida para resolver algunos d los problemas más comunes que se han documentado durante la instalación o la 
-      ejecución de programas para facilitar la accesibilidad a diferentes aparatos:
-    </p>
-    <ul role="list">
-      <li role="listitem">Smartphones.</li>
-      <li role="listitem">Ordenadores.</li>
-      <li role="listitem">BlinsShells.</li>
-      <li role="listitem">Reproductores Daisy.</li>
-      <li role="listitem">Lineas braille.</li>
-      <li role="listitem">Etcétera.</li>
-    </ul>
-  </div>
-
-  <!-- TODO: ONLY WEB PAGE -->
-  <div class="web">
-    <h2>Descarga de la <abbr title="aplicación">app</abbr></h2>
-    <p>
-      Si se quiere, se puede 
-      <a href="https://drive.google.com/file/d/1rLsc5f3i7sFvoK5jKfEUE62NNkIDRDzX/view?usp=drive_link" 
-      target="_blank">
-      descargar la aplicación para Android
-      </a>
-      para instalar la aplicación en un dispositivo de forma local. La versión actual de la aplicación es 
-      la 2.2.1
-    </p> 
-  </div>  
-  <div>
-    <h2>¿Consultar o Buscar en la base de datos?</h2>
-    <p>
-      Tanto el a parte inferior de esta página como en el menú lateral existen dos opciones: Consultar la Base de Datos y 
-      Buscar en la Base de Datos. El comportamiento de dichas opciones es diferente.
-    </p>
-
-    <ul>
-      <li>
-        <b>Consultar la Base de Datos</b>: En este apartado se muestra la Base de datos entera, pero de forma local (si se ha 
-        descargado la aplicación) o mediante código <abbr title="Hype Text Markup Lenguage">HTML</abbr> las consultas solucionadas.
-      </li>
-      <li>
-        <b>Buscar en la Base de Datos</b>: En esta apartado se muestran todas las consultas, con o sin solución desde una base de datos, y
-        sólo estarán disposibles si hay acceso a internet.
-      </li>
-    </ul>
-    <p>
-      La idea actualizar la base de datos de forma bisemanal o mensual (dependiendo de las nuevas aportaciones), y actualizar la aplicación
-      cada seis meses (dependiendo de las aportaciones), para que las soluciones esténdisposnibles en la aplicación de forma local
-      y sin necesidad de acceder a internet.
-    </p>
-  </div>
-
-  <div>
-    <h2>Diferentes apartados</h2>
-    <p>
-      Mediante el menú lateral podemos acceder a los diferentes componentes de la página:
-    </p>
-    <ul role="list">
-      <li role="listitem">Consultar incidencias.</li>
-      <li role="listitem">Buscador de incidencias.</li>
-      <li role="listitem">Enviar<span aria-hidden="true">/</span>Resolver incidencia.</li>
-      <li role="listitem">Enviar incidencias con su solución.</li>
-    </ul>
-
-    <div class="flex-container">
-      <button routerLink="/consult">Consultar la Base de Datos</button>
-      <button routerLink="/search">Buscar en la Base de Datos</button>
+  <main>
+    <!-- TODO: WEB ONLY -->
+  <!---->
+    <h1>Tiflodudas</h1>
+    <!---->
+    <div id="img-container">
+      <img src="../../assets/image.png" alt="Android en una isla desértica rodeada de tiburones. El Andoid 
+      está buscando cobertura con un iPhone y detrás suyo hayn una gran Z con las letras sos escritas en braille."> 
     </div>
-  </div>
+    <article>
+      <h2>¿Para qué sirve?</h2>
+      <p>
+        La presente aplicación web busca ser una referencia rápida para resolver algunos d los problemas más comunes que se han documentado durante la instalación o la 
+        ejecución de programas para facilitar la accesibilidad a diferentes aparatos:
+      </p>
+      <ul role="list">
+        <li role="listitem">Smartphones.</li>
+        <li role="listitem">Ordenadores.</li>
+        <li role="listitem">BlinsShells.</li>
+        <li role="listitem">Reproductores Daisy.</li>
+        <li role="listitem">Lineas braille.</li>
+        <li role="listitem">Etcétera.</li>
+      </ul>
+    </article>
+
+    <!-- TODO: ONLY WEB -->
+  <!---->
+    <article class="web">
+      <h2>Descarga de la <abbr title="aplicación">app</abbr></h2>
+      <p>
+        Si se quiere, se puede 
+        <a href="" 
+        target="_blank">
+        descargar fichero apk de la aplicación para Android
+        </a> o <a href="https://drive.google.com/file/d/1cQfFGEABgDuEJazCY3jHoZ3epsgQF_ht/view?usp=drive_link" 
+        target="_blank">
+        descargar fichero bundle de la aplicación para Android
+        </a>
+        para instalar la aplicación en un dispositivo de forma local. La versión actual de la aplicación es 
+        la 2.2.1
+      </p> 
+    </article>  
+    <!---->
+    
+    <article>
+      <h2>¿Consultar o Buscar en la base de datos?</h2>
+      <p>
+        Tanto el a parte inferior de esta página como en el menú lateral existen dos opciones: Consultar la Base de Datos y 
+        Buscar en la Base de Datos. El comportamiento de dichas opciones es diferente.
+      </p>
+
+      <ul>
+        <li>
+          <b>Consultar la Base de Datos</b>: En este apartado se muestra la Base de datos entera, pero de forma local (si se ha 
+          descargado la aplicación) o mediante código <abbr title="Hype Text Markup Lenguage">HTML</abbr> las consultas solucionadas.
+        </li>
+        <li>
+          <b>Buscar en la Base de Datos</b>: En esta apartado se muestran todas las consultas, con o sin solución desde una base de datos, y
+          sólo estarán disposibles si hay acceso a internet.
+        </li>
+      </ul>
+      <p>
+        La idea actualizar la base de datos de forma bisemanal o mensual (dependiendo de las nuevas aportaciones), y actualizar la aplicación
+        cada seis meses (dependiendo de las aportaciones), para que las soluciones esténdisposnibles en la aplicación de forma local
+        y sin necesidad de acceder a internet.
+      </p>
+    </article>
+
+    <article>
+      <h2>Diferentes apartados</h2>
+      <p>
+        Mediante el menú lateral podemos acceder a los diferentes componentes de la página:
+      </p>
+      <ul role="list">
+        <li role="listitem">Consultar incidencias.</li>
+        <li role="listitem">Buscador de incidencias.</li>
+        <li role="listitem">Enviar<span aria-hidden="true">/</span>Resolver incidencia.</li>
+        <li role="listitem">Enviar incidencias con su solución.</li>
+      </ul>
+
+      <div class="flex-container">
+        <button routerLink="/consult">Consultar la Base de Datos</button>
+        <button routerLink="/search">Buscar en la Base de Datos</button>
+      </div>
+    </article>
+  </main>
 </ion-content>

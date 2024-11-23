@@ -91,11 +91,13 @@ details summary {
     //background: url(/src/assets/arrow.svg) no-repeat 14px 50%;
     //background-size: 18px;
     //font-weight: bold;
+    color: #fff;
 }
 
 details{
     margin: 0 2vw 1vh 2vw;
     background-color: inherit;
+    color: inherit;
 }
 
 details[open] {
@@ -104,15 +106,17 @@ details[open] {
 
 @media (max-width: 720px) {
     button{
-        width: 40%;
+        //width: 40%;
+        margin-right: 20%;
+        margin-left: 20%;
     }    
 }
 
 @media (max-width: 505px) {
     button{
         //width: 50%;
-        margin-right: 50%;
-        margin-left: 25%;
+        margin-right: 5%;
+        margin-left: 5%;
     }
 
     #index{

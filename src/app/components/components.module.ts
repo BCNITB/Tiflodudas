@@ -53,8 +53,10 @@ import { GoogleAsComponent } from './google-as/google-as.component';
 import { SiriComponent } from './siri/siri.component';
 
 /* Typing */
+import { DioComponent } from './dio/dio.component';
 import { MecanetComponent } from './mecanet/mecanet.component';
 import { MekantaComponent } from './mekanta/mekanta.component';
+import { MioComponent } from './mio/mio.component';
 import { TecladoComponent } from './teclado/teclado.component';
 
 /* OCR */
@@ -112,8 +114,10 @@ import { CtiComponent } from './cti/cti.component';
     AlexaComponent,
     GoogleAsComponent,
     SiriComponent,
+    DioComponent,
     MecanetComponent,
     MekantaComponent,
+    MioComponent,
     TecladoComponent,
     FineReaderComponent,
     OmniPageComponent,

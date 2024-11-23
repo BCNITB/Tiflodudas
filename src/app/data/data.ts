@@ -146,6 +146,11 @@ export const CATEGORIES = [
     },
     {
         category:   'mecanografía',
+        item:       'DIO',
+        value:      'dio'
+    },
+    {
+        category:   'mecanografía',
         item:       'Mecanet',
         value:      'mecanet'
     },
@@ -153,6 +158,11 @@ export const CATEGORIES = [
         category:   'mecanografía',
         item:       'Mekanta',
         value:      'mekanta'
+    },
+    {
+        category:   'mecanografía',
+        item:       'MIO',
+        value:      'mio'
     },
     {
         category:   'mecanografía',
