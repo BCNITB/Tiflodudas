@@ -20,6 +20,10 @@ export class IndexPage implements OnInit {
     }
   }
 
+  ngOnInit(): void {
+      
+  }
+
   ionViewWillEnter(){
     this.logged = String(localStorage.getItem('state'));
   }
