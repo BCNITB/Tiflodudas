@@ -5,6 +5,8 @@
   <ion-item>
     <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
       <ion-select-option value="descarga">Descarga</ion-select-option>
+      <ion-select-option value="borrar">Borrar libro</ion-select-option>
+      <ion-select-option value="descomprimir">Descomprimir</ion-select-option>
       <ion-select-option value="eliminar">Eliminar</ion-select-option>
       <ion-select-option value="lectura">Lectura</ion-select-option>
       <ion-select-option value="movil">Móvil</ion-select-option>
@@ -159,8 +161,7 @@
       </div>
     </div>
 
-    <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' 
-    || category=='pausar lectura' || category=='eliminar'">
+    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='pausar lectura' || category=='eliminar'">
       <div class="flex-item txt">
         <p>
           <abbr title="Consulta" class="emphasy">C</abbr>:
@@ -187,6 +188,50 @@
   
       <div class="flex-btn">
         <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+        <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+      </div>
+    </div>
+
+    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='descomprimir'">
+      <div class="flex-item txt">
+        <p>
+          <abbr title="Consulta" class="emphasy">C</abbr>:
+          Después de actualizarse la biblioteca con los libros descargados se lanza el mensaje: 
+          “error en la descompresión del archivo”.
+        </p>
+        <div *ngIf="show == 8" aria-hidden="true" id="gold_8">
+          <p>
+            <abbr title="Resolucion" class="emphasy">R</abbr>:
+            El problema suele ser porque el libro no está bien formado . hay que reportar la incidencia al 
+            servicio bibliográfico.
+          </p>
+        </div>
+      </div>
+  
+      <div class="flex-btn">
+        <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
+        <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+      </div>
+    </div>
+
+    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='lectura' || category=='borrar'">
+      <div class="flex-item txt">
+        <p>
+          <abbr title="Consulta" class="emphasy">C</abbr>:
+          Los libros descargados no aparecen en la biblioteca y no se guarda la lectura de los libros, 
+          volviéndose siempre a la misma página. Tampoco se puede borrar un libro de la biblioteca.
+        </p>
+        <div *ngIf="show == 9" aria-hidden="true" id="gold_9">
+          <p>
+            <abbr title="Resolucion" class="emphasy">R</abbr>:
+            la tarjeta MicroSD presenta un malfuncionamiento, debe quietarse la misma y sustituirse por una 
+            nueve o utilizarse la memoria interna del dispositivo.
+          </p>
+        </div>
+      </div>
+  
+      <div class="flex-btn">
+        <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
         <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
       </div>
     </div>
