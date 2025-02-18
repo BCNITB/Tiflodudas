@@ -40,7 +40,7 @@ export class ContactPage implements OnInit {
     this.counter2 = 0;
 
     this.formItem = new FormGroup({});
-    this.categories = CATEGORIES;
+    this.categories = CATEGORIES.filter((category): category is Categories => category !== undefined);
   }
 
   ngOnInit() {

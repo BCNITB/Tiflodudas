@@ -83,14 +83,8 @@ ion-icon{
 }
 
 details summary {
-    //display: inline-flex;
-    //justify-content: space-between;
-    //list-style-type: "+";
     padding: 10px 10px 10px 40px;
     background-color: #53713d;
-    //background: url(/src/assets/arrow.svg) no-repeat 14px 50%;
-    //background-size: 18px;
-    //font-weight: bold;
     color: #fff;
 }
 
@@ -98,6 +92,7 @@ details{
     margin: 0 2vw 1vh 2vw;
     background-color: inherit;
     color: inherit;
+    
 }
 
 details[open] {
@@ -106,21 +101,24 @@ details[open] {
 
 @media (max-width: 720px) {
     button{
-        //width: 40%;
         margin-right: 20%;
         margin-left: 20%;
     }    
 }
 
 @media (max-width: 505px) {
-    button{
-        //width: 50%;
+    /*button{
         margin-right: 5%;
         margin-left: 5%;
-    }
+    }*/
 
     #index{
         padding-bottom: 7vh;
+    }
+
+    details[open] button {
+        margin-left: 8vw;
+        margin-right: 8vw;
     }
 }
 

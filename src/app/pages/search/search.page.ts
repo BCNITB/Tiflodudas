@@ -7,6 +7,8 @@ import { ItemService } from 'src/app/services/item.service';
 
 import { PipesModule } from 'src/app/pipes/pipes.module';
 
+import { SearchService } from 'src/app/services/search.service';
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.page.html',
@@ -15,15 +17,19 @@ import { PipesModule } from 'src/app/pipes/pipes.module';
 export class SearchPage implements OnInit {
 
   items:    Items[];
+  results:   any[] = [];
+
   showTxt:  boolean;
 
+  searchTerm: string = '';
   term:     string;
   result:   string;
 
   constructor(
     private itemsSrvc: ItemService,
     private navCtrl: NavController,
-    private title: Title
+    private title: Title,
+    private searchService: SearchService
   ) { 
     
     title.setTitle('Tiflodudas | Búsqueda');
@@ -38,6 +44,17 @@ export class SearchPage implements OnInit {
     this.itemsSrvc.getItems().subscribe(items =>{
       this.items = items;
     });
+  }
+
+  onSearch(event: any) {
+    const value = event.target.value;
+    if (value && value.trim() !== '') {
+      this.searchService.SearcDoc('fieldName', value).subscribe(data => {
+        this.results = data;
+      });
+    } else {
+      this.results = [];
+    }
   }
 
   show(page: any){

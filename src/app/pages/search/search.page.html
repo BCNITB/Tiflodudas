@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<!--<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -12,8 +12,15 @@
     <ion-toolbar>
       <ion-title size="large">Búsquueda</ion-title>
     </ion-toolbar>
+  </ion-header>-->
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Búsqueda</ion-title>
+    </ion-toolbar>
   </ion-header>
 
+ <ion-content> 
   <div *ngIf="showTxt">
     <h2>Cómo utilizar la búsqueda</h2>
     <p>
@@ -25,7 +32,7 @@
     </p>
   </div>
 
-  <ion-searchbar
+  <!--<ion-searchbar
     [(ngModel)]="result"
     placeholder="Orbit"
     show-clear-button="focus"
@@ -34,15 +41,21 @@
     role="searchbox"
     name="result">
     <span id="search" class="scr">Introduce el término a buscar</span>
-  </ion-searchbar>
+  </ion-searchbar>-->
 
+  <ion-searchbar
+    [(ngModel)]="searchTerm"
+    (ionInput)="onSearch($event)"
+    placeholder="Introduce palabras clave">
+  </ion-searchbar>
+<!--
   <hr *ngIf="result.length == 0" class="title" role="decorative">
 
   <div *ngIf="result.length > 0" class="title">
     <h2>Soluciones encontradas para: {{ result }}</h2>
-  </div>
+  </div>-->
   <!--<div *ngFor="let item of items | filter: term:'classification'" class="flex-container" role="listitem">-->
-  <div *ngFor="let item of items | filter: result" class="flex-container" role="listitem">
+  <!--<div *ngFor="let item of items | filter: result" class="flex-container" role="listitem">
     <p class="consult" *ngIf="item.category != 'Solución Propuesta' && item.category != 'colaboración'">
       <abbr title="Pregunta">P</abbr>: {{ item.consult }}
       <span *ngIf="item.answer == ''" class="super">Solución no disponible</span>
@@ -55,5 +68,14 @@
         Resolver
       </button>
     </div>
-  </div>
+  </div>-->
+
+  <ion-list>
+    <ion-item *ngFor="let item of results">
+      <ion-label>
+        {{ item.name }} <!-- Ajusta esto según los campos de tu documento -->
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
 </ion-content>

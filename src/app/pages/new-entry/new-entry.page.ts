@@ -48,7 +48,7 @@ export class NewEntryPage implements OnInit {
     this.counter4 = 0;
 
     this.formItem = new FormGroup({});
-    this.categories = CATEGORIES;
+    this.categories = CATEGORIES.filter((category): category is Categories => category !== undefined);
   }
 
   ngOnInit() {

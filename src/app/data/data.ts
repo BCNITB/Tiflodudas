@@ -86,22 +86,22 @@ export const CATEGORIES = [
     },
     {
         category:   'magnificadores de pantalla',
-        item:       'Ampliación Android',
+        item:       'Android',
         value:      'ampliación android'
     },
     {
         category:   'magnificadores de pantalla',
-        item:       'Ampliación MacOS',
+        item:       'MacOS',
         value:      'ampliación macos'
     },
     {
         category:   'magnificadores de pantalla',
-        item:       'Ampliación iOS',
+        item:       'iOS',
         value:      'ampliación ios'
     },
     {
         category:   'magnificadores de pantalla',
-        item:       'Lupa Windows',
+        item:       'Windows',
         value:      'lupa windows'
     },
     {
@@ -113,6 +113,12 @@ export const CATEGORIES = [
         category:   'telefonía',
         item:       'BlindShell',
         value:      'blindShell'
+    },
+    ,
+    {
+        category:   'telefonía',
+        item:       'Kapsys',
+        value:      'kapsys'
     },
     {
         category:   'software de apoyo didáctico',
