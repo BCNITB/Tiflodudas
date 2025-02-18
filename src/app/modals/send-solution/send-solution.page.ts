@@ -124,7 +124,11 @@ export class SendSolutionPage implements OnInit {
   }
 
   async edit(){
-    const response = await this.itemsSrvc.updateItem(this.formItem.value, this.id);
+    const response = await this.itemsSrvc.updateItem(this.id, this.formItem.value).then(() => {
+      console.log('Item updated successfully');
+    }).catch(error => {
+      console.error('Error updating item: ', error);
+    });
 
     this.interactionSrvc.presentToast('Registro modificado correctamente.', 2000);
     this.navCtrl.navigateForward('/login');

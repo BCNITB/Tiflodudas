@@ -64,9 +64,13 @@ export class ItemService {
     return updateDoc(itemDocRef, data);
   }*/
 
-  updateItem(itemId: any, data: any) {
+  /*updateItem(itemId: any, data: any) {
     const itemDocRef = doc(this.firestore, itemId);
 
     return updateDoc(itemDocRef, data);
-   }
+   }*/
+    updateItem(itemId: string, data: Partial<Items>) {
+      const itemDocRef = doc(this.firestore, `items/${itemId}`);
+      return updateDoc(itemDocRef, data);
+    }
 }
