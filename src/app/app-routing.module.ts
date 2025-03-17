@@ -60,6 +60,10 @@ const routes: Routes = [
     path: 'contact-modal',
     loadChildren: () => import('./modals/contact-modal/contact-modal.module').then( m => m.ContactModalPageModule)
   },
+  {
+    path: 'gemini',
+    loadChildren: () => import('./pages/gemini/gemini.module').then( m => m.GeminiPageModule)
+  },
 
 
 
