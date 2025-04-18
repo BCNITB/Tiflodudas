@@ -45,6 +45,10 @@
         <button *ngIf="item.id == cat && logged == 'connected'" (click)="edit(cat)" class="btn">
           Editar Entrada
         </button>
+      
+        <button *ngIf="item.id == cat && logged == 'connected'" (click)="update(item)" class="btn">
+          Actualizar Entrada
+        </button>
         
         <button *ngIf="item.id == cat && logged == 'connected'" (click)="erase(item)" class="danger">
           Borrar Entrada

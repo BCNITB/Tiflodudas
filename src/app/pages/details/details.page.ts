@@ -84,4 +84,24 @@ export class DetailsPage implements OnInit {
 
     return await modal.present();
   }
+
+  async update(item: Items){
+    const alert = await this.alertCtrl.create({
+      header: 'Actualizar registro',
+      message: '¿Quieres actualizar este registro?',
+      buttons: [
+        {
+          text: 'No',
+        },
+        {
+          text: 'Sí',
+          handler: () => {
+            this.itemsSrvc.updateCollection(item, { state: 'solved' });
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  } 
 }

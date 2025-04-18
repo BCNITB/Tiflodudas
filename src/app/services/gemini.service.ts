@@ -13,6 +13,7 @@ export class GeminiService {
   constructor() {
     const API_KEY = 'AIzaSyCCbZdyp0b2kvnPqUcBHll1b1zfQ_AMlkg';
     this.genAI = new GoogleGenerativeAI(API_KEY);
+    //this.model = this.genAI.getGenerativeModel({model: 'gemini-2.5-preview'});
     this.model = this.genAI.getGenerativeModel({model: 'gemini-1.5-flash'});
     //this.model = this.genAI.getGenerativeModel({ model: 'text-to-text' });
    }
