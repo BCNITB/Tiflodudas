@@ -21,7 +21,7 @@
   </ion-header>
 
   <!-- ALL USERS -->
-  <ion-card class="ion-padding">
+  <ion-card class="ion-padding" *ngIf="cat != 'contacto' && cat != 'colaboración' && cat != 'Solución Propuesta'">
     <h2>Dudas resueltas</h2>
 
     <!-- WRITERS -->
@@ -97,7 +97,7 @@
     <app-cti *ngIf="cat == 'cti'"></app-cti>
   </ion-card>
 
-  <ion-card class="ion-padding">
+  <ion-card class="ion-padding" *ngIf="cat != 'contacto' && cat != 'colaboración' && cat != 'Solución Propuesta'">
    
     <h2>Dudas sin resolver</h2>
   

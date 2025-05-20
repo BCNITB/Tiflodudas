@@ -31,9 +31,9 @@
   <!-- TODO: ADMIN USER -->
   <app-acces *ngIf="logged == 'no connected'"></app-acces>
   
-  <!-- TODO: ADMIN USER 
+  <!-- TODO: ADMIN USER -->
   <div *ngIf="logged == 'connected'">
-  --> <div>
+   
     <!-- ADMIN OF ADMIN USERS -->
     <app-register></app-register>
     
@@ -76,7 +76,6 @@
 
       <button (click)="seeSol(3)" *ngIf="countContact == 1">Ver Mensje</button>
       <button (click)="seeSol(3)" *ngIf="countContact > 1">Ver Mensajes</button>
-      <button (click)="seeSol(3)">Ver Mensajes</button>
 
       <button routerLink="/new-entry/admin" id="new">Nueva Entrada</button>
     </div>

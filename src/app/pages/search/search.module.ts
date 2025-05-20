@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -16,7 +17,8 @@ import { PipesModule } from 'src/app/pipes/pipes.module';
     FormsModule,
     IonicModule,
     SearchPageRoutingModule,
-    PipesModule
+    PipesModule,
+    RouterModule.forChild([{ path: '', component: SearchPage }])
   ],
   declarations: [SearchPage]
 })

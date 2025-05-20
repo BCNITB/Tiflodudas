@@ -82,6 +82,17 @@ ion-icon{
     margin-left: 0.5em;
 }
 
+details summary::marker {
+    content: "+ ";
+    font-size: 2rem;
+    font-size: 1.25rem;
+}
+
+details[open] summary::marker {
+    content: "- ";
+}
+  
+
 details summary {
     padding: 10px 10px 10px 40px;
     background-color: #53713d;

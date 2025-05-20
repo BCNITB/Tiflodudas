@@ -114,7 +114,7 @@
       -<ion-item>
         <ion-label for="consult" position="floating">Consulta<abbr title="Campo obligatorio">*</abbr></ion-label>
         
-        <ion-textarea type="text" formControlName="consult" id="consult" name="consult" type="text"
+        <ion-textarea aria-label="Consulta" type="text" formControlName="consult" id="consult" name="consult" type="text"
         placeholder="Jaws o lee textos en inglés" (keyup)="onKey($event, 2)" class="txt"></ion-textarea>
         <div>
           <span>{{ counter2 }}/300</span>
@@ -124,14 +124,14 @@
 
       <ion-item>
         <ion-label for="answer" position="floating">Solucion</ion-label>
-        <ion-textarea type="text" formControlName="answer" id="answer" name="answer" type="text"
+        <ion-textarea aria-label="Solución" type="text" formControlName="answer" id="answer" name="answer" type="text"
         placeholder="Reinstalar las voces en inglés" (keyup)="onKey($event, 3)" class="txt"></ion-textarea>
         <span>{{ counter3 }}/800</span>
       </ion-item>
 
       <ion-item>
         <ion-label for="comments" position="floating">Comentarios</ion-label>
-        <ion-textarea type="text" formControlName="comments" id="comments" name="comments" type="text"
+        <ion-textarea aria-label="Comentarios" type="text" formControlName="comments" id="comments" name="comments" type="text"
         placeholder="Solución temporal" (keyup)="onKey($event, 4)" class="txt"></ion-textarea>
         <span>{{ counter4 }}/800</span>
       </ion-item>

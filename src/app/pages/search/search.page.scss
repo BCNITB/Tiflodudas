@@ -6,6 +6,11 @@ button{
     border-radius: 0.2rem;
 }
 
+.btn{
+    background-color: green !important;
+    font-weight: 600;
+}
+
 .super{
     vertical-align: super;
     font-size: 0.5em;
@@ -39,6 +44,7 @@ p{
 .title{
     border-bottom: solid 0.1rem;
 }
+
 
 @media only screen and (max-width: 765px) {
     .flex-container{

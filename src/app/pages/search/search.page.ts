@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injector } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Title } from '@angular/platform-browser';
 
@@ -8,6 +8,7 @@ import { ItemService } from 'src/app/services/item.service';
 import { PipesModule } from 'src/app/pipes/pipes.module';
 
 import { SearchService } from 'src/app/services/search.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -16,28 +17,20 @@ import { SearchService } from 'src/app/services/search.service';
 })
 export class SearchPage implements OnInit {
 
-  items:    Items[];
-  results:   any[] = [];
+  items:      Items[];
 
-  showTxt:  boolean;
-
-  searchTerm: string = '';
-  term:     string;
-  result:   string;
+  searchResults$: Observable<Items[]>;
+  searchValue: string = '';
 
   constructor(
+    private title: Title,
+    private searchService: SearchService,
     private itemsSrvc: ItemService,
     private navCtrl: NavController,
-    private title: Title,
-    private searchService: SearchService
-  ) { 
-    
-    title.setTitle('Tiflodudas | Búsqueda');
-    
+  ) {
+    this.title.setTitle('Tiflodudas | Búsqueda');
+
     this.items =[];
-    this.showTxt = false;
-    this.term = "";
-    this.result = '';
   }
 
   ngOnInit() {
@@ -46,23 +39,17 @@ export class SearchPage implements OnInit {
     });
   }
 
-  onSearch(event: any) {
-    const value = event.target.value;
-    if (value && value.trim() !== '') {
-      this.searchService.SearcDoc('fieldName', value).subscribe(data => {
-        this.results = data;
-      });
-    } else {
-      this.results = [];
+  onSearch() {
+    if (this.searchValue.trim()) {
+      this.searchResults$ = this.searchService.search(
+        this.searchValue,
+        'consult',
+        'items'
+      );
     }
   }
 
   show(page: any){
     this.navCtrl.navigateForward('/details/'+page);
-  }
-
-  search(event: any){
-
-    this.term = event.detail.value;
   }
 }
