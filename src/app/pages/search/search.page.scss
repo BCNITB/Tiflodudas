@@ -45,6 +45,12 @@ p{
     border-bottom: solid 0.1rem;
 }
 
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
 
 @media only screen and (max-width: 765px) {
     .flex-container{

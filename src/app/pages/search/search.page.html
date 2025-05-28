@@ -8,43 +8,74 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-item>
-    <ion-label position="floating">Buscar consulta</ion-label>
-    <ion-input [(ngModel)]="searchValue" 
-               (ionChange)="onSearch()"
-               placeholder="Escribe para buscar..."></ion-input>
-  </ion-item>
+  <ion-searchbar [(ngModel)]="searchValue" (ionInput)="onSearch()" placeholder="Buscar..." aria-label="Realizar consulta"></ion-searchbar>
 
-  <!--<ion-item>
-    <ion-label position="floating">Buscar consulta</ion-label>
-    <ion-input [(ngModel)]="searchValue" placeholder="Escribe para buscar..."></ion-input>
-  </ion-item>
-  <ion-button expand="full" (click)="onSearch()">Buscar</ion-button>-->
+  <p *ngIf="resultsCount > 0">
+    Resultados encontrados: {{ resultsCount }}
+  </p>
+  <p *ngIf="resultsCount === 0">
+    No se encontraron resultados.
+  </p>
 
-  <!--<ion-list *ngIf="searchResults$ | async as results">
-    <ion-item *ngFor="let result of results">
-      <ion-card class="ion-padding">
-        <ion-card-header>
-          <ion-card-subtitle>Importancia: {{ result.importance }}</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <p><strong>Consulta:</strong> {{ result.consult }}</p>
-          <p *ngIf="result.answer"><strong>Respuesta:</strong> {{ result.answer }}</p>
-        </ion-card-content>
-      </ion-card>
+  <p *ngIf="resultsCount > 0">
+    Mostrando resultados del {{ page * pageSize + 1 }} al
+    {{
+      ((page + 1) * pageSize) > resultsCount
+        ? resultsCount
+        : ((page + 1) * pageSize)
+    }}
+    de {{ resultsCount }}
+  </p>
+
+  <ion-list *ngIf="resultsCount > 0">
+    <ion-item *ngFor="let item of pagedItems">
+      <p class="ion-text-wrap">
+        {{ item.consult }}
+      </p>
+      <button (click)="show(item.id)" class="btn flex-btn">
+        <span *ngIf="item.answer == ''">Resolver</span>
+        <span *ngIf="item.answer != ''">Consultar</span>
+      </button>
     </ion-item>
-  </ion-list>-->
+  </ion-list>
 
-  <ng-container *ngFor="let item of items">
-      <div class="flex-container" role="list">
-        <p class="question" role="listitem">
-          <abbr title="Pregunta">P</abbr>: {{ item.consult }}
-          <!--<span *ngIf="item.answer == ''" class="super">Solución no disponible</span>-->
-        </p>
-        <button (click)="show(item.id)" class="btn flex-btn">
-          <span *ngIf="item.answer == ''">Resolver</span>
-          <span *ngIf="item.answer != ''">Consultar</span>
-        </button>
-      </div>
-    </ng-container>
+  <div class="pagination-controls" *ngIf="resultsCount > pageSize">
+    <ion-button *ngIf="page > 0" (click)="prevPage()" aria-laberl="Página anterior">
+      {{
+        ((page - 1) * pageSize + 1)
+      }} -
+      {{
+        ((page) * pageSize) > resultsCount
+          ? resultsCount
+          : ((page) * pageSize)
+      }}
+      {{
+        ((page - 1) * pageSize + 1)
+      }} -
+      {{
+        ((page) * pageSize) > resultsCount
+          ? resultsCount
+          : ((page) * pageSize)
+      }}
+    </ion-button>
+
+    <ion-button *ngIf="(page + 1) * pageSize < resultsCount" (click)="nextPage()" aria-label="Siguiente página">
+      {{
+        ((page + 1) * pageSize + 1)
+      }} -
+      {{
+        ((page + 2) * pageSize) > resultsCount
+          ? resultsCount
+          : ((page + 2) * pageSize)
+      }}
+      {{
+        ((page + 1) * pageSize + 1)
+      }} -
+      {{
+        ((page + 2) * pageSize) > resultsCount
+          ? resultsCount
+          : ((page + 2) * pageSize)
+      }}
+    </ion-button>
+  </div>
 </ion-content>
