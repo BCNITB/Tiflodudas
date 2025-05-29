@@ -1,23 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>gemini</ion-title>
+    <ion-title>Pregunta a Gemini</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">gemini</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-item>
-    <ion-input label="Prompt" [(ngModel)]="userInput"></ion-input>
+    <ion-textarea label="Escribe tu mensaje:" [(ngModel)]="userInput" rows="5"></ion-textarea>
   </ion-item>
-  <ion-button (click)="sendPrompt()">Enviar</ion-button>
-  <ion-card>
+
+  <ion-button expand="block" (click)="sendPrompt()" [disabled]="!userInput.trim()">
+    Enviar a Gemini
+  </ion-button>
+
+  <ion-card *ngIf="geminiResponse">
+    <ion-card-header>
+      <ion-card-title>Respuesta de Gemini:</ion-card-title>
+    </ion-card-header>
     <ion-card-content>
-      {{ geminiResponse }}
+      <p>{{ geminiResponse }}</p>
     </ion-card-content>
-  </ion-card>  
+  </ion-card>
 </ion-content>

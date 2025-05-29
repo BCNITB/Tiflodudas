@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenerativeAI, GenerativeModel, ChatSession } from '@google/generative-ai';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,33 +9,51 @@ export class GeminiService {
 
 
   private genAI: GoogleGenerativeAI;
-  private model: any;
+  private model: GenerativeModel;
+  private chat: ChatSession | null = null;
 
   constructor() {
-    const API_KEY = 'AIzaSyCCbZdyp0b2kvnPqUcBHll1b1zfQ_AMlkg';
-    this.genAI = new GoogleGenerativeAI(API_KEY);
-    //this.model = this.genAI.getGenerativeModel({model: 'gemini-2.5-preview'});
-    this.model = this.genAI.getGenerativeModel({model: 'gemini-1.5-flash'});
-    //this.model = this.genAI.getGenerativeModel({ model: 'text-to-text' });
+    //const API_KEY = 'AIzaSyCCbZdyp0b2kvnPqUcBHll1b1zfQ_AMlkg';
+    //this.genAI = new GoogleGenerativeAI(API_KEY);
+    this.genAI = new GoogleGenerativeAI(environment.geminiApiKey);
+    this.model = this.genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    //this.model = this.genAI.getGenerativeModel({model: 'gemini-1.5-flash'});
    }
 
-   async generateContent(prompt: string) {
-    const result = await this.model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
-    return text;
-  }
-
-    /*async run(prompt: string) {
-      // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
-      const model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
-    
-      const prompt = "Write a story about a magic backpack."
-    
-      const result = await model.generateContent(prompt);
+   async generateText(prompt: string): Promise<string> {
+    try {
+      const result = await this.model.generateContent(prompt);
       const response = await result.response;
       const text = response.text();
-      console.log(text);
       return text;
-    }*/
+    } catch (error) {
+      console.error('Error al generar texto con Gemini:', error);
+      throw error; // Propaga el error para manejarlo en el componente
+    }
+  }
+
+  // Opcional: Para mantener una conversación
+  async startNewChat(): Promise<void> {
+    this.chat = this.model.startChat({
+      history: [], // Puedes cargar un historial previo aquí
+      generationConfig: {
+        maxOutputTokens: 100, // Ajusta según tus necesidades
+      },
+    });
+  }
+
+  async sendMessageToChat(message: string): Promise<string> {
+    if (!this.chat) {
+      await this.startNewChat(); // Inicia un nuevo chat si no hay uno activo
+    }
+    try {
+      const result = await this.chat!.sendMessage(message);
+      const response = await result.response;
+      const text = response.text();
+      return text;
+    } catch (error) {
+      console.error('Error al enviar mensaje al chat de Gemini:', error);
+      throw error;
+    }
+  }
 }

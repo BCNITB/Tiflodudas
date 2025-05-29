@@ -12,7 +12,8 @@ export const environment = {
     messagingSenderId: '1066166367070',
     measurementId: 'G-G5YLMPVQ9S',
   },
-  production: false
+  production: false,
+  geminiApiKey: 'AIzaSyCCbZdyp0b2kvnPqUcBHll1b1zfQ_AMlkg',
 };
 
 /*

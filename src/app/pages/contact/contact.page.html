@@ -45,7 +45,7 @@
         </ion-label>
 
         <ion-textarea aria-label="Consulta" type="text" formControlName="msg" id="msg" name="msg" type="text"
-        placeholder="La sección de Buscar ..." (keyup)="onKey($event, 2)" class="txt"></ion-textarea>
+         (keyup)="onKey($event, 2)" class="txt"></ion-textarea>
         <div>
           <span>{{ counter2 }}</span>
           <span *ngIf="formItem.invalid && counter2 < 5 && formItem.touched" id="comment02">La longitud mínima es de 5 caracteres</span>
