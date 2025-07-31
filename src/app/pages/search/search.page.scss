@@ -52,6 +52,10 @@ p{
   margin-top: 1em;
 }
 
+.item-bordered {
+  border-bottom: 1px solid #d1d1d1;
+}
+
 @media only screen and (max-width: 765px) {
     .flex-container{
         flex-direction: column;

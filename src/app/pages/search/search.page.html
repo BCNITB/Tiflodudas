@@ -28,19 +28,16 @@
   </p>
 
   <ion-list *ngIf="resultsCount > 0">
-    <ion-item *ngFor="let item of pagedItems">
-      <p class="ion-text-wrap">
-        {{ item.consult }}
+    <ion-item *ngFor="let item of pagedItems" class="item-bordered" role="listitem">
+      <p class="ion-text-wrap" role="button" (click)="show(item.id)">
+        {{ item.consult }} <sup *ngIf="item.answer == ''">(Por resolver)</sup>
       </p>
-      <button (click)="show(item.id)" class="btn flex-btn">
-        <span *ngIf="item.answer == ''">Resolver</span>
-        <span *ngIf="item.answer != ''">Consultar</span>
-      </button>
+      <ion-icon name="chevron-forward" slot="end" role="decoration"></ion-icon>
     </ion-item>
   </ion-list>
 
   <div class="pagination-controls" *ngIf="resultsCount > pageSize">
-    <ion-button *ngIf="page > 0" (click)="prevPage()" aria-laberl="Página anterior">
+    <ion-button *ngIf="page > 0" (click)="prevPage()" aria-label="Anterriores 10 resultados">
       {{
         ((page - 1) * pageSize + 1)
       }} -
@@ -59,7 +56,7 @@
       }}
     </ion-button>
 
-    <ion-button *ngIf="(page + 1) * pageSize < resultsCount" (click)="nextPage()" aria-label="Siguiente página">
+    <ion-button *ngIf="(page + 1) * pageSize < resultsCount" (click)="nextPage()" aria-label="Siguiente 10 resultados">
       {{
         ((page + 1) * pageSize + 1)
       }} -
