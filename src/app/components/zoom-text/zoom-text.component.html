@@ -339,8 +339,28 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+      <button class="btn" (click)="showOpt(13)" *ngIf="show != 13">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 13">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Al activar ZoomText lla pantalla de registro del programa por internet está en negro, pero se escuchaba a la síntesis de voz.
+      </p>
+      <div *ngIf="show == 14" aria-hidden="true" id="zt_14">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Salir del programa e ir directamente a la aplicación <b>Start activation</b> en las utilidades de ZoomText.
+        </p>        
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(14)" *ngIf="show != 14">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 14">Ocultar</button>
     </div>
   </div>
 

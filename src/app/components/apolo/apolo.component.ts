@@ -32,11 +32,11 @@ export class ApoloComponent  implements OnInit {
         this.element = "apolo_1";
         this.show = 1;
         break;
-      /*case 2:
-        this.element = "bs_2";
+      case 2:
+        this.element = "apolo_2";
         this.show = 2;
         break;
-      case 3:
+      /*case 3:
         this.element = "bs_3";
         this.show = 3;
         break;

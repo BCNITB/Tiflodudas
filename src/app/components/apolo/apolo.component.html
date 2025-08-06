@@ -36,3 +36,31 @@
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
     </div>
   </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        En la pestaña Descargas no se puede abrir la opción de búsqueda, pero fundiona correctamente en novedades y el resto de ítems
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="apolo_1">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Para solucionar el problema realizar lo siguiente::
+        </p>
+        <ol>
+          <li>Ir a Ajustes.</li>
+          <li>Club ONCE.</li>
+          <li>Cerrar la sesión del usuario.</li>
+          <li>Volver a iniciar sesión.</li>
+        </ol>
+        <p>Otra opción es desinstalar la app y volver a instalar la aokicación.</p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    </div>
+  </div>
+
+</div>

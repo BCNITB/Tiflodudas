@@ -241,4 +241,21 @@
     </div>
   </div>
 
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='instalacion'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        No se puede descargar la aplicación. Se inicia la descarga pero esta se detiene. La instalación tampoco se puede realizar desde el USB.
+      </p>
+      <p *ngIf="show == 6" aria-hidden="true" id="edico_6">
+        Puede deberse al firewall en la wi-fi. Realizar la instalación conectado a otra wi-fi.
+      </p>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+    </div>
+  </div>
+
 </div>

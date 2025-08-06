@@ -472,7 +472,7 @@
     </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura' || category=='outlook'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
@@ -636,7 +636,7 @@
       </p>
     </div>
 
-    <div class="flex-btn"></div>
+    <div class="flex-btn">
       <button class="btn" (click)="showOpt(29)" *ngIf="show != 29">Consultar</button>
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 29">Ocultar</button>
     </div>
@@ -1426,3 +1426,24 @@
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 57">Ocultar</button>
     </div>
   </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='lectura'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Leer tablas en un documeto PDF.
+      </p> 
+      <div *ngIf="show == 58" aria-hidden="true" id="jaws_58">
+        <p><abbr title="Resolución" class="emphasy">R</abbr>:
+          Es un problema de la versión del controlados, seguir el siguiente procedimiento:
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(58)" *ngIf="show != 58">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 58">Ocultar</button>
+    </div>
+  </div>
+
+</div>

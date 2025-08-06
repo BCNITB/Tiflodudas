@@ -72,6 +72,14 @@ export class FocusComponent  implements OnInit {
         this.element = "focus_11";
         this.show = 11;
         break;
+      case 12:
+        this.element = "focus_12";
+        this.show = 12;
+        break;
+      case 13:
+        this.element = "focus_13";
+        this.show = 13;
+        break;
     }
 
     this.elementTemp = this.element;

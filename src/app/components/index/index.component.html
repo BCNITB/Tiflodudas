@@ -58,4 +58,21 @@
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
     </div>
   </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='conexion'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Al realizar una impresión con Index Everest DV-5 desde Ebrai se realiza una doble paginación.
+      </p>
+      <div *ngIf="show == 3" aria-hidden="true" id="index_3">
+        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Se debe desactivar la paginación de la Index Everest o de la aplicación Ebrai,</p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
+    </div>
+  </div>
 </div>

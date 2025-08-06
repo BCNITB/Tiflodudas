@@ -48,6 +48,10 @@ export class EdicoComponent  implements OnInit {
         this.element = "edico_5";
         this.show = 5;
         break;
+      case 6:
+        this.element = "edico_6";
+        this.show = 6;
+        break;
     }
 
     this.elementTemp = this.element;

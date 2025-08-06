@@ -1044,4 +1044,33 @@
     </div>
   </div>
 
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='correo electrpnico'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        No se puede saltar de contenedor realizando un flick con un dedo.
+      </p> 
+      <div *ngIf="show == 44" aria-hidden="true" id="vo_44">
+        <p>
+          <abbr title="Resolución" class="emphasy">R</abbr>:
+          Comprobar que no está activada la navegación por grupos.
+        </p>
+        <ol>
+          <li> Ir a Accesibilidad.</li>
+          <li> Navegación.</li>
+          <li>Activar: <b>Navegación individual</b>.</li>
+        </ol>
+
+        <p class="emphasy">Comentarios:
+          La configurar descrita permite que se configure para caracteres o para palabras.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(44)" *ngIf="show != 44">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 44">Ocultar</button>
+    </div>
+  </div>
+
 </div>

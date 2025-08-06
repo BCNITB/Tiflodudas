@@ -319,8 +319,58 @@
       <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
     </div>
-
-
   </div>
 
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='edico' || category=='configuracion'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        En Word la línea braille Focus al escribir un "punto", con la tecla 3, y configurada en braille español grado 1, escribe apóstrofe.
+      </p>
+      <div *ngIf="show == 12" aria-hidden="true" id="focus_12">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Configurar la línea en braille computerizado.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='word'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Al escribir un punto con la línea braille (punto 3), si se pulsa después el espacio el punto se cambia
+        automáticamente por un apóstrofe, tanto en WORD como en la línea braille.
+      </p> 
+      <div *ngIf="show == 13" aria-hidden="true" id="focus_13">
+        <p><abbr title="Resolución" class="emphasy">R</abbr>:
+          Existen dos posibles soluciones:
+        </p>
+        <ul>
+          <li>Configurar la entrada como braille computerizado (así si que me lo detecta como ., el punto 3).</li>
+          <li>
+            Sustituir la tabla de braille, que al menos en el JAWS 2021 viene predefinida liblouis 3.15, por liblouis 3.9.
+            en el gestor de configuraciones de:
+          </li>
+          <ol> 
+            <li>JAWS.</li>
+            <li>Braille.</li>
+            <li>Opciones avanzadas.</li>
+            <li>Transcriptor a braille.</li>
+          </ol>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(13)" *ngIf="show != 13">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 13">Ocultar</button>
+    </div>
+  </div>
 </div>

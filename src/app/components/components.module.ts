@@ -11,6 +11,7 @@ import { AccesComponent } from './acces/acces.component';
 import { OrbitComponent } from './orbit/orbit.component';
 import { BrailleComponent } from './braille/braille.component';
 import { BraillantComponent } from './braillant/braillant.component';
+import { BrailleLiteComponent } from './braille-lite/braille-lite.component';
 
 /* Embossers */
 import { IndexComponent } from './index/index.component';
@@ -34,6 +35,7 @@ import { VarioUltraComponent } from './vario-ultra/vario-ultra.component';
 
 /* Magnifiers */
 import { AmpAndroidComponent } from './amp-android/amp-android.component';
+import { AmpLinuxComponent } from './amp-linux/amp-linux.component';
 import { AmpIosComponent } from './amp-ios/amp-ios.component';
 import { AmpMacComponent } from './amp-mac/amp-mac.component';
 import { LupaWinComponent } from './lupa-win/lupa-win.component';
@@ -88,6 +90,7 @@ import { CtiComponent } from './cti/cti.component';
     OrbitComponent,
     BrailleComponent,
     BraillantComponent,
+    BrailleLiteComponent,
     IndexComponent,
     PortathielComponent,
     ImpactoComponent,
@@ -104,6 +107,7 @@ import { CtiComponent } from './cti/cti.component';
     VarioUltraComponent,
     AmpAndroidComponent,
     AmpIosComponent,
+    AmpLinuxComponent,
     AmpMacComponent,
     LupaWinComponent,
     ZoomTextComponent,
@@ -145,6 +149,7 @@ import { CtiComponent } from './cti/cti.component';
     OrbitComponent,
     BrailleComponent,
     BraillantComponent,
+    BrailleLiteComponent,
     IndexComponent,
     PortathielComponent,
     ImpactoComponent,
@@ -161,6 +166,7 @@ import { CtiComponent } from './cti/cti.component';
     VarioUltraComponent,
     AmpAndroidComponent,
     AmpIosComponent,
+    AmpLinuxComponent,
     AmpMacComponent,
     LupaWinComponent,
     ZoomTextComponent,

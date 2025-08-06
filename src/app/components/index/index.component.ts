@@ -37,6 +37,10 @@ export class IndexComponent  implements OnInit {
       this.element = "index_2";
       this.show = 2;
       break;
+    case 3:
+      this.element = "index_3";
+      this.show = 3;
+      break;
     }
 
     this.elementTemp = this.element;

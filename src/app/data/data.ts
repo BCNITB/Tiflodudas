@@ -15,6 +15,11 @@ export const CATEGORIES = [
         value:      'brailliant bi'
     },
     {
+        category:   'anotadores electrónicos',
+        item:       'Braillie Lite',
+        value:      'braille lite'
+    },
+    {
         category:   'impresoras braille',
         item:       'Impacto',
         value:      'impacto'
@@ -88,6 +93,16 @@ export const CATEGORIES = [
         category:   'magnificadores de pantalla',
         item:       'Android',
         value:      'ampliación android'
+    },
+    {
+        category:   'magnificadores de pantalla',
+        item:       'MacOS',
+        value:      'ampliación macos'
+    },
+    {
+        category:   'magnificadores de pantalla',
+        item:       'Linux',
+        value:      'ampliación linux'
     },
     {
         category:   'magnificadores de pantalla',

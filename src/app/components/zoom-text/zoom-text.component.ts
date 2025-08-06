@@ -78,9 +78,13 @@ export class ZoomTextComponent  implements OnInit {
       this.show = 12;
       break;
     case 13:
-    this.element = "zt_13";
-    this.show = 13;
-    break;
+      this.element = "zt_13";
+      this.show = 13;
+      break;
+    case 14:
+      this.element = "zt_14";
+      this.show = 14;
+      break;
     }
 
     this.elementTemp = this.element;

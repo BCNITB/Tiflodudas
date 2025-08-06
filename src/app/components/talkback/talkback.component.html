@@ -14,7 +14,7 @@
 
 <div role="list">
   <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='gestos'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Descolgar en un Sony Xperia con TalkBack activado.
       </p>
@@ -30,7 +30,7 @@
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='dictado'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: El micro del teclado para el dictado aparece atenuado (inactivo).
       </p>
@@ -48,7 +48,7 @@
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Activar transcripción de sonidos.
       </p>
@@ -71,7 +71,7 @@
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gestos'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Desactivar la voz de TalkBack con un gesto.
       </p>
@@ -93,7 +93,7 @@
   </div>
   
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: Conexión línea braille con TalkBack.
       </p>
@@ -128,7 +128,7 @@
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='lectura'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Talkback lee la letra N como U.
@@ -148,12 +148,12 @@
   </div>
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div>
+    <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
         El doble toque no funciona de forma correcta.
       </p>
-      <div *ngIf="show == 6" aria-hidden="true" id="tb_6">
+      <div *ngIf="show == 7" aria-hidden="true" id="tb_7">
         <p>
           <abbr title="Resolucion" class="emphasy">R</abbr>: Para añadir una línea braille a Talkback debemos tener instalada 
           Reducir el tamaño de la fuente.
