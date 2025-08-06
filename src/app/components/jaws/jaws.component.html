@@ -12,7 +12,9 @@
       <ion-select-option value="excel">Excel</ion-select-option>
       <ion-select-option value="instalación">Instalación</ion-select-option>
       <ion-select-option value="lectura">Lectura</ion-select-option>
+      <ion-select-option value="linea">Línea braille</ion-select-option>
       <ion-select-option value="menú de inicio">Menú de Inicio</ion-select-option>
+      <ion-select-option value="outlook">Outlook</ion-select-option>
       <ion-select-option value="scripts">Scripts</ion-select-option>
       <ion-select-option value="vpn"><abbr title="Virtual Private Network">VPN</abbr></ion-select-option>
       <ion-select-option value="word">Word</ion-select-option>
@@ -132,7 +134,7 @@
     </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='correo electrónico' || category=='outlook'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>: 
@@ -159,7 +161,7 @@
         Cuando Jaws lee "Mouse Over" la ayuda de Jaws indica que la combinación de teclas a utilizar es Insert + Ctrl + Enter, 
         pero al utilizar esa combinación de teclas Jaws no hace nada.
       </p>
-      <p *ngIf="show == 5" aria-hidden="true" id="jaws_6">
+      <p *ngIf="show == 6" aria-hidden="true" id="jaws_6">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
         Realizar una copia del fichero con extensión *,rtf y renombrarlo.
       </p>
@@ -177,7 +179,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         Al utilizar Jaws con el revisor ortográfico dice tras cada palabra "marcador de espacio".
       </p>
-      <div *ngIf="show == 6" aria-hidden="true" id="jaws_6">
+      <div *ngIf="show == 7" aria-hidden="true" id="jaws_7">
         <p><abbr title="Resolución" class="emphasy">R</abbr>: En Word realizar lo siguiente: </p>
         <ol>
           <li>Opciones de Word (Alt + A y cursor arriba hasta opciones).</li>
@@ -190,8 +192,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
+      <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
     </div>
   </div>
 
@@ -201,15 +203,15 @@
         <abbr title="Consulta" class="emphasy">C</abbr>: 
         El motor de Vocalizer no aparece en la lista de selección.
       </p>
-      <p *ngIf="show == 7" aria-hidden="true" id="jaws_7">
+      <p *ngIf="show == 8" aria-hidden="true" id="jaws_8">
         <abbr title="Resolución" class="emphasy">R</abbr>: En 
         las nuevas versiones de Jaws las voces se deben descargar desde la opción agregar / eliminar voces del menú voces.
       </p>
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+      <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
     </div>
   </div>
 
@@ -220,27 +222,9 @@
         Mensaje de error al entrar al ordenador mediante <abbr title="Virtual Private Network">VPN</abbr> por fallo del 
         controlador de vídeo de Jaws. En algunas ocasiones Jaws no lee y se queda colgado
       </p>
-      <p *ngIf="show == 8" aria-hidden="true" id="jaws_8">
-        <abbr title="Resolución" class="emphasy">R</abbr>: 
-        Se debe desintsalar Jaws con componentes compartidos e instalar la versión 2019 de Jaws (versión mínima).
-      </p>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='dongle'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        Jaws no reconoce el Dongle pero el sistema sí. 
-      </p>
       <p *ngIf="show == 9" aria-hidden="true" id="jaws_9">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
-        Actualizar el Dongle.
+        Se debe desintsalar Jaws con componentes compartidos e instalar la versión 2019 de Jaws (versión mínima).
       </p>
     </div>
 
@@ -250,15 +234,15 @@
     </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='dongle'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
-        Al actualizar de Jaws 2019 a Jaws 2020 Jaws habla en inglés y no permite cambiar el idioma.
+        Jaws no reconoce el Dongle pero el sistema sí. 
       </p>
       <p *ngIf="show == 10" aria-hidden="true" id="jaws_10">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
-        Desinstalar Jaws y volver a instalarlo seleccionando com idioma de instalación cespañol.
+        Actualizar el Dongle.
       </p>
     </div>
 
@@ -268,13 +252,31 @@
     </div>
   </div>
 
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Al actualizar de Jaws 2019 a Jaws 2020 Jaws habla en inglés y no permite cambiar el idioma.
+      </p>
+      <p *ngIf="show == 11" aria-hidden="true" id="jaws_11">
+        <abbr title="Resolución" class="emphasy">R</abbr>: 
+        Desinstalar Jaws y volver a instalarlo seleccionando com idioma de instalación cespañol.
+      </p>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+    </div>
+  </div>
+
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuración'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
         En un texto escrito, al pulsar sobre el cursor de subir o bajar Jaws dice: “Acciones: deshacer acciones automáticas”.
       </p>
-      <div *ngIf="show == 11" aria-hidden="true" id="jaws_11">
+      <div *ngIf="show == 12" aria-hidden="true" id="jaws_12">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>: Realizar las siguientes acciones:
         </p>
@@ -287,8 +289,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+      <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
     </div>
   </div>
 
@@ -298,7 +300,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Herramienta para activar Jaws remotamente.
       </p>
-      <p *ngIf="show == 12" aria-hidden="true" id="jaws_12">
+      <p *ngIf="show == 13" aria-hidden="true" id="jaws_13">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
         Debe ejecutarse el programa EsClientActivator.exe que se encuentra en 
         C:\Program Tiles\Freedom Scientific\Shared\Authorization Tools\x.0.
@@ -306,8 +308,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
+      <button class="btn" (click)="showOpt(13)" *ngIf="show != 13">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 13">Ocultar</button>
     </div>
   </div>
 
@@ -315,9 +317,9 @@
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
-        Al escribir Jaws dice la letre y una palabra, por ejemplo, A alfa.
+        Al escribir Jaws dice la letra y una palabra. Por ejemplo, A alfa.
       </p>
-      <div *ngIf="show == 13" aria-hidden="true" id="jaws_13">
+      <div *ngIf="show == 14" aria-hidden="true" id="jaws_14">
         <p><abbr title="Resolución" class="emphasy">R</abbr>: 
         Existen dos posibles soluciones: 
         </p>
@@ -335,8 +337,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(13)" *ngIf="show != 13">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 13">Ocultar</button>
+      <button class="btn" (click)="showOpt(14)" *ngIf="show != 14">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 14">Ocultar</button>
     </div>
   </div>
 
@@ -346,15 +348,15 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Al pegar una columna completa  Excel deja de leer el contenido de las celdas e indica sólo la posición de la mismas.
       </p>
-      <p *ngIf="show == 14" aria-hidden="true" id="jaws_14">
+      <p *ngIf="show == 15" aria-hidden="true" id="jaws_15">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
         Los datos deben ser pegados desde la cinta de Excel.
       </p>
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(14)" *ngIf="show != 14">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 14">Ocultar</button>
+      <button class="btn" (click)="showOpt(15)" *ngIf="show != 15">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 15">Ocultar</button>
     </div>
   </div>
 
@@ -364,7 +366,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Al pulsar Insert + A para abrir un archivo adjunto, éste no se abre. Tampoco se puede abrir con el menú contextual.
       </p>
-      <div *ngIf="show == 15" aria-hidden="true" id="jaws_15">
+      <div *ngIf="show == 16" aria-hidden="true" id="jaws_16">
         <p><abbr title="Resolución" class="emphasy">R</abbr>: 
         Realizar los siguientes pasos: 
         </p>
@@ -378,38 +380,20 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(15)" *ngIf="show != 15">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 15">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        Pasar de remoto a local.
-      </p>
-      <p *ngIf="show == 16" aria-hidden="true" id="jaws_16">
-        <abbr title="Resolución" class="emphasy">R</abbr>: 
-        Utilizar el comando: <abbr title="control">Ctrl</abbr> + fin.
-      </p>
-    </div>
-
-    <div class="flex-btn">
       <button class="btn" (click)="showOpt(16)" *ngIf="show != 16">Consultar</button>
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 16">Ocultar</button>
     </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos' || category=='aplicaciones'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
-        Activación cursor táctil.
+        Pasar de remoto a local.
       </p>
       <p *ngIf="show == 17" aria-hidden="true" id="jaws_17">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
-        Utilizar el comando: shift + + (teclado numérico).
+        Utilizar el comando: <abbr title="control">Ctrl</abbr> + fin.
       </p>
     </div>
 
@@ -419,17 +403,15 @@
     </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='correo electrónico'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
-        Configuración de Yahoo para Outlook con lector de pantalla.
+        Activación cursor táctil.
       </p>
       <p *ngIf="show == 18" aria-hidden="true" id="jaws_18">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
-        <a href="https://www.solvetic.com/tutoriales/article/3995-como-configurar-cuenta-correo-yahoo-outlook-2016/"
-        titl="Ver configuración de Yahoo (se abre en una nueva ventana)" target="_blank">
-        Ver configuración de Yahoo con Outlook</a>.
+        Utilizar el comando: shift + + (teclado numérico).
       </p>
     </div>
 
@@ -445,15 +427,15 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Al utilizar el correcto éste se queda colgado.
       </p>
-      <p *ngIf="show == 19" aria-hidden="true" id="jaws_19">
+      <p *ngIf="show == 20" aria-hidden="true" id="jaws_20">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
         Debe actualizarse Word.
       </p>
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(19)" *ngIf="show != 19">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 19">Ocultar</button>
+      <button class="btn" (click)="showOpt(20)" *ngIf="show != 20">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 20">Ocultar</button>
     </div>
   </div>
 
@@ -463,7 +445,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Jaws no enuncia la configuración de Windows 10.
       </p>
-      <div *ngIf="show == 20" aria-hidden="true" id="jaws_20">
+      <div *ngIf="show == 21" aria-hidden="true" id="jaws_21">
         <p><abbr title="Resolución" class="emphasy">R</abbr>: 
         Realizar los siguientes pasos:
         </p>
@@ -485,8 +467,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(20)" *ngIf="show != 20">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 20">Ocultar</button>
+      <button class="btn" (click)="showOpt(21)" *ngIf="show != 21">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 21">Ocultar</button>
     </div>
   </div>
 
@@ -496,15 +478,15 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Jaws lee toda la información del mensaje al situar el foco sobre el mismo en la bandeja de entrada
       </p>
-      <p *ngIf="show == 21" aria-hidden="true" id="jaws_21">
+      <p *ngIf="show == 22" aria-hidden="true" id="jaws_22">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
         Restablecer la vista de Outlook
       </p>
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(21)" *ngIf="show != 21">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 21">Ocultar</button>
+      <button class="btn" (click)="showOpt(22)" *ngIf="show != 22">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 22">Ocultar</button>
     </div>
   </div>
 
@@ -514,7 +496,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Configurar Outlook con Yahoo.
       </p>
-      <div *ngIf="show == 22" aria-hidden="true" id="jaws_22">
+      <div *ngIf="show == 23" aria-hidden="true" id="jaws_23">
         <p><abbr title="Resolución" class="emphasy">R</abbr>: 
           Debe marcarse o desmarcarse las siguientes opciones:
         </p>
@@ -525,12 +507,19 @@
           <li>Puerto correo saliente: 465; Puerto Correo entrante: 995.</li>
           <li>Marcar la casilla El servidor requiere una contraseña segura.</li>
         </ul>
+
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          <a href="https://www.solvetic.com/tutoriales/article/3995-como-configurar-cuenta-correo-yahoo-outlook-2016/"
+        titl="Ver configuración de Yahoo (se abre en una nueva ventana)" target="_blank">
+        Ver configuración de Yahoo con Outlook</a>
+        </p>
       </div>
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(22)" *ngIf="show != 22">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 22">Ocultar</button>
+      <button class="btn" (click)="showOpt(23)" *ngIf="show != 23">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 23">Ocultar</button>
     </div>
   </div>
 
@@ -540,38 +529,13 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Scripts de Jaws para Facturaplus y Contaplus.
       </p>
-      <div *ngIf="show == 23" aria-hidden="true" id="jaws_23">
+      <div *ngIf="show == 24" aria-hidden="true" id="jaws_24">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>: 
           <a href="https://www.compartolid.es/jaws-noticias/" target="_blank" title="Scripta para Contaplus y Facturaplus (se abre en una pestaña nueva).">
             Página de descargas de scripts para de Contaplu y Facturaplus para Jaws 12.
           </a>
         </p>
-      </div>
-    </div>
-    
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(23)" *ngIf="show != 23">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 23">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        Jaws dice "Verificado" al movernos por la pantalla de escritorio de Windows.
-      </p>
-      <div *ngIf="show == 24" aria-hidden="true" id="jaws_24">
-        <p><abbr title="Resolución" class="emphasy">R</abbr>: 
-          Debe realizarse lo siguiente:
-        </p>
-        <ol>
-          <li>Opciones del Explorador de Archivos.</li>
-          <li>Configuración Avanzada.</li>
-          <li>Mostrar siempre menús: OFF.</li>
-          <li>Usar las casillas para seleccionar elementos: OFF.</li>
-        </ol>
       </div>
     </div>
     
@@ -585,29 +549,36 @@
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
-        Jaws no lee algunos campos cuando se tabula (la web está creada con la normativa de Accesibilidad).
+        Jaws dice "Verificado" al movernos por la pantalla de escritorio de Windows.
       </p>
-      <p *ngIf="show == 25" aria-hidden="true" id="jaws_25">
-        <abbr title="Resolución" class="emphasy">R</abbr>: 
-        Suele ser problema de la compatibilidad entre la web y el navegador.
-      </p>
+      <div *ngIf="show == 25" aria-hidden="true" id="jaws_25">
+        <p><abbr title="Resolución" class="emphasy">R</abbr>: 
+          Debe realizarse lo siguiente:
+        </p>
+        <ol>
+          <li>Opciones del Explorador de Archivos.</li>
+          <li>Configuración Avanzada.</li>
+          <li>Mostrar siempre menús: OFF.</li>
+          <li>Usar las casillas para seleccionar elementos: OFF.</li>
+        </ol>
+      </div>
     </div>
-
+    
     <div class="flex-btn">
       <button class="btn" (click)="showOpt(25)" *ngIf="show != 25">Consultar</button>
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 25">Ocultar</button>
     </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
-        Comando de Jaws para la descripción de imágenes.
+        Jaws no lee algunos campos cuando se tabula (la web está creada con la normativa de Accesibilidad).
       </p>
       <p *ngIf="show == 26" aria-hidden="true" id="jaws_26">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
-        insert + espació, i.
+        Suele ser problema de la compatibilidad entre la web y el navegador.
       </p>
     </div>
 
@@ -617,15 +588,15 @@
     </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
-        Jaws no reconoce siglas.
+        Comando de Jaws para la descripción de imágenes.
       </p>
       <p *ngIf="show == 27" aria-hidden="true" id="jaws_27">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
-        Asegurarse que las siglas están incorporadas en el Diccionario de Jaws; también descativar la lectura inteligente.
+        insert + espació, i.
       </p>
     </div>
 
@@ -635,31 +606,49 @@
     </div>
   </div>
 
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Jaws no reconoce siglas.
+      </p>
+      <p *ngIf="show == 28" aria-hidden="true" id="jaws_28">
+        <abbr title="Resolución" class="emphasy">R</abbr>: 
+        Asegurarse que las siglas están incorporadas en el Diccionario de Jaws; también descativar la lectura inteligente.
+      </p>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(28)" *ngIf="show != 28">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 28">Ocultar</button>
+    </div>
+  </div>
+
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Hacer MouseOver.
       </p>
-      <p *ngIf="show == 28" aria-hidden="true" id="jaws_28">
+      <p *ngIf="show == 29" aria-hidden="true" id="jaws_29">
         <abbr title="Resolución" class="emphasy">R</abbr>: 
         Para hacer MouseOver con JAWS: JAWS + Ctrl.
       </p>
     </div>
 
     <div class="flex-btn"></div>
-      <button class="btn" (click)="showOpt(28)" *ngIf="show != 28">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 28">Ocultar</button>
+      <button class="btn" (click)="showOpt(29)" *ngIf="show != 29">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 29">Ocultar</button>
     </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='correo electrónico'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='correo electrónico' || category=='outlook'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Jaws no lee el autocompletado, ni el campo para cuando se envía un correo con Outlook.
       </p>
-      <div *ngIf="show == 29" aria-hidden="true" id="jaws_29">
+      <div *ngIf="show == 30" aria-hidden="true" id="jaws_30">
         <p><abbr title="Resolución" class="emphasy">R</abbr>:
           Restablecer la visatas de Outlook:
         </p>
@@ -672,18 +661,18 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(29)" *ngIf="show != 29">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 29">Ocultar</button>
+      <button class="btn" (click)="showOpt(30)" *ngIf="show != 30">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 30">Ocultar</button>
     </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuración'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuración' || category=='word'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
         No se puede acceder a la barra de menús de word pulsando la tecla alt
       </p>
-      <div *ngIf="show == 30" aria-hidden="true" id="jaws_30">
+      <div *ngIf="show == 31" aria-hidden="true" id="jaws_31">
         <p><abbr title="Resolución" class="emphasy">R</abbr>: 
           La solución más sencilla es utilizar la tecla F10. Si se quiere continuar utilizando la tecla alt se debe realizar 
           los siguientes pasos:
@@ -699,30 +688,6 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(30)" *ngIf="show != 30">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 30">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        Aplicación de firma digital accesible para lectores de pantalla.
-      </p>
-      <div *ngIf="show == 31" aria-hidden="true" id="jaws_31">
-        <p><abbr title="Resolución" class="emphasy">R</abbr>: 
-          Autofirma, suele ser una de las recomendadas por la Administración Pública.
-        </p>
-        
-        <p>
-          <span class="emphasy">Comentarios</span>:
-          Enlace de descarga de <a href="https://www.compartolid.es/autofirma/" title="Descarga de autofima (se abre en una nueva ventana)" target="_blank">Autofirma</a>.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
       <button class="btn" (click)="showOpt(31)" *ngIf="show != 31">Consultar</button>
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 31">Ocultar</button>
     </div>
@@ -732,13 +697,16 @@
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
-        Evitar que se escuche lo que JAWS verbaliza durante una videoconferencia en un equipo con la pantalla que incluye cámara, 
-        altavoces y micrófono.
+        Aplicación de firma digital accesible para lectores de pantalla.
       </p>
       <div *ngIf="show == 32" aria-hidden="true" id="jaws_32">
         <p><abbr title="Resolución" class="emphasy">R</abbr>: 
-          En las opciones de Windows y de la aplicación de videoconferencia a usar seleccionar como altavoz la opción de: 
-          <i>Teléfono sin eco</i>.
+          Autofirma, suele ser una de las recomendadas por la Administración Pública.
+        </p>
+        
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Enlace de descarga de <a href="https://www.compartolid.es/autofirma/" title="Descarga de autofima (se abre en una nueva ventana)" target="_blank">Autofirma</a>.
         </p>
       </div>
     </div>
@@ -753,11 +721,32 @@
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
+        Evitar que se escuche lo que JAWS verbaliza durante una videoconferencia en un equipo con la pantalla que incluye cámara, 
+        altavoces y micrófono.
+      </p>
+      <div *ngIf="show == 33" aria-hidden="true" id="jaws_33">
+        <p><abbr title="Resolución" class="emphasy">R</abbr>: 
+          En las opciones de Windows y de la aplicación de videoconferencia a usar seleccionar como altavoz la opción de: 
+          <i>Teléfono sin eco</i>.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(33)" *ngIf="show != 33">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 33">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
         Al enviar un archivo desde Exce: Archivo > Compartir > Correo electronico > Enviar como datos adjuntos, al escribir la 
         inicial del contacto en el campo <i>Para:</i> aunque se muestra la sugerencia del contacto Jaws no la verbaliza. 
         Ocurre igual cuando se hace con el botón de aplicaciones > enviar a > destinatario de correo.
       </p> 
-      <div *ngIf="show == 33" aria-hidden="true" id="jaws_33">
+      <div *ngIf="show == 34" aria-hidden="true" id="jaws_34">
         <p><abbr title="Resolución" class="emphasy">R</abbr>:
           Probar una de las siguientes opciones:
         </p>
@@ -777,18 +766,18 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(33)" *ngIf="show != 33">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 33">Ocultar</button>
+      <button class="btn" (click)="showOpt(34)" *ngIf="show != 34">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 34">Ocultar</button>
     </div>
   </div>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='correo electrónico'">
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Configuración para que el gestor de correoa Thunderbird sea más accesible.
       </p> 
-      <div *ngIf="show == 34" aria-hidden="true" id="jaws_34">
+      <div *ngIf="show == 35" aria-hidden="true" id="jaws_35">
         <p><abbr title="Resolución" class="emphasy">R</abbr>:
           Las possibles configuraciones para hacer un gestor de correos más accesibles para lectores de pantalla son:
         </p>
@@ -825,10 +814,11 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(34)" *ngIf="show != 34">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 34">Ocultar</button>
+      <button class="btn" (click)="showOpt(35)" *ngIf="show != 35">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 35">Ocultar</button>
     </div>
   </div>
+    
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
     <div class="flex-item txt">
@@ -836,7 +826,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         El micrófono no funciona en una reunión de Teams si está Jaws activado.
       </p> 
-      <div *ngIf="show == 35" aria-hidden="true" id="jaws_35">
+      <div *ngIf="show == 36" aria-hidden="true" id="jaws_36">
         <p><abbr title="Resolución" class="emphasy">R</abbr>:
           Se debe desactivar el control mediante comandos de voz. Para ello utilizar los siguientes comandos al iniciar Teams:
         </p>
@@ -859,8 +849,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(35)" *ngIf="show != 35">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 35">Ocultar</button>
+      <button class="btn" (click)="showOpt(36)" *ngIf="show != 36">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 36">Ocultar</button>
     </div>
   </div>
 
@@ -870,7 +860,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Jaws verbaliza <i>marcador de espacio</i> en documento Word.
       </p> 
-      <div *ngIf="show == 36" aria-hidden="true" id="jaws_36">
+      <div *ngIf="show == 37" aria-hidden="true" id="jaws_37">
         <p><abbr title="Resolución" class="emphasy">R</abbr>:
           Desactivar la representación de símbolos en la pantalla de Word: Control + Shift + 8.
         </p>
@@ -878,8 +868,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(36)" *ngIf="show != 36">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 36">Ocultar</button>
+      <button class="btn" (click)="showOpt(37)" *ngIf="show != 37">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 37">Ocultar</button>
     </div>
   </div>
 
@@ -889,7 +879,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Jaws no funciona en tablet de Microsoft, la Surface Pro X.
       </p> 
-      <div *ngIf="show == 37" aria-hidden="true" id="jaws_37">
+      <div *ngIf="show == 37" aria-hidden="true" id="jaws_38">
         <p><abbr title="Resolución" class="emphasy">R</abbr>:
           Se debe descargar la versión de JAWS para ARM. Los pasos a seguir son:
         </p>
@@ -914,8 +904,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(37)" *ngIf="show != 37">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 37">Ocultar</button>
+      <button class="btn" (click)="showOpt(38)" *ngIf="show != 38">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 38">Ocultar</button>
     </div>
   </div>
 
@@ -926,7 +916,7 @@
         En un equipo corporativo con Jaws y Excel en una hoja protegida que tiene distintos filtros de selección, cuando se entra 
         en uno de ellos, no se puede salir utilizando el comando <b>CTRL + Alt+ L</b>.
       </p> 
-      <div *ngIf="show == 38" aria-hidden="true" id="jaws_38">
+      <div *ngIf="show == 39" aria-hidden="true" id="jaws_39">
         <p><abbr title="Resolución" class="emphasy">R</abbr>:
           Reinstalar Jaws sin scripts.
         </p>
@@ -934,8 +924,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(38)" *ngIf="show != 38">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 38">Ocultar</button>
+      <button class="btn" (click)="showOpt(39)" *ngIf="show != 39">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 39">Ocultar</button>
     </div>
   </div>
 
@@ -946,7 +936,7 @@
         Al escribir un punto con la línea braille (punto 3), si se pulsa después el espacio el punto se cambia
         automáticamente por un apóstrofe, tanto en WORD como en la línea braille.
       </p> 
-      <div *ngIf="show == 39" aria-hidden="true" id="jaws_39">
+      <div *ngIf="show == 40" aria-hidden="true" id="jaws_40">
         <p><abbr title="Resolución" class="emphasy">R</abbr>:
           Existen dos posibles soluciones:
         </p>
@@ -967,8 +957,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(39)" *ngIf="show != 39">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 39">Ocultar</button>
+      <button class="btn" (click)="showOpt(40)" *ngIf="show != 40">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 40">Ocultar</button>
     </div>
   </div>
 
@@ -980,7 +970,7 @@
         target="_blank">Diccionario de la Real Academia Española</a>  al consultar una acepción de una palabra con JAWS 
         2023.2212 se verbaliza la etiqueta HTML mark, incrustada en a cada una de las palabras que conforman la acepción. 
       </p> 
-      <div *ngIf="show == 40" aria-hidden="true" id="jaws_40">
+      <div *ngIf="show == 41" aria-hidden="true" id="jaws_41">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>:
           Se ha de editar el esquema actual (por defecto clásico), para ello:
@@ -1005,8 +995,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(40)" *ngIf="show != 40">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 40">Ocultar</button>
+      <button class="btn" (click)="showOpt(41)" *ngIf="show != 41">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 41">Ocultar</button>
     </div>
   </div>
 
@@ -1016,7 +1006,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Cambiar la verbalización para que cuando una palabra está en mayúsculas, lea la palabra completa y no la deletree.
       </p> 
-      <div *ngIf="show == 41" aria-hidden="true" id="jaws_41">
+      <div *ngIf="show == 42" aria-hidden="true" id="jaws_42">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>:
           Se ha de elimina la entrada de diccionario.
@@ -1025,8 +1015,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(41)" *ngIf="show != 41">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 41">Ocultar</button>
+      <button class="btn" (click)="showOpt(42)" *ngIf="show != 42">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 42">Ocultar</button>
     </div>
   </div>
 
@@ -1036,7 +1026,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Fijar la primera columna de una hoja Excel en una línea braille.
       </p> 
-      <div *ngIf="show == 42" aria-hidden="true" id="jaws_42">
+      <div *ngIf="show == 43" aria-hidden="true" id="jaws_43">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>:
           No es posible dicha configuración, pero sí es posible que se vea la primera celdilla y la celda activa.
@@ -1049,8 +1039,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(42)" *ngIf="show != 42">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 42">Ocultar</button>
+      <button class="btn" (click)="showOpt(43)" *ngIf="show != 43">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 43">Ocultar</button>
     </div>
   </div>
 
@@ -1060,7 +1050,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         No se puede asignar comando de acceso rápido.
       </p> 
-      <div *ngIf="show == 43" aria-hidden="true" id="jaws_43">
+      <div *ngIf="show == 44" aria-hidden="true" id="jaws_44">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>:
           Modificar los permisos de administrador al icono de jaws desde la pestaña seguridad del diálogo de propiedades del 
@@ -1070,8 +1060,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(43)" *ngIf="show != 43">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 43">Ocultar</button>
+      <button class="btn" (click)="showOpt(44)" *ngIf="show != 44">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 44">Ocultar</button>
     </div>
   </div>
 
@@ -1081,7 +1071,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Desactivar tecla FN desde BIOS.
       </p> 
-      <div *ngIf="show == 44" aria-hidden="true" id="jaws_44">
+      <div *ngIf="show == 45" aria-hidden="true" id="jaws_45">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>:
           El procedimiento es el siguiente:
@@ -1106,8 +1096,8 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(44)" *ngIf="show != 44">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 44">Ocultar</button>
+      <button class="btn" (click)="showOpt(45)" *ngIf="show != 45">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 45">Ocultar</button>
     </div>
   </div>
 
@@ -1117,7 +1107,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Configurar JAWS para que verbalice mayúsculas y no haga una modificación del tono (por defecto).
       </p> 
-      <div *ngIf="show == 45" aria-hidden="true" id="jaws_45">
+      <div *ngIf="show == 46" aria-hidden="true" id="jaws_46">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>:
           Para que JAWS diga las letras que están en mayúscula se pueden agregar entradas en el diccionario de JAWS. Para añadir una entrada al diccionario:
@@ -1138,30 +1128,6 @@
     </div>
 
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(45)" *ngIf="show != 45">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 45">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        No se puede acceer a los archivos compartidos en OneDrive.
-      </p> 
-      <div *ngIf="show == 46" aria-hidden="true" id="jaws_46">
-        <p>
-          <abbr title="Resolución" class="emphasy">R</abbr>:
-          Se ha de pulsar sobre el enlace de <b>Mis Archivos</b>, si se pulsa sobre el enlace <b>Compartido</b>, no se carga 
-          bien la lista.
-        </p>
-        <p>
-          <span class="emphasy">Comentarios</span>:
-        </p>
-      </div>
-    </div>
-    
-    <div class="flex-btn">
       <button class="btn" (click)="showOpt(46)" *ngIf="show != 46">Consultar</button>
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 46">Ocultar</button>
     </div>
@@ -1171,17 +1137,16 @@
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
-        Saber en que página estamos en un documento PDF abierto con Adobe Acrobat Reader. 
+        No se puede acceer a los archivos compartidos en OneDrive.
       </p> 
       <div *ngIf="show == 47" aria-hidden="true" id="jaws_47">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>:
-          Control + Shift + N.
+          Se ha de pulsar sobre el enlace de <b>Mis Archivos</b>, si se pulsa sobre el enlace <b>Compartido</b>, no se carga 
+          bien la lista.
         </p>
         <p>
           <span class="emphasy">Comentarios</span>:
-          Mp es un comando de JAWS, es el comando de navegar a página de Adobe Acrobar Reader, pero JAWS nos dice en 
-          que página estamos.
         </p>
       </div>
     </div>
@@ -1196,9 +1161,34 @@
     <div class="flex-item txt">
       <p>
         <abbr title="Consulta" class="emphasy">C</abbr>:
+        Saber en que página estamos en un documento PDF abierto con Adobe Acrobat Reader. 
+      </p> 
+      <div *ngIf="show == 48" aria-hidden="true" id="jaws_48">
+        <p>
+          <abbr title="Resolución" class="emphasy">R</abbr>:
+          Control + Shift + N.
+        </p>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Mp es un comando de JAWS, es el comando de navegar a página de Adobe Acrobar Reader, pero JAWS nos dice en 
+          que página estamos.
+        </p>
+      </div>
+    </div>
+    
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(48)" *ngIf="show != 48">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 48">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
         Hacer que Jaws verbalice con distintas voces el texto con formatos de negrita, subrayado y cursiva. 
       </p> 
-      <div *ngIf="show == 47" aria-hidden="true" id="jaws_48">
+      <div *ngIf="show == 49" aria-hidden="true" id="jaws_49">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>:
           Seguir el siguiente procedimiento:
@@ -1223,8 +1213,8 @@
     </div>
     
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(48)" *ngIf="show != 48">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 48">Ocultar</button>
+      <button class="btn" (click)="showOpt(50)" *ngIf="show != 50">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 50">Ocultar</button>
     </div>
   </div>
 
@@ -1234,7 +1224,7 @@
         <abbr title="Consulta" class="emphasy">C</abbr>:
         Exportar configuración de Jaws a otro equipo.
       </p> 
-      <div *ngIf="show == 47" aria-hidden="true" id="jaws_48">
+      <div *ngIf="show == 51" aria-hidden="true" id="jaws_51">
         <p>
           <abbr title="Resolución" class="emphasy">R</abbr>:
           Los perfiles creados se guardan en: <b>SettingsCenter.ini</b> y los esquemas de voces y sonidos en archivos con 
@@ -1254,7 +1244,185 @@
     </div>
     
     <div class="flex-btn">
-      <button class="btn" (click)="showOpt(49)" *ngIf="show != 49">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 49">Ocultar</button>
+      <button class="btn" (click)="showOpt(51)" *ngIf="show != 51">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 51">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='menú de inicio'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        JAWS no lee los elementos del Menú de Inicio de Windows.
+      </p> 
+      <div *ngIf="show == 52" aria-hidden="true" id="jaws_52">
+        <p>
+          <abbr title="Resolución" class="emphasy">R</abbr>:
+          Probar primero actualizando Windos 10 y Jaws; si no funciona. </p>
+          <ol>
+            <li>Ir a Archivos de programa.</li>
+            <li>Carpeta Freedome Scientific.</li>
+            <li>Posicionarse sobre Jaws.</li>
+            <li> y en propiedades (alt + Enter)</li>
+            <li>en la pestaña de Seguridad.</li>
+            <li>Pulsar sobre el botón Editar.</li>
+            <li>A continuación sobre el botón Agregar.</li>
+            <li>Añadir el grupo <b>Todos los paquetes de Aplicaciones</b>.</li>
+            <li>Por último darle control total.</li>
+          </ol>
+          <p>Si no se resuelve instalar el Classic.</p>
+      </div>
+    </div>
+    
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(52)" *ngIf="show != 52">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 52">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Al crearse y guardarse un fichero con Write Jaws lee perfectamente el fichero, pero al cerrarlo y abrirlo Jaws lee una línea sí y otra no.
+      </p> 
+      <p *ngIf="show == 53" aria-hidden="true" id="jaws_53">
+        <abbr title="Resolución" class="emphasy">R</abbr>:
+        Realizar una copia del fichero con extensión *,rtf y renombrarlo.  
+      </p>
+    </div>
+    
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(53)" *ngIf="show != 53">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 53">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        No es posible instalar Jaws 2019 y 2020.
+      </p> 
+      <p *ngIf="show == 54" aria-hidden="true" id="jaws_54">
+        <abbr title="Resolución" class="emphasy">R</abbr>:
+        Comprobar que la configuración del equipo cumple los requisitos mínimos.  
+      </p>
+      <p class="emphasy">Comentarios:
+          Requisitos: Procesador i5 a 2.0GH; 8Gb de RAM y 2Gb de espacio en el disco duro.
+      </p>
+    </div>
+    
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(54)" *ngIf="show != 54">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 54">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='vincular'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: No se consigue vincular Orbit a JAWS.
+      </p>
+      <div *ngIf="show == 55" aria-hidden="true" id="jaws_55">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Para poder escribir debe activarse el modo teclado braille. Para ello realizar lo siuiente:
+        </p>
+        <ol>
+          <li>Pulsar flecha derecha + barra espaciadora + punto 6, para habilitar la conexión por USB.</li>
+          <li>Agregar la Orbit Reader a Jaws como si se tratara de una línea braille al uso.</li>
+          <li>Seleccionarla como línea braille predeterminada.</li>
+          <li>Pulsar la barra espaciadora + los puntos del 1 al 6. La Orbit verbalizará el mensaje: modo teclado braille activado.</li>
+        </ol>
+        <p>Este modo braille se utiliza para poder escribir, pero si no se activa, se puede manejar el equipo sin problemas</p>
+        <p>
+          <span class="emphasy">Comentarios</span>: Esta solución tambien serviría para <abbr title="No Visual Desktop Accessibility">NVDA</abbr>.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(55)" *ngIf="show != 55">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 55">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        La línea braille dejó de funcionar en el equipo. Cuando se conecta la línea braille al ordenador por puerto USB y se accede
+         a Opciones > braille (em Jaws), el mensaje es: <i>La línea braille activa es ninguna línea</i>. Se verifica que todas las 
+         opciones están bien configuradas, que se ha agregado en más de una ocasión la línea. Se reinicia Jaws, ... 
+      </p>
+      <p>
+        Por otro lado, se ha desinstalado Jaws con los elementos compartidos y procedido a instalar la última versión de Jaws. 
+        El problema continúa. También se comprueba que la línea braille funciona correctamente en otros ordenadores. 
+      </p>
+      <div *ngIf="show == 56" aria-hidden="true" id="jaws_56">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Si el equipo tiene actualizaciones pendientes, hay que instalarlas para ver si el fabricante ha resuelto el problema.
+          Si está actualizado, intentar volver a la versión anterior del controlador: 
+        </p>
+        <ol>
+          <li>Administrador de dispositivos.</li>
+          <li>Nos posicionamos sobr el dispositivo que no funciona.</li>
+          <li>Menú contextual.</li>
+          <li>Opciones.</li>
+        </ol>
+        <p>
+          Si permite volver al controlador anterior, inténtalo.
+        </p>
+        <p>
+          Si esto no funciona, consultar la configuración de energía.
+        </p>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Existe otra posible solución para este problema.
+          <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Ver</button>
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(56)" *ngIf="show != 56">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 56">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='linea'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        La línea braille dejó de funcionarle en este equipo.
+      </p> 
+      <div *ngIf="show == 57" aria-hidden="true" id="jaws_57">
+        <p><abbr title="Resolución" class="emphasy">R</abbr>:
+          Es un problema de la versión del controlados, seguir el siguiente procedimiento:
+        </p>
+        <ol>
+          <li>Acceder a administrador de dispositivos.</li>
+          <li>Localizar <b>Lib USB-1.0:FreedmScientific [Focus Blue]</b>.</li>
+          <li>Consultar la fecha del  controlador y su versión.</li>
+          <li>Desinstalo el controlador.</li>
+          <li>Reiniciar el ordenador.</li>
+          <li>Conecto la línea braille.</li>
+          <li>Ejecutar Jaws.</li>
+          <li>Acceder a administrador de dispositivos.</li>
+          <li>Localizar <i>Lib USB-1.0:FreedmScientific [Focus Blue]</i>.</li>
+          <li>Consultar la fecha del  controlador y su versión.</li>
+        </ol>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          <a href="https://support.freedomscientific.com/Downloads/Focus/FocusBlueBrailleDisplayDriver" target="_blank" 
+          title="Descarga el driver de Freedom Scientific (se abre en una nueva ventana)">Descarga el driver de Freedom Scientific</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(57)" *ngIf="show != 57">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 57">Ocultar</button>
     </div>
   </div>

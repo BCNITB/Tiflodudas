@@ -188,10 +188,18 @@ export class VOverComponent  implements OnInit {
         this.element = "vo_40";
         this.show = 40;
         break;
-        case 41:
+      case 41:
           this.element = "vo_41";
           this.show = 41;
           break;
+        case 42:
+          this.element = "vo_42";
+          this.show = 42;
+          break;
+      case 43:
+        this.element = "vo_43";
+        this.show = 43;
+        break;
     }
 
     this.elementTemp = this.element;

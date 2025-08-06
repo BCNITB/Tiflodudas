@@ -23,7 +23,7 @@ export class RegisterComponent  implements OnInit {
     private interactionSrvc: InteractionService
   ) {
     this.formReg = new FormGroup({
-        email: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required, Validators.email]),
         password: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(15)]),
         confirmPassword: new FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(15)]),
       });
@@ -35,19 +35,28 @@ export class RegisterComponent  implements OnInit {
   ngOnInit() { }
 
   onSubmit(){
-    if(this.formReg.get('password')?.value == this.formReg.get('confirmPassword')?.value){
-      this.userSrvc.register(this.formReg.value)
-        .then(Response => {
-          this.interactionSrvc.presentToast('Usuario creado de forma correcta', 2000)
-          this.router.navigate(['/edit'])
-        })
-        .catch(error => {
-          this.interactionSrvc.presentToast('Error al crear el nuevo usuario. <br> Inéntelo de nuevo.', 2000)
-          console.log(error)
-        });
+    this.submitAttempt = true;
+    if (this.formReg.invalid) {
+      this.interactionSrvc.presentToast('Por favor, completa todos los campos correctamente.', 2000);
+      return;
     }
-    else{
-      this.interactionSrvc.presentToast('Las contraseás no coinciden.', 2000);
+    if (this.formReg.get('password')?.value !== this.formReg.get('confirmPassword')?.value) {
+      this.interactionSrvc.presentToast('Las contraseñas no coinciden.', 2000);
+      return;
     }
-  }
+    const { email, password } = this.formReg.value;
+    this.userSrvc.register({ email, password })
+      .then(Response => {
+        this.interactionSrvc.presentToast('Usuario creado de forma correcta', 2000)
+        this.router.navigate(['/edit'])
+      })
+      .catch(error => {
+      let msg = 'Error al crear el nuevo usuario. Inténtelo de nuevo.';
+      if (error.code === 'auth/email-already-in-use') {
+        msg = 'El correo electrónico ya está registrado.';
+      }
+      this.interactionSrvc.presentToast(msg, 2000);
+      console.log(error);
+    });
+   }
 }

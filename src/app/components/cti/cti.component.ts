@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-cti',
@@ -14,7 +15,8 @@ export class CtiComponent  implements OnInit {
   element: string;
   category: string;
 
-  constructor() { 
+  constructor(private title: Title) { 
+    title.setTitle('Centro Tegnología e Innovación');
     this.category = 'all';
   }
 

@@ -195,4 +195,23 @@
         <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
       </div>
     </div>
-</div>
+
+    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='movil'">
+      <div class="flex-item txt">
+        <p>
+          <abbr title="Consulta" class="emphasy">C</abbr>: Error en la aplicación con iPod touch; las listas de búsqueda salen vacías.
+        </p>
+        <div *ngIf="show == 8" aria-hidden="true" id="gold_8">
+          <p>
+            <abbr title="Resolucion" class="emphasy">R</abbr>: Actualizar la versión de iOS. 
+          </p>
+        </div>
+      </div>
+
+      <div class="flex-btn">
+        <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
+        <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+      </div>
+    </div>
+
+  </div>

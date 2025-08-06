@@ -30,11 +30,11 @@
 
   <!-- TODO: ADMIN USER -->
   <app-acces *ngIf="logged == 'no connected'"></app-acces>
-  
+
   <!-- TODO: ADMIN USER -->
-  <div *ngIf="logged == 'connected'">
+  <div *ngIf="logged == 'connected'"></div>
+  <div>
    
-    <!-- ADMIN OF ADMIN USERS -->
     <app-register></app-register>
     
     <p *ngIf="count == 0">

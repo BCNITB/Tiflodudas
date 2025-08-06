@@ -6,6 +6,10 @@
     <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
       <ion-select-option value="comandos">Comandos</ion-select-option>
       <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="edico">Edico</ion-select-option>
+      <ion-select-option value="talkback" lang="en">TalkBack</ion-select-option>
+      <ion-select-option value="vincular">Vinculación</ion-select-option>
+      <ion-select-option value="voiceover" lang="en">VoiceOver</ion-select-option>
       <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
@@ -51,6 +55,7 @@
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
     </div>
   </div>
+
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
     <div class="flex-item txt">
@@ -105,10 +110,7 @@
       <div *ngIf="show == 4" aria-hidden="true" id="focus_4">
         <p>
           <abbr title="Resolucion" class="emphasy">R</abbr>: 
-        </p>
-        <p>
-          <span class="emphasy">Comentarios</span>:
-          La línea focus tiene como método de entrada braille de 6 puntos; debe cambiarse a braille de 8 puntos.
+          Si la línea focus tiene como método de entrada braille de 6 puntos; debe cambiarse a braille de 8 puntos.
         </p>
       </div>
     </div>
@@ -135,7 +137,7 @@
           <li>Shift derecho + 4-5-6-8.</li>
         </ul>
         <p>
-          Si se configura mediante menñus, seguir el siguiente procedimiento para activar o desactivar el modo a una mano:
+          Si se configura mediante menús, seguir el siguiente procedimiento para activar o desactivar el modo a una mano:
         </p>
         <ol>
           <li>Pulsar la tecla menú.</li>
@@ -165,7 +167,7 @@
         </p>
         <ol>
           <li>Acceder a administrador de dispositivos.</li>
-          <li>Localizar <i>Lib USB-1.0:FreedmScientific [Focus Blue]</i>.</li>
+          <li>Localizar <b>Lib USB-1.0:FreedmScientific [Focus Blue]</b>.</li>
           <li>Consultar la fecha del  controlador y su versión.</li>
           <li>Desinstalo el controlador.</li>
           <li>Reiniciar el ordenador.</li>
@@ -188,4 +190,137 @@
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
     </div>
   </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='talkback' || category=='vincular'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Conexión línea braille con TalkBack.
+      </p>
+      <div *ngIf="show == 7" aria-hidden="true" id="focus_7">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Para añadir una línea braille a Talkback debemos tener instalada 
+          BrailleBack (dependiendo de la versión de Android no está incluido por defecto) y realizar los siguientes pasos:
+        </p>
+        <ol>
+          <li>Activar la conexión mediante Bluetooth.</li>
+          <li>Vicular la línea braille.</li>
+          <li>Ir a:</li>
+          <ol>
+            <li>Ajustes.</li>
+            <li>Accesibilidad.</li>
+            <li>BrailleBack.</li>
+          </ol>
+          <li>Comprobar que la línea braille está enlazada, si no lo est´´a pulsar sobre el desplegable y seleccionarla.</li>
+        </ol>
+        <p class="emphasy">Comentarios:</p>
+          <ul>
+            <li>Actualmente BrailleBack está incluido en la Suite de Accesibilidad de Android.</li>
+            <li>Para que la línea funcione debe estar activado TalkBack.</li>
+          </ul>
+      </div>
+    </div>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='voiceover' || category=='iphone'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: El iPhone no detecta la línea Braille.
+      </p>
+      <div *ngIf="show == 8" aria-hidden="true" id="focus_8">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Deben eliminarse dispositivos vinculados de la línea.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Como conectar una línea Braille a un Apple Watch.
+      <p>
+      <div *ngIf="show == 9" aria-hidden="true" id="focus_9">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Se deben seguir los siguientes pasos:
+        </p>
+        <ol>
+          <li>Descubrir la Línea Braille.</li>
+          <li>Ajustes.</li>
+          <li>Accesibilidad.</li>
+          <li>VoiceOver.</li>
+          <li>Braille.</li>
+          <li>Conectar la línea Braille.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: La línea Focus está bloqueada.
+      <p>
+      <div *ngIf="show == 10" aria-hidden="true" id="focus_10">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Para desbloquear la línea braille:
+        </p>
+        <ol>
+          <li>Desconectar la línea braille de todos los dispositivos.</li>
+          <li>Pulsar, con la línea encendida, Modo derecho y dos sensores durante 5 segundos.</li>
+
+        </ol>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='edico' || category=='configuracion'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: 
+        Cuando se pulsa un sensor de la línea braille para posicionarse en un lugar determinado de la  misma, el cursor sube 3 
+        líneas.
+      </p>
+      <div *ngIf="show == 11" aria-hidden="true" id="focus_11">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: 
+          Las siguientes opciones deben estar activadas:
+        </p>
+        <ul>
+          <li>Teclas de la línea braille desplazan el cursor activo.</li>
+          <li>La línea braille sigue el cursor activo.</li>
+        </ul>
+        <p>
+          <span class="emphasy">Comentarios</span>:
+          Estas configuraciones se encuentran en el gestor de configuración > Braille > General. 
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
+    </div>
+
+
+  </div>
+
 </div>

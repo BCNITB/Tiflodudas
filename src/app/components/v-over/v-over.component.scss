@@ -22,6 +22,10 @@ ion-list{
     border-bottom: solid 0.1rem;
 }
 
+.cap-letters{
+    text-transform: uppercase;
+}
+
 @media only screen and (max-width: 765px) {
     .flex-container{
         flex-direction: column;

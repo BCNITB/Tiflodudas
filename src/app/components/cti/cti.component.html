@@ -101,7 +101,10 @@
       </div>
     </div>
 
-    <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-    <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
   </div>
+  
 </div>

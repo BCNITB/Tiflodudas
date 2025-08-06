@@ -30,4 +30,30 @@
       <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
     </div>
   </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Google Assistant graba lo que verbaliza Voice Assistant.
+      </p>
+      <div *ngIf="show == 2" aria-hidden="true" id="gAss_2">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Debemos seguir el siguiente procedimiento:
+        </p>
+        <ol>
+          <li>Google.</li>
+          <li>Ajustes.</li>
+          <li>Asistente de Google.</li>
+          <li>General.</li>
+          <li>Desactivar <b>usar contexto de pantalla</b>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+    </div>
+  </div>
+  
 </div>

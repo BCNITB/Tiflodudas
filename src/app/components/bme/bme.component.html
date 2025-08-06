@@ -1,4 +1,113 @@
 <p>
-  No se ha reportado ninguan consulta sobre el Software de Apoyo Didáctico: <abbr title="Braille Music Edito">BME</abbr>. Si quieres registrar una duda o aportar una
-  solución a un problema detectado, <a href="/new-entry/colaboración" title="Ir a enviar una consulta">Ir a enviar una nueva consulta</a>.
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
 </p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="instalacion">Instalación</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='instalacion' || category=='configuracion'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>: Cuando se da uno de estos supuestos:
+      </p>
+      <ul>
+        <li>Los protocolos de seguridad utilizados por HTTPS no están activos.</li>
+        <li>Bien configurados.</li>
+        <li>La entidad de confianza que certifica la autenticidad de la web de ONCE no está reconocida.</li>
+        <li>Las librerías del ClickOnce incluidas no permiten hacer descargas seguras.</li>
+      </ul>
+      <p>
+        La instalación de aplicaciones como <abbr title="Editor Braille">eBrai</abbr>, <abbr title="Editor Científico ONCE">Edico</abbr>
+        , <abbr title="Mecanografía Interactiva ONCE">MIO</abbr> o Braitico generan un error que indica que no se puede descargar un 
+        archivo necesario para instalar.
+      </p>
+      <div *ngIf="show == 1" aria-hidden="true" id="bme_1">
+        <p>
+          <abbr title="Resolucion" class="emphasy">R</abbr>: Seguir el siguiente procedimiento:
+        </p>
+        <ol>
+          <li>
+            Reiniciar el PC, ya que después de tratar de realizar una instalación que da error en el equipo se queda un proceso 
+            en memoria que bloquea algunos de los siguientes pasos.
+          </li>
+          <li>
+            Configurar <i>GlobalSign</i>, que es la entidad que certifica las páginas web de ONCE, como entidad de certificación 
+            raíz de confianza. Para ello, hay que descargar el <a href="http://secure.globalsign.net/cacert/Root-R3.crt">Certificado de GlobalSign</a>	
+            y abrir el fichero descargado para proceder a instalarlo. 
+            <ol>
+              <li>En la ventana con las propiedades del certificado pulsar <i>Instalar certificado...</i></li>
+              <li><i>Siguiente</i></li>
+              <li>Activar la casilla <i>Colocar todos los certificados en el siguiente almacén.</i></li>
+              <li>Se abilitará el botón <i>Examinar...</i></li>
+              <li>Pulsarel botón habilitado.</li>
+              <li>En la lista que aparece se debe seleccionar <i>Entidades de certificación raíz de confianza</i>.</li>
+              <li>Pulsar <i>Aceptar</i>.</li>
+              <li><i>Siguiente</i>.</li>
+              <li><i>Finalizar</i>.</li>
+              <li>Aparecerá un aviso de que se va a instalar un certificado de GlobalSign que deberá ser confirmado pulsando <i>Sí</i>.</li>
+              <li>Cuando el proceso se realice aparecerá un mensaje indicando que <i>La importación se completó correctamente</i>.</li>
+            </ol>              
+          </li>
+          <li>En Windows 7, cuando las actualizaciones automáticas no se han llevado a cabo de forma completa, no están activas las
+             descargas TLS 1.2. Deben habilitarse ya que este es el protocolo necesario para las descargas HTTPS que utiliza la web 
+             del <abbr title="Centro de Tecnología e Innovación">CTI</abbr>. Existe una aplicación de Microsoft que realiza este 
+             proceso de forma automática, y que puede descargarse en <a href="https://aka.ms/easyfix51044">Easy Fix</a>.
+             <ol>
+              <li>Ejecutar el fichero.</li>
+              <li>Aceptar la licencia.</li>
+              <li><i>Siguiente”</i>.</li>
+              <li>Conceder los permisos que se soliciten.</li>
+              <li>Aparecerá el mensaje: <i>La operación se ha realizado correctamente</i> y el botón <i>Cerrar</i>.</li>
+              <li>Pulsar sobre el botón.</li>
+            </ol>
+          </li>
+          <li>
+            Principalmente en equipos con Windows 7, aunque podría ocurrir también en Windows 8 y Windows 10, puede ser necesario 
+            instalar el Microsoft .NET Framework 4.6.2 para que ClickOnce funcione con TLS 1.2 descargando el instalador desde el 
+            la <a href="https://www.microsoft.com/es-es/download/confirmation.aspx?id=53344"><p>agina de Microsoft</p></a>. 
+            <ol>
+              <li>Ejecutar el fichero descargado.</li>
+              <li>Conceder los permisos que se soliciten.</li>
+              <li>Aceptar la licencia marcando la casilla que lo indica.</li>
+              <li><i>Instalar</i>.</li>
+              <li><i>Finalizar</i>.</li>
+            </ol>
+          </li>
+          <li>
+            Cambiar la política de seguridad relacionada con el protocolo de seguridad SSL que impide el acceso a la web de la 
+            <abbr title="Organización NacionalCiegos Española">ONCE</abbr>. 
+            Para ello seguir los siguientes pasos:
+            <ol>
+              <li>Iniciar sesión con un usuario que tenga permisos de administrador.</li>
+              <li>Abrir el Editor de directivas locales, pulsando Windows+R, tecleando gpedit.msc y pulsando Aceptar.</li>
+              <li>
+                En el árbol de directivas que aparece navegar hasta; Directiva Equipo local > Configuración del equipo > 
+                Plantillas administrativas > Red > Opciones de configuración SSL.
+              </li>
+              <li>
+                En la lista de directivas seleccionar la que se llama <i>Orden de la curva ECC</i> y modificarla.
+                Su estado debe quedar en <i>No configurada</i>.
+              </li>
+              <li>Pulsar Aceptar.</li>
+            </ol>
+          </li>
+          <li>Una vez modificada la directiva, se debe reiniciar el PC para que los cambios surtan efecto.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+    </div>
+  </div>
+
+  
+</div>

@@ -223,6 +223,38 @@ export class JawsComponent  implements OnInit {
         this.element = "jaws_49";
         this.show = 49;
         break;
+      case 50:
+        this.element = "jaws_50";
+        this.show = 50;
+        break;
+      case 51:
+        this.element = "jaws_51";
+        this.show = 51;
+        break;
+      case 52:
+        this.element = "jaws_52";
+        this.show = 52;
+        break;
+      case 53:
+        this.element = "jaws_53";
+        this.show = 53;
+        break;
+      case 54:
+        this.element = "jaws_54";
+        this.show = 54;
+        break;
+      case 55:
+        this.element = "jaws_55";
+        this.show = 55;
+        break;
+      case 56:
+        this.element = "jaws_56";
+        this.show = 56;
+        break;
+      case 57:
+        this.element = "jaws_57";
+        this.show = 57;
+        break;
     }
 
     this.elementTemp = this.element;
