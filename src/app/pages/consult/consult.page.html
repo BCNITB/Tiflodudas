@@ -38,7 +38,7 @@
       </button>
     </div>-->
 
-    <details>
+    <details name="item">
       <summary>Anotadores Electrónicos</summary>
         <button aria-label="Orbit, pulsa para consultar incidencias" 
         (click)="navigateTo('orbit reader 20')" role="button" class="flex-item">
@@ -59,7 +59,7 @@
     </details>
 
     <!-- COMUNICADORES SORDOCEGUERA -->
-    <details>
+    <details name="item">
       <summary>Comunicadores personas con Sordoceuera</summary>
       <p>
         No se ha reportado ninguan consulta sobre Comunicadores para Sordoceguera. Si quieres registrar una duda o aportar 
@@ -69,7 +69,7 @@
     </details>
     
     <!-- CONVERSORES -->
-    <details>
+    <details name="item">
       <summary>Conversores</summary>
       <p>
         No se ha reportado ninguan consulta sobre Conversores. Si quieres registrar una duda o aportar 
@@ -79,7 +79,7 @@
     </details>
 
     <!-- IMPRESORAS -->
-    <details>
+    <details name="item">
       <summary>Impresoras Braille</summary>
       
       <button (click)="navigateTo('portathiel')" aria-label="PortaThiel, pulsa para consultar incidencias" role="button" class="flex-item">
@@ -96,7 +96,7 @@
     </details>
 
     <!-- LECTORES DE PANTALLA -->
-    <details>
+    <details name="item">
     <summary>Lectores de Pantalla</summary>
       <button (click)="navigateTo('jaws')" aria-label="Jaws, pulsa para consultar incidencias" role="button" class="flex-item">
         <abbr title="Job Access With Speech">JAWS</abbr>
@@ -128,7 +128,7 @@
     </details>
 
     <!-- LINEA / TECLADO BRAILLE -->
-    <details>
+    <details name="item">
       <summary>Línea/Teclado Braille</summary>
       <button (click)="navigateTo('alva')" aria-label="Alva, pulsa para consultar incidencias" role="button" class="flex-item">
         Alva
@@ -148,7 +148,7 @@
     </details>
 
     <!-- MAGNIFICADORES PANTALLA -->
-    <details>
+    <details name="item">
       <summary>Magnificadores de pantalla</summary>
       
       <button (click)="navigateTo('ampliación android')" aria-label="Ampliación Android, pulsa para consultar incidencias" role="button" class="flex-item">
@@ -177,7 +177,7 @@
     </details>
 
     <!-- TELEFONOS ADAPTADOS -->
-    <details>
+    <details name="item">
       <summary>Telefonos Adaptados</summary>
       
       <button (click)="navigateTo('blindshell')" aria-label="BlindShell, pulsa para mostrar incidencias" role="button" class="flex-item">
@@ -190,7 +190,7 @@
     </details>
 
     <!-- SOFTWARE DIDATICO -->
-    <details>
+    <details name="item">
       <summary>Software de Apoyo Didáctico</summary>
       
       <button (click)="navigateTo('bme')" aria-label="BME, pulsa para mostrar incidencias" role="button" class="flex-item">
@@ -207,7 +207,7 @@
     </details>
 
     <!-- ASISTENTES INTELIGENTES -->
-    <details>
+    <details name="item">
       <summary>Asistente Inteligente</summary>
       
       <button (click)="navigateTo('alexa')" aria-label="Alexa, pulsa prar mostrar incidencias" role="button" class="flex-item">
@@ -224,7 +224,7 @@
     </details>
 
     <!-- MECANOGRAFÍA -->
-    <details>
+    <details name="item">
       <summary>Mecanografía</summary>
       
       <button (click)="navigateTo('dio')" aria-label="DIO, pulsa para mostrar incidencias" role="button" class="flex-item">
@@ -249,7 +249,7 @@
     </details>  
 
     <!-- OCR -->
-    <details>
+    <details name="item">
       <summary>
         <abbr title="Reconocedores Ópticos de Caracteres">OCR</abbr>
       </summary>
@@ -264,7 +264,7 @@
     </details>
 
     <!-- REPRODUCTORES/GRABADORAS -->
-    <details>
+    <details name="item">
       <summary>
         Reproductores<span aria-hidden="true">/</span>Grabadoras Digitales
       </summary>
@@ -291,7 +291,7 @@
     </details>
 
     <!-- TELELUPAS -->
-    <details>
+    <details name="item">
       <summary>Lupas Televisión</summary>
       
       <!--<button (click)="navigateTo('telelupa')" aria-label="Telelupa, pulsa para mostrar incidencias" role="button" class="flex-item">
@@ -308,7 +308,7 @@
     </details>
 
     <!-- SOFTWARE ONCE -->
-    <details>
+    <details name="item">
       <summary>
         Software <abbr title="Organización Nacional Ciegos Españoles">ONCE</abbr>
       </summary>
@@ -327,6 +327,25 @@
 
       <button (click)="navigateTo('cti')" aria-label="CTI, pulsa para mostrar incidencias" role="button" class="flex-item">
         <abbr title="Centro de Tecnología e Innovación">CTI</abbr>
+      </button>
+    </details>
+
+    <!-- MISCELANEOUS -->
+    <details name="item">
+      <summary>
+        Cajón de Sastre
+      </summary>
+      
+      <button (click)="navigateTo('aplicaciones')" aria-label="Aplicaciones, pulsa para mostrar incidencias" role="button" class="flex-item">
+        Aplicaciones
+      </button>
+
+      <button (click)="navigateTo('dispositivos')" aria-label="Dispositivos, pulsa para mostrar incidencias" role="button" class="flex-item">
+        Dispositivos
+      </button>
+
+      <button (click)="navigateTo('repositorio')" aria-label="Repositorio, pulsa para mostrar incidencias" role="button" class="flex-item">
+        Repositorio
       </button>
     </details>
   </ion-list>

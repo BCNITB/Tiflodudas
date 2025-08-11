@@ -259,6 +259,14 @@ export class JawsComponent  implements OnInit {
         this.element = "jaws_58";
         this.show = 58;
         break;
+      case 59:
+        this.element = "jaws_59";
+        this.show = 59;
+        break;
+      case 60:
+        this.element = "jaws_60";
+        this.show = 60;
+        break;
     }
 
     this.elementTemp = this.element;

@@ -1,0 +1,56 @@
+.btn{
+    background-color: green;
+    color: #fff;
+    padding: 0.5em 0.5em;
+    border-radius: 0.2rem;
+}
+
+.flex-container{
+    border-bottom: solid 0.1rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.txt{
+    width: 86%;
+}
+
+ion-list{
+    border-bottom: solid 0.1rem;
+}
+
+
+details[open] summary {
+    font-weight: 600;
+}
+
+details summary {
+    font-weight: 400;
+    padding-top: 1em;
+    cursor: pointer;
+} 
+
+details p{
+    padding-left: 2em;
+
+    border-left: solid 0.25rem;
+    border-color: #70b578;
+}
+
+@media only screen and (max-width: 765px) {
+    .flex-container{
+        flex-direction: column;
+    }
+
+    .txt{
+        width: 100%;
+    }
+
+    .flex-btn{
+        margin-bottom: 1vh;
+    }
+    
+}

@@ -1,0 +1,88 @@
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="aplicaciones">Aplicaciones</ion-select-option>
+      <ion-select-option value="juegos">Juegos</ion-select-option>
+      <ion-select-option value="outlook">Outlook</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <details name="category" id="consult_1" *ngIf="category=='all' || category=='outlook'" class="odd">
+    <summary>
+      Outlook da el siguiente error: <b>Error de archivo en el convertidor Valores separados por comas al inicializar un convertidor para generar la información de campo.
+        Compruebe que dispone del archivo correcto, que tiene permisos para abrirlo y que no está abierto en otro programa</b>.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Importar el archivo csv a excel o a un text para ver que delimitado está utilizndo para separar los campos.
+      </p>
+    </div>
+  </details>
+
+  <details name="category" id="consult_1" *ngIf="category=='all' || category=='juegos'">
+    <summary>
+      Juego accesible para ordenador y consola.
+    </summary>
+    <div class="txt-content">
+      <p>
+        <a href="https://store.steampowered.com/agecheck/app/1341820/?l=spanish" target="_blank" aria-label="As Dusk Falls, enlace a Steam">As Dusk Falls</a>. Es un juego de 
+        aventuras interactivo que se centra en la narrativa y las decisiones del jugador. 
+      </p>
+      <p>
+        El juego es accesible para personas con discapacidad visual, auditiva y motora. 
+        Incluye opciones de accesibilidad como subtítulos, descripciones de audio y controles personalizables.
+      </p>
+      <p>
+        El juego está disponibel en la plateforma de Steam para ordenadores y para la consola <abbr lang="en" title="Play Station">PS</abbr>5.
+      </p>
+    </div>
+  </details>
+
+  <details name="category" id="consult_1" *ngIf="category=='all' || category=='cuentos'">
+    <summary>
+      Cuento interactivo de La casita de las 3 mellizas.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Enlace al cuento de <a href="https://office365once-my.sharepoint.com/personal/rcs_once_es/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Frcs%5Fonce%5Fes%2FDocuments%2FCASETA%5FTRES%5FBESSONES%2Ezip&parent=%2Fpersonal%2Frcs%5Fonce%5Fes%2FDocuments&ga=1" 
+        target="_blank" aria-label="La casita de las 3 mellizas, se abre en una nueva ventana">La casita de las 3 mellizas</a>.
+      </p>
+      <p>
+        Cuento interactivo y accesible de Las 3 mellizas.
+      </p>
+      <p>
+        Para descargar el cuento se debe ser trabajador y tener una cuenta de correo electrónico de la <abbr title="Organización Nacional de Ciegos Españoles">ONCE</abbr>.
+      </p>
+    </div>
+  </details>
+
+  <details name="category" id="consult_1" *ngIf="category=='all' || category=='aplicaciones'">
+    <summary>
+      Programa para personalizar Windows 11.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Windhawk es un mod para Windows 11 que permite personalizar el entorno gráfico del sistema operativo. Debe tenerse en cuenta que es un programa de terceros y no está 
+        desarrollado por Microsoft y puede no ser compatible con todas las versiones de Windows 11, sobretodo cuando se actualiza Windows 11.
+      </p>
+      <p>
+        Enlace a <a href="https://windhawk.net/" target="_blank" aria-label="Windhawk, se abre en una nueva ventana">LWindhawk</a>.
+      </p>
+    </div>
+  </details>
+
+  <details name="category" id="consult_1" *ngIf="category=='all' || category=='aplicaciones'">
+    <summary>
+      Complemento para hacer Edico acceible con NVDA.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Enlace al <a href="https://nvda.es/files/get.php?file=edico" target="_blank" aria-label="Complemento de NVDA, se abre en una nueva ventana">
+          Complemento de <abbr lang="en" title="Non Visual Desk acceible">NVDA</abbr></a>.
+      </p>
+    </div>
+  </details>
+</div>

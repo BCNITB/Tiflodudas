@@ -83,6 +83,11 @@ import { PortalOnceComponent } from './portal-once/portal-once.component';
 import { ApoloComponent } from './apolo/apolo.component';
 import { CtiComponent } from './cti/cti.component';
 
+/* MISCELANEOUS */
+import { AplicacionesComponent } from './aplicaciones/aplicaciones.component';
+import { RepositorioComponent } from './repositorio/repositorio.component';
+import { DispositivosComponent } from './dispositivos/dispositivos.component';
+
 @NgModule({
   declarations: [
     RegisterComponent,
@@ -136,7 +141,10 @@ import { CtiComponent } from './cti/cti.component';
     ClubOnceComponent,
     PortalOnceComponent,
     ApoloComponent,
-    CtiComponent
+    CtiComponent,
+    AplicacionesComponent,
+    RepositorioComponent,
+    DispositivosComponent
   ],
   imports: [
     CommonModule,
@@ -193,7 +201,10 @@ import { CtiComponent } from './cti/cti.component';
     ClubOnceComponent,
     PortalOnceComponent,
     ApoloComponent,
-    CtiComponent
+    CtiComponent,
+    AplicacionesComponent,
+    RepositorioComponent,
+    DispositivosComponent
   ],
 })
 export class ComponentsModule { }

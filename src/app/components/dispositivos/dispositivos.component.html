@@ -1,0 +1,31 @@
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="cajeros">Cajeros Automáticos</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <details name="category" id="consult_1" *ngIf="category=='all' || category=='outlook'">
+    <summary>
+      Como activar la accesibilidad de los cajeros automáticos de CaixaBank.
+    </summary>
+    <div>
+      <p>Para activar la indicación por tonos debe seguirse el siguiente procedimiento: </p>
+      <ol>
+        <li>Pulsamos el número uno en el teclado numérico.</li>
+        <li>URealizamos ua pequeña pausa.</li>
+        <li>Introducimos cuatro veces el número uno.</li>
+      </ol> 
+      <p>Un pitido indicará que podemos introducir la tarjeta o libreta.</p>
+      <p>Si se quiere utilizar la voz sintética:</p>
+      <ol>
+        <li>Pulsaremos el número dos.</li>
+        <li>Realizamos una pausa.</li>
+        <li>Introducimos cuatro veces el número dos.</li>
+      </ol>
+    </div>
+  </details>
+</div>

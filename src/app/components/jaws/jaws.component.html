@@ -1446,4 +1446,42 @@
     </div>
   </div>
 
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='excel' || category=='comandos'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Fijar una cabecera columna en Excel con JAWS.
+      </p> 
+      <div *ngIf="show == 59" aria-hidden="true" id="jaws_59">
+        <p><abbr title="Resolución" class="emphasy">R</abbr>:
+          El comando es: <b>CTRL + ALT + INSERT + C</b>.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(59)" *ngIf="show != 59">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 59">Ocultar</button>
+    </div>
+  </div>
+
+  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='excel' || category=='comandos'">
+    <div class="flex-item txt">
+      <p>
+        <abbr title="Consulta" class="emphasy">C</abbr>:
+        Fijar una cabecera fila en Excel con JAWS.
+      </p> 
+      <div *ngIf="show == 60" aria-hidden="true" id="jaws_60">
+        <p><abbr title="Resolución" class="emphasy">R</abbr>:
+          El comando es: <b>CTRL + ALT + INSERT + F</b>.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex-btn">
+      <button class="btn" (click)="showOpt(60)" *ngIf="show != 60">Consultar</button>
+      <button class="btn" (click)="showOpt(0)" *ngIf="show == 60">Ocultar</button>
+    </div>
+  </div>
+
 </div>

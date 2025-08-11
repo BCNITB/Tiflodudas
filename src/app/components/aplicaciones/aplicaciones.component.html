@@ -1,0 +1,20 @@
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="outlook">Outlook</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <details name="category" id="consult_1" *ngIf="category=='all' || category=='outlook'">
+    <summary>
+      Outlook da el siguiente error: <b>Error de archivo en el convertidor Valores separados por comas al inicializar un convertidor para generar la información de campo.
+        Compruebe que dispone del archivo correcto, que tiene permisos para abrirlo y que no está abierto en otro programa</b>.
+    </summary>
+      <p>
+        Importar el archivo csv a excel o a un text para ver que delimitado está utilizndo para separar los campos.
+      </p>
+  </details>
+</div>

@@ -260,4 +260,20 @@ export const CATEGORIES = [
         item:       'CTI ONCE',
         value:      'cti once'
     },
+    {
+        category:   'cajon sastre',
+        item:       'Aplicaciones',
+        value:      'aplicaciones'
+    },
+    {
+        category:   'cajon sastre',
+        item:       'Dispositivos',
+        value:      'dispositivos'
+    },
+    {
+        category:   'cajon sastre',
+        item:       'Repositorio',
+        value:      'repositorio'
+    }
+    
 ]

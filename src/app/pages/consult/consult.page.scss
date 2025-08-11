@@ -82,16 +82,28 @@ ion-icon{
     margin-left: 0.5em;
 }
 
-details summary::marker {
+/*details summary::marker {
     content: "+ ";
     font-size: 2rem;
     font-size: 1.25rem;
+}*/
+
+/*details[open] summary::marker {
+    content: "- ";
+}*/
+  
+/* Flecha en contenido colapsado */
+details summary::marker {
+  content: "⮞ ";
+  color: white;
+  font-size: 1.5rem;
 }
 
+/* Flecha en contenido desplegado */
 details[open] summary::marker {
-    content: "- ";
+  content: "⮟ ";
 }
-  
+
 
 details summary {
     padding: 10px 10px 10px 40px;
