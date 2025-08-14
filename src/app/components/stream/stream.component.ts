@@ -8,10 +8,19 @@ import { Title } from '@angular/platform-browser';
 })
 export class StreamComponent  implements OnInit {
 
+  category: string;
+
   constructor(private title: Title) {
     title.setTitle('Victor Reader Stream 2');
-   }
 
-  ngOnInit() {}
+    this.category='all';
+  }
 
+  ngOnInit() {
+  }
+
+
+  selection(e:string){
+    this.category=e;
+  }
 }

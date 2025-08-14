@@ -1,7 +1,9 @@
 <ion-list>
   <ion-item>
     <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="atajo">Atajos de teclado</ion-select-option>
       <ion-select-option value="outlook">Outlook</ion-select-option>
+      <ion-select-option value="word">Word</ion-select-option>
       <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
@@ -16,5 +18,37 @@
       <p>
         Importar el archivo csv a excel o a un text para ver que delimitado está utilizndo para separar los campos.
       </p>
+  </details>
+
+  <details name="category" id="consult_1" *ngIf="category=='all' || category=='word'">
+    <summary>
+      Multicobra no desbrailla de forma correcta.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Descargar la nueva versión de MultiCobra.
+      </p>
+    </div>
+  </details>
+
+  <details name="category" id="consult_1" *ngIf="category=='all' || category=='atajo'">
+    <summary>
+      El atajo está capturado por AMD. Para desactivarlo hay que entrar en AMD Softawre, ir a la pestaña Ataajos de Teclado, seleccionar el atajo Control + Shift + L y pulsar suprimir.
+    </summary>
+    <div class="txt-content">
+      <p>
+        El atajo está capturado por AMD. Para desactivarlo hay que realizar lo siguiente:
+      </p>
+      <ol>
+        <li>Entrar en AMD Softawre.</li>
+        <li>Botón ajustes (arriba a la derecha).</li>
+        <li>Pestaña Ataajos de Teclado.</li>
+        <li>Seleccionar el atajo Control + Shift + L.</li>
+        <li>Pulsar suprimir.</li>
+      </ol>
+      <p>
+        <span class="emphasis">Nota:</span> También se puede desactivar los Atajos de Teclado de AMA Radeon.
+      </p>
+    </div>
   </details>
 </div>

@@ -1,5 +1,24 @@
 <p>
-  No se ha reportado ninguan consulta sobre el reproductor/grabador Daisy Victor Reader Stream 2. Si quieres registrar una duda o 
-  aportar una solución a un problema detectado, <a href="/new-entry/colaboración" title="Ir a enviar una consulta">Ir a enviar 
-  una nueva consulta</a>.
+  Usa el filtro para que se muestren las consultas relacionadas con tu búsqueda.
 </p>
+<ion-list>
+  <ion-item>
+    <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
+      <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="all">Todo</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+
+<div role="list">
+  <details name="category" id="consult_1" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+      Cambiar entre red (modo conectado) y local (modo desconectado).
+    </summary>
+    <div class="txt-content">
+      <p>
+        Pulsar el botón redondo situado sobre la fila del 1 al 3.
+      </p>
+    </div>
+  </details>
+</div>
