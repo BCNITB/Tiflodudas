@@ -13,122 +13,78 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='actualizcion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='actualizcion'">
+    <summary>
+      Mensaje: reloj no preparado.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Mensaje reloj no preparado
-      </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="bra_1">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Debemos seguir el siguiente procedimiento: </p>
-        <ol>
-          <li>cor+o</li>
-          <li>s</li>
-          <li>d</li>
-          <li>Introducir la fecha en braille computerizado.</li>
-        </ol>
-      </div>
+        Debemos seguir el siguiente procedimiento: </p>
+      <ol>
+        <li>cor+o</li>
+        <li>s</li>
+        <li>d</li>
+        <li>Introducir la fecha en braille computerizado.</li>
+      </ol>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
+    <summary>
+      Obtener el número de serie de Braille Hablado 2000.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Obtener el número de serie de Braille Hablado 2000.
+        Pulsar la siguiente seguencia de comandos:
       </p>
-      <div *ngIf="show == 2" aria-hidden="true" id="bra_2">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Pulsar la siguiente seguencia de comandos:
-        </p>
-        <ol>
-          <li>Cos + Puntos 1-2-3-4-5-6.</li>
-          <li>Cor + Puntos 1-2-3-4-5-6.</li>
-          <li>Cor + P.</li>
-          <li>Puntos 1-4-5-6.</li>
-        </ol>
-      </div>
+      <ol>
+        <li>Cos + Puntos 1-2-3-4-5-6.</li>
+        <li>Cor + Puntos 1-2-3-4-5-6.</li>
+        <li>Cor + P.</li>
+        <li>Puntos 1-4-5-6.</li>
+      </ol>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos' || category=='error'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos' || category=='error'">
+    <summary>
+      Error “File system”.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Error “File system”.
+        El error en File System a veces se arregla con el reinicio (<i>Cor+i</i>), pero ese arreglo siempre sería provisional. En cualquier momento volverá a salir.
       </p>
-      <div *ngIf="show == 3" aria-hidden="true" id="bra_3">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: 
-          El error en File System a veces se arregla con el reinicio (<i>Cor+i</i>), pero ese arreglo siempre sería provisional. 
-          En cualquier momento volverá a salir.
-        </p>
-        <p>
-          La mejor opción es hacer una copia de respaldo de datos y enviar a CTI. Puede ser tema de baterías o incluso de 
-          resoldaduras de procesador.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
-    <div class="flex-item txt">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        Comandos para reaizar una copia de seguridad en Braille hablado 2000 (del BH a la Unidad de disco).
+        La mejor opción es hacer una copia de respaldo de datos y enviar a CTI. Puede ser tema de baterías o incluso de resoldaduras de procesador.
       </p>
-      <div *ngIf="show == 4" aria-hidden="true" id="bra_4">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>:
-          El proceso para realizar una copia de seguridad es:
-        </p>
-        <ol>
-          <li>Cor + S, Y</li>
-          <li>S para enviar.</li>
-          <li>Seleccionar los archivos.</li>
-          <li>Cor + E para enviar</li>
-        </ol>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
+    <summary>
+      Comandos para reaizar una copia de seguridad en Braille hablado 2000 (del BH a la Unidad de disco).
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        ¿Los Comandos copia de seguridad con el Braille hablado 2000 son los mismos en el Braille hablado clásico 2000?
+        El proceso para realizar una copia de seguridad es:
       </p>
-      <div *ngIf="show == 5" aria-hidden="true" id="bra_5">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Sí.
-        </p>
-      </div>
+      <ol>
+        <li>Cor + S, Y</li>
+        <li>S para enviar.</li>
+        <li>Seleccionar los archivos.</li>
+        <li>Cor + E para enviar</li>
+      </ol>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
+    <summary>
+      ¿Los Comandos copia de seguridad con el Braille hablado 2000 son los mismos en el Braille hablado clásico 2000?
+    </summary>
+    <div class="txt-content">
+      <p>
+        Sí.
+      </p>
     </div>
-  </div>
+  </details>
 </div>

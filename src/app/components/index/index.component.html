@@ -13,66 +13,51 @@
 
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='actualizacion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='actualizacion'">
+    <summary>
+      Los drivers no se actualizan correctamente y la impresora entra en un bucle.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Los drivers no se actualizan correctamente y la impresora entra en un
-         bucle.
+        Mantener pulsado le tecla CHS durante 10 segundos.
       </p>
-      <p *ngIf="show == 1"><abbr title="Resolucion" class="emphasy">R</abbr>: Mantener pulsado le tecla CHS durante 10 segundos </p>
     </div>
+  </details> 
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='conexion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='conexion'">
+    <summary>
+      Conocer la IP de la impresora.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Conocer la IP de la impresora.
+        Existen diferentes opciones: 
       </p>
-      <div *ngIf="show == 2" aria-hidden="true" id="index_2">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Existen diferentes opciones: </p>
+      <ul>
+        <li>En la impresora Index-D V5:</li>
         <ul>
-          <li>En la impresora Index-D V5:</li>
-          <ul>
-            <li>Para imprimir la IP pulsar: HELP, 1</li>
-            <li>Para que la impresora diga la IP pulsar: HELP, 10</li>
-          </ul>
-
-          <li>En Windows realizar lo siguiente:</li>
-          <ol>
-            <li>Panel de Control.</li>
-            <li>Impresoras.</li>
-            <li>Propiedades de la impresora.</li>
-            <li>Puertos. </li>
-          </ol>
+          <li>Para imprimir la IP pulsar: HELP, 1</li>
+          <li>Para que la impresora diga la IP pulsar: HELP, 10</li>
         </ul>
-      </div>
-    </div>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
+        <li>En Windows realizar lo siguiente:</li>
+        <ol>
+          <li>Panel de Control.</li>
+          <li>Impresoras.</li>
+          <li>Propiedades de la impresora.</li>
+          <li>Puertos. </li>
+        </ol>
+      </ul>
     </div>
-  </div>
+  </details>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='conexion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='conexion'">
+    <summary>
+      Al realizar una impresión con Index Everest DV-5 desde Ebrai se realiza una doble paginación.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Al realizar una impresión con Index Everest DV-5 desde Ebrai se realiza una doble paginación.
+        Se debe desactivar la paginación de la Index Everest o de la aplicación Ebrai.
       </p>
-      <div *ngIf="show == 3" aria-hidden="true" id="index_3">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Se debe desactivar la paginación de la Index Everest o de la aplicación Ebrai,</p>
-      </div>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
-    </div>
-  </div>
+  </details>
 </div>

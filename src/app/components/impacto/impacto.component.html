@@ -11,22 +11,14 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+      La impresora impacto no imprime bien a doble espacio los saltos de página. 
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        La impresora impacto no imprime bien a doble espacio los saltos de página. 
-      </p>
-      <p *ngIf="show == 1" aria-hidden="true" id="impacto_1">
-        <abbr title="Resolucion" class="emphasy">R</abbr>: 
-        Se debe modificar la configuración del dispositivo y asignar el modelo correcto de la impresora: impacto texto o 
-        impacto 600
+        Se debe modificar la configuración del dispositivo y asignar el modelo correcto de la impresora: impacto texto o impacto 600.
       </p>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
+  </details> 
 </div>

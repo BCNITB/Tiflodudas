@@ -18,49 +18,35 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='fire' || category=='instalacion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='fire' || category=='instalacion'">
+    <summary>
+      No se puede instalar Apolo ONCE en el Fire <abbr title="Televión">TV</abbr>.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        No se puede instalar Apolo ONCE en el Fire <abbr title="Televión">TV</abbr>.
+        Actualizar a la version 7.0.0 o superior.
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="apolo_1">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Actualizar a la version 7.
-        </p>
-      </div>
+      
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga'">
+    <summary>
+      En la pestaña Descargas no se puede abrir la opción de búsqueda, pero fundiona correctamente en novedades y el resto de ítems.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        En la pestaña Descargas no se puede abrir la opción de búsqueda, pero fundiona correctamente en novedades y el resto de ítems
+        Para solucionar el problema realizar lo siguiente::
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="apolo_1">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Para solucionar el problema realizar lo siguiente::
-        </p>
-        <ol>
-          <li>Ir a Ajustes.</li>
-          <li>Club ONCE.</li>
-          <li>Cerrar la sesión del usuario.</li>
-          <li>Volver a iniciar sesión.</li>
-        </ol>
-        <p>Otra opción es desinstalar la app y volver a instalar la aokicación.</p>
-      </div>
+      <ol>
+        <li>Ir a Ajustes.</li>
+        <li>Club ONCE.</li>
+        <li>Cerrar la sesión del usuario.</li>
+        <li>Volver a iniciar sesión.</li>
+      </ol>
+      <p>
+        Otra opción es desinstalar la app y volver a instalar la aokicación.
+      </p>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
-    </div>
-  </div>
-
+  </details>
 </div>

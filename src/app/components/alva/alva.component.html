@@ -11,22 +11,15 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='compatibilidad'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='compatibilidad'">
+    <summary>
+      ¿Es compatible la línea braille Alva 570 con un Windows de 64 bits?
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: ¿Es compatible la línea braille Alva 570 con un Windows de 64 bits?
-      </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="alva_1">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: No es compatile; es compatible con un Windows de 32 bits pero no con 
+        No es compatile; es compatible con un Windows de 32 bits pero no con 
           uno de 64.
-        </p>
-      </div>
+      </p>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
+  </details>
 </div>

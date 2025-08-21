@@ -10,14 +10,19 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" id="consult_1" *ngIf="category=='all' || category=='outlook'">
+  <details name="category" *ngIf="category=='all' || category=='outlook'" role="listitem">
     <summary>
       Outlook da el siguiente error: <b>Error de archivo en el convertidor Valores separados por comas al inicializar un convertidor para generar la información de campo.
         Compruebe que dispone del archivo correcto, que tiene permisos para abrirlo y que no está abierto en otro programa</b>.
     </summary>
+    <div class="txt-content">
       <p>
         Importar el archivo csv a excel o a un text para ver que delimitado está utilizndo para separar los campos.
       </p>
+      <p>
+        <span class="emphasis">Nota:</span> Si es coma, cambiar el delimitador en Outlook a coma.
+      </p>
+      </div>
   </details>
 
   <details name="category" id="consult_1" *ngIf="category=='all' || category=='word'">

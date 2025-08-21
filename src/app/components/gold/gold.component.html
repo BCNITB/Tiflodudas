@@ -15,203 +15,127 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='pausa lectura' || category=='movil'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='pausa lectura' || category=='movil'">
+    <summary>
+      La lectura se pausa cuando se apaga la pantalla del terminal.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        La lectura se pausa cuando se apaga la pantalla del terminal.
+        Abrir el selector de aplicaciones y cerratodas las aplicaciones, incluído Gold.
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="gold_1">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>:
-          Abrir el selector de aplicaciones y cerratodas las aplicaciones, incluído Gold.
-        </p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='lectura' || category=='movil'">
+    <summary>
+      En alguno de los libros descargados cuando se para la lectura, al reanudarla, vuelve al principio de todo.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Eliminar la caché de GOLD y reinstalar la aplicación. Para borrar la caché:
+      </p>
+      <ol>
+        <li>Ajustes.</li>
+        <li>Almacenamiento.</li>
+        <li>Otras aplicaciones o Ajustes.</li>
+        <li>Aplicaciones y notificaciones.</li>
+      </ol>
+      <p>
+        <span class="emphasy">Nota</span>:
+        ¡Cuidado! Si se pulsa en <b>Borrar almacenamiento</b> se borrarán todos los libros descargados.
+      </p>
     </div>
-  </div>
+  </details>
 
-  <div role="list">
-    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lectura' || category=='movil'">
-      <div class="flex-item txt">
-        <p>
-          <abbr title="Consulta" class="emphasy">C</abbr>:
-          En alguno de los libros descargados cuando se para la lectura, al reanudarla, vuelve al principio de todo.
-        </p>
-        <div *ngIf="show == 2" aria-hidden="true" id="gold_2">
-          <p>
-            <abbr title="Resolucion" class="emphasy">R</abbr>:
-            Eliminar la caché de GOLD y reinstalar la aplicación. Para borrar la caché:
-          </p>
-          <ol>
-            <li>Ajustes.</li>
-            <li>Almacenamiento.</li>
-            <li>Otras aplicaciones o Ajustes.</li>
-            <li>Aplicaciones y notificaciones.</li>
-          </ol>
-          <p>
-            <span class="emphasy">Comentarios</span>:
-            ¡Cuidado! Si se pulsa en <b>Borrar almacenamiento</b> se borrarán todos los libros descargados.
-          </p>
-        </div>
-      </div>
-  
-      <div class="flex-btn">
-        <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-        <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
-      </div>
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga' || category=='movil'">
+    <summary>
+      No se puede descargar libros, da el mensaje: <b>error en la descarga</b>.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Eliminar la caché de GOLD y reinstalar la aplicación. Para borrar la caché:
+      </p>
+      <ol>
+        <li>Ajustes.</li>
+        <li>Almacenamiento.</li>
+        <li>Otras aplicaciones o Ajustes.</li>
+        <li>Aplicaciones y notificaciones.</li>
+      </ol>
+      <p>
+        <span class="emphasy">Comentarios</span>:
+        ¡Cuidado! Si se pulsa en <b>Borrar almacenamiento</b> se borrarán todos los libros descargados.
+      </p>
     </div>
+  </details>
 
-    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='movil'">
-      <div class="flex-item txt">
-        <p>
-          <abbr title="Consulta" class="emphasy">C</abbr>:
-          No se puede descargar libros, da el mensaje: <b>error en la descarga</b>.
-        </p>
-        <div *ngIf="show == 3" aria-hidden="true" id="gold_3">
-          <p>
-            <abbr title="Resolucion" class="emphasy">R</abbr>:
-            Eliminar la caché de GOLD y reinstalar la aplicación. Para borrar la caché:
-          </p>
-          <ol>
-            <li>Ajustes.</li>
-            <li>Almacenamiento.</li>
-            <li>Otras aplicaciones o Ajustes.</li>
-            <li>Aplicaciones y notificaciones.</li>
-          </ol>
-          <p>
-            <span class="emphasy">Comentarios</span>:
-            ¡Cuidado! Si se pulsa en <b>Borrar almacenamiento</b> se borrarán todos los libros descargados.
-          </p>
-        </div>
-      </div>
-  
-      <div class="flex-btn">
-        <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-        <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
-      </div>
+    <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga' || category=='movil'">
+    <summary>
+      Instalar una versión anterior de una aplicación ya que el iOS es antiguo y no es compatible.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Cuando se intenta descarga una aplicación no compatible con la versión de iOS instalada en el dispositivo, la AppStore ofrece la opción de descargar una versión anterior 
+        de la aplicación (si existe) que sea compatible con la versión de iOS.
+      </p>
     </div>
+  </details>
 
-    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='movil'">
-      <div class="flex-item txt">
-        <p>
-          <abbr title="Consulta" class="emphasy">C</abbr>:
-          Instalar una versión anterior de una aplicación ya que el iOS es antiguo y no es compatible.
-        </p>
-        <div *ngIf="show == 4" aria-hidden="true" id="gold_4">
-          <p>
-            <abbr title="Resolucion" class="emphasy">R</abbr>:  
-            Cuando se intenta descarga una aplicación no compatible con la versión de iOS instalada en el dispositivo, la 
-              AppStore ofrece la opción de descargar una versión anterior de la aplicación (si existe) que sea compatible con la 
-              versión de iOS.
-          </p>
-        </div>
-      </div>
-  
-      <div class="flex-btn">
-        <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-        <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
-      </div>
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga' || category=='movil'">
+    <summary>
+      Al iniciar cuenta en Gestor ONCE Libros Digitales foco se queda atrapado en el campo de edición de texto de usuario.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Insertar primero el campo de contraseña y después el de usuario, una vez tienes todo pulsar la tecla abajo sin soltar hasta que el final de la página y subir hasta el botón 
+        de iniciar sesión.
+      </p>
     </div>
+  </details>
 
-    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='movil'">
-      <div class="flex-item txt">
-        <p>
-          <abbr title="Consulta" class="emphasy">C</abbr>:
-          Al iniciar cuenta en Gestor ONCE Libros Digitales foco se queda atrapado en el campo de edición de texto de usuario.
-        </p>
-        <div *ngIf="show == 5" aria-hidden="true" id="gold_5">
-          <p>
-            <abbr title="Resolucion" class="emphasy">R</abbr>:  
-            Insertar primero el campo de contraseña y después el de usuario, una vez tienes todo pulsar la tecla abajo sin 
-            soltar hasta que el final de la página y subir hasta el botón de iniciar sesión.
-          </p>
-        </div>
-      </div>
-  
-      <div class="flex-btn">
-        <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-        <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
-      </div>
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga' || category=='descarga'">
+    <summary>
+      No se pueden descargar audiolibros en un ordenador.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Cerrar sesión y volver a iniciarla.
+      </p>
     </div>
-
-    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='descarga'">
-      <div class="flex-item txt">
-        <p>
-          <abbr title="Consulta" class="emphasy">C</abbr>:
-          No se pueden descargar audiolibros en un ordenador.
-        </p>
-        <div *ngIf="show == 6" aria-hidden="true" id="gold_6">
-          <p>
-            <abbr title="Resolucion" class="emphasy">R</abbr>:  
-            Cerrar sesión y volver a iniciarla.
-          </p>
-        </div>
-      </div>
-  
-      <div class="flex-btn">
-        <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
-        <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
-      </div>
+  </details>
+    
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='pausar lectura' || category=='eliminar'">
+    <summary>
+      No se puede eliminar un audiolibro desde la aplicación del móvil o la tablet. El libro tampoco guarda el punto de lectura.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Si el dispositivo contiene un atarjeta MicroSD, seguramente esté dañada. Para comprobarlo seguir el siguiente procedimiento:
+      </p>
+      <ol>
+        <li>Estraer la tarjeta MicroSD.</li>
+        <li>Descargar un libro.</li>
+        <li>Eliminar el libro.</li>
+      </ol>
+      <p>
+        Si al salir de la aplicación y volver a entrar el libro que se acaba de eliminar sigue siendo 
+        visible, la tarjeta MicroSD está dañada y debe retirarse para poder utilizar la memoria del
+        dispositivo.
+      </p>
+      <p>
+        <span class="emphasy">Nota</span>:
+        Esta solución es temporal. El usuario deberá reemplazar la tarjeta MicroSD por otra.
+      </p>
     </div>
-
-    <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' 
-    || category=='pausar lectura' || category=='eliminar'">
-      <div class="flex-item txt">
-        <p>
-          <abbr title="Consulta" class="emphasy">C</abbr>:
-          No se puede eliminar un audiolibro desde la aplicación del móvil o la tablet. El libro tampoco
-          guarda el punto de lectura.
-        </p>
-        <div *ngIf="show == 7" aria-hidden="true" id="gold_7">
-          <p>
-            <abbr title="Resolucion" class="emphasy">R</abbr>:
-            Si el dispositivo contiene un atarjeta MicroSD, seguramente esté dañada. Para comprobarlo
-            seguir el siguiente procedimiento:
-          </p>
-          <ol>
-            <li>Estraer la tarjeta MicroSD.</li>
-            <li>Descargar un libro.</li>
-            <li>Eliminar el libro.</li>
-          </ol>
-          <p>
-            Si al salir de la aplicación y volver a entrar el libro que se acaba de eliminar sigue siendo 
-            visible, la tarjeta MicroSD está dañada y debe retirarse para poder utilizar la memoria del
-            dispositivo.
-          </p>
-          <p>
-            <span class="emphasy">Comentarios</span>:
-            Esta solución es temporal. El usuario deberá reemplazar la tarjeta MicroSD por otra.
-          </p>
-        </div>
-      </div>
-  
-      <div class="flex-btn">
-        <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
-        <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
-      </div>
+  </details>
+    
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga' || category=='movil'">
+    <summary>
+      Error en la aplicación con iPod touch; las listas de búsqueda salen vacías.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Actualizar la versión de iOS.
+      </p>
     </div>
-
-    <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='descarga' || category=='movil'">
-      <div class="flex-item txt">
-        <p>
-          <abbr title="Consulta" class="emphasy">C</abbr>: Error en la aplicación con iPod touch; las listas de búsqueda salen vacías.
-        </p>
-        <div *ngIf="show == 8" aria-hidden="true" id="gold_8">
-          <p>
-            <abbr title="Resolucion" class="emphasy">R</abbr>: Actualizar la versión de iOS. 
-          </p>
-        </div>
-      </div>
-
-      <div class="flex-btn">
-        <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
-        <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
-      </div>
-    </div>
-
-  </div>
+  </details>
+</div>

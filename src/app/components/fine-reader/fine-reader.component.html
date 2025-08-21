@@ -11,24 +11,17 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='digitalizacion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='digitalizacion'">
+    <summary>
+      FineReader no digitaliza.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: FineReader no digitaliza.
-      </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="fr_1">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: <a href="https://support.hp.com/es-es/help/printscandoctor"
+        <a href="https://support.hp.com/es-es/help/printscandoctor"
           title="ScanDoctor: HP Print and Scan Doctor para Windows oficial (se abre en una pestala nueva)">
             Descargar <span lang="en">ScanDoctor: HP Print and Scan Doctor</span> para Windows oficial
-          </a>.
-        </p>
-      </div>
+        </a>.
+      </p>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
+  </details>
 </div>

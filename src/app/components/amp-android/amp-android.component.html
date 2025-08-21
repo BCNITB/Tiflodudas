@@ -12,52 +12,36 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='aplicaciones'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
+    <summary>
+      La aplicación Big Font no funciona correctamente.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        La aplicación Big Font no funciona correctamente.
+        Posiblemente ha habido una actualización de algún programa o del sistema operativo. actualizar la aplicación.
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="ampAndroid_1">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Posiblemente ha habido una actualización de algún programa o del sistema operativo. actualizar la aplicación.
-        </p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+      Configurar el teclado de Android para que diga la tecla que se pulsa sin tener el lector de pantalla activado.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Configurar el teclado de Android para que diga la tecla que se pulsa sin tener el lector de pantalla activado.
+        Seguir el siguiente procedimiento (en un Samsung):
       </p>
-      <div *ngIf="show == 2" aria-hidden="true" id="ampAndroid_2">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>:
-          Seguir el siguiente procedimiento (en un Samsung):
-        </p>
-        <ol>
-          <li>Teclado Samsung.</li>
-          <li>Opción desplazar.</li>
-          <li>Comentarios.</li>
-          <li>Activar la opción <i>Decir en voz alta la entrada del teclado</i>.</li>
-        </ol> 
-        <p class="emphasy">Comentarios:
-          Pese a que la descripción es para un dispositivo Samsung, en principio, en las propiedades del teclado se encuentra la 
-          opción descrita.
-        </p>
-      </div>
+      <ol>
+        <li>Teclado Samsung.</li>
+        <li>Opción desplazar.</li>
+        <li>Comentarios.</li>
+        <li>Activar la opción <i>Decir en voz alta la entrada del teclado</i>.</li>
+      </ol> 
+      <p class="emphasy">Nota:
+        Pese a que la descripción es para un dispositivo Samsung, en principio, en las propiedades del teclado se encuentra la 
+        opción descrita.
+      </p>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
-    </div>
-  </div>
+  </details>
+  
 </div>

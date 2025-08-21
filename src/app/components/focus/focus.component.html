@@ -16,361 +16,249 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='comandos' || category=='configuracion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos' || category=='configuracion'">
+    <summary>
+      Configurar entrada y salida con un comando.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Configurar entrada y salida con un comando.
+        Los comandos de la línea focus son:
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="focus_1">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Los comandos de la línea focus son:
-        </p>
-        <ul>
-          <li>Comando para configurar la salida: cor + G.</li>
-          <li>Comando para consigurar la entrada: cor + 2-3-6.</li>
-        </ul>
-      </div>
+      <ul>
+        <li>Comando para configurar la salida: cor + G.</li>
+        <li>Comando para consigurar la entrada: cor + 2-3-6.</li>
+      </ul>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='comandos'">
-    <div class="flex-item txt">
+  </details>
+  
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
+    <summary>
+      Escribir línea nueva.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Escribir línea nueva.
+        El comando para crear una línea nueva es: cor + 2 + 7 y 8.  
       </p>
-      <div *ngIf="show == 2" aria-hidden="true" id="focus_2">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: El comando para crear una línea nueva es: cor + 2 + 7 y 8.
-        </p>
-      </div>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
-    </div>
-  </div>
-
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        La línea braille dejó de funcionar en el equipo. Cuando se conecta la línea braille al ordenador por puerto USB y se accede
-         a Opciones > braille (em Jaws), el mensaje es: <i>La línea braille activa es ninguna línea</i>. Se verifica que todas las 
-         opciones están bien configuradas, que se ha agregado en más de una ocasión la línea. Se reinicia Jaws, ... 
-      </p>
+  </details>
+  
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+      La línea braille dejó de funcionar en el equipo. Cuando se conecta la línea braille al ordenador por puerto USB y se accede
+      a Opciones > braille (em Jaws), el mensaje es: <i>La línea braille activa es ninguna línea</i>. Se verifica que todas las 
+      opciones están bien configuradas, que se ha agregado en más de una ocasión la línea. Se reinicia Jaws, ... 
       <p>
         Por otro lado, se ha desinstalado Jaws con los elementos compartidos y procedido a instalar la última versión de Jaws. 
         El problema continúa. También se comprueba que la línea braille funciona correctamente en otros ordenadores. 
       </p>
-      <div *ngIf="show == 3" aria-hidden="true" id="focus_3">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Si el equipo tiene actualizaciones pendientes, hay que instalarlas para ver si el fabricante ha resuelto el problema.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Si el equipo tiene actualizaciones pendientes, hay que instalarlas para ver si el fabricante ha resuelto el problema.
           Si está actualizado, intentar volver a la versión anterior del controlador: 
-        </p>
-        <ol>
-          <li>Administrador de dispositivos.</li>
-          <li>Nos posicionamos sobr el dispositivo que no funciona.</li>
-          <li>Menú contextual.</li>
-          <li>Opciones.</li>
-        </ol>
-        <p>
-          Si permite volver al controlador anterior, inténtalo.
-        </p>
-        <p>
-          Si esto no funciona, consultar la configuración de energía.
-        </p>
-        <p>
-          <span class="emphasy">Comentarios</span>:
-          Existe otra posible solución para este problema.
-          <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Ver</button>
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Al utilizar una línea braille Focus blue 40 para escribir en Word no se escribe el texto hasta pulsar la tecla espacio.
       </p>
-      <div *ngIf="show == 4" aria-hidden="true" id="focus_4">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Si la línea focus tiene como método de entrada braille de 6 puntos; debe cambiarse a braille de 8 puntos.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='comandos'">
-    <div class="flex-item txt">
+      <ol>
+        <li>Administrador de dispositivos.</li>
+        <li>Nos posicionamos sobr el dispositivo que no funciona.</li>
+        <li>Menú contextual.</li>
+        <li>Opciones.</li>
+      </ol>
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Cambiar la configuración del teclado de una línea focus a una mano.
+        Si permite volver al controlador anterior, inténtalo.
       </p>
-      <div *ngIf="show == 5" aria-hidden="true" id="focus_5">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Utilzar los siguientes comandos para permutar entre una configuración y otra:
-        </p>
-        <ul>
-          <li>Shift izquierdo + 1-2-3-7.</li>
-          <li>Shift derecho + 4-5-6-8.</li>
-        </ul>
-        <p>
-          Si se configura mediante menús, seguir el siguiente procedimiento para activar o desactivar el modo a una mano:
-        </p>
-        <ol>
-          <li>Pulsar la tecla menú.</li>
-          <li>Para acceder a la opción, pulsar Punto 8.</li>
-          <li>Para cambiar entre <i>activado</i> y <i>desactivado</i> usar el Balancín izquierdo.</li>
-          <li>Para confirmar la opción seleccionada, pulsar Punto 8.</li>
-        </ol>
-        <p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        La línea braille dejó de funcionarle en este equipo.
-      </p> 
-      <div *ngIf="show == 6" aria-hidden="true" id="focus_6">
-        <p><abbr title="Resolución" class="emphasy">R</abbr>:
-          Es un problema de la versión del controlados, seguir el siguiente procedimiento:
-        </p>
-        <ol>
-          <li>Acceder a administrador de dispositivos.</li>
-          <li>Localizar <b>Lib USB-1.0:FreedmScientific [Focus Blue]</b>.</li>
-          <li>Consultar la fecha del  controlador y su versión.</li>
-          <li>Desinstalo el controlador.</li>
-          <li>Reiniciar el ordenador.</li>
-          <li>Conecto la línea braille.</li>
-          <li>Ejecutar Jaws.</li>
-          <li>Acceder a administrador de dispositivos.</li>
-          <li>Localizar <i>Lib USB-1.0:FreedmScientific [Focus Blue]</i>.</li>
-          <li>Consultar la fecha del  controlador y su versión.</li>
-        </ol>
-        <p>
-          <span class="emphasy">Comentarios</span>:
-          <a href="https://support.freedomscientific.com/Downloads/Focus/FocusBlueBrailleDisplayDriver" target="_blank" 
-          title="Descarga el driver de Freedom Scientific (se abre en una nueva ventana)">Descarga el driver de Freedom Scientific</a>.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='talkback' || category=='vincular'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Conexión línea braille con TalkBack.
+        Si esto no funciona, consultar la configuración de energía.
       </p>
-      <div *ngIf="show == 7" aria-hidden="true" id="focus_7">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Para añadir una línea braille a Talkback debemos tener instalada 
-          BrailleBack (dependiendo de la versión de Android no está incluido por defecto) y realizar los siguientes pasos:
-        </p>
-        <ol>
-          <li>Activar la conexión mediante Bluetooth.</li>
-          <li>Vicular la línea braille.</li>
-          <li>Ir a:</li>
+      <p>
+        <span class="emphasy">Mota</span>:
+        <details>
+          <summary>
+            Otra posible solución para este problema.
+          </summary>
+          <p>
+            Es un problema de la versión del controlados, seguir el siguiente procedimiento:
+          </p>
           <ol>
-            <li>Ajustes.</li>
-            <li>Accesibilidad.</li>
-            <li>BrailleBack.</li>
+            <li>Acceder a administrador de dispositivos.</li>
+            <li>Localizar <b>Lib USB-1.0:FreedmScientific [Focus Blue]</b>.</li>
+            <li>Consultar la fecha del  controlador y su versión.</li>
+            <li>Desinstalo el controlador.</li>
+            <li>Reiniciar el ordenador.</li>
+            <li>Conecto la línea braille.</li>
+            <li>Ejecutar Jaws.</li>
+            <li>Acceder a administrador de dispositivos.</li>
+            <li>Localizar <i>Lib USB-1.0:FreedmScientific [Focus Blue]</i>.</li>
+            <li>Consultar la fecha del  controlador y su versión.</li>
           </ol>
-          <li>Comprobar que la línea braille está enlazada, si no lo est´´a pulsar sobre el desplegable y seleccionarla.</li>
-        </ol>
-        <p class="emphasy">Comentarios:</p>
-          <ul>
-            <li>Actualmente BrailleBack está incluido en la Suite de Accesibilidad de Android.</li>
-            <li>Para que la línea funcione debe estar activado TalkBack.</li>
-          </ul>
-      </div>
-    </div>
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='voiceover' || category=='iphone'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: El iPhone no detecta la línea Braille.
+          <p>
+            <span class="emphasy">Nota</span>:
+            <a href="https://support.freedomscientific.com/Downloads/Focus/FocusBlueBrailleDisplayDriver" target="_blank" 
+            title="Descarga el driver de Freedom Scientific (se abre en una nueva ventana)">Descarga el driver de Freedom Scientific</a>.
+          </p>
+        </details>
       </p>
-      <div *ngIf="show == 8" aria-hidden="true" id="focus_8">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Deben eliminarse dispositivos vinculados de la línea.
-        </p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+      Al utilizar una línea braille Focus blue 40 para escribir en Word no se escribe el texto hasta pulsar la tecla espacio.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Si la línea focus tiene como método de entrada braille de 6 puntos; debe cambiarse a braille de 8 puntos.
+      </p>
     </div>
-  </div>
+  </details>
+  
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion' || category=='comandos'">
+    <summary>
+      Cambiar la configuración del teclado de una línea focus a una mano.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Utilzar los siguientes comandos para permutar entre una configuración y otra:
+      </p>
+      <ul>
+        <li>Shift izquierdo + 1-2-3-7.</li>
+        <li>Shift derecho + 4-5-6-8.</li>
+      </ul>
+      <p>
+        Si se configura mediante menús, seguir el siguiente procedimiento para activar o desactivar el modo a una mano:
+      </p>
+      <ol>
+        <li>Pulsar la tecla menú.</li>
+        <li>Para acceder a la opción, pulsar Punto 8.</li>
+        <li>Para cambiar entre <i>activado</i> y <i>desactivado</i> usar el Balancín izquierdo.</li>
+        <li>Para confirmar la opción seleccionada, pulsar Punto 8.</li>
+      </ol>
+    </div>
+  </details>
 
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='vincular'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='talkback' || category=='vincular'">
+    <summary>
+      Conexión línea braille con TalkBack.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Como conectar una línea Braille a un Apple Watch.
-      <p>
-      <div *ngIf="show == 9" aria-hidden="true" id="focus_9">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Se deben seguir los siguientes pasos:
-        </p>
+        Para añadir una línea braille a Talkback debemos tener instalada 
+          BrailleBack (dependiendo de la versión de Android no está incluido por defecto) y realizar los siguientes pasos:
+      </p>
+      <ol>
+        <li>Activar la conexión mediante Bluetooth.</li>
+        <li>Vicular la línea braille.</li>
+        <li>Ir a:</li>
         <ol>
-          <li>Descubrir la Línea Braille.</li>
           <li>Ajustes.</li>
           <li>Accesibilidad.</li>
-          <li>VoiceOver.</li>
-          <li>Braille.</li>
-          <li>Conectar la línea Braille.</li>
+          <li>BrailleBack.</li>
         </ol>
-      </div>
+        <li>Comprobar que la línea braille está enlazada, si no lo est´´a pulsar sobre el desplegable y seleccionarla.</li>
+      </ol>
+      <p class="emphasy">Nota</p>:
+      <ul>
+        <li>Actualmente BrailleBack está incluido en la Suite de Accesibilidad de Android.</li>
+        <li>Para que la línea funcione debe estar activado TalkBack.</li>
+      </ul>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='talkback' || category=='vincular'">
+    <summary>
+      El iPhone no detecta la línea Braille.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: La línea Focus está bloqueada.
-      <p>
-      <div *ngIf="show == 10" aria-hidden="true" id="focus_10">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Para desbloquear la línea braille:
-        </p>
-        <ol>
-          <li>Desconectar la línea braille de todos los dispositivos.</li>
-          <li>Pulsar, con la línea encendida, Modo derecho y dos sensores durante 5 segundos.</li>
-
-        </ol>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='edico' || category=='configuracion'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Cuando se pulsa un sensor de la línea braille para posicionarse en un lugar determinado de la  misma, el cursor sube 3 
-        líneas.
+        Deben eliminarse dispositivos vinculados de la línea.
       </p>
-      <div *ngIf="show == 11" aria-hidden="true" id="focus_11">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Las siguientes opciones deben estar activadas:
+    </div>
+  </details>
+
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='vincular'">
+    <summary>
+      Como conectar una línea Braille a un Apple Watch.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Se deben seguir los siguientes pasos:
+      </p>
+      <ol>
+        <li>Descubrir la Línea Braille.</li>
+        <li>Ajustes.</li>
+        <li>Accesibilidad.</li>
+        <li>VoiceOver.</li>
+        <li>Braille.</li>
+        <li>Conectar la línea Braille.</li>
+      </ol>
+    </div>
+  </details>
+
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+      La línea Focus está bloqueada.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Para desbloquear la línea braille:
+      </p>
+      <ol>
+        <li>Desconectar la línea braille de todos los dispositivos.</li>
+        <li>Pulsar, con la línea encendida, Modo derecho y dos sensores durante 5 segundos.</li>
+      </ol>
+    </div>
+  </details>
+
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='edico' || category=='configuracion'">
+    <summary>
+      Cuando se pulsa un sensor de la línea braille para posicionarse en un lugar determinado de la  misma, el cursor sube 3 líneas.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Las siguientes opciones deben estar activadas:
         </p>
         <ul>
           <li>Teclas de la línea braille desplazan el cursor activo.</li>
           <li>La línea braille sigue el cursor activo.</li>
         </ul>
         <p>
-          <span class="emphasy">Comentarios</span>:
+          <span class="emphasy">Nota</span>:
           Estas configuraciones se encuentran en el gestor de configuración > Braille > General. 
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='edico' || category=='configuracion'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        En Word la línea braille Focus al escribir un "punto", con la tecla 3, y configurada en braille español grado 1, escribe apóstrofe.
       </p>
-      <div *ngIf="show == 12" aria-hidden="true" id="focus_12">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Configurar la línea en braille computerizado.
-        </p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='word'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='edico' || category=='configuracion'">
+    <summary>
+      En Word la línea braille Focus al escribir un "punto", con la tecla 3, y configurada en braille español grado 1, escribe apóstrofe.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        Al escribir un punto con la línea braille (punto 3), si se pulsa después el espacio el punto se cambia
-        automáticamente por un apóstrofe, tanto en WORD como en la línea braille.
-      </p> 
-      <div *ngIf="show == 13" aria-hidden="true" id="focus_13">
-        <p><abbr title="Resolución" class="emphasy">R</abbr>:
-          Existen dos posibles soluciones:
-        </p>
-        <ul>
-          <li>Configurar la entrada como braille computerizado (así si que me lo detecta como ., el punto 3).</li>
-          <li>
-            Sustituir la tabla de braille, que al menos en el JAWS 2021 viene predefinida liblouis 3.15, por liblouis 3.9.
-            en el gestor de configuraciones de:
-          </li>
-          <ol> 
-            <li>JAWS.</li>
-            <li>Braille.</li>
-            <li>Opciones avanzadas.</li>
-            <li>Transcriptor a braille.</li>
-          </ol>
-        </ul>
-      </div>
+        Configurar la línea en braille computerizado.
+      </p>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(13)" *ngIf="show != 13">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 13">Ocultar</button>
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='word'">
+    <summary>
+      Al escribir un punto con la línea braille (punto 3), si se pulsa después el espacio el punto se cambia automáticamente por un apóstrofe, tanto en WORD como en la línea braille.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Existen dos posibles soluciones:
+      </p>
+      <ul>
+        <li>Configurar la entrada como braille computerizado (así si que me lo detecta como ., el punto 3).</li>
+        <li>
+          Sustituir la tabla de braille, que al menos en el JAWS 2021 viene predefinida liblouis 3.15, por liblouis 3.9.
+          en el gestor de configuraciones de:
+        </li>
+        <ol> 
+          <li>JAWS.</li>
+          <li>Braille.</li>
+          <li>Opciones avanzadas.</li>
+          <li>Transcriptor a braille.</li>
+        </ol>
+      </ul>
     </div>
-  </div>
+  </details>
 </div>

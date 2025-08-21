@@ -20,345 +20,232 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='lite' || category=='configuracion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='lite' || category=='configuracion'">
+    <summary>
+      Blindshell lite, no conserva la fecha, sí la hora, al apagarse.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Blindshell lite, no conserva la fecha, sí la hora, al apagarse.
+        Comprobar si la tarjeta SIM tiene datos.
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="bs_1">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Comprobar si la tarjeta SIM tiene datos.</p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='llamadas' || category=='version'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='llamadas' || category=='version'">
+    <summary>
+      En la versión Blindshell 5.1.0.13-master, no se dice el nombre del contacto al realizar una marcación rápida.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        En la versión Blindshell 5.1.0.13-master, no se dice el nombre del contacto al realizar una marcación rápida.
+        Comprobar si la tarjeta SIM tiene datos.
       </p>
-      <div *ngIf="show == 2" aria-hidden="true" id="bs_2">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Comprobar si la tarjeta SIM tiene datos.</p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='control por voz'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='control por voz'">
+    <summary>
+      El contro por voz de BlindShell 2 no da tiempo a hablar y dice: <b>hable más alto</b>.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        El contro por voz de BlindShell 2 no da tiempo a hablar y dice: <b>hable más alto</b>.
+        El error se soluciona en la versión 5.1.3.7.  
       </p>
-      <div *ngIf="show == 3" aria-hidden="true" id="bs_3">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
-          El error se soluciona en la versión 5.1.3.7.  
-        </p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='corro' || category=='notificaciones'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='corro' || category=='notificaciones'">
+    <summary>
+      Las notificaciones no muestran los correos nuevos que no se han leído, es necesario acceder a la aplicación de correos.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Las notificaciones no muestran los correos nuevos que no se han leído, es necesario acceder a la aplicación de correos.
+        Para que los correos aparezcan las notificaciones:
       </p>
-      <div *ngIf="show == 4" aria-hidden="true" id="bs_4">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Para que los correos aparezcan las notificaciones:
-        </p>
-        <ol>
-          <li>Acceder a la aplicación correo.</li>
-          <li>Ir a ajustes de la aplicación y seleccionar: comprobación de correo en según plano.</li>
-          <li>Marcar el tiempo para que se revise si hay correos nuevos.</li>
-        </ol>
-      </div>
+      <ol>
+        <li>Acceder a la aplicación correo.</li>
+        <li>Ir a ajustes de la aplicación y seleccionar: comprobación de correo en según plano.</li>
+        <li>Marcar el tiempo para que se revise si hay correos nuevos.</li>
+      </ol>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+      Configurar en el navegador que cuando se llege a un enlace se escuche un sonido
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Configurar en el navegador que cuando se llege a un enlace se escuche un sonido
+        Realizar el siguiente procedimiento:
       </p>
-      <div *ngIf="show == 5" aria-hidden="true" id="bs_5">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Realizar el siguiente procedimiento:
-        </p>
-        <ol>
-          <li>Navegador de internet.</li>
-          <li>Ir a ajustes de la aplicación y seleccionar <b>configuración de sonidos</b>.</li>
-          <li>Marcar <b>Usar sonido para los enlaces</b>.</li>
-        </ol>
-      </div>
+      <ol>
+        <li>Navegador de internet.</li>
+        <li>Ir a ajustes de la aplicación y seleccionar <b>configuración de sonidos</b>.</li>
+        <li>Marcar <b>Usar sonido para los enlaces</b>.</li>
+      </ol>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+      Modificar <abbr lang="en" title="Personal Identification NUmber">PIN</abbr> en BlindShell Lite.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Modificar pin en BlindShell Lite.
+        Ir a: 
       </p>
-      <div *ngIf="show == 6" aria-hidden="true" id="bs_6">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Ir a: 
-        </p>
-        <ol>
-          <li>Ajustes.</li>
-          <li>Código pin.</li>
-          <li>Código activado.</li>
-          <li>Cambiar pin.</li>
-        </ol>
-      </div>
+      <ol>
+        <li>Ajustes.</li>
+        <li>Código pin.</li>
+        <li>Código activado.</li>
+        <li>Cambiar pin.</li>
+      </ol>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion' || category=='contactos'">
-    <div class="flex-item txt">
+  </details>
+  
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion' || category=='contactos'">
+    <summary>
+      Importar agenda de contacto de iPhone a BlindShell.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Importar agenda de contacto de iPhone a BlindShell.
+        Para exportar contactos desde iPhone a Blindshell seguir el siguiente procedimiento:
       </p>
-      <div *ngIf="show == 7" aria-hidden="true" id="bs_7">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Para exportar contactos desde iPhone a Blindshell seguir el siguiente procedimiento:
-        </p>
-        <ol>
-          <li>
-            En el iPhone, descargamos la aplicación
-            <a href="https://apps.apple.com/us/app/my-contacts-backup/id446784593" target="_blank"
-            title="Descargar MyContacts Backup (se abre en una ventan nueva)">MyContacts BackUp</a>.
-          </li>
-          <li>
-            Tras ejecutarla y aceptar los permisos, realizamos la copia de seguridad de los contactos. Nos informará del número 
-            que logra localizar.
-          </li>
-          <li>
-            Generar un archivo con extensión *.VCF, se ofrece la opción de enviarlo por correo sin salir de la aplicación.
-          </li>
-          <li>
-            Una vez tenemos esste fichero, conectamos BlindShell al ordenador mediante USB.
-          </li>
-          <li>
-            Copiamos el archivo en la raíz de la memoria interna o tarjeta SD del BlindShell.
-          </li>
-          <li>
-            En el BlindShell, vamos a: <b>Contactos\Importar contactos desde carpeta”</b>.
-          </li>
-          <li>
-            Automáticamente detectará el número de contactos totales y nos consultará si deseamos importarlos.
-          </li>
-        </ol>
-      </div>
+      <ol>
+        <li>
+          En el iPhone, descargamos la aplicación
+          <a href="https://apps.apple.com/us/app/my-contacts-backup/id446784593" target="_blank"
+          title="Descargar MyContacts Backup (se abre en una ventan nueva)">MyContacts BackUp</a>.
+        </li>
+        <li>
+          Tras ejecutarla y aceptar los permisos, realizamos la copia de seguridad de los contactos. Nos informará del número 
+          que logra localizar.
+        </li>
+        <li>
+          Generar un archivo con extensión *.VCF, se ofrece la opción de enviarlo por correo sin salir de la aplicación.
+        </li>
+        <li>
+          Una vez tenemos esste fichero, conectamos BlindShell al ordenador mediante USB.
+        </li>
+        <li>
+          Copiamos el archivo en la raíz de la memoria interna o tarjeta SD del BlindShell.
+        </li>
+        <li>
+          En el BlindShell, vamos a: <b>Contactos\Importar contactos desde carpeta”</b>.
+        </li>
+        <li>
+          Automáticamente detectará el número de contactos totales y nos consultará si deseamos importarlos.
+        </li>
+      </ol>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
+    <summary>
+      No se pueden borrar los chats (uno a uno) en WhatsApp.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        No se pueden borrar los chats (uno a uno) en WhatsApp.
+        Actualizar la app, las versiones de 2022 no incluían esta opción.
       </p>
-      <div *ngIf="show == 8" aria-hidden="true" id="bs_8">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>:
-          Actualizar la app, las versiones de 2022 no incluían esta opción.
-        </p>
-      </div>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(8)" *ngIf="show != 8">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 8">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='lite' || category=='configuracion'">
-    <div class="flex-item txt">
+  </details>
+  
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='lite' || category=='configuracion'">
+    <summary>
+      Cambiar el idioma del teléfono.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Cambiar el idioma del teléfono.
+        Seguir el siguiente procedimiento:
       </p>
-      <div *ngIf="show == 9" aria-hidden="true" id="bs_9">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>:
-          Seguir el siguiente procedimiento:
-        </p>
-        <ol>
-          <li>Pulsando <b>***####</b> (como si se marca un número de teléfono).</li>
-          <li>Pulsar el botón de descolgar/llamar (Tecla verde) para acceder al Menú de Ajustes Avanzados (settings).</li>
-          <li>Bajar con el cursor  del teclado del teléfono hasta Avanzado Idioma (Advanced Languaje).</li>
-          <li>
-            Pulsar en el centro de cursor para acceder al menú de cambio de idioma, donde se mostrarán los diferentes idiomas.
-          </li>
-          <li>Desplazarnos hacia abajo hasta Español España (Spanish Spain).</li>
-          <li>Pulsar en el centro del cursor.</li>
-        </ol>
-        <p>
-          El equipo se apagará y cuando vuelva a encenderse estará en el idioma que se haya seleccionado.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(9)" *ngIf="show != 9">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 9">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='configuracion'">
-    <div class="flex-item txt">
+      <ol>
+        <li>Pulsando <b>***####</b> (como si se marca un número de teléfono).</li>
+        <li>Pulsar el botón de descolgar/llamar (Tecla verde) para acceder al Menú de Ajustes Avanzados (settings).</li>
+        <li>Bajar con el cursor  del teclado del teléfono hasta Avanzado Idioma (Advanced Languaje).</li>
+        <li>
+          Pulsar en el centro de cursor para acceder al menú de cambio de idioma, donde se mostrarán los diferentes idiomas.
+        </li>
+        <li>Desplazarnos hacia abajo hasta Español España (Spanish Spain).</li>
+        <li>Pulsar en el centro del cursor.</li>
+      </ol>
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Ordenar aplicaicones favoritas en BlindShell.
+        El equipo se apagará y cuando vuelva a encenderse estará en el idioma que se haya seleccionado.
       </p>
-      <div *ngIf="show == 10" aria-hidden="true" id="bs_10">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>:
-          Se debe realizar una pulsación corta al botón del asistente para mostrar las aplicaciones favoritas, si nos vamos 
-          desplazando por las aplicaciones favoritas con los botones llegaremos a la opción de reordenar.
-        </p>
-      </div>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(10)" *ngIf="show != 10">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 10">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
+  </details>
+  
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones' || category=='configuracion'">
+    <summary>
+      Ordenar aplicaicones favoritas en BlindShell.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        ¿Que significa el mensaje código MMI no valido?
+        Se debe realizar una pulsación corta al botón del asistente para mostrar las aplicaciones favoritas, si nos vamos desplazando por las aplicaciones favoritas con los botones 
+        llegaremos a la opción de reordenar.
       </p>
-      <div *ngIf="show == 11" aria-hidden="true" id="bs_11">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>:
-          El mensaje Código USSD en ejecución (o código MMI) aparece cuando se marca un código desde el terminal del que se 
+    </div>
+  </details>
+  
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+      ¿Que significa el mensaje código MMI no valido?
+    </summary>
+    <div class="txt-content">
+      <p>
+        El mensaje Código USSD en ejecución (o código MMI) aparece cuando se marca un código desde el terminal del que se 
           recibe respuesta desde la red para efectuar alguna operación tal como comprobar o activar desvíos . Suelen ser códigos 
           que van precedidos de símbolos, como * o #, que les hace diferenciarse de una llamada. Si el código es incorrecto o el 
           servicio no está disponible, el mensaje que devuelve la red es: Se ha producido un problema de conexión o el código MMI 
           no es válido. 
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(11)" *ngIf="show != 11">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 11">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Solucionar el error de Código MMI.
       </p>
-      <div *ngIf="show == 12" aria-hidden="true" id="bs_12">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>:
-          En ocasiones, cuando marcamos alguno de los contactos de nuestro terminal, introducimos de forma accidental de manera 
-          previa, o entre medias de los números, algún símbolo, y nos aparece también el mensaje: <b>Se ha producido un problema 
-          de conexión o el código MMI no es válido</b>, en cuyo caso debemos verificar que hemos introducido la numeración 
-          correcta, sin nada por el medio.
-        </p>
-        <p>
-          El error también puede ser debido a un fallo de la tarjeta SIM que puede estar dañada o tener un mal contacto, para 
-          confirmar que este no sea el origen del problema, habría que insertarla en un terminal distinto y realizar la prueba 
-          desde otro para así descartar que la tarjeta esté mal. Si la incidencia se presenta con ambos terminales, para 
-          solucionarlo bastaría con realizar un duplicado de la tarjeta SIM.
-        </p>
-        <p>
-          <span class="emphasy">Comentarios:</span>
-          Hay que tener en cuenta que para los teléfonos compatibles con el servicio de Voz 4G no se garantiza la gestión de 
-          servicios cuando el usuario tramita los mismos con Comandos USSD ( **21*123# …… etc ).
-        </p>
-      </div>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(12)" *ngIf="show != 12">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 12">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='llamadas'">
-    <div class="flex-item txt">
+  </details>
+  
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+      Solucionar el error de Código MMI.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Bloqueo de llamadas.
+        En ocasiones, cuando marcamos alguno de los contactos de nuestro terminal, introducimos de forma accidental de manera 
+        previa, o entre medias de los números, algún símbolo, y nos aparece también el mensaje: <b>Se ha producido un problema 
+        de conexión o el código MMI no es válido</b>, en cuyo caso debemos verificar que hemos introducido la numeración 
+        correcta, sin nada por el medio.
       </p>
-      <div *ngIf="show == 13" aria-hidden="true" id="bs_13">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>:
-          No es posible bloquear llamadas.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(13)" *ngIf="show != 13">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 13">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='classic'">
-    <div class="flex-item txt">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        Con la última actualización de WhatsApp (octubre 2023) falla el envío de mensajes de voz. Al mantener pulsado el botón 
-        verde cambia a mensaje de video y falla.
+        El error también puede ser debido a un fallo de la tarjeta SIM que puede estar dañada o tener un mal contacto, para 
+        confirmar que este no sea el origen del problema, habría que insertarla en un terminal distinto y realizar la prueba 
+        desde otro para así descartar que la tarjeta esté mal. Si la incidencia se presenta con ambos terminales, para 
+        solucionarlo bastaría con realizar un duplicado de la tarjeta SIM.
       </p>
-      <div *ngIf="show == 14" aria-hidden="true" id="bs_14">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>:
-          Para cambiar entre vídeo y audio se utiliza una pulsación breve del botón verde y, una vez que se deja en audio, si 
-          se mantiene la pulsación de este botón, se graba el mensaje de voz sin problemas. 
-        </p>
-      </div>
+      <p>
+        <span class="emphasy">Nota:</span>
+        Hay que tener en cuenta que para los teléfonos compatibles con el servicio de Voz 4G no se garantiza la gestión de 
+        servicios cuando el usuario tramita los mismos con Comandos USSD ( **21*123# …… etc ).
+      </p>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(14)" *ngIf="show != 14">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 14">Ocultar</button>
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='llamadas'">
+    <summary>
+      Bloqueo de llamadas.
+    </summary>
+    <div class="txt-content">
+      <p>
+        No es posible bloquear llamadas.
+      </p>
     </div>
-  </div>
+  </details>
+  
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones' || category=='classic'">
+    <summary>
+      Con la última actualización de WhatsApp (octubre 2023) falla el envío de mensajes de voz. Al mantener pulsado el botón verde cambia a mensaje de video y falla.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Para cambiar entre vídeo y audio se utiliza una pulsación breve del botón verde y, una vez que se deja en audio, si se mantiene la pulsación de este botón, se graba el 
+        mensaje de voz sin problemas. 
+      </p>
+    </div>
+  </details>
 </div>

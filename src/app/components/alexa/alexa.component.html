@@ -11,23 +11,14 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='skills'">
-    <div class="flex-item txt">
+  <details name="category" *ngIf="category=='all' || category=='skills'" role="listitem">
+    <summary>
+      La skill de la <abbr title="Bibkioteca Digital ONCE">BDO</abbr> no reconoce el número de afiliado introducido.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        La skill de la <abbr title="Bibkioteca Digital ONCE">BDO</abbr> no reconoce el número de afiliado introducido.
+        Dictar los números de dos en dos. Por ejemplo, 22.1236 sería 22, 12. 36.
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="alexa_1">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: 
-          Dictar los números de dos en dos. Por ejemplo, 22.1236 sería 22, 12. 36.
-        </p>
-      </div>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
+  </details>
 </div>
