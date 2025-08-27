@@ -12,76 +12,58 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='aplicaciones'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='instalacion' || category=='configuracion'">
+    <summary>
+      Aplicación de firma digital accesible para lectores de pantalla.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        Aplicación de firma digital accesible para lectores de pantalla.
+        Autofirma, suele ser una de las recomendadas por la Administración Pública.
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="narrador_1">
-        <p><abbr title="Resolución" class="emphasy">R</abbr>: 
-          Autofirma, suele ser una de las recomendadas por la Administración Pública.
-        </p>
-        
-        <p>
-          <span class="emphasy">Comentarios</span>:
-          Enlace de descarga de <a href="https://www.compartolid.es/autofirma/" title="Descarga de autofima (se abre en una nueva ventana)" target="_blank">Autofirma</a>.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(42)" *ngIf="show != 42">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 42">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='aplicaciones' || category=='correo electrpnico'">
-    <div class="flex-item txt">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>:
-        Configuración para que el gestor de correoa Thunderbird sea más accesible.
-      </p> 
-      <div *ngIf="show == 2" aria-hidden="true" id="narrador_2">
-        <p><abbr title="Resolución" class="emphasy">R</abbr>:
-          Las possibles configuraciones para hacer un gestor de correos más accesibles para lectores de pantalla son:
-        </p>
+        <span class="emphasy">Nota</span>:
+        Enlace de descarga de <a href="https://www.compartolid.es/autofirma/" title="Descarga de autofima (se abre en una nueva ventana)" target="_blank">Autofirma</a>.
+      </p>
+     </div>
+  </details>
+
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones' || category=='correo electrpnico'">
+    <summary>
+      Configuración para que el gestor de correoa Thunderbird sea más accesible.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Las possibles configuraciones para hacer un gestor de correos más accesibles para lectores de pantalla son:
+      </p>
+      <ul>
+        <li>
+          Si no hay otro cliente de correo en el equipo, ir a <i>Aplicaciones predeterminadas</i> y lo establezco como tal 
+          el gestor de correos que se utilizara para que abra vínculos de mensajes directamente.
+        </li>
+        <li>
+          En Ver > Barras de herramientas y las desactivamos todas para que el foco se posicione directamente en la tabla de mensajes o 
+          lo más cercano a ella.
+        </li>
+        <li>
+          En Herramientas > Ajustes (pueden ser <i>preferences</i> dependiendo de la versión instalada) hacer lo siguiente:
+        </li>
         <ul>
           <li>
-            Si no hay otro cliente de correo en el equipo, ir a <i>Aplicaciones predeterminadas</i> y lo establezco como tal 
-            el gestor de correos que se utilizara para que abra vínculos de mensajes directamente.
+            Pestaña <i>General</i>, desmarcar la opción <i>Al iniciarse Thunderbird, mostrar la página de inicio en el área 
+            de mensajes</i>.
           </li>
           <li>
-            En Ver > Barras de herramientas y las desactivamos todas para que el foco se posicione directamente en la tabla de mensajes o 
-            lo más cercano a ella.
+            Pestaña <i>Genera</i> ;atcar ña opción <i>Abrir mensajes en: una ventana de mensaje nueva</i>.</li>
+          <li>
+            Pestaña <i>Privacidad y seguridad</i>, marcar la opción <i>Permitir contenido remoto en los mensajes</i>.
           </li>
           <li>
-            En Herramientas > Ajustes (pueden ser <i>preferences</i> dependiendo de la versión instalada) hacer lo siguiente:
-          </li>
-          <ul>
-            <li>
-              Pestaña <i>General</i>, desmarcar la opción <i>Al iniciarse Thunderbird, mostrar la página de inicio en el área 
-              de mensajes</i>.
-            </li>
-            <li>
-              Pestaña <i>Genera</i> ;atcar ña opción <i>Abrir mensajes en: una ventana de mensaje nueva</i>.</li>
-            <li>
-              Pestaña <i>Privacidad y seguridad</i>, marcar la opción <i>Permitir contenido remoto en los mensajes</i>.
-            </li>
-            <li>
-              Cerrar la ventana de <i>Ajustes</i> con <abbr title="Control">CTRL</abbr> + W para cerrar y guardar las modificaciones.
-          </ul>
-          <li>
-            Tras crear un mensaje nuevo, enviar con <abbr title="Control">CTRL</abbr> <abbr title="más">+</abbr> Intro” y marco la casilla de “No mostrar más este mensaje” para que no me lo solicite en ocasiones sucesivas.
-          </li>
+            Cerrar la ventana de <i>Ajustes</i> con <abbr title="Control">CTRL</abbr> + W para cerrar y guardar las modificaciones.
         </ul>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
-    </div>
-  </div>
-
+        <li>
+          Tras crear un mensaje nuevo, enviar con <abbr title="Control">CTRL</abbr> <abbr title="más">+</abbr> Intro” y marco la casilla de “No mostrar más este mensaje” para que no me lo solicite en ocasiones sucesivas.
+        </li>
+      </ul>
+     </div>
+  </details>
 </div>

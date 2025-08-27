@@ -23,155 +23,109 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='vincular'">
-    <div class="flex-item txt">
+  <details name="category" id="consult_1" role="listitem" *ngIf="category=='all' || category=='vincular'">
+    <summary>
+      El iPhone no detecta la línea Braille.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: El iPhone no detecta la línea Braille.
+        Deben eliminarse dispositivos vinculados de la línea.
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="vo_1">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Deben eliminarse dispositivos vinculados de la línea.
-        </p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='gestos'">
-    <div class="flex-item txt">
+  <details name="category" id="consult_1" role="listitem" *ngIf="category=='all' || category=='gestos'">
+    <summary>
+        El iphone no reconoce los flicks.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: el iphone no reconoce los flicks.
+        Restablecer ajustes de VoiceOver desde el apartado comandos.
       </p>
-      <div *ngIf="show == 2" aria-hidden="true" id="vo_2">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Restablecer ajustes de VoiceOver desde el apartado comandos.
-        </p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
+  <details name="category" id="consult_1" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+        Evitar que Voice Over diga: <b>pantalla bloqueada</b>.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Evitar que Voice Over diga: <i>pantalla bloqueada</i>.
-      </p>
-      <p *ngIf="show == 3" aria-hidden="true" id="vo_3">
-        <abbr title="Resolucion" class="emphasy">R</abbr>: Activar los sonidos del iPhone.
+        ctivar los sonidos del iPhone.
       </p>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(3)" *ngIf="show != 3">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 3">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
+  <details name="category" id="consult_1" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+        El iPhone no deja modificar la velocidad de la voz.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: El iPhone no deja modificar la velocidad de la voz.
+        Restablecer ajustes de VoiceOver desde el apartado comandos.
       </p>
-      <div *ngIf="show == 4" aria-hidden="true" id="vo_4">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Restablecer ajustes de VoiceOver desde el apartado comandos.
-        </p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">>
-      <button class="btn" (click)="showOpt(4)" *ngIf="show != 4">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 4">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
+  <details name="category" id="consult_1" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+        El botón de dictado aparece atenuado, aunque puede activarse desde la línea braille.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: El botón de dictado aparece atenuado, aunque puede activarse desde la 
-        línea braille.
+        Restablecer ajustes de Voice Over desde el apartado comandos.
       </p>
-      <div *ngIf="show == 5" aria-hidden="true" id="vo_5">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Restablecer ajustes de Voice Over desde el apartado comandos.
-        </p>
-      </div>
     </div>
+  </details>
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(5)" *ngIf="show != 5">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 5">Ocultar</button>
+  <details name="category" id="consult_1" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+        Al recibir una llamada y descolgar, si se separa el terminal de la oreja salta automáticamente el altavoz.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Deben seguirse los siguientes pasos para desactivar el altavoz:
+      </p>
+      <ol>
+        <li>Ajustes.</li>
+        <li>Accesibilidad.</li>
+        <li>VoiceOver.</li>
+        <li>Audio.</li>
+        <li>Altavoz automático.</li>
+      </ol>
     </div>
-  </div>
+  </details>
+
+  <details name="category" id="consult_1" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+    <summary>
+        Cuando se consulta una notificación y entra una llamada o un mensaje, el nuevo elemento se superpone al antiguo.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Deben seguirse los siguientes pasos:
+      </p>
+      <ol>
+        <li>Ajustes.</li>
+        <li>Notificaciones.</li>
+      </ol>
+      <p>
+        En la opción <b>mostrar previsualizaciones</b> seleccionar la opción más convniente para el usuario. Otra solución es: 
+      </p>
+      <ol>
+        <li>Ajustes.</li>
+        <li>Notificaciones.</li>
+        <li>WhatsApp.</li>
+      </ol>
+      <p>
+        Realizar una selección como en la solución anterior. En esta ocasión esta modificación sólo afectaría a 
+        las notificaciones de WhatsApp.
+      </p>
+    </div>
+  </details>
   
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Al recibir una llamada y descolgar, si se separa el erminal de la oreja salta 
-        automáticamente el altavoz.
-      </p>
-      <div *ngIf="show == 6" aria-hidden="true" id="vo_6">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Deben seguirse los siguientes pasos para desactivar el altavoz:
-        </p>
-        <ol>
-          <li>Ajustes.</li>
-          <li>Accesibilidad.</li>
-          <li>VoiceOver.</li>
-          <li>Audio.</li>
-          <li>Altavoz automático.</li>
-        </ol>
-      </div>
-    </div>
+  
 
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(6)" *ngIf="show != 6">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 6">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='configuracion'">
-    <div class="flex-item txt">
-      <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Cuando se consulta una notificación y entra una llamada o un mensaje, 
-        el nuevo elemento se superpone al antiguo.
-      </p>
-      <div *ngIf="show == 7" aria-hidden="true" id="vo_7">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Deben seguirse los siguientes pasos:
-        </p>
-        <ol>
-          <li>Ajustes.</li>
-          <li>Notificaciones.</li>
-        </ol>
-        <p>
-          En la opción <b>mostrar previsualizaciones</b> seleccionar la opción más convniente para el usuario. Otra solución es: 
-        </p>
-        <ol>
-          <li>Ajustes.</li>
-          <li>Notificaciones.</li>
-          <li>WhatsApp.</li>
-        </ol>
-        <p>
-          Realizar una selección como en la solución anterior. En esta ocasión esta modificación sólo afectaría a 
-          las notificaciones de WhatsApp.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(7)" *ngIf="show != 7">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 7">Ocultar</button>
-    </div>
-  </div>
+  
 
   <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='ipad'">
     <div class="flex-item txt">

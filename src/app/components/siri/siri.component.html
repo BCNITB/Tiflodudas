@@ -12,22 +12,14 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='voiceover'">
-      <div class="flex-item txt">
-        <p>
-          <abbr title="Consulta" class="emphasy">C</abbr>: Hay contactos que no aparecen en la agenda pero Siri si que los reconoce.
-        <p>
-        <div *ngIf="show == 1" aria-hidden="true" id="siri_1">
-          <p>
-            <abbr title="Resolucion" class="emphasy">R</abbr>: Comprobar que el contacto no fue guardado en iCloud.
-          </p>
-        </div>
-      </div>
-
-      <div class="flex-btn">
-        <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-        <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-      </div>
-    </div>
-    
-  </div>
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='voiceover'">
+    <summary>
+      Hay contactos que no aparecen en la agenda pero Siri si que los reconoce.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Comprobar que el contacto no fue guardado en iCloud.
+      </p>
+     </div>
+  </details>  
+</div>

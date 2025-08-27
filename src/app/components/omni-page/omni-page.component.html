@@ -12,51 +12,37 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='compatibilidad'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='compatibilidad'">
+    <summary>
+      Omnipage pero se abre un archivo en blanco. 
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Cuando se abre directamente un archivo con extensión *.opd, se ejecuta 
-        Omnipage pero se abre un archivo en blanco. 
+        Hay que hacer el proceso a la inversa:
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="op_1">
-        <p><abbr title="Resolucion" class="emphasy">R</abbr>: Hay que hacer el proceso a la inversa:</p>
-        <ol>
-          <li>ejecutar Omnipage.</li>
-          <li>Ir a Archivo.</li>
-          <li>Abrir.</li>
-          <li>Buscar el documento.</li>
-        </ol>
-        <p>
-          De esta manera se vé el archivo en pantalla.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
-
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='navegacion'">
-    <div class="flex-item txt">
+      <ol>
+        <li>ejecutar Omnipage.</li>
+        <li>Ir a Archivo.</li>
+        <li>Abrir.</li>
+        <li>Buscar el documento.</li>
+      </ol>
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Si tienes varias ventanas en la pantalla (miniaturas, editor de texto, 
+        De esta manera se vé el archivo en pantalla.
+      </p>
+     </div>
+  </details>
+
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='navegacion'">
+    <summary>
+      Si tienes varias ventanas en la pantalla (miniaturas, editor de texto, 
         imágenes, etc….) si que dando F6 va cambiando de ventana o de área como lo hace con el Power Point, pero desactivando todas 
         y dejando sólo el editor de texto, no se sabe, ni visualmente, dónde va el foco.
+    </summary>
+    <div class="txt-content">
+      <p>
+        archivo, aunque ya se hubiera seleccionado la opción, volver a repetir los pasos de acceder a la barra de menú de 
+        OmniPage > Ver > Editor de textos > Texto sin formato.
       </p>
-      <div *ngIf="show == 2" aria-hidden="true" id="op_2">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Cada vez que se termine de reconocer un texto o se haya abierto el 
-          archivo, aunque ya se hubiera seleccionado la opción, volver a repetir los pasos de acceder a la barra de menú de 
-          OmniPage > Ver > Editor de textos > Texto sin formato.
-        </p>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(2)" *ngIf="show != 2">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 2">Ocultar</button>
-    </div>
-  </div>
+     </div>
+  </details>
 </div>

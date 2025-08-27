@@ -11,27 +11,20 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" id="consult_1" *ngIf="category=='all' || category=='instalacion'">
-    <div class="flex-item txt">
+   <details name="category" role="listitem" *ngIf="category=='all' || category=='instalacion'">
+    <summary>
+      Mekanta no se instala.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: Mekanta no se instala.
+        Seguir los siguientes pasos:
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="mk_1">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>: Seguir los siguientes pasos:
-        </p>
-        <ol>
-          <li>Reiniciar el equipo.</li>
-          <li>Modificacar la fecha del Sistema Operativo.</li>
-          <li>Desconectarlo de internet el equipo.</li>
-          <li>Volver a instalar.</li>
-        </ol>
-      </div>
+      <ol>
+        <li>Reiniciar el equipo.</li>
+        <li>Modificacar la fecha del Sistema Operativo.</li>
+        <li>Desconectarlo de internet el equipo.</li>
+        <li>Volver a instalar.</li>
+      </ol>
     </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
+  </details>
 </div>

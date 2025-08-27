@@ -8,11 +8,6 @@ import { Title } from '@angular/platform-browser';
 })
 export class NvdaComponent  implements OnInit {
 
-  show: number;
-
-  tag: any;
-  elementTemp: string;
-  element: string;
   category: string;
 
   constructor(private title: Title) {
@@ -23,38 +18,6 @@ export class NvdaComponent  implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  showOpt(opt: number){
-
-    this.show = 0;
-    switch (opt){
-      case 1:
-        this.element = "nvda_1";
-        this.show = 1;
-        break;
-      case 2:
-        this.element = "nvda_2";
-        this.show = 2;
-        break;
-      case 3:
-      this.element = "nvda_3";
-      this.show = 3;
-      break;
-      case 4:
-        this.element = "nvda_4";
-        this.show = 4;
-        break;
-      case 5:
-        this.element = "nvda_5";
-        this.show = 5;
-        break;
-    }
-
-    this.elementTemp = this.element;
-
-    this.tag = document.getElementById(this.element);
-    this.tag.ariaHidden="false";
   }
 
   selection(e:string){

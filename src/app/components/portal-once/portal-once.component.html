@@ -11,32 +11,22 @@
 </ion-list>
 
 <div role="list">
-  <div role="listitem" class="flex-container" *ngIf="category=='all' || category=='voiceover'">
-    <div class="flex-item txt">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='voiceover'">
+    <summary>
+      No se puede utilizar la aplicación de PortalONCE.
+    </summary>
+    <div class="txt-content">
       <p>
-        <abbr title="Consulta" class="emphasy">C</abbr>: 
-        No se puede utilizar la aplicación de PortalONCE.
+        Una vez descargada la app de la página web (no está en AppStore) se debe realizar los siguientes pasos:
       </p>
-      <div *ngIf="show == 1" aria-hidden="true" id="portal_1">
-        <p>
-          <abbr title="Resolucion" class="emphasy">R</abbr>:
-          Una vez descargada la app de la página web (no está en AppStore) se debe realizar los siguientes pasos:
-        </p>
-        <ol>
-          <li>Ir a Ajustes.</li>
-          <li>Accedr a General.</li>
-          <li>Entrar en Gestión de Dispositivo.</li>
-          <li>Entrar en la sección Apps Empresariales.</li>
-          <li>Acceder a ORGANIZACIÓN NACIONAL DE CIEGOS ESPAÑOLES.</li>
-          <li>Seleccionar la opción: <b>Confiar en <span class="cap-letters">Organización Nacional de Ciegos Españoles</span>.</b>.</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="flex-btn">
-      <button class="btn" (click)="showOpt(1)" *ngIf="show != 1">Consultar</button>
-      <button class="btn" (click)="showOpt(0)" *ngIf="show == 1">Ocultar</button>
-    </div>
-  </div>
-
+      <ol>
+        <li>Ir a Ajustes.</li>
+        <li>Accedr a General.</li>
+        <li>Entrar en Gestión de Dispositivo.</li>
+        <li>Entrar en la sección Apps Empresariales.</li>
+        <li>Acceder a ORGANIZACIÓN NACIONAL DE CIEGOS ESPAÑOLES.</li>
+        <li>Seleccionar la opción: <b>Confiar en <span class="cap-letters">Organización Nacional de Ciegos Españoles</span>.</b>.</li>
+      </ol>
+     </div>
+  </details>
 </div>
