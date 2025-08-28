@@ -6,6 +6,7 @@
     <ion-select #C aria-label="Selecciona una categoría" placeholder="Selecciona un categoría" (ionChange)="selection(C.value)">
       <ion-select-option value="voiceover" lang="en">VoiceOver</ion-select-option>
       <ion-select-option value="configuracion">Configuración</ion-select-option>
+      <ion-select-option value="llamadas">Llamada</ion-select-option>
       <ion-select-option value="all">Todo</ion-select-option>
     </ion-select>
   </ion-item>
@@ -21,5 +22,16 @@
         Comprobar que el contacto no fue guardado en iCloud.
       </p>
      </div>
-  </details>  
+  </details>
+
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='llamadas'">
+    <summary>
+      Siri no llama al buzón de voz.
+    </summary>
+    <div class="txt-content">
+      <p>
+        Siri sólo llama al 112. Se puede configurar un atajo para llamar al buzón de voz.
+      </p>
+     </div>
+  </details>
 </div>

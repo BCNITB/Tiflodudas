@@ -22,8 +22,34 @@ ion-list{
     border-bottom: solid 0.1rem;
 }
 
-.cap-letters{
-    text-transform: uppercase;
+
+details[open] summary {
+    font-weight: 600;
+}
+
+details[open] {
+    background-color: white;
+}
+
+details{
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.2rem;
+    border: solid 0.1rem;
+    border-color: #70b578;
+}
+
+details summary {
+    font-weight: 400;
+    padding-top: 1em;
+    cursor: pointer;
+} 
+
+details .txt-content{
+    padding-left: 2em;
+
+    border-left: solid 0.25rem;
+    border-color: #70b578;
 }
 
 @media only screen and (max-width: 765px) {
@@ -39,4 +65,10 @@ ion-list{
         margin-bottom: 1vh;
     }
     
+}
+
+.scr-only{
+    position: absolute;
+    top: -99999px;
+    left: -99999px;
 }
