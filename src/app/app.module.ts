@@ -12,10 +12,11 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 
 import { PipesModule } from './pipes/pipes.module';
+import { TabsPageModule } from './pages/tabs/tabs.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, PipesModule, IonicModule.forRoot(), AppRoutingModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideFirestore(() => getFirestore()), provideAuth(() => getAuth())],
+  imports: [BrowserModule, PipesModule, IonicModule.forRoot(), AppRoutingModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideFirestore(() => getFirestore()), provideAuth(() => getAuth()), TabsPageModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

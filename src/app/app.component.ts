@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   
   logged: string;
+  isMobile: boolean;
 
-  constructor() {}
+  constructor(private platform: Platform) {
+    this.initializeApp();
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.isMobile = this.platform.is('mobile');
+    });
+  }
 }

@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
+  <ion-split-pane contentId="main-content" when="(min-width: 768px)">
     <ion-menu contentId="main-content" role="navigation" aria-label="Menú Principal">
       <ion-header>
         <ion-toolbar>
@@ -9,21 +9,21 @@
       <ion-content>
         <ion-list role="menu">
           <ion-menu-toggle auto-hide="false">
-            <ion-item [routerDirection]="'root'" [routerLink]="'/index'" role="menuitem">
+            <ion-item [routerDirection]="'root'" [routerLink]="'/tabs/index'" role="menuitem">
               <ion-icon slot="start" [name]="'home-outline'" aria-hidden="true"></ion-icon>
               <ion-label>
                 Inicio
               </ion-label>
             </ion-item>
 
-            <ion-item [routerDirection]="'root'" [routerLink]="'/consult'" role="menuitem">
+            <ion-item [routerDirection]="'root'" [routerLink]="'/tabs/consult'" role="menuitem">
               <ion-icon slot="start" [name]="'cube-outline'" aria-hidden="true"></ion-icon>
               <ion-label>
                 Consultar la Base de Datos
               </ion-label>
             </ion-item>
 
-            <ion-item [routerDirection]="'root'" [routerLink]="'/search'" role="menuitem">
+            <ion-item [routerDirection]="'root'" [routerLink]="'/tabs/search'" role="menuitem">
               <ion-icon slot="start" [name]="'search-outline'" aria-hidden="true"></ion-icon>
               <ion-label>
                 Buscar en la Base de Datos
