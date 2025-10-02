@@ -51,7 +51,11 @@ const routes: Routes = [
   {
     path: 'gemini',
     loadChildren: () => import('./pages/gemini/gemini.module').then( m => m.GeminiPageModule)
+  },  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
   },
+
 
 
 

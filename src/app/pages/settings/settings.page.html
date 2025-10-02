@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Seleccionar Modo</ion-label>
+      <ion-select [(ngModel)]="selectedTheme" (ionChange)="changeTheme()">
+        <ion-select-option value="system">Sistema</ion-select-option>
+        <ion-select-option value="light">Claro</ion-select-option>
+        <ion-select-option value="dark">Oscuro</ion-select-option>
+        <ion-select-option value="custom">Personalizado</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tamaño del Texto</ion-label>
+      <ion-range min="0.5" max="2" step="0.1" [(ngModel)]="fontMultiplier" (ionChange)="changeFontMultiplier()">
+        <ion-label slot="start">0.5</ion-label>
+        <ion-label slot="end">2</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <div *ngIf="selectedTheme === 'custom'">
+      <ion-item>
+        <ion-label>Color de Fondo</ion-label>
+        <ion-select [(ngModel)]="customBackgroundColor" (ionChange)="changeCustomColor()">
+          <ion-select-option value="#000000">Negro</ion-select-option>
+          <ion-select-option value="#FFFFFF">Blanco</ion-select-option>
+          <ion-select-option value="#0000FF">Azul</ion-select-option>
+          <ion-select-option value="#FFFF00">Amarillo</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Color del Texto</ion-label>
+        <ion-select [(ngModel)]="customTextColor" (ionChange)="changeCustomColor()">
+          <ion-select-option value="#000000">Negro</ion-select-option>
+          <ion-select-option value="#FFFFFF">Blanco</ion-select-option>
+          <ion-select-option value="#0000FF">Azul</ion-select-option>
+          <ion-select-option value="#FFFF00">Amarillo</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Ratio de Contraste</ion-label>
+        <ion-text>{{ contrastRatio.toFixed(2) }}</ion-text>
+      </ion-item>
+    </div>
+
+    <ion-item>
+      <ion-label>Fuente del Texto</ion-label>
+      <ion-select [(ngModel)]="selectedFontFamily" (ionChange)="changeFontFamily()">
+        <ion-select-option value="system-ui">Sistema</ion-select-option>
+        <ion-select-option value="sans-serif">Sans-serif</ion-select-option>
+        <ion-select-option value="bold-font">Bold</ion-select-option>
+        <ion-select-option value="monospace">Monospace</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Interlineado</ion-label>
+      <ion-select [(ngModel)]="selectedLineHeight" (ionChange)="changeLineHeight()">
+        <ion-select-option value="1">Sencillo</ion-select-option>
+        <ion-select-option value="1.5">1.5</ion-select-option>
+        <ion-select-option value="2">Doble</ion-select-option>
+        <ion-select-option value="2.5">2.5</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Alineación del Texto</ion-label>
+      <ion-select [(ngModel)]="selectedTextAlign" (ionChange)="changeTextAlign()">
+        <ion-select-option value="left">Izquierda</ion-select-option>
+        <ion-select-option value="right">Derecha</ion-select-option>
+        <ion-select-option value="center">Centro</ion-select-option>
+        <ion-select-option value="justify">Justificado</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div [style.font-size.em]="1 * fontMultiplier" class="ion-padding">
+      <p>Este es un texto de ejemplo para que puedas ver el tamaño de la fuente.</p>
+    </div>
+
+  </ion-list>
+
+  <ion-button expand="block" color="danger" (click)="resetSettings()">Restablecer valores</ion-button>
+
+</ion-content>

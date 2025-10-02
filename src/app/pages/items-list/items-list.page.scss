@@ -1,6 +1,18 @@
+ion-card {
+    color: var(--ion-text-color);
+
+    h2 {
+        color: var(--ion-text-color);
+    }
+
+    p {
+        color: var(--ion-text-color);
+    }
+}
+
 .super{
     vertical-align: super;
-    font-size: 0.5em;
+    font-size: 0.5rem;
 }
 
 /*.flex-container{
@@ -40,7 +52,6 @@ p{
 .btn{
     //margin-top: 0;
     background-color: green;
-    color: #fff;
     padding: 0.5em 0.5em;
     border-radius: 0.2rem;
 }

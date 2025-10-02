@@ -66,13 +66,19 @@
                 </ion-label>
               </ion-item>
 
-              <ion-item *ngIf="isAdmin" [routerDirection]="'root'" [routerLink]="'/admin'" role="menuitem">
-                <ion-icon slot="start" [name]="'cog-outline'" aria-hidden="true"></ion-icon>
-                <ion-label>
-                  Administración
-                </ion-label>
-              </ion-item>
-
+                          <ion-item [routerDirection]="'root'" [routerLink]="'/settings'" role="menuitem">
+                            <ion-icon slot="start" [name]="'settings-outline'" aria-hidden="true"></ion-icon>
+                            <ion-label>
+                              Configuración
+                            </ion-label>
+                          </ion-item>
+              
+                          <ion-item *ngIf="isAdmin" [routerDirection]="'root'" [routerLink]="'/admin'" role="menuitem">
+                            <ion-icon slot="start" [name]="'cog-outline'" aria-hidden="true"></ion-icon>
+                            <ion-label>
+                              Administración
+                            </ion-label>
+                          </ion-item>
               <ion-item [routerDirection]="'root'" [routerLink]="'/login'" role="menuitem">
                 <ion-icon slot="start" [name]="'log-in-outline'" aria-hidden="true"></ion-icon>
                 <ion-label>

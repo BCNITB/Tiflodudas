@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Platform } from '@ionic/angular';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   isAdmin: boolean = false; // TODO: Implement logic to check if the user is an admin
   showTabs: boolean;
 
-  constructor(private platform: Platform) {
+  constructor(private platform: Platform, private themeService: ThemeService) {
     this.initializeApp();
     this.checkPlatform();
   }

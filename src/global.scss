@@ -25,6 +25,29 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+body {
+  font-size: 1rem;
+  background-color: var(--ion-background-color);
+  color: var(--ion-text-color);
+}
+
+html[color-theme="dark"] .alert-radio-label {
+    color: var(--ion-text-color);
+}
+
+.alert-radio-group .alert-radio-button[aria-checked="true"] .alert-radio-label {
+  color: var(--ion-text-color);
+  font-weight: bold;
+}
+
+.alert-radio-group .alert-radio-button[aria-checked="true"] .alert-radio-icon {
+  border-color: var(--ion-text-color);
+  background: var(--ion-text-color);
+}
+
+html[color-theme="custom"] {
+}
+
 .flex-container{
     margin-top: 1em;
     margin-bottom: 1em;

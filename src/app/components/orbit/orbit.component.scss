@@ -23,12 +23,9 @@ ion-list{
 }
 
 
-details[open] summary {
-    font-weight: 600;
-}
-
 details[open] {
-    background-color: white;
+    font-weight: 600;
+    background-color: var(--ion-item-background);
 }
 
 details{
