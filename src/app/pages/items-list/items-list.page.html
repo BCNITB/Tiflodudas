@@ -110,28 +110,32 @@
    
     <h2>Dudas sin resolver</h2>
   
-    <ng-container *ngFor="let item of items">
-      <div class="flex-container" *ngIf="item.item == cat && item.category != 'Solución Propuesta' && item.answer == '' " class="flex-container" role="list">
-        <p class="question" role="listitem">
-          <abbr title="Pregunta">P</abbr>: {{ item.consult }}
-          <!--<span *ngIf="item.answer == ''" class="super">Solución no disponible</span>-->
-        </p>
-        <button *ngIf="item.category != 'Solución Propuesta' && i != 0" (click)="show(item.id)" class="btn flex-btn">
-          Resolver
-        </button>
-      </div>
-    </ng-container>
+    <div role="list">
+      <ng-container *ngFor="let item of items">
+        <div class="flex-container" *ngIf="item.item == cat && item.category != 'Solución Propuesta' && item.answer == '' " role="listitem">
+          <p class="question">
+            <abbr title="Pregunta">P</abbr>: {{ item.consult }}
+            <!--<span *ngIf="item.answer == ''" class="super">Solución no disponible</span>-->
+          </p>
+          <button (click)="show(item.id)" class="btn flex-btn">
+            Resolver
+          </button>
+        </div>
+      </ng-container>
+    </div>
   </ion-card>
   <!-- ONLY ADMIN -->
   <h2 *ngIf="cat == 'colaboración'">Nuevas propuestas para la Base de Datos</h2>
-  <ng-container *ngFor="let item of items; let i = index" role="list"> 
-    <div *ngIf="item.category == cat && i != 0" class="flex-container" role="list" role="listitem">
-      <p class="question" role="listitem">
-        <abbr title="Pregunta">P</abbr>: {{ item.consult }}
-      </p>
-      <button *ngIf="item.category == cat && i != 0" (click)="show(item.id)" class="btn">
-        Consultar
-      </button>
-    </div>
-  </ng-container>
+  <div role="list">
+    <ng-container *ngFor="let item of items; let i = index"> 
+      <div *ngIf="item.category == cat && i != 0" class="flex-container" role="listitem">
+        <p class="question">
+          <abbr title="Pregunta">P</abbr>: {{ item.consult }}
+        </p>
+        <button (click)="show(item.id)" class="btn">
+          Consultar
+        </button>
+      </div>
+    </ng-container>
+  </div>
 </ion-content>

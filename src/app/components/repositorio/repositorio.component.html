@@ -10,7 +10,7 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" id="consult_1" *ngIf="category=='all' || category=='outlook'" class="odd">
+  <details name="category" *ngIf="category=='all' || category=='outlook'" class="odd" role="listitem">
     <summary>
       Outlook da el siguiente error: <b>Error de archivo en el convertidor Valores separados por comas al inicializar un convertidor para generar la información de campo.
         Compruebe que dispone del archivo correcto, que tiene permisos para abrirlo y que no está abierto en otro programa</b>.
@@ -22,13 +22,13 @@
     </div>
   </details>
 
-  <details name="category" id="consult_1" role="listitem" *ngIf="category=='all' || category=='juegos'">
+  <details name="category" role="listitem" *ngIf="category=='all' || category=='juegos'">
     <summary>
       Juego accesible para ordenador y consola.
     </summary>
     <div class="txt-content">
       <p>
-        <a href="https://store.steampowered.com/agecheck/app/1341820/?l=spanish" target="_blank" aria-label="As Dusk Falls, enlace a Steam">As Dusk Falls</a>. Es un juego de 
+        <a href="https://store.steampowered.com/agecheck/app/1341820/?l=spanish" target="_blank" aria-label="As Dusk Falls, enlace a Steam">As Dusk Falls<span class="scr-only">(se abre en una nueva ventana)</span></a>. Es un juego de 
         aventuras interactivo que se centra en la narrativa y las decisiones del jugador. 
       </p>
       <p>
@@ -48,7 +48,7 @@
     <div class="txt-content">
       <p>
         Enlace al cuento de <a href="https://office365once-my.sharepoint.com/personal/rcs_once_es/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Frcs%5Fonce%5Fes%2FDocuments%2FCASETA%5FTRES%5FBESSONES%2Ezip&parent=%2Fpersonal%2Frcs%5Fonce%5Fes%2FDocuments&ga=1" 
-        target="_blank" aria-label="La casita de las 3 mellizas, se abre en una nueva ventana">La casita de las 3 mellizas</a>.
+        target="_blank" aria-label="La casita de las 3 mellizas, se abre en una nueva ventana">La casita de las 3 mellizas<span class="scr-only">(se abre en una nueva ventana)</span></a>.
       </p>
       <p>
         Cuento interactivo y accesible de Las 3 mellizas.
@@ -69,7 +69,7 @@
         desarrollado por Microsoft y puede no ser compatible con todas las versiones de Windows 11, sobretodo cuando se actualiza Windows 11.
       </p>
       <p>
-        Enlace a <a href="https://windhawk.net/" target="_blank" aria-label="Windhawk, se abre en una nueva ventana">LWindhawk</a>.
+        Enlace a <a href="https://windhawk.net/" target="_blank" aria-label="Windhawk, se abre en una nueva ventana">LWindhawk<span class="scr-only">(se abre en una nueva ventana)</span></a>.
       </p>
     </div>
   </details>
@@ -81,7 +81,7 @@
     <div class="txt-content">
       <p>
         Enlace al <a href="https://nvda.es/files/get.php?file=edico" target="_blank" aria-label="Complemento de NVDA, se abre en una nueva ventana">
-          Complemento de <abbr lang="en" title="Non Visual Desk acceible">NVDA</abbr></a>.
+          Complemento de <abbr lang="en" title="Non Visual Desk acceible">NVDA</abbr><span class="scr-only">(se abre en una nueva ventana)</span></a>.
       </p>
     </div>
   </details>

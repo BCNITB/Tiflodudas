@@ -27,12 +27,12 @@
   <form [formGroup]="formItem" (submit)="onSubmit()">
     <ion-list>
       <ion-item>
-        <ion-label id="mailLbl" for="mail" position="floating">
+        <ion-label for="mail" position="floating">
           Corrreo electrónico<abbr title="Campo obligatorio">*</abbr>
         </ion-label>
         
-        <ion-input labelledby="mailLbl mail" type="email" formControlName="mail" id="mail" name="mail"
-        placeholder="John@Doe.com" required class="txt" (keyup)="onKey($event, 1)"></ion-input> 
+        <ion-input type="email" formControlName="mail" id="mail" name="mail"
+        placeholder="John@Doe.com" required class="txt" (keyup)="onKey($event, 1)" aria-describedby="comment01"></ion-input> 
         <div>
           <span>{{ counter1 }}/150</span>
           <span *ngIf="formItem.invalid && formItem.touched" id="comment01">Introduce una dirección válida.</span>
@@ -44,8 +44,8 @@
           Consulta<abbr title="Campo obligatorio">*</abbr>
         </ion-label>
 
-        <ion-textarea aria-label="Consulta" type="text" formControlName="msg" id="msg" name="msg" type="text"
-         (keyup)="onKey($event, 2)" class="txt"></ion-textarea>
+        <ion-textarea formControlName="msg" id="msg" name="msg"
+         (keyup)="onKey($event, 2)" class="txt" aria-describedby="comment02"></ion-textarea>
         <div>
           <span>{{ counter2 }}</span>
           <span *ngIf="formItem.invalid && counter2 < 5 && formItem.touched" id="comment02">La longitud mínima es de 5 caracteres</span>
@@ -53,14 +53,13 @@
       </ion-item>
     
       <ion-item>
-        <ion-checkbox justify="start" role="checkbox" formControlName="consent" id="checkLbl" name="checkLbl" aria-checked="false"
-         checked="false">
+        <ion-label for="consent-checkbox" class="ion-text-wrap">
           Consiento el tratamiento del uso de los datos según la 
           <a>
             Política de Privacidad
           </a>.
-        </ion-checkbox>
-        <ion-label for="checkLbl">Consentimiento</ion-label>
+        </ion-label>
+        <ion-checkbox id="consent-checkbox" slot="start" formControlName="consent"></ion-checkbox>
       </ion-item>
     </ion-list>
   

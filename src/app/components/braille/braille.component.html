@@ -14,7 +14,7 @@
 
 <div role="list">
   <details name="category" role="listitem" *ngIf="category=='all' || category=='actualizcion'">
-    <summary>
+    <summary role="button">
       Mensaje: reloj no preparado.
     </summary>
     <div class="txt-content">
@@ -30,7 +30,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Obtener el número de serie de Braille Hablado 2000.
     </summary>
     <div class="txt-content">
@@ -47,7 +47,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos' || category=='error'">
-    <summary>
+    <summary role="button">
       Error “File system”.
     </summary>
     <div class="txt-content">
@@ -61,7 +61,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Comandos para reaizar una copia de seguridad en Braille hablado 2000 (del BH a la Unidad de disco).
     </summary>
     <div class="txt-content">
@@ -78,7 +78,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
-    <summary>
+    <summary role="button">
       ¿Los Comandos copia de seguridad con el Braille hablado 2000 son los mismos en el Braille hablado clásico 2000?
     </summary>
     <div class="txt-content">

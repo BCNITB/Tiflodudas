@@ -18,7 +18,7 @@
 
 <div role="list">
   <details name="category" role="listitem" *ngIf="category=='all' || category=='actualizcion' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       El menú contextual completo no aparece en la aplicación de Editor. Solo aparecen las opciones: Menú de archivos, Menú de edición, Menú de marcadores y Cerrar.
     </summary>
     <div class="txt-content">
@@ -41,7 +41,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='linea braille' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Si se pulsa cor + E tras un texto, el mensaje no se envía.
     </summary>
     <div class="txt-content">
@@ -57,7 +57,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='sintesi voz'">
-    <summary>
+    <summary role="button">
       La síntesis de voz de Brailliant no lee los textos creados directamente en el Brailliant o añadidos desde un ordenador.
     </summary>
     <div class="txt-content">
@@ -80,7 +80,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Comando o tecla de Brailliant para acceder a las opciones en un iPhone.
     </summary>
     <div class="txt-content">
@@ -92,7 +92,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       No se verbaliza el texto que se escribe, ni al navegar por palabras (cor+5 o cor+2) lee el texto escrito.
     </summary>
     <div class="txt-content">
@@ -103,7 +103,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='conexion'">
-    <summary>
+    <summary role="button">
       Enlazar anotador Brailliant con Android.
     </summary>
     <div class="txt-content">
@@ -119,7 +119,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='compatibilidad'">
-    <summary>
+    <summary role="button">
       Abrir un fichero BRA desde los editores del Brailliant BI.
     </summary>
     <div class="txt-content">

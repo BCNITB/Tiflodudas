@@ -2,12 +2,12 @@
   <ion-list>
     <ion-item  class="l-txt">
       <ion-label for="email" position="floating">Introduce el correo electrónico</ion-label>
-      <ion-input name="email" formControlName="email"></ion-input>
+      <ion-input id="email" name="email" formControlName="email"></ion-input>
     </ion-item>
 
     <ion-item  class="normal-txt">
       <ion-label for="password" position="floating">Contraseña</ion-label>
-      <ion-input name="password" formControlName="password" type="password"></ion-input>
+      <ion-input id="password" name="password" formControlName="password" type="password"></ion-input>
     </ion-item>
 
     <ion-item *ngIf="submitAttempt">
@@ -16,8 +16,8 @@
   </ion-list>
   <ion-row>
     <ion-col class="flex-container"> 
-      <button type="submit" name="submit" [disabled]="formLogin.invalid" id="success" tabindex="1">Enviar</button>
-      <button type="reset" class="danger" tabindex="1" id="cancel">Borrar</button>
+      <button type="submit" name="submit" [disabled]="formLogin.invalid" id="success">Enviar</button>
+      <button type="reset" class="danger" id="cancel">Borrar</button>
     </ion-col>
   </ion-row>
 </form>

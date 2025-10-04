@@ -13,6 +13,7 @@ export class AppComponent {
   isMobile: boolean;
   isAdmin: boolean = false; // TODO: Implement logic to check if the user is an admin
   showTabs: boolean;
+  menuCollapsed: boolean = false;
 
   constructor(private platform: Platform, private themeService: ThemeService) {
     this.initializeApp();
@@ -34,5 +35,9 @@ export class AppComponent {
     const isApp = this.platform.is('hybrid');
     const isMobileWeb = this.platform.width() < 768 && !isApp;
     this.showTabs = isApp || isMobileWeb;
+  }
+
+  toggleMenuCollapse() {
+    this.menuCollapsed = !this.menuCollapsed;
   }
 }

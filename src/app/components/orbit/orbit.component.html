@@ -14,7 +14,7 @@
 
 <div role="list">
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Cambiar la Orbit de modo <abbr title="Interfaz de Dispositivo Humano">HID</abbr> a local.
     </summary>
     <div class="txt-content">
@@ -28,7 +28,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       No se puede salir del fichero en uso.
     </summary>
     <div class="txt-content">
@@ -45,7 +45,7 @@
   </details>
  
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
-    <summary>
+    <summary role="button">
       ¿Qué significa Voluta Tarifa?
     </summary>
     <div class="txt-content">
@@ -56,7 +56,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos' || category=='test'">
-    <summary>
+    <summary role="button">
       Test de punzones(puntos).
     </summary>
     <div class="txt-content">
@@ -93,7 +93,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion' || category=='vincular'">
-    <summary>
+    <summary role="button">
       No se consigue vincular Orbit a JAWS.
     </summary>
     <div class="txt-content">

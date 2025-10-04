@@ -1,3 +1,51 @@
 .web{
     display: none;
 }
+
+ion-menu.menu-collapsed {
+  width: 60px; // Adjust to desired collapsed width
+  min-width: 60px; // Ensure it doesn't get smaller
+  .menu-inner {
+    width: 60px;
+  }
+
+  ion-item {
+    --padding-start: 10px; // Adjust padding for icons
+    --inner-padding-end: 10px;
+  }
+
+  ion-label {
+    display: none; // Hide labels when collapsed
+  }
+
+  ion-icon {
+    margin-inline-end: 0 !important; // Remove space after icon
+  }
+
+  ion-title {
+    display: none; // Hide title when collapsed
+  }
+
+  ion-toolbar {
+    justify-content: center; // Center the collapse button
+  }
+}
+
+// Ensure the menu has a default width when not collapsed
+ion-menu {
+  width: 360px; // Default width (20% wider than 300px)
+  min-width: 360px;
+  transition: all 0.2s ease-in-out; // Smooth transition
+}
+
+// Adjust content margin when menu is collapsed
+ion-split-pane.split-pane-visible {
+  ion-router-outlet#main-content {
+    margin-left: 2vw; // Margin set to 2vw
+    transition: all 0.2s ease-in-out;
+  }
+
+  ion-menu.menu-collapsed + ion-router-outlet#main-content {
+    margin-left: 60px; // Collapsed margin remains 60px
+  }
+}
