@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { Platform, AlertController } from '@ionic/angular';
 import { ThemeService } from './services/theme.service';
+import { UpdateService } from './services/update.service';
 
 @Component({
   selector: 'app-root',
@@ -15,15 +16,44 @@ export class AppComponent {
   showTabs: boolean;
   menuCollapsed: boolean = false;
 
-  constructor(private platform: Platform, private themeService: ThemeService) {
+  constructor(private platform: Platform, private themeService: ThemeService, private updateService: UpdateService, private alertController: AlertController) {
     this.initializeApp();
     this.checkPlatform();
   }
 
   initializeApp() {
-    this.platform.ready().then(() => {
+    this.platform.ready().then(async () => {
       this.isMobile = this.platform.is('mobile');
+      // Check for updates after platform is ready
+      const updateInfo = await this.updateService.checkForUpdates();
+      if (updateInfo) {
+        this.presentUpdateAlert(updateInfo.newVersion, updateInfo.downloadUrl);
+      }
     });
+  }
+
+  async presentUpdateAlert(newVersion: string, downloadUrl: string) {
+    const alert = await this.alertController.create({
+      header: 'Nueva Versión Disponible',
+      message: `Hay una nueva versión (${newVersion}) de la aplicación disponible. ¿Deseas descargarla ahora?`,
+      buttons: [
+        {
+          text: 'Más Tarde',
+          role: 'cancel',
+          handler: () => {
+            console.log('Update deferred');
+          },
+        },
+        {
+          text: 'Descargar',
+          handler: () => {
+            window.open(downloadUrl, '_system');
+          },
+        },
+      ],
+    });
+
+    await alert.present();
   }
 
   @HostListener('window:resize', ['$event'])
