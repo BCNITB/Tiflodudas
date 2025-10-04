@@ -26,6 +26,7 @@
                 <ion-label>
                   Inicio
                 </ion-label>
+                <div *ngIf="menuCollapsed" class="custom-tooltip">Inicio</div>
               </ion-item>
 
               <ion-item *ngIf="!showTabs" [routerDirection]="'root'" [routerLink]="'/tabs/consult'" role="menuitem">
@@ -33,6 +34,7 @@
                 <ion-label>
                   Consultar la Base de Datos
                 </ion-label>
+                <div *ngIf="menuCollapsed" class="custom-tooltip">Consultar la Base de Datos</div>
               </ion-item>
 
               <ion-item *ngIf="!showTabs" [routerDirection]="'root'" [routerLink]="'/tabs/search'" role="menuitem">
@@ -40,6 +42,7 @@
                 <ion-label>
                   Buscar en la Base de Datos
                 </ion-label>
+                <div *ngIf="menuCollapsed" class="custom-tooltip">Buscar en la Base de Datos</div>
               </ion-item>
 
               <ion-item [routerDirection]="'root'" [routerLink]="'/new-entry/colaboración'" role="menuitem">
@@ -47,6 +50,7 @@
                 <ion-label>
                   Enviar una consulta
                 </ion-label>
+                <div *ngIf="menuCollapsed" class="custom-tooltip">Enviar una consulta</div>
               </ion-item>
 
               <ion-item [routerDirection]="'root'" [routerLink]="'/gemini'" role="menuitem">
@@ -54,6 +58,7 @@
                 <ion-label>
                   Gemini
                 </ion-label>
+                <div *ngIf="menuCollapsed" class="custom-tooltip">Gemini</div>
               </ion-item>
 
               <ion-item [routerDirection]="'root'" [routerLink]="'/contact'" role="menuitem">
@@ -61,6 +66,7 @@
                 <ion-label>
                   Contacto
                 </ion-label>
+                <div *ngIf="menuCollapsed" class="custom-tooltip">Contacto</div>
               </ion-item>
 
               <ion-item [routerDirection]="'root'" [routerLink]="'/accesibilidad'" role="menuitem">
@@ -68,6 +74,7 @@
                 <ion-label>
                   Accesibilidad
                 </ion-label>
+                <div *ngIf="menuCollapsed" class="custom-tooltip">Accesibilidad</div>
               </ion-item>
 
               <ion-item [routerDirection]="'root'" [routerLink]="'/about'" role="menuitem">
@@ -75,6 +82,7 @@
                 <ion-label>
                   Acerca de
                 </ion-label>
+                <div *ngIf="menuCollapsed" class="custom-tooltip">Acerca de</div>
               </ion-item>
 
                           <ion-item [routerDirection]="'root'" [routerLink]="'/settings'" role="menuitem">
@@ -82,6 +90,7 @@
                             <ion-label>
                               Configuración
                             </ion-label>
+                            <div *ngIf="menuCollapsed" class="custom-tooltip">Configuración</div>
                           </ion-item>
               
                           <ion-item *ngIf="isAdmin" [routerDirection]="'root'" [routerLink]="'/admin'" role="menuitem">
@@ -89,12 +98,14 @@
                             <ion-label>
                               Administración
                             </ion-label>
+                            <div *ngIf="menuCollapsed" class="custom-tooltip">Administración</div>
                           </ion-item>
               <ion-item [routerDirection]="'root'" [routerLink]="'/login'" role="menuitem">
                 <ion-icon slot="start" [name]="'log-in-outline'" aria-hidden="true"></ion-icon>
                 <ion-label>
                   Area Personal
                 </ion-label>
+                <div *ngIf="menuCollapsed" class="custom-tooltip">Area Personal</div>
               </ion-item>
             </ion-menu-toggle>
           </ion-list>

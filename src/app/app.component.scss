@@ -31,6 +31,31 @@ ion-menu.menu-collapsed {
   }
 }
 
+ion-menu.menu-collapsed ion-item {
+  position: relative; // Needed for absolute positioning of tooltip
+
+  .custom-tooltip {
+    display: none;
+    width: auto;
+    background-color: var(--ion-color-dark);
+    color: var(--ion-color-dark-contrast);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    left: 70px; // Position to the right of the collapsed icon
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap; // Prevent text wrapping
+    pointer-events: none; // Allow clicks to pass through
+  }
+
+  &:hover .custom-tooltip {
+    display: block;
+  }
+}
+
 // Ensure the menu has a default width when not collapsed
 ion-menu {
   width: 360px; // Default width (20% wider than 300px)
