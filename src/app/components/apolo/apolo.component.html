@@ -19,7 +19,7 @@
 
 <div role="list">
   <details name="category" role="listitem" *ngIf="category=='all' || category=='fire' || category=='instalacion'">
-    <summary>
+    <summary role="button">
       No se puede instalar Apolo ONCE en el Fire <abbr title="Televión">TV</abbr>.
     </summary>
     <div class="txt-content">
@@ -31,7 +31,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga'">
-    <summary>
+    <summary role="button">
       En la pestaña Descargas no se puede abrir la opción de búsqueda, pero fundiona correctamente en novedades y el resto de ítems.
     </summary>
     <div class="txt-content">

@@ -14,7 +14,7 @@
 
 <div role="list">
   <details name="category" role="listitem" *ngIf="category=='all' || category=='actualizacion'">
-    <summary>
+    <summary role="button">
       Los drivers no se actualizan correctamente y la impresora entra en un bucle.
     </summary>
     <div class="txt-content">
@@ -25,7 +25,7 @@
   </details> 
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='conexion'">
-    <summary>
+    <summary role="button">
       Conocer la IP de la impresora.
     </summary>
     <div class="txt-content">
@@ -51,7 +51,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='conexion'">
-    <summary>
+    <summary role="button">
       Al realizar una impresión con Index Everest DV-5 desde Ebrai se realiza una doble paginación.
     </summary>
     <div class="txt-content">

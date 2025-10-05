@@ -25,7 +25,7 @@
 
 <div role="list">
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       Jaws no lee los elementos del Menú de Inicio de Windows.
     </summary>
     <div class="txt-content">
@@ -53,7 +53,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuración'">
-    <summary>
+    <summary role="button">
       Modificar la tecla Insert de Jaws y asignarle otra tecla que no sea Bloq. mayúsc.
     </summary>
     <div class="txt-content">
@@ -81,7 +81,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuración'">
-    <summary>
+    <summary role="button">
       Los menús aparecen en inglés a pesar de que se marcaba para que fueran en castellano (el teclado está configurado como danés por el usuario).
     </summary>
     <div class="txt-content">
@@ -93,7 +93,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='lectura'">
-    <summary>
+    <summary role="button">
       Cuando Jaws lee "Mouse Over" la ayuda de Jaws indica que la combinación de teclas a utilizar es Insert + Ctrl + Enter, pero al utilizar esa combinación de teclas Jaws no hace 
       nada.
     </summary>
@@ -105,7 +105,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones' || category=='correo electrónico' || category=='outlook'">
-    <summary>
+    <summary role="button">
       Al escribir la dirección para enviar el correo Jaws no lee las sugerencias ni el desplegable con las opciones, tampoco utilizando la combinación insert + cursor.
     </summary>
     <div class="txt-content">
@@ -116,7 +116,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='correo electrónico'">
-    <summary>
+    <summary role="button">
       Cuando Jaws lee "Mouse Over" la ayuda de Jaws indica que la combinación de teclas a utilizar es Insert + Ctrl + Enter, pero al utilizar esa combinación de teclas Jaws no hace 
       nada.
     </summary>
@@ -128,7 +128,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='word'">
-    <summary>
+    <summary role="button">
       Al utilizar Jaws con el revisor ortográfico dice tras cada palabra "marcador de espacio".
     </summary>
     <div class="txt-content">
@@ -145,7 +145,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='lectura'">
-    <summary>
+    <summary role="button">
       El motor de Vocalizer no aparece en la lista de selección.
     </summary>
     <div class="txt-content">
@@ -156,7 +156,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='vpn'">
-    <summary>
+    <summary role="button">
       Mensaje de error al entrar al ordenador mediante <abbr title="Virtual Private Network">VPN</abbr> por fallo del controlador de vídeo de Jaws. En algunas ocasiones Jaws no 
       lee y se queda colgado.
     </summary>
@@ -168,7 +168,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='dongle'">
-    <summary>
+    <summary role="button">
       Jaws no reconoce el Dongle pero el sistema sí.
     </summary>
     <div class="txt-content">
@@ -179,7 +179,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='lectura'">
-    <summary>
+    <summary role="button">
       Al actualizar de Jaws 2019 a Jaws 2020 Jaws habla en inglés y no permite cambiar el idioma.
     </summary>
     <div class="txt-content">
@@ -190,7 +190,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuración'">
-    <summary>
+    <summary role="button">
       En un texto escrito, al pulsar sobre el cursor de subir o bajar Jaws dice: “Acciones: deshacer acciones automáticas”.
     </summary>
     <div class="txt-content">
@@ -206,7 +206,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='instalación'">
-    <summary>
+    <summary role="button">
       Herramienta para activar Jaws remotamente.
     </summary>
     <div class="txt-content">
@@ -217,7 +217,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuración'">
-    <summary>
+    <summary role="button">
       Al escribir Jaws dice la letra y una palabra. Por ejemplo, A alfa.
     </summary>
     <div class="txt-content">
@@ -238,7 +238,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='excel'">
-    <summary>
+    <summary role="button">
       Al pegar una columna completa  Excel deja de leer el contenido de las celdas e indica sólo la posición de la mismas.
     </summary>
     <div class="txt-content">
@@ -249,7 +249,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='correo electrónico'">
-    <summary>
+    <summary role="button">
       Al pulsar <b>Insert + A</b> para abrir un archivo adjunto, éste no se abre. Tampoco se puede abrir con el menú contextual.
     </summary>
     <div class="txt-content">
@@ -266,7 +266,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       Pasar de remoto a local.
     </summary>
     <div class="txt-content">
@@ -278,7 +278,7 @@
   
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Activación cursor táctil.
     </summary>
     <div class="txt-content">
@@ -289,7 +289,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='word'">
-    <summary>
+    <summary role="button">
       Al utilizar el correcto éste se queda colgado.
     </summary>
     <div class="txt-content">
@@ -300,7 +300,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='lectura'">
-    <summary>
+    <summary role="button">
       Jaws no enuncia la configuración de Windows 10.
     </summary>
     <div class="txt-content">
@@ -325,7 +325,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='lectura' || category=='outlook'">
-    <summary>
+    <summary role="button">
       Jaws lee toda la información del mensaje al situar el foco sobre el mismo en la bandeja de entrada.
     </summary>
     <div class="txt-content">
@@ -336,7 +336,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='correo electrónico'">
-    <summary>
+    <summary role="button">
       Configurar Outlook con Yahoo.
     </summary>
     <div class="txt-content">
@@ -360,7 +360,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='scripts'">
-    <summary>
+    <summary role="button">
       Scripts de Jaws para Facturaplus y Contaplus.
     </summary>
     <div class="txt-content">
@@ -373,7 +373,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='lectura'">
-    <summary>
+    <summary role="button">
       Jaws dice "Verificado" al movernos por la pantalla de escritorio de Windows.
     </summary>
     <div class="txt-content">
@@ -390,7 +390,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Comando de Jaws para la descripción de imágenes.
     </summary>
     <div class="txt-content">
@@ -401,7 +401,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='lectura'">
-    <summary>
+    <summary role="button">
       Jaws no reconoce siglas.
     </summary>
     <div class="txt-content">
@@ -412,7 +412,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Hacer MouseOver.
     </summary>
     <div class="txt-content">
@@ -423,7 +423,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='correo electrónico' || category=='outlook'">
-    <summary>
+    <summary role="button">
       Jaws no lee el autocompletado, ni el campo para cuando se envía un correo con Outlook.
     </summary>
     <div class="txt-content">
@@ -439,7 +439,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuración' || category=='word'">
-    <summary>
+    <summary role="button">
       No se puede acceder a la barra de menús de word pulsando la tecla alt.
     </summary>
     <div class="txt-content">
@@ -457,7 +457,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       Aplicación de firma digital accesible para lectores de pantalla.
     </summary>
     <div class="txt-content">
@@ -472,7 +472,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       Evitar que se escuche lo que JAWS verbaliza durante una videoconferencia en un equipo con la pantalla que incluye cámara, altavoces y micrófono.
     </summary>
     <div class="txt-content">
@@ -483,7 +483,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       Al enviar un archivo desde Exce: Archivo > Compartir > Correo electronico > Enviar como datos adjuntos, al escribir la 
         inicial del contacto en el campo <i>Para:</i> aunque se muestra la sugerencia del contacto Jaws no la verbaliza. 
         Ocurre igual cuando se hace con el botón de aplicaciones > enviar a > destinatario de correo.
@@ -508,7 +508,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones' || category=='correo electrónico'">
-    <summary>
+    <summary role="button">
       Configuración para que el gestor de correoa Thunderbird sea más accesible.
     </summary>
     <div class="txt-content">
@@ -548,7 +548,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       El micrófono no funciona en una reunión de Teams si está Jaws activado.
     </summary>
     <div class="txt-content">
@@ -574,7 +574,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='word'">
-    <summary>
+    <summary role="button">
       Jaws verbaliza <b>marcador de espacio</b> en documento Word.
     </summary>
     <div class="txt-content">
@@ -585,7 +585,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='instalacion'">
-    <summary>
+    <summary role="button">
       Jaws no funciona en tablet de Microsoft, la Surface Pro X.
     </summary>
     <div class="txt-content">
@@ -613,7 +613,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='excel'">
-    <summary>
+    <summary role="button">
       En un equipo corporativo con Jaws y Excel en una hoja protegida que tiene distintos filtros de selección, cuando se entra 
         en uno de ellos, no se puede salir utilizando el comando <b>CTRL + Alt+ L</b>.
     </summary>
@@ -625,7 +625,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='word'">
-    <summary>
+    <summary role="button">
       Al escribir un punto con la línea braille (punto 3), si se pulsa después el espacio el punto se cambia
       automáticamente por un apóstrofe, tanto en WORD como en la línea braille.
     </summary>
@@ -650,7 +650,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       En el <a href="https://dle.rae.es/" title="Diccionario de la Real Academia Española (se abre en una nueva pestaña)"
       target="_blank">Diccionario de la Real Academia Española<span class="scr-only">(se abre en una nueva ventana)</span></a>  al consultar una acepción de una palabra con JAWS 
       2023.2212 se verbaliza la etiqueta HTML mark, incrustada en a cada una de las palabras que conforman la acepción. 
@@ -679,7 +679,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       Cambiar la verbalización para que cuando una palabra está en mayúsculas, lea la palabra completa y no la deletree.
     </summary>
     <div class="txt-content">
@@ -690,7 +690,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion' || category=='excel'">
-    <summary>
+    <summary role="button">
       Fijar la primera columna de una hoja Excel en una línea braille.
     </summary>
     <div class="txt-content">
@@ -704,7 +704,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion' || category=='comandos'">
-    <summary>
+    <summary role="button">
       No se puede asignar comando de acceso rápido.
     </summary>
     <div class="txt-content">
@@ -715,7 +715,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       Desactivar tecla FN desde BIOS.
     </summary>
     <div class="txt-content">
@@ -742,7 +742,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       Configurar JAWS para que verbalice mayúsculas y no haga una modificación del tono (por defecto).
     </summary>
     <div class="txt-content">
@@ -764,7 +764,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       No se puede acceer a los archivos compartidos en OneDrive.
     </summary>
     <div class="txt-content">
@@ -775,7 +775,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       Saber en que página estamos en un documento PDF abierto con Adobe Acrobat Reader.
     </summary>
     <div class="txt-content">
@@ -790,7 +790,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       Hacer que Jaws verbalice con distintas voces el texto con formatos de negrita, subrayado y cursiva. 
     </summary>
     <div class="txt-content">
@@ -817,7 +817,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       Exportar configuración de Jaws a otro equipo.
     </summary>
     <div class="txt-content">
@@ -839,7 +839,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion' || category=='menú de inicio'">
-    <summary>
+    <summary role="button">
       JAWS no lee los elementos del Menú de Inicio de Windows.
     </summary>
     <div class="txt-content">
@@ -862,7 +862,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       Al crearse y guardarse un fichero con Write Jaws lee perfectamente el fichero, pero al cerrarlo y abrirlo Jaws lee una línea sí y otra no.
     </summary>
     <div class="txt-content">
@@ -873,7 +873,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       No es posible instalar Jaws 2019 y 2020.
     </summary>
     <div class="txt-content">
@@ -891,7 +891,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion' || category=='vincular'">
-    <summary>
+    <summary role="button">
       No se consigue vincular Orbit a JAWS.
     </summary>
     <div class="txt-content">
@@ -912,7 +912,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       La línea braille dejó de funcionar en el equipo. Cuando se conecta la línea braille al ordenador por puerto USB y se accede
          a Opciones > braille (em Jaws), el mensaje es: <i>La línea braille activa es ninguna línea</i>. Se verifica que todas las 
          opciones están bien configuradas, que se ha agregado en más de una ocasión la línea. Se reinicia Jaws, ... 
@@ -947,7 +947,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='linea'">
-    <summary>
+    <summary role="button">
       La línea braille dejó de funcionarle en este equipo.
     </summary>
     <div class="txt-content">
@@ -975,7 +975,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones' || category=='lectura'">
-    <summary>
+    <summary role="button">
       Leer tablas en un documeto PDF.
     </summary>
     <div class="txt-content">
@@ -986,7 +986,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones' || category=='excel' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Fijar una cabecera columna en Excel con JAWS.
     </summary>
     <div class="txt-content">
@@ -997,7 +997,7 @@
   </details>
   
     <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones' || category=='excel' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Fijar una cabecera fila en Excel con JAWS.
     </summary>
     <div class="txt-content">

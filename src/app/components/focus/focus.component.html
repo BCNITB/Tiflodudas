@@ -17,7 +17,7 @@
 
 <div role="list">
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       Configurar entrada y salida con un comando.
     </summary>
     <div class="txt-content">
@@ -32,7 +32,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Escribir línea nueva.
     </summary>
     <div class="txt-content">
@@ -43,7 +43,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       La línea braille dejó de funcionar en el equipo. Cuando se conecta la línea braille al ordenador por puerto USB y se accede
       a Opciones > braille (em Jaws), el mensaje es: <i>La línea braille activa es ninguna línea</i>. Se verifica que todas las 
       opciones están bien configuradas, que se ha agregado en más de una ocasión la línea. Se reinicia Jaws, ... 
@@ -72,7 +72,7 @@
       <p>
         <span class="emphasy">Mota</span>:
         <details>
-          <summary>
+          <summary role="button">
             Otra posible solución para este problema.
           </summary>
           <p>
@@ -101,7 +101,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       Al utilizar una línea braille Focus blue 40 para escribir en Word no se escribe el texto hasta pulsar la tecla espacio.
     </summary>
     <div class="txt-content">
@@ -112,7 +112,7 @@
   </details>
   
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion' || category=='comandos'">
-    <summary>
+    <summary role="button">
       Cambiar la configuración del teclado de una línea focus a una mano.
     </summary>
     <div class="txt-content">
@@ -136,7 +136,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='talkback' || category=='vincular'">
-    <summary>
+    <summary role="button">
       Conexión línea braille con TalkBack.
     </summary>
     <div class="txt-content">
@@ -164,7 +164,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='talkback' || category=='vincular'">
-    <summary>
+    <summary role="button">
       El iPhone no detecta la línea Braille.
     </summary>
     <div class="txt-content">
@@ -175,7 +175,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='vincular'">
-    <summary>
+    <summary role="button">
       Como conectar una línea Braille a un Apple Watch.
     </summary>
     <div class="txt-content">
@@ -194,7 +194,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       La línea Focus está bloqueada.
     </summary>
     <div class="txt-content">
@@ -209,7 +209,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='edico' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       Cuando se pulsa un sensor de la línea braille para posicionarse en un lugar determinado de la  misma, el cursor sube 3 líneas.
     </summary>
     <div class="txt-content">
@@ -228,7 +228,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='edico' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       En Word la línea braille Focus al escribir un "punto", con la tecla 3, y configurada en braille español grado 1, escribe apóstrofe.
     </summary>
     <div class="txt-content">
@@ -239,7 +239,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='word'">
-    <summary>
+    <summary role="button">
       Al escribir un punto con la línea braille (punto 3), si se pulsa después el espacio el punto se cambia automáticamente por un apóstrofe, tanto en WORD como en la línea braille.
     </summary>
     <div class="txt-content">

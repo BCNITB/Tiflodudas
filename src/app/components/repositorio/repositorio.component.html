@@ -11,7 +11,7 @@
 
 <div role="list">
   <details name="category" *ngIf="category=='all' || category=='outlook'" class="odd" role="listitem">
-    <summary>
+    <summary role="button">
       Outlook da el siguiente error: <b>Error de archivo en el convertidor Valores separados por comas al inicializar un convertidor para generar la información de campo.
         Compruebe que dispone del archivo correcto, que tiene permisos para abrirlo y que no está abierto en otro programa</b>.
     </summary>
@@ -23,7 +23,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='juegos'">
-    <summary>
+    <summary role="button">
       Juego accesible para ordenador y consola.
     </summary>
     <div class="txt-content">
@@ -42,7 +42,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='cuentos'">
-    <summary>
+    <summary role="button">
       Cuento interactivo de La casita de las 3 mellizas.
     </summary>
     <div class="txt-content">
@@ -60,7 +60,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       Programa para personalizar Windows 11.
     </summary>
     <div class="txt-content">
@@ -75,7 +75,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
-    <summary>
+    <summary role="button">
       Complemento para hacer Edico acceible con NVDA.
     </summary>
     <div class="txt-content">

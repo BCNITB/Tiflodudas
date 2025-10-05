@@ -12,7 +12,7 @@
 
 <div role="list">
   <details name="category" role="listitem" *ngIf="category=='all' || category=='llamadas'">
-    <summary>
+    <summary role="button">
       Al pedirle al asistente de google que llame a un contacto, lo hacemediante whasapp.
     </summary>
     <div class="txt-content">
@@ -23,7 +23,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
-    <summary>
+    <summary role="button">
       Google Assistant graba lo que verbaliza Voice Assistant.
     </summary>
     <div class="txt-content">

@@ -13,7 +13,7 @@
 
 <div role="list">
   <details name="category" role="listitem" *ngIf="category=='all' || category=='compatibilidad'">
-    <summary>
+    <summary role="button">
       Omnipage pero se abre un archivo en blanco. 
     </summary>
     <div class="txt-content">
@@ -33,7 +33,7 @@
   </details>
 
   <details name="category" role="listitem" *ngIf="category=='all' || category=='navegacion'">
-    <summary>
+    <summary role="button">
       Si tienes varias ventanas en la pantalla (miniaturas, editor de texto, 
         imágenes, etc….) si que dando F6 va cambiando de ventana o de área como lo hace con el Power Point, pero desactivando todas 
         y dejando sólo el editor de texto, no se sabe, ni visualmente, dónde va el foco.
