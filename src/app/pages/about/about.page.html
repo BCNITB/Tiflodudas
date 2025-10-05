@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" #content>
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Acercar de</ion-title>
@@ -16,7 +16,7 @@
 
   <ion-card>
     <p>
-      <span class="head">Versión</span>: La versión actual es 3.0.0.
+      <span class="head">Versión</span>: La versión actual es 3.0.2.
     </p>
     <p>
       <span class="head">Creador</span>: Gacs.
@@ -26,4 +26,24 @@
     Si tienen cualquier consulta pueden escribir un correo electrónico a la siguiente dirección: 
     <b>bcn4itb&#64;gmail.com</b>
   </ion-card>
+
+  <!-- TODO: ONLY WEB -->
+<!---->
+  <ion-card> 
+    <ion-card-header>
+      Atajos de teclado
+    </ion-card-header>
+    <ion-card-content>
+      A continuación se muestran los atajos de teclado disponibles en la aplicación web:
+      <ul>
+        <li><b>Shift + I</b>: Navegar a la página de inicio.</li>
+        <li><b>Shift + C</b>: Consultar la Base de DAtos.</li>
+        <li><b>Shift + B</b>: Buscar en la lista de dudas.</li>
+        <li><b>Shift + O</b>: Ocultar o mostrar el Menú lateral.</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+  <!---->
+
+  <ion-button *ngIf="isApp" expand="block" (click)="checkVersion()">Comprobar Actualizaciones</ion-button>
 </ion-content>

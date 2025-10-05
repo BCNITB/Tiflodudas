@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { Platform, AlertController } from '@ionic/angular';
 import { ThemeService } from './services/theme.service';
 import { UpdateService } from './services/update.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,19 +17,32 @@ export class AppComponent {
   showTabs: boolean;
   menuCollapsed: boolean = false;
 
-  constructor(private platform: Platform, private themeService: ThemeService, private updateService: UpdateService, private alertController: AlertController) {
+  constructor(private platform: Platform, private themeService: ThemeService, private updateService: UpdateService, private alertController: AlertController, private router: Router) {
     this.initializeApp();
     this.checkPlatform();
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.shiftKey && event.key === 'I') {
+      this.router.navigate(['/']);
+    } else if (event.shiftKey && event.key === 'C') {
+      this.router.navigate(['/tabs/consult']);
+    } else if (event.shiftKey && event.key === 'B') {
+      this.router.navigate(['/tabs/search']);
+    } else if (event.shiftKey && event.key === 'O') {
+      this.toggleMenuCollapse();
+    }
   }
 
   initializeApp() {
     this.platform.ready().then(async () => {
       this.isMobile = this.platform.is('mobile');
       // Check for updates after platform is ready
-      const updateInfo = await this.updateService.checkForUpdates();
-      if (updateInfo) {
-        this.presentUpdateAlert(updateInfo.newVersion, updateInfo.downloadUrl);
-      }
+      // const updateInfo = await this.updateService.checkForUpdates();
+      // if (updateInfo) {
+      //   this.presentUpdateAlert(updateInfo.newVersion, updateInfo.downloadUrl);
+      // }
     });
   }
 

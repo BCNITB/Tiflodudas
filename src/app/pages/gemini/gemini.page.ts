@@ -46,6 +46,7 @@ export class GeminiPage implements OnInit {
 
       this.userInput = ''; // Limpiar la entrada
     } catch (error) {
+      console.log(error);
       console.error('Error en el componente al enviar prompt:', error);
       const alert = await this.alertCtrl.create({
         header: 'Error',

@@ -16,7 +16,7 @@ export class GeminiService {
     //const API_KEY = 'AIzaSyCCbZdyp0b2kvnPqUcBHll1b1zfQ_AMlkg';
     //this.genAI = new GoogleGenerativeAI(API_KEY);
     this.genAI = new GoogleGenerativeAI(environment.geminiApiKey);
-    this.model = this.genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    this.model = this.genAI.getGenerativeModel({ model: 'gemini-1.5-pro-002' });
     //this.model = this.genAI.getGenerativeModel({model: 'gemini-1.5-flash'});
    }
 
