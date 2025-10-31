@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   
   logged: string;
-  isMobile: boolean;
+  isMobileView: boolean;
   isAdmin: boolean = false; // TODO: Implement logic to check if the user is an admin
   showTabs: boolean;
   menuCollapsed: boolean = false;
@@ -37,7 +37,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(async () => {
-      this.isMobile = this.platform.is('mobile');
+      this.checkPlatform();
       // Check for updates after platform is ready
       // const updateInfo = await this.updateService.checkForUpdates();
       // if (updateInfo) {
@@ -76,8 +76,9 @@ export class AppComponent {
   }
 
   private checkPlatform() {
+    this.isMobileView = this.platform.width() < 768;
     const isApp = this.platform.is('hybrid');
-    const isMobileWeb = this.platform.width() < 768 && !isApp;
+    const isMobileWeb = this.isMobileView && !isApp;
     this.showTabs = isApp || isMobileWeb;
   }
 

@@ -12,7 +12,7 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='configuracion'">
     <summary role="button">
       Desactivar los menús de contexto en un iPhone.
     </summary>
@@ -34,7 +34,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='configuracion'">
     <summary role="button">
       Desactivar el modo de bajo consumo en un iPhone.
     </summary>
@@ -50,7 +50,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='aplicaciones'">
     <summary role="button">
       La aplicación FichApp no tiene permisos en <abbr lang="en" title="iPhone Operative System">iOS</abbr>.
     </summary>

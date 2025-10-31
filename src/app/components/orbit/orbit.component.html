@@ -13,7 +13,7 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='comandos'">
     <summary role="button">
       Cambiar la Orbit de modo <abbr title="Interfaz de Dispositivo Humano">HID</abbr> a local.
     </summary>
@@ -21,13 +21,13 @@
       <p>
         Debemos seguir el siguiente procedimiento: </p>
       <ol>
-        <li>Seleccionar + flecha arriba</li>.
-        <li>Seleccionar + flecha izquierda</li>.
+        <li>Seleccionar + flecha arriba.</li>
+        <li>Seleccionar + flecha izquierda.</li>
       </ol>
      </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='configuracion'">
     <summary role="button">
       No se puede salir del fichero en uso.
     </summary>
@@ -44,7 +44,7 @@
      </div>
   </details>
  
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='comandos'">
     <summary role="button">
       ¿Qué significa Voluta Tarifa?
     </summary>
@@ -55,7 +55,7 @@
      </div>
   </details>
   
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='comandos' || category=='test'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='comandos' || category==='test'">
     <summary role="button">
       Test de punzones(puntos).
     </summary>
@@ -92,7 +92,7 @@
      </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion' || category=='vincular'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='configuracion' || category==='vincular'">
     <summary role="button">
       No se consigue vincular Orbit a JAWS.
     </summary>

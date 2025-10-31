@@ -11,7 +11,7 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='instalacion'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='instalacion'">
     <summary role="button">
       Al instalar el programa Ebrai y poner la activación se me abre en modo 
         comentarios y no permite  seleccionar impresora, configurar página o imprimir. Se ha desinstalado el programa y vuelto a instalar sin cambios.
@@ -35,7 +35,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='instalacion' || category=='configuracion'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='instalacion' || category==='configuracion'">
     <summary role="button">
       Cuando se da uno de estos supuestos:
       <ul>

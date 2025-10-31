@@ -13,7 +13,7 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='voiceover'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='voiceover'">
     <summary role="button">
       Hay contactos que no aparecen en la agenda pero Siri si que los reconoce.
     </summary>
@@ -24,7 +24,7 @@
      </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='llamadas'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='llamadas'">
     <summary role="button">
       Siri no llama al buzón de voz.
     </summary>

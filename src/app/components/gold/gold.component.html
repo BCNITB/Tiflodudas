@@ -15,7 +15,7 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='pausa lectura' || category=='movil'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='pausa lectura' || category==='movil'">
     <summary role="button">
       La lectura se pausa cuando se apaga la pantalla del terminal.
     </summary>
@@ -26,7 +26,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='lectura' || category=='movil'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='lectura' || category==='movil'">
     <summary role="button">
       En alguno de los libros descargados cuando se para la lectura, al reanudarla, vuelve al principio de todo.
     </summary>
@@ -47,7 +47,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga' || category=='movil'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='descarga' || category==='movil'">
     <summary role="button">
       No se puede descargar libros, da el mensaje: <b>error en la descarga</b>.
     </summary>
@@ -68,7 +68,7 @@
     </div>
   </details>
 
-    <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga' || category=='movil'">
+    <details name="category" role="listitem" *ngIf="category==='all' || category==='descarga' || category==='movil'">
     <summary role="button">
       Instalar una versión anterior de una aplicación ya que el iOS es antiguo y no es compatible.
     </summary>
@@ -80,7 +80,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga' || category=='movil'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='descarga' || category==='movil'">
     <summary role="button">
       Al iniciar cuenta en Gestor ONCE Libros Digitales foco se queda atrapado en el campo de edición de texto de usuario.
     </summary>
@@ -92,7 +92,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga' || category=='descarga'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='descarga' || category==='descarga'">
     <summary role="button">
       No se pueden descargar audiolibros en un ordenador.
     </summary>
@@ -103,7 +103,7 @@
     </div>
   </details>
     
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='pausar lectura' || category=='eliminar'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='pausar lectura' || category==='eliminar'">
     <summary role="button">
       No se puede eliminar un audiolibro desde la aplicación del móvil o la tablet. El libro tampoco guarda el punto de lectura.
     </summary>
@@ -128,7 +128,7 @@
     </div>
   </details>
     
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga' || category=='movil'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='descarga' || category==='movil'">
     <summary role="button">
       Error en la aplicación con iPod touch; las listas de búsqueda salen vacías.
     </summary>

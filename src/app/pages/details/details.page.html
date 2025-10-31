@@ -1,8 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <button (click)="goBack()" title="Consultar incidencia ir atrás" class="back-btn">
-        <img src="../../../assets/left-arrow.png" aria-hidden="true">  
+      <button (click)="goBack()" aria-label="Volver" class="back-btn">
+        <img src="../../../assets/left-arrow.png" alt="" aria-hidden="true">
       </button>
     </ion-buttons>
 
@@ -18,39 +18,39 @@
   </ion-header>
 
   <ng-container *ngFor="let item of items">
-    <div *ngIf="item.id == cat">
+    <div *ngIf="item.id === cat">
       <p>
         <b>Consulta</b>: {{ item.consult }}
       </p>
-      <p *ngIf="item.answer != ''">
+      <p *ngIf="item.answer !== ''">
         <b>Solución</b>: {{ item.answer }}
       </p>
-      <p *ngIf="item.answer == ''">
+      <p *ngIf="item.answer === ''">
         <b>Solución</b>: Ahora mismo no conocemos niguna posibles solución, si conoce alguno, por favor, envíela y la probaremos. ¡Muchas gracias!
       </p>
-      <p *ngIf="item.comments != ''">
+      <p *ngIf="item.comments !== ''">
         <b>Comentarios</b>: {{ item.comments }}
       </p>
-      <p *ngIf="item.comments == ''">
+      <p *ngIf="item.comments === ''">
         <b>Comentarios</b>: No hay comentarios.
       </p>
     
       <div class="flex-container">
         <!-- TODO: ALL USERS -->
-        <button *ngIf="item.answer == '' && logged == 'no connected'" (click)="sendSol()" class="btn">
+        <button *ngIf="item.answer === '' && logged === 'no connected'" (click)="sendSol()" class="btn">
           Enviar una solución
         </button>
 
         <!-- TODO: ADMIN USER -->
-        <button *ngIf="item.id == cat && logged == 'connected'" (click)="edit(cat)" class="btn">
+        <button *ngIf="item.id === cat && logged === 'connected'" (click)="edit(cat)" class="btn">
           Editar Entrada
         </button>
       
-        <button *ngIf="item.id == cat && logged == 'connected'" (click)="update(item)" class="btn">
+        <button *ngIf="item.id === cat && logged === 'connected'" (click)="update(item)" class="btn">
           Actualizar Entrada
         </button>
         
-        <button *ngIf="item.id == cat && logged == 'connected'" (click)="erase(item)" class="danger">
+        <button *ngIf="item.id === cat && logged === 'connected'" (click)="erase(item)" class="danger">
           Borrar Entrada
         </button>
       </div>

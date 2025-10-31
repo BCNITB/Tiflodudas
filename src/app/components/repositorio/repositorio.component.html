@@ -10,7 +10,7 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" *ngIf="category=='all' || category=='outlook'" class="odd" role="listitem">
+  <details name="category" *ngIf="category==='all' || category==='outlook'" class="odd" role="listitem">
     <summary role="button">
       Outlook da el siguiente error: <b>Error de archivo en el convertidor Valores separados por comas al inicializar un convertidor para generar la información de campo.
         Compruebe que dispone del archivo correcto, que tiene permisos para abrirlo y que no está abierto en otro programa</b>.
@@ -22,7 +22,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='juegos'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='juegos'">
     <summary role="button">
       Juego accesible para ordenador y consola.
     </summary>
@@ -41,7 +41,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='cuentos'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='cuentos'">
     <summary role="button">
       Cuento interactivo de La casita de las 3 mellizas.
     </summary>
@@ -59,7 +59,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='aplicaciones'">
     <summary role="button">
       Programa para personalizar Windows 11.
     </summary>
@@ -74,7 +74,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='aplicaciones'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='aplicaciones'">
     <summary role="button">
       Complemento para hacer Edico acceible con NVDA.
     </summary>

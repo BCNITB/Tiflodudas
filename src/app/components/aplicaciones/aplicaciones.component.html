@@ -10,7 +10,7 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" *ngIf="category=='all' || category=='outlook'" role="listitem">
+  <details name="category" *ngIf="category==='all' || category==='outlook'" role="listitem">
     <summary role="button">
       Outlook da el siguiente error: <b>Error de archivo en el convertidor Valores separados por comas al inicializar un convertidor para generar la información de campo.
         Compruebe que dispone del archivo correcto, que tiene permisos para abrirlo y que no está abierto en otro programa</b>.
@@ -25,7 +25,7 @@
       </div>
   </details>
 
-  <details name="category" *ngIf="category=='all' || category=='word'" role="listitem">>
+  <details name="category" *ngIf="category==='all' || category==='word'" role="listitem">>
     <summary role="button">
       Multicobra no desbrailla de forma correcta.
     </summary>
@@ -36,7 +36,7 @@
     </div>
   </details>
 
-  <details name="category" *ngIf="category=='all' || category=='atajo'" role="listitem">
+  <details name="category" *ngIf="category==='all' || category==='atajo'" role="listitem">
     <summary role="button">
       El atajo está capturado por AMD. Para desactivarlo hay que entrar en AMD Softawre, ir a la pestaña Ataajos de Teclado, seleccionar el atajo Control + Shift + L y pulsar suprimir.
     </summary>

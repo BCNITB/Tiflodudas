@@ -14,7 +14,7 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='configuracion' || category=='instalacion'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='configuracion' || category==='instalacion'">
     <summary role="button">
       En algunas instalaciones se han detectado problemas con el uso de tipos de letra (fuentes) propias de las aplicaciones, 
       que hacen que éstas no aparezcan correctamente por restricciones en la seguridad de los equipos donde están instaladas.
@@ -52,7 +52,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='instalacion'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='instalacion'">
     <summary role="button">
       Aparece en pantalla el menaje: <i>Cargando aplicación</i>, la ejecución finaliza y la aplicación no arranca.
     </summary>
@@ -76,7 +76,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='linea braille'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='linea braille'">
     <summary role="button">
       Cuando se pulsa un sensor de la línea braille para posicionarse en un lugar determinado de la  misma, el cursor sube 3 
         líneas.
@@ -96,7 +96,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='instalacion' || category=='configuracion'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='instalacion' || category==='configuracion'">
     <summary role="button">
       Cuando se da uno de estos supuestos:
       <ul>
@@ -186,7 +186,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='lectores'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='lectores'">
     <summary role="button">
       Complemento para <abbr title="Editor Científico ONCE">Edico</abbr>.
     </summary>
@@ -200,7 +200,7 @@
     </div>
   </details>
 
-    <details name="category" role="listitem" *ngIf="category=='all' || category=='instalacion'">
+    <details name="category" role="listitem" *ngIf="category==='all' || category==='instalacion'">
     <summary role="button">
       No se puede descargar la aplicación. Se inicia la descarga pero esta se detiene. La instalación tampoco se puede realizar desde el USB.
     </summary>

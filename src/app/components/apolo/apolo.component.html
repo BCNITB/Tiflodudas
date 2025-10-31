@@ -18,7 +18,7 @@
 </ion-list>
 
 <div role="list">
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='fire' || category=='instalacion'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='fire' || category==='instalacion'">
     <summary role="button">
       No se puede instalar Apolo ONCE en el Fire <abbr title="Televión">TV</abbr>.
     </summary>
@@ -30,7 +30,7 @@
     </div>
   </details>
 
-  <details name="category" role="listitem" *ngIf="category=='all' || category=='descarga'">
+  <details name="category" role="listitem" *ngIf="category==='all' || category==='descarga'">
     <summary role="button">
       En la pestaña Descargas no se puede abrir la opción de búsqueda, pero fundiona correctamente en novedades y el resto de ítems.
     </summary>

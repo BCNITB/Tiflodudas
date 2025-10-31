@@ -20,6 +20,34 @@ const routes: Routes = [
         loadChildren: () => import('../search/search.module').then(m => m.SearchPageModule)
       },
       {
+        path: 'about',
+        loadChildren: () => import('../about/about.module').then(m => m.AboutPageModule)
+      },
+      {
+        path: 'contact',
+        loadChildren: () => import('../contact/contact.module').then(m => m.ContactPageModule)
+      },
+      {
+        path: 'new-entry/:id',
+        loadChildren: () => import('../new-entry/new-entry.module').then( m => m.NewEntryPageModule)
+      },
+      {
+        path: 'gemini',
+        loadChildren: () => import('../gemini/gemini.module').then( m => m.GeminiPageModule)
+      },
+      {
+        path: 'accesibilidad',
+        loadChildren: () => import('../accesibilidad/accesibilidad.module').then( m => m.AccesibilidadPageModule)
+      },
+      {
+        path: 'settings',
+        loadChildren: () => import('../settings/settings.module').then( m => m.SettingsPageModule)
+      },
+      {
+        path: 'login',
+        loadChildren: () => import('../login/login.module').then( m => m.LoginPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/index',
         pathMatch: 'full'
