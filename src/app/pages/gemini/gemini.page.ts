@@ -1,61 +1,56 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonContent } from '@ionic/angular';
+import { GeminiService } from 'src/app/services/gemini.service';
 
-import { GeminiService } from '../../services/gemini.service';
-import { LoadingController, AlertController } from '@ionic/angular';
+interface Message {
+  text: string;
+  sender: 'user' | 'bot';
+}
+
 @Component({
   selector: 'app-gemini',
   templateUrl: './gemini.page.html',
   styleUrls: ['./gemini.page.scss'],
 })
 export class GeminiPage implements OnInit {
+  @ViewChild(IonContent, { static: false }) content: IonContent;
 
+  messages: Message[] = [];
   userInput: string = '';
-  geminiResponse: string = '';
-  isChatActive: boolean = false;
+  isLoading: boolean = false;
 
-  constructor(
-    private geminiSrvc: GeminiService,
-    private loadingCtrl: LoadingController,
-    private alertCtrl: AlertController
-  ) { }
+  constructor(private geminiService: GeminiService) { }
 
   ngOnInit() {
+    this.messages.push({ sender: 'bot', text: 'Hola, soy el asistente de Tiflodudas. ¿En qué puedo ayudarte hoy?' });
   }
 
-  async sendPrompt() {
-    if (!this.userInput.trim()) {
-      return;
+  async sendMessage(event: any) {
+    event.preventDefault();
+
+    if (this.userInput.trim()) {
+      const userMessageText = this.userInput.trim();
+      this.messages.push({ sender: 'user', text: userMessageText });
+      this.userInput = '';
+      this.isLoading = true;
+      this.scrollToBottom();
+
+      try {
+        const botResponse = await this.geminiService.getChatResponse(userMessageText);
+        this.messages.push({ sender: 'bot', text: botResponse });
+      } catch (error) {
+        console.error('Error al contactar con el servicio de Gemini', error);
+        this.messages.push({ sender: 'bot', text: 'Lo siento, no he podido procesar tu solicitud en este momento.' });
+      } finally {
+        this.isLoading = false;
+        this.scrollToBottom();
+      }
     }
+  }
 
-    const loading = await this.loadingCtrl.create({
-      message: 'Pensando...',
-      spinner: 'dots',
-    });
-    await loading.present();
-
-    try {
-      // Para generar texto simple:
-      this.geminiResponse = await this.geminiSrvc.generateText(this.userInput);
-
-      // O para usar el modo de chat:
-      // if (!this.isChatActive) {
-      //   await this.geminiService.startNewChat();
-      //   this.isChatActive = true;
-      // }
-      // this.geminiResponse = await this.geminiService.sendMessageToChat(this.userInput);
-
-      this.userInput = ''; // Limpiar la entrada
-    } catch (error) {
-      console.log(error);
-      console.error('Error en el componente al enviar prompt:', error);
-      const alert = await this.alertCtrl.create({
-        header: 'Error',
-        message: 'No se pudo obtener una respuesta de Gemini. Inténtalo de nuevo.',
-        buttons: ['OK'],
-      });
-      await alert.present();
-    } finally {
-      loading.dismiss();
-    }
+  scrollToBottom() {
+    setTimeout(() => {
+      this.content.scrollToBottom(300);
+    }, 100);
   }
 }

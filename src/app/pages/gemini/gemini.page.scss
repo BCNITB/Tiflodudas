@@ -1,0 +1,73 @@
+ion-content {
+  --background: #f4f4f4; // Un fondo suave para el área de chat
+}
+
+.message-list {
+  background: transparent;
+  padding-bottom: 10px;
+}
+
+.message-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.message-bubble {
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #007bff; // Azul para el usuario
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+}
+
+.bot-message {
+  background-color: #e5e5ea; // Gris para el bot
+  color: black;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+}
+
+.message-text {
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap; // Respeta los saltos de línea y espacios
+}
+
+ion-footer {
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.chat-textarea {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 12px !important;
+  margin-right: 10px;
+  --padding-start: 12px; // Ajuste para el padding interno de Ionic
+  --padding-end: 12px;
+  max-height: 120px; // Limita el crecimiento del textarea
+}
+
+.send-button {
+  --padding-start: 0;
+  --padding-end: 0;
+  width: 44px;
+  height: 44px;
+}
+
+ion-spinner {
+  width: 30px;
+}

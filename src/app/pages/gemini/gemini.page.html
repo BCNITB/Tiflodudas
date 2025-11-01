@@ -1,24 +1,42 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>Pregunta a Gemini</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Asistente Gemini</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-  <ion-item>
-    <ion-textarea label="Escribe tu mensaje:" [(ngModel)]="userInput" rows="5"></ion-textarea>
-  </ion-item>
-
-  <ion-button expand="block" (click)="sendPrompt()" [disabled]="!userInput.trim()">
-    Enviar a Gemini
-  </ion-button>
-
-  <ion-card *ngIf="geminiResponse">
-    <ion-card-header>
-      <ion-card-title>Respuesta de Gemini:</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>{{ geminiResponse }}</p>
-    </ion-card-content>
-  </ion-card>
+<ion-content #content class="ion-padding">
+  <ion-list class="message-list">
+    <div *ngFor="let message of messages" class="message-item">
+      <div class="message-bubble" [ngClass]="{'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot'}">
+        <p class="message-text">{{ message.text }}</p>
+      </div>
+    </div>
+    <div *ngIf="isLoading" class="message-item">
+      <div class="message-bubble bot-message">
+        <ion-spinner name="dots"></ion-spinner>
+      </div>
+    </div>
+  </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="chat-input">
+      <ion-textarea
+        [(ngModel)]="userInput"
+        placeholder="Escribe tu pregunta..."
+        (keydown.enter)="sendMessage($event)"
+        class="chat-textarea"
+        autoGrow="true"
+        rows="1"
+        maxlength="500">
+      </ion-textarea>
+      <ion-button (click)="sendMessage($event)" [disabled]="!userInput || userInput.trim() === ''" fill="clear" shape="round" class="send-button">
+        <ion-icon name="send" slot="icon-only"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
