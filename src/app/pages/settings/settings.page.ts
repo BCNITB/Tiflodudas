@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
+import { PushNotifications, Token, PushNotificationSchema, ActionPerformed, RegistrationError } from '@capacitor/push-notifications';
+import { Capacitor } from '@capacitor/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-settings',
@@ -17,7 +20,7 @@ export class SettingsPage implements OnInit {
   customTextColor: string;
   contrastRatio: number = 0;
 
-  constructor(private themeService: ThemeService) { }
+  constructor(private themeService: ThemeService, private toastController: ToastController) { }
 
   ngOnInit() {
     this.selectedTheme = this.themeService.getTheme();
@@ -28,6 +31,50 @@ export class SettingsPage implements OnInit {
     this.customBackgroundColor = localStorage.getItem('customBackgroundColor') || '#FFFFFF';
     this.customTextColor = localStorage.getItem('customTextColor') || '#000000';
     this.calculateContrastRatio();
+  }
+
+  async enablePushNotifications() {
+    if (Capacitor.isNativePlatform()) {
+      let permStatus = await PushNotifications.requestPermissions();
+
+      if (permStatus.receive === 'granted') {
+        await PushNotifications.register();
+        this.presentToast('Notificaciones push activadas.', 'success');
+      } else {
+        this.presentToast('Permiso de notificaciones denegado.', 'danger');
+      }
+
+      PushNotifications.addListener('registration', (token) => {
+        console.log('Push registration success, token: ' + token.value);
+        // TODO: Send this token to your backend server to associate with the user
+      });
+
+      PushNotifications.addListener('registrationError', (error: any) => {
+        console.error('Error on registration: ' + JSON.stringify(error));
+        this.presentToast('Error al registrar notificaciones.', 'danger');
+      });
+
+      PushNotifications.addListener('pushNotificationReceived', (notification) => {
+        console.log('Push received: ' + JSON.stringify(notification));
+        this.presentToast(`Notificación recibida: ${notification.title}`, 'primary');
+      });
+
+      PushNotifications.addListener('pushNotificationActionPerformed', (notification) => {
+        console.log('Push action performed: ' + JSON.stringify(notification));
+        // Handle notification tap
+      });
+    } else {
+      this.presentToast('Las notificaciones push solo están disponibles en dispositivos móviles.', 'warning');
+    }
+  }
+
+  async presentToast(message: string, color: string = 'primary') {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 3000,
+      color: color,
+    });
+    toast.present();
   }
 
   changeTheme() {

@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { ItemService } from './item.service';
 import { firstValueFrom, forkJoin, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import { DataCacheService } from './data-cache.service'; // Import DataCacheService
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,11 @@ export class GeminiService {
   private chat: ChatSession | null = null;
   private manuals = ['jaws_keystrokes.txt', 'nvda_keystrokes.txt'];
 
-  constructor(private itemService: ItemService, private http: HttpClient) {
+  constructor(
+    private itemService: ItemService,
+    private http: HttpClient,
+    private dataCache: DataCacheService // Inject DataCacheService
+  ) {
     this.genAI = new GoogleGenerativeAI(environment.geminiApiKey);
     this.model = this.genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
   }
@@ -47,15 +52,32 @@ export class GeminiService {
         });
       }
 
-      // Get context from manuals
-      const manualObservables = this.manuals.map(manual => 
-        this.http.get(`assets/manuals/${manual}`, { responseType: 'text' }).pipe(
-          map(content => ({ manual, content })),
-          catchError(error => of({ manual, content: null })) // Handle errors for individual files
-        )
-      );
+      // Get context from manuals with caching
+      const manualPromises = this.manuals.map(async manual => {
+        const cacheKey = `manual_${manual}`;
+        let content = await this.dataCache.get(cacheKey);
 
-      const manualContents = await firstValueFrom(forkJoin(manualObservables));
+        if (content) {
+          console.log(`Manual ${manual} loaded from cache.`);
+          return { manual, content: content as string };
+        } else {
+          console.log(`Manual ${manual} not in cache, fetching from network.`);
+          return firstValueFrom(
+            this.http.get(`assets/manuals/${manual}`, { responseType: 'text' }).pipe(
+              map(c => {
+                this.dataCache.set(cacheKey, c);
+                return { manual, content: c };
+              }),
+              catchError(error => {
+                console.error(`Error loading or caching manual ${manual}:`, error);
+                return of({ manual, content: null });
+              })
+            )
+          );
+        }
+      });
+
+      const manualContents = await Promise.all(manualPromises);
       
       let manualContext = '';
       manualContents.forEach(mc => {
@@ -66,6 +88,7 @@ export class GeminiService {
           manualContext += `Manual: ${mc.manual}\n${mc.content}\n\n`;
         }
       });
+
 
       const finalPrompt = `${manualContext}${dbContext}Pregunta del usuario: ${prompt}`;
 

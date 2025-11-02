@@ -56,6 +56,17 @@ p{
   border-bottom: 1px solid #d1d1d1;
 }
 
+ion-searchbar {
+  --color: var(--ion-color-step-850, #000); /* Default to black for light mode */
+  --placeholder-color: var(--ion-color-step-600, #929292);
+
+  // Dark mode styles
+  :host-context(.ion-color-scheme-dark) & {
+    --color: var(--ion-color-step-100, #fff); /* White for dark mode */
+    --placeholder-color: var(--ion-color-step-400, #a6a6a6);
+  }
+}
+
 @media only screen and (max-width: 765px) {
     .flex-container{
         flex-direction: column;

@@ -30,8 +30,14 @@
 }
 
 .message-wrapper.bot .message {
-  background-color: var(--ion-color-success);
-  color: var(--ion-color-success-contrast);
+  background-color: var(--ion-color-light); /* Use a light background for bot messages */
+  color: var(--ion-color-dark); /* Use dark text for contrast */
+  
+  // Dark mode styles for bot messages
+  :host-context(.ion-color-scheme-dark) & {
+    background-color: var(--ion-color-medium); /* A slightly darker background for dark mode */
+    color: var(--ion-color-light-contrast); /* Lighter text for contrast in dark mode */
+  }
 }
 
 .chat-input-container {
@@ -46,4 +52,12 @@ ion-input {
     border-radius: 20px;
     padding: 5px 15px !important;
     margin-right: 10px;
+    --color: var(--ion-color-step-850, #000); /* Default to black for light mode */
+    --placeholder-color: var(--ion-color-step-600, #929292);
+
+    // Dark mode styles
+    :host-context(.ion-color-scheme-dark) & {
+      --color: var(--ion-color-step-100, #fff); /* White for dark mode */
+      --placeholder-color: var(--ion-color-step-400, #a6a6a6);
+    }
 }

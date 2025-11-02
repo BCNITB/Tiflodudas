@@ -7,6 +7,7 @@ export const environment = {
     authDomain: 'tiflo-web.firebaseapp.com',
     messagingSenderId: '1066166367070',
     measurementId: 'G-G5YLMPVQ9S',
+    vapidKey: '',
   },
   production: true,
   geminiApiKey: 'AIzaSyC6sbVthz1jgsRvRm_V5f2Dqnj-GPZzRWM',
