@@ -13,7 +13,7 @@ export const environment = {
     measurementId: 'G-G5YLMPVQ9S',
   },
   production: false,
-  geminiApiKey: 'AIzaSyCCbZdyp0b2kvnPqUcBHll1b1zfQ_AMlkg',
+  geminiApiKey: 'AIzaSyC6sbVthz1jgsRvRm_V5f2Dqnj-GPZzRWM',
 };
 
 /*

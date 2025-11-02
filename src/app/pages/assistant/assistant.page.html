@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Asistente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="chat-container">
+    <div *ngFor="let message of messages" class="message-wrapper {{ message.sender }}">
+      <div class="message" [innerHTML]="message.content"></div>
+    </div>
+    <div *ngIf="isLoading" class="message-wrapper bot">
+      <div class="message">...</div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="chat-input-container">
+      <ion-input [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="Escribe un mensaje..."></ion-input>
+      <ion-button (click)="sendMessage()" [disabled]="isLoading">
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

@@ -9,5 +9,5 @@ export const environment = {
     measurementId: 'G-G5YLMPVQ9S',
   },
   production: true,
-  geminiApiKey: '',
+  geminiApiKey: 'AIzaSyC6sbVthz1jgsRvRm_V5f2Dqnj-GPZzRWM',
 };

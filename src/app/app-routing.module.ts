@@ -21,6 +21,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
   },
 
+
+
   {
     path: 'send-solution',
     loadChildren: () => import('./modals/send-solution/send-solution.module').then( m => m.SendSolutionPageModule)

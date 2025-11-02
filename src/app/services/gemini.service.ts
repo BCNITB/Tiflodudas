@@ -1,26 +1,85 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { GoogleGenerativeAI, GenerativeModel, ChatSession } from '@google/generative-ai';
 import { environment } from 'src/environments/environment';
+import { ItemService } from './item.service';
+import { firstValueFrom, forkJoin, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GeminiService {
 
-
   private genAI: GoogleGenerativeAI;
   private model: GenerativeModel;
   private chat: ChatSession | null = null;
+  private manuals = ['jaws_keystrokes.txt', 'nvda_keystrokes.txt'];
 
-  constructor() {
-    //const API_KEY = 'AIzaSyCCbZdyp0b2kvnPqUcBHll1b1zfQ_AMlkg';
-    //this.genAI = new GoogleGenerativeAI(API_KEY);
+  constructor(private itemService: ItemService, private http: HttpClient) {
     this.genAI = new GoogleGenerativeAI(environment.geminiApiKey);
-    this.model = this.genAI.getGenerativeModel({ model: 'gemini-1.5-pro-002' });
-    //this.model = this.genAI.getGenerativeModel({model: 'gemini-1.5-flash'});
-   }
+    this.model = this.genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+  }
 
-   async generateText(prompt: string): Promise<string> {
+  async generateTextWithContext(prompt: string): Promise<string> {
+    try {
+      // Get context from the database
+      const items = await firstValueFrom(this.itemService.getItems());
+      const relevantItems = items.filter(item => {
+        const promptLower = prompt.toLowerCase();
+        const itemLower = item.item ? item.item.toLowerCase() : '';
+        const categoryLower = item.category ? item.category.toLowerCase() : '';
+        return (itemLower && promptLower.includes(itemLower)) || (categoryLower && promptLower.includes(categoryLower));
+      });
+
+      let dbContext = '';
+      if (relevantItems.length > 0) {
+        dbContext = 'Contexto de la base de datos de Tiflodudas:\n';
+        relevantItems.forEach(item => {
+          dbContext += `Categoría: ${item.category}\n`;
+          dbContext += `Dispositivo: ${item.item}\n`;
+          dbContext += `Consulta: ${item.consult}\n`;
+          dbContext += `Respuesta: ${item.answer}\n`;
+          if (item.comments) {
+            dbContext += `Comentarios: ${item.comments}\n`;
+          }
+          dbContext += '\n';
+        });
+      }
+
+      // Get context from manuals
+      const manualObservables = this.manuals.map(manual => 
+        this.http.get(`assets/manuals/${manual}`, { responseType: 'text' }).pipe(
+          map(content => ({ manual, content })),
+          catchError(error => of({ manual, content: null })) // Handle errors for individual files
+        )
+      );
+
+      const manualContents = await firstValueFrom(forkJoin(manualObservables));
+      
+      let manualContext = '';
+      manualContents.forEach(mc => {
+        if (mc.content && mc.content.toLowerCase().includes(prompt.toLowerCase())) {
+          if (manualContext === '') {
+            manualContext = 'Contexto de los manuales:\n';
+          }
+          manualContext += `Manual: ${mc.manual}\n${mc.content}\n\n`;
+        }
+      });
+
+      const finalPrompt = `${manualContext}${dbContext}Pregunta del usuario: ${prompt}`;
+
+      const result = await this.model.generateContent(finalPrompt);
+      const response = await result.response;
+      const text = response.text();
+      return text;
+    } catch (error) {
+      console.error('Error al generar texto con Gemini:', error);
+      throw error;
+    }
+  }
+
+  async generateText(prompt: string): Promise<string> {
     try {
       const result = await this.model.generateContent(prompt);
       const response = await result.response;
@@ -28,7 +87,7 @@ export class GeminiService {
       return text;
     } catch (error) {
       console.error('Error al generar texto con Gemini:', error);
-      throw error; // Propaga el error para manejarlo en el componente
+      throw error;
     }
   }
 

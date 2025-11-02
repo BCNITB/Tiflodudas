@@ -36,6 +36,10 @@ const routes: Routes = [
         loadChildren: () => import('../gemini/gemini.module').then( m => m.GeminiPageModule)
       },
       {
+        path: 'assistant',
+        loadChildren: () => import('../assistant/assistant.module').then( m => m.AssistantPageModule)
+      },
+      {
         path: 'accesibilidad',
         loadChildren: () => import('../accesibilidad/accesibilidad.module').then( m => m.AccesibilidadPageModule)
       },
