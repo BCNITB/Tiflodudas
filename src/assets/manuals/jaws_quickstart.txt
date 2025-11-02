@@ -1,0 +1,182 @@
+JAWS® for Windows®
+Quick Start Guide
+
+PUBLISHED BY
+Freedom Scientific
+www.FreedomScientific.com
+Information in this document is subject to change without notice. No part of this publication may be reproduced or transmitted in any form or any means electronic or mechanical, for any purpose, without the express written permission of Freedom Scientific.
+Copyright © 2018 Freedom Scientific, Inc. All Rights Reserved.
+JAWS is a registered trademark of Freedom Scientific, Inc. in the United States and other countries. Microsoft, Windows 10, Windows 8.1, Windows 7, and Windows Server are registered trademarks of Microsoft Corporation in the U.S. and/or other countries.
+Sentinel® is a registered trademark of SafeNet, Inc. 
+
+Table of Contents
+Welcome to JAWS for Windows
+System Requirements
+Installing JAWS
+Activating JAWS
+Dongle Authorization
+Network JAWS
+Running JAWS Startup Wizard
+Installing Vocalizer Expressive Voices
+FSReader and Training Materials
+Starting and Using FSReader
+Updating JAWS
+Getting Help
+JAWS Training Materials
+JAWS Help System
+Keystrokes to Get Help Wherever You Are
+Technical Support
+New Users Start Here
+Reading Screens and Documents
+More Reading Commands
+Working with Dialog Boxes
+Getting Started with the Internet
+Reading and Moving through Web Pages
+Quick and Easy Navigation
+Displaying Lists of Information
+Interacting with Forms
+
+Welcome to JAWS for Windows
+Freedom Scientific has developed a full range of screen reading and screen magnification software, notetakers, braille displays, and other devices for blind and visually impaired computer users. With our products, users can access a whole world of information, education, and job-related applications for browsing the web, reading or writing email messages, working with spreadsheets, or accessing information in a database. Our software is the product of choice for blind and visually impaired people around the world.
+Freedom Scientific leads by example, with software developed by blind people for blind people. Many of our developers, technical support personnel, and sales representatives are users of our products. We are dedicated to remaining at the forefront of assistive technology, ensuring our own progress in addition to that of the blind and low vision community at large.
+JAWS offers comprehensive screen reading capability for Windows that includes extended product customization through powerful utility managers.
+
+System Requirements
+The system requirements for JAWS are listed below.
+Specification	Minimum Requirement
+Operating System	Windows® 10, Windows 8.1, Windows 7 Service Pack 1, Windows Server® 2016, Windows Server 2012, and Windows Server 2008
+Processor speed	Minimum 1.5 GHz processor
+Memory (RAM)	4 GB recommended (64-bit) or 2 GB recommended (32-bit
+Required hard disk space	1.6 GB required during installation 20 MB to 690 MB required per voice for installing Vocalizer Expressive voices (file sizes will vary depending on the voice installed
+Video	A display adapter capable of at least 800 x 600 screen resolution with 16-bit color (1024 x 768 screen resolution with 32-bit color recommended)
+Sound	Windows compatible sound card (for speech)
+Older Versions of JAWS needed for Windows XP and Windows Vista installations are still available from the Freedom Scientific website.
+
+Installing JAWS 
+Note: 	You must have an active internet connection as well as be logged on to an account with administrator privileges to install JAWS. 
+If you have not already downloaded JAWS, you can get it from www.freedomscientific.com/Downloads/JAWS. Once the download is complete, navigate to where you saved the executable file, select it, and press ENTER.
+The JAWS setup program starts. You will hear the installation speak the instructions as they appear on your screen. Follow these instructions to complete the JAWS installation. Once installation is complete, you must restart your computer before using JAWS.
+If this is a new JAWS installation, the next step is to complete the activation process. Otherwise, the JAWS Startup Wizard opens. Use it to configure basic JAWS parameters.
+
+Activating JAWS
+Note: 	This section applies to perpetual licenses (Professional and Home). If you have an Annual license, you can skip to the next section.
+Internet License Manager lets you activate JAWS using an Internet connection. The activation process begins automatically when you start JAWS. For information on other ways to activate, choose Activation Help when the activation process begins.
+To activate JAWS using the Internet, do the following: 
+1. In the Activation dialog box, choose Start Activation.
+2. Read the message that displays and then use the ARROW keys to select Internet (RECOMMENDED), and then press ENTER. 
+3. If your 20-digit Authorization number is not automatically displayed, type it into the Authorization Number edit box. 
+4. Press ENTER to continue. You will be asked to connect to the Internet if you have not already done so. You must establish an Internet connection before continuing with the activation.
+5. If you have not registered JAWS, you are asked to do so now. Registering JAWS lets you receive technical support. Choose Register Now and complete the online registration form by following the instructions provided. You can choose to register later, but you must register the next time you activate JAWS.
+6. After you submit your registration, Internet License Manager attempts to activate JAWS. This process may take several minutes. When the activation is successful, choose Finish.
+Note: 	If Internet License Manager cannot activate JAWS, you may need to reconfigure your firewall. Refer to the Activation Help for more information.
+
+Dongle Authorization
+A dongle is a hardware device that you can connect to a computer's USB port. One dongle can be used to authorize all Freedom Scientific software products (JAWS, Fusion, and ZoomText). The software is authorized to run on that computer as long as the dongle remains connected. Dongles are useful if you are a trainer or consultant where you frequently use Freedom Scientific software on many different computers as you do not have to worry about activation. 
+When JAWS starts, it first determines whether a dongle is connected to the computer. If one is connected, JAWS uses the features and information for the license associated with the dongle to authorize JAWS. If no dongle is connected, JAWS searches for the license information stored on the computer. You can use the Dongle Viewer utility to view information on the license associated with the dongle currently connected to your computer. To start this utility, go to the Utilities menu located in the JAWS main window, choose "Explore Utilities Folder", and select Dongle Viewer.
+Dongles are sold separately as an add-on for ILM perpetual licenses of JAWS and Fusion Professional and Home, as well as for ZoomText. To purchase one, contact Freedom Scientific Sales. Dongles are not available for adding to a Home Annual license.
+
+Network JAWS
+If you have a multi-user network license, your system administrator must go to www.fsactivate.com/network and download the network authorization tools and license server. This page also contains simple instructions for setting up the license server and activating the network license.
+
+Running JAWS Startup Wizard
+The JAWS Startup Wizard is a helpful tool that lets you configure specific JAWS parameters, such as speech and braille preferences, verbosity settings, JAWS startup options, as well as install basic training materials. During a new JAWS installation, the Startup Wizard appears after you complete product activation. However, it can always be accessed later from the JAWS Help menu by pressing ALT+H and choosing Startup Wizard.
+
+Installing Vocalizer Expressive Voices
+Vocalizer Expressive provides mor natural-sounding speech in a variety of voices in several languages. To install these voices, press INSERT+J to open the JAWS application window, press ALT+H to open the Help menu, press DOWN ARROW until you reach More Voices, and then press ENTER. This opens the Synthesizers page on the Freedom Scientific website where you can preview voice samples, and then download and install voices.
+
+FSReader and Training Materials
+Freedom Scientific offers basic training materials in a digital document format known as DAISY (Digital Accessible Information System). You can listen to and read the training modules by using FSReader (Freedom Scientific’s DAISY book reader), which is automatically installed with JAWS. By default, at least one DAISY book (FSReaderGettingStarted) is also installed.
+To install training materials, do the following:
+1. Press INSERT+J to open the JAWS application window. 
+2. Press ALT+H to choose the Help menu, and then press ENTER to choose Training. 
+3. FSReader opens and displays the JAWS Training Table of Contents which contains links to all of the available DAISY training books. Use the ARROW keys to navigate to the book you want to download and install and then press ENTER. FSReader will automatically download and install the book and then open it.
+4. Repeat this process for each book you want to download.
+
+Starting and Using FSReader 
+The following describes how to start FSReader and open a DAISY book. 
+1. Do one of the following:
+* From the JAWS application window, press ALT+H, T, or
+* Choose the FSReader shortcut available on your desktop, and then press CTRL+J. The JAWS Training Materials Table of Contents opens. Each DAISY book is represented by a link.
+2. Select a DAISY book and press ENTER. The selected book appears in FSReader. 
+3. Press CTRL+P to begin reading the book. Press CTRL+P again to pause reading the book. To fast forward five seconds, press CTRL+PERIOD. To rewind the book five seconds, press CTRL+COMMA. 
+Note:	As long as FSReader is running, CTRL+P will toggle between play and pause. If you want to print while FSReader is active, you must use an application’s Print command.
+4. When you are finished reading the book, press CTRL+J to open another JAWS training book, press ALT+F, O to open a DAISY book from another provider, or press ALT+F, X to close and exit FSReader.
+
+Updating JAWS
+Freedom Scientific is continually seeking to improve and expand JAWS for Windows. Periodically, updates to JAWS will be released. It is recommended that you keep your software up-to-date so that you experience the greatest possible performance.
+Updating your software is quick and easy. To search for updates to JAWS, do the following:
+1. Establish a connection to the Internet.
+2. Start JAWS.
+3. From the Help menu, choose Check for Updates.
+4. JAWS searches the Internet for updates and displays a list of any that are available to download. Use the ARROW keys to move through the list, and press the SPACEBAR to select the check box next to any updates that you want to download and install. 
+Note: 	If your computer has active firewall software (such as Windows Firewall), you may receive a warning indicating that either the FSAutoUpdate Application or FSAutoUpdate.exe is attempting to access the Internet. You must allow this process to access the Internet through the firewall in order to retrieve updates. 
+5. When you are finished selecting updates, choose the Install button. You may be required to restart your computer. If the updates are not installed successfully, repair your installation of JAWS (refer to the online help for more information) and then try the procedure again.
+
+Getting Help
+Freedom Scientific provides many ways to access help when using JAWS. With so many formats, you can always receive assistance in the most comfortable way possible. 
+
+JAWS Training Materials
+The Basic Training for JAWS and the What’s New in JAWS training materials can be downloaded and read using the FSReader DAISY reader included with JAWS. To start FSReader, open the Help menu and choose Training. For more information on using FSReader, select the "FSReaderGettingStarted" DAISY book and press ENTER.
+The training materials are installed in the following folder:  C:\Program Files\Freedom Scientific\Training\JAWS\enu. The JAWS Basic Training modules give you the best possible start on your road to mastering Windows with JAWS. The set takes you logically from starting JAWS to working in the Windows environment. The modules include actual samples of what you will hear as you perform various Windows and JAWS operations. All users are encouraged to take advantage of this training. Once JAWS is running, you should listen to all modules and perform the operations along with them. 
+
+JAWS Help System
+Using the JAWS Help system is quick and easy. To start JAWS Help, press INSERT+J to switch to the JAWS window, press ALT+H to open the Help menu, and choose JAWS Help Topics. 
+When you first open JAWS Help, the Table of Contents appears on the left side of a split window. The Table of Contents lists a number of books and pages. Books are categories that contain pages. The pages are topics containing information. Use the UP and DOWN ARROW keys to move through the Table of Contents. Use RIGHT ARROW to open a book and LEFT ARROW to close a book. Press ENTER on a selected page to display the text of that topic and then press F6 to move to the topic window. Press F6 again to return to the Table of Contents, or press ALT+C to return to the Table of Contents from any section of the help system.
+Use CTRL+TAB to access the Index and Search tabs in the Help system. 
+In almost all Windows applications, you can press F1 to open Help for that application. This is also true in the JAWS window and in the JAWS Managers (INSERT+F2), such as Keyboard Manager. 
+
+Keystrokes to Get Help Wherever You Are
+JAWS Context Sensitive Help provides information on using various dialog box options, buttons, and other controls. To activate this feature, move to the control you want help for and press INSERT+F1. This is a quick way to get specific help for the program you are using.
+Hot Key Help is a feature that provides you quick access to available JAWS keystrokes that might be useful. It is aware of the applications that you are using so it gives you the proper help based on what you are doing at the time. To activate Hot Key Help, press INSERT+H.
+Many popular applications have an additional help feature available. Pressing INSERT+F1 twice quickly opens a JAWS Help topic for the currently running application. 
+As you learn commands, JAWS Keyboard Help is a beneficial tool. It gives information on key combinations while you are working in any application. To activate JAWS Keyboard Help, press INSERT+1. JAWS then says, “Keyboard help on.” Press any key combination to hear a description of that command. Obtain a more extensive description of the command by holding down the first key or keys in the combination and pressing the last key twice quickly. If the command contains only one key, press this key twice quickly. For example, to get help on the Say All command you would press INSERT+DOWN ARROW twice quickly. While Keyboard Help is active, keystrokes that you press do not actually perform any action. Press INSERT+1 again to turn off Keyboard Help. 
+You can also search for specific commands using the JAWS Command Search. Press INSERT+SPACEBAR, followed by J to open the Search for Commands window, begin typing text related to the type of command you want to perform, and JAWS will display commands matching what you entered along with their keystrokes.
+The last keystroke to obtain help is INSERT+W, which provides help for some commonly used Windows application keystrokes.
+
+Technical Support
+Our Technical Support staff provides assistance for the setup of JAWS and other Freedom Scientific products. Ongoing Technical Support is available for those users who purchase and register JAWS. Before calling Technical Support, please visit our web site at www.FreedomScientific.com. You can also email technical support at support@FreedomScientific.com, or call them at (727) 803-8600. When calling Freedom Scientific Technical Support, please have your JAWS serial number ready. To read your JAWS serial number, switch to the JAWS window and press INSERT+PAGE DOWN to read the status bar. 
+
+New Users Start Here
+If you are new to JAWS, the following sections contain a summary of useful reading and navigation keystrokes to help you get started. To learn more about using JAWS, install and listen to the Basic Training DAISY files or open the JAWS Help file. For instructions describing how to install and locate the Basic Training, refer to FSReader and Training Materials or JAWS Training Materials. Refer to JAWS Help System for more information on opening and using Help.
+
+Reading Screens and Documents
+You can access many speech functions in JAWS by using the numeric keypad (NUM PAD) located on the far right side of most keyboards. JAWS uses the INSERT key at the bottom left of the NUM PAD in combination with the other keys on this keypad to control what JAWS will speak.
+To start JAWS reading the screen, press the key combination INSERT+DOWN ARROW. This is the Say All command. While using the Say All command, you can press the LEFT or RIGHT ARROW keys to rewind or fast forward through the text. You can also press PAGE UP or PAGE DOWN to increase or decrease the speech rate. To halt speech, press the CTRL key.
+The following are additional keystroke combinations that use this keypad:
+* NUM PAD 5 - Say Character 
+* INSERT+NUM PAD 5 - Say Word 
+* INSERT+NUM PAD 5 twice - Spell Word 
+* INSERT+LEFT ARROW - Say Prior Word 
+* INSERT+RIGHT ARROW - Say Next Word 
+* INSERT+UP ARROW - Say Line 
+* INSERT+HOME (the 7 key) - Say To Cursor 
+* INSERT+PAGE UP (the 9 key) - Say From Cursor 
+* INSERT+PAGE DOWN (the 3 key) - Say Bottom Line Of Window 
+* INSERT+END (the 1 key) - Say Top Line Of Window
+
+More Reading Commands
+There are more reading commands in addition to those listed previously. You can use the LEFT and RIGHT ARROW keys to move to and read the next or previous character. The UP and DOWN ARROW keys allow you to move to and read the previous or next line. Hold down the ALT key and press the UP or DOWN ARROW key to move through a document by sentence. Similarly, hold down CTRL and use the UP and DOWN ARROW keys to move through a document by paragraph. 
+
+Working with Dialog Boxes
+Dialog boxes display information and allow you to interact with Windows programs. To move through the various options in a dialog box, press TAB or SHIFT+TAB. If the dialog box is divided into tabs, you can use CTRL+TAB to move between the tabs. Press INSERT+TAB to hear a description of the currently selected option. 
+
+Getting Started with the Internet
+Web browsers such as Internet Explorer, Firefox, or Chrome allow you to view pages on the Internet as well as interact with other people in several ways. JAWS uses the Virtual Cursor in web pages, letting you read as you would in a word processing document. The Virtual Cursor is also available in other applications, such as HTML-based help systems, PDF files, and HTML email. Many of the features discussed in this section are also available wherever the Virtual Cursor is used. For specific information on which features are available, refer to the JAWS help topic for the application you are using.
+
+Reading and Moving through Web Pages
+When you start the web browser, your home page opens. If you don't have a home page specified, you can select a web page from the Favorites or Bookmarks menu, or press ALT+D to move to the Address Bar and type in the address of a page. After you select a page, the browser loads it and JAWS announces the presence of frames, links, headings, and forms and begins speaking the text on the screen. To move through the page, use the standard JAWS reading commands. 
+Note:	If you start to read before a page finishes loading, some of the page may not be available.
+JAWS says, "Link," when it encounters a link to another document or portion of the page. To follow a link, press ENTER while positioned on the link. To go back to the previous page, press ALT+LEFT ARROW or BACKSPACE. To move forward one page after you have moved back, press ALT+RIGHT ARROW.
+
+Quick and Easy Navigation
+JAWS provides easy to use and remember commands to move through web pages. You can press a single letter on your keyboard to move to an item. For example, you can press T for table, F for form control, V for visited link, H for heading, and so on. Add SHIFT to move to the previous element of that type. For a complete listing of these commands, refer to the JAWS help system.
+
+Displaying Lists of Information
+JAWS can compile lists of frames, links, headings, or form fields on a web page so you can quickly find what you need. Press INSERT+F9 to display a list of all frames on the current page. Press INSERT+F7 to display a list of all links on the current page. Press INSERT+F6 to display a list of all headings on the current page. Press INSERT+F5 to display a list of all form fields on the current page. Use the ARROW keys to select an item and press ENTER to move to it.
+In addition, if you hold down CTRL+INSERT and press one of several Navigation Quick Keys, JAWS displays a list of those elements on the current page. You can then select an item using the ARROW keys and press ENTER to move to it. For example, to display a list of check boxes on the current page, press CTRL+INSERT+X. 
+Tip: 	Pressing INSERT+F3 allows you to view any of the lists of information that are available for web pages.
+
+Interacting with Forms
+JAWS lets you easily work with forms on the web. When you move into a form control, you can simply type in edit fields or select items in combo boxes. This is known as Auto Forms Mode and is on by default. If you would like to have more control over a form, you can turn off Auto Forms Mode by pressing INSERT+V and then setting the Auto Forms Mode option to Manual or Semi-Auto. In Semi-Auto, Forms Mode only activates when you navigate to an edit field or combo box using TAB or SHIFT+TAB.
+To manually control a form, press F to move to the next form control on the page. Press ENTER to activate Forms Mode. Press the TAB key to move between form controls while in Forms Mode. Type in edit fields, select check boxes, and select items from lists and combo boxes. Press NUM PAD PLUS to turn off Forms Mode. 
+If you like, you can set Auto Forms Mode on or off based on the web pages that you visit. You can personalize settings for specific web pages by opening Quick Settings (INSERT+V), selecting the Personalize Web Settings group, and then configuring the Auto Forms Mode option.

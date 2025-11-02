@@ -1,0 +1,251 @@
+Braille Commands
+JAWS® supports a series of keystrokes that allow you to input braille commands and also control your computer (see BrailleIn™ description below). Below are keystrokes that support Freedom Scientific’s Focus braille displays. For other braille displays, contact the manufacturer for a list of keystrokes.
+
+Many commands listed here include the word “CHORD.” To perform a chorded command, you always include the SPACEBAR as part of the command. For example, L CHORD or DOTS 1-2-3 and the SPACEBAR.
+
+Modifier Keys
+Use the modifier keys to simulate key combinations (keystrokes) that include CTRL, ALT, WINDOWS Key, SHIFT, or the JAWS Key (INSERT). To use these modifiers when typing a keystroke, do the following:
+
+Hold down DOT 8 CHORD and then press the corresponding modifier keys in the keystroke. Modifier keystrokes are listed in the following table.
+After you create the modifier portion of the keystroke, release the keys and press the remaining part of the keystroke. For example, to perform the keystroke CTRL+SHIFT+V, you press DOTS 3-7-8 CHORD, release the keys, and then press V (DOTS 1-2-3-6).
+
+Key Name	Keystroke
+Function Keys (F1 through F12)
+For more information, see the Function Keys description.	DOT 1
+INSERT	DOT 2
+CTRL	DOT 3
+WINDOWS Key	DOT 4
+JAWS Key	DOT 5
+ALT	DOT 6
+SHIFT	DOT 7
+Instead of memorizing these keys by their dot position, it may be easier to learn the finger with which each key would be associated. When all of your fingers are on the braille keyboard, the layout would be:
+
+Key Name	Finger position
+Function Keys (F1 through F12)	Left index finger
+WINDOWS Key	Right index finger
+INSERT	Left middle finger
+JAWS Key	Right middle finger
+CTRL	Left ring finger
+ALT	Right ring finger
+SHIFT	Left little finger
+Notice that you can create a rather loose correlation between pairs of fingers in this description. For example, the left index finger is Function Keys while the right index finger is the WINDOWS key. A stronger correlation can be made with the left and right middle fingers. The left is the INSERT Key and the right is the JAWS key, both often serving the same purpose in JAWS usage. Finally, the left and right ring fingers are the CTRL and ALT keys respectively, which make these two positions easier to remember.
+
+Once this layout is understood, it is easy to grasp that Any time a modifier key, or combination of modifier keys is used as part of a command, DOT 8 CHORD will always be included.
+
+Finally, pressing any of these modifier keys with DOT 8 CHORD is the same as pressing and holding any of the equivalent keys on the QWERTY keyboard. The computer is waiting for the key or keys which the modifier keys will modify. So, pressing DOTS 3-8 CHORD is the same as pressing the CTRL key. Windows then waits for the key which will complete the CTRL combination, such as the letter A to make CTRL+A to select all, or the letter C to make CTRL+C to copy the selected text to the clipboard. Repetition of frequently used keystrokes such as the CTRL key combinations already mentioned, Windows commands such as WINDOWS Key+M, and JAWS commands such as INSERT+T should imprint these key associations firmly in your memory.
+
+Function Keys
+To simulate the function keys (F1 through F12), press DOTS 1-8 CHORD followed by A through L (which correspond to 1 through 12). For example, to simulate the F6 key, press DOTS 1-8 CHORD, then F (DOTS 1-2-4). If the function key is part of a key combination, add the appropriate modifiers while holding down DOTS 1-8 CHORD. For example, to simulate the keystroke INSERT+F2, press DOTS 1-2-8 CHORD, then B (DOTS 1-2).
+
+Special Keys
+Use these keystrokes to simulate certain keys that are not available on the Focus braille keyboard. These keys can be combined with the modifier keys described previously. For your convenience, both keystrokes and braille dot patterns are provided. If no dot pattern equivalent is available, a dash appears in the table cell.
+
+Key Name	Keystroke	DOTS Pattern
+ESC	RIGHT SHIFT+DOT 1 or Z CHORD	RIGHT SHIFT+DOT 1 or DOTS 1-3-5-6 CHORD
+ALT	RIGHT SHIFT+DOT 2	–
+APPLICATION Key	RIGHT SHIFT+DOT 2 CHORD	–
+NUM PAD ASTERISK	RIGHT SHIFT+DOT 3	–
+WINDOWS Key	RIGHT SHIFT+DOT 4	–
+NUM PAD SLASH	RIGHT SHIFT+DOT 7	RIGHT SHIFT+DOT 7
+CAPS LOCK	RIGHT SHIFT+DOT 7 CHORD	RIGHT SHIFT+DOT 7 CHORD
+NUM PAD PLUS	RIGHT SHIFT+DOT 8	–
+BACKSPACE	DOT 7	–
+ENTER	DOT 8	–
+CTRL+BACKSPACE	DOTS 1-2-3-4-5-6-7 CHORD	–
+TAB	DOTS 4-5 CHORD	–
+SHIFT+TAB	B CHORD	DOTS 1-2 CHORD
+HOME	K CHORD	DOTS 1-3 CHORD
+END	DOTS 4-6 CHORD	–
+PAGE UP	LEFT SELECT+ROCKER BAR UP or RIGHT SELECT+ROCKER BAR UP or DOTS 2-3-7 CHORD	–
+PAGE DOWN	LEFT SELECT+ROCKER BAR DOWN or RIGHT SELECT+ROCKER BAR DOWN or DOTS 5-6-7 CHORD	–
+DELETE	FOR CHORD or LEFT SHIFT+D	DOTS 1-2-3-4-5-6 CHORD or LEFT SHIFT+DOTS 1-4-5
+EQUALS	DOTS 1-2-3-4-5-6	–
+RIGHT BRACKET	DOTS 1-2-4-5-6-7	–
+LEFT BRACKET	DOTS 2-4-6-7	–
+BACKSLASH	DOTS 1-2-5-6-7	–
+SLASH	DOTS 3-4	–
+LEFT PARENTHESIS	DOTS 1-2-3-5-6	–
+RIGHT PARENTHESIS	DOTS 2-3-4-5-6	–
+APOSTROPHE	DOT 3	–
+DASH	DOTS 3-6	–
+GRAVE	DOT 4	–
+PERIOD	DOTS 4-6	–
+QUESTION MARK	DOTS 1-4-5-6	–
+EXCLAMATION MARK	DOTS 2-3-4-6	–
+SEMICOLON	DOTS 5-6	–
+COMMA	DOT 6	–
+Navigation Commands
+Use these keystrokes to perform various JAWS navigation commands. Both keystrokes and braille dot patterns are provided in the table. If no dot pattern equivalent is available, a dash appears in the table cell.
+
+Description	Keystroke	DOTS Pattern
+Say Prior Character	DOT 3 CHORD	–
+Say Next Character	DOT 6 CHORD	–
+Say Character	DOTS 3-6 CHORD	–
+Say Prior Word	DOT 2 CHORD	–
+Say Next Word	DOT 5 CHORD	–
+Say Word	DOTS 2-5 CHORD	–
+Say Prior Line	DOT 1 CHORD or LEFT ROCKER BAR UP	–
+Say Next Line	DOT 4 CHORD or LEFT ROCKER BAR DOWN	–
+Say Line	C CHORD	DOTS 1-4 CHORD
+Say Sentence	LEFT SHIFT+RIGHT SHIFT+C	LEFT SHIFT+RIGHT SHIFT+DOTS 1-4
+Say Prior Paragraph	RIGHT SHIFT+LEFT ROCKER BAR UP	–
+Say Next Paragraph	RIGHT SHIFT+LEFT ROCKER BAR DOWN	–
+Say Paragraph	LEFT SHIFT+RIGHT SHIFT+DOTS 2-3-5-6-7-8	–
+Move to Top of File	L CHORD	DOTS 1-2-3 CHORD
+Move to Bottom of File	DOTS 4-5-6 CHORD	–
+Say to Cursor	RIGHT SHIFT+DOTS 3-7	–
+Say from Cursor	RIGHT SHIFT+DOTS 6-8	–
+Say All	DOTS 1-2-4-5-6 CHORD	–
+Say Top Line of Active Window	LEFT ROCKER BAR UP+RIGHT ROCKER BAR UP	–
+Say Bottom Line of Active Window	LEFT ROCKER BAR DOWN+RIGHT ROCKER BAR DOWN	–
+Previous Document Window	DOTS 2-3 CHORD	–
+Next Document Window	DOTS 5-6 CHORD	–
+Open List Box	LEFT SHIFT+RIGHT ROCKER BAR DOWN	–
+Close List Box	LEFT SHIFT+RIGHT ROCKER BAR UP	–
+Exit Forms Mode	X CHORD	DOTS 1-3-4-6 CHORD
+Say Window Prompt and Text	G CHORD	DOTS 1-2-4-5 CHORD
+Microsoft Word Navigation Quick Keys
+Use these keystrokes to navigate Microsoft Word documents. Navigation Quick Keys must be enabled in order for these commands to function (DOT 8 CHORD, DOT 2 followed by DOTS 1-3-5-6). Note that you can add DOT 7 to most of the keystrokes in the table below to move to the previous element of that type in the document. Both keystrokes and braille dot patterns are provided in the table. If no dot pattern equivalent is available, a dash appears in the table cell.
+
+Description	Keystroke	DOTS Pattern
+Next Grammatical Error	A	DOT 1
+Next Bookmark	B	DOTS 1-2
+Next Combo Form Field	C	DOTS 1-4
+Next Endnote	D	DOTS 1-4-5
+Next Edit Form Field	E	DOTS 1-5
+Next Form Field	F	DOTS 1-2-4
+Next Graphic	G	DOTS 1-2-4-5
+Next Heading	H	DOTS 1-2-5
+Next List	L	DOTS 1-2-3
+Next Spelling Error	M	DOTS 1-3-4
+Next Comment	N	DOTS 1-3-4-5
+Next Footnote	O	DOTS 1-3-5
+Next Paragraph	P	DOTS 1-2-3-4
+Next Revision	R	DOTS 1-2-3-5
+Next Section	S	DOTS 2-3-4
+Next Table	T	DOTS 2-3-4-5
+Next Check Box Form Field	X	DOTS 1-3-4-6
+Next Page	SPACEBAR	–
+Previous Page	BACKSPACE	DOT 7
+Selection Commands
+Use these keystrokes to select characters, lines, and other page elements. Both keystrokes and braille dot patterns are provided in the table. If no dot pattern equivalent is available, a dash appears in the table cell.
+
+Description	Keystroke	DOTS Pattern
+Select Prior Character	LEFT SHIFT+DOT 3 or DOTS 3-7 CHORD	–
+Select Next Character	LEFT SHIFT+DOT 6 or DOTS 6-7 CHORD	–
+Select Prior Word	DOTS 2-7 CHORD	–
+Select Next Word	DOTS 5-7 CHORD	–
+Select Prior Line	LEFT SHIFT+DOT 1 or DOTS 1-7 CHORD	–
+Select Next Line	LEFT SHIFT+DOT 4 or DOTS 4-7 CHORD	–
+Select Prior Screen	LEFT SHIFT+K	LEFT SHIFT+DOTS 1-3
+Select Next Screen	LEFT SHIFT+DOTS 4-6	–
+Select from Start of Line	LEFT SHIFT+DOT 2 or DOTS 1-3-7 CHORD	–
+Select to End of Line	LEFT SHIFT+DOT 5 or DOTS 4-6-7 CHORD	–
+Select from Top	LEFT SHIFT+L or L+DOTS 7 CHORD	LEFT SHIFT+DOTS 1-2-3 or DOTS 1-2-3-7 CHORD
+Select to Bottom	LEFT SHIFT+DOTS 4-5-6 or DOTS 4-5-6-7 CHORD	–
+Select All	LEFT SHIFT+FOR Sign	LEFT SHIFT+DOTS 1-2-3-4-5-6
+Move To Beginning Of Line	ROCKER BAR UP+PANNING BUTTON	–
+Move To End Of Line	ROCKER BAR DOWN+PANNING BUTTON	–
+Braille Commands
+Use these keystrokes to configure various braille functions. Both keystrokes and braille dot patterns are provided in the table.
+
+Description	Keystroke	DOTS Pattern
+Grade 2 Expand Current Word	T CHORD	DOTS 2-3-4-5 CHORD
+Grade 2 Translation	DOTS 1-2-4-5-7 CHORD	DOTS 1-2-4-5-7 CHORD
+Toggle Characters and Attributes	CH Sign CHORD	DOTS 1-6 CHORD
+Cycle Among Braille Display Modes	M CHORD	DOTS 1-3-4 CHORD
+Toggle 8/6 DOTS Braille	8 CHORD	DOTS 2-3-6 CHORD
+Change Cursor Shape	SH Sign CHORD	DOTS 1-4-6 CHORD
+Restrict Braille Cursor	R CHORD	DOTS 1-2-3-5 CHORD
+Switch Braille Translation Table	DOTS 2-3-4-5-7 CHORD	DOTS 2-3-4-5-7 CHORD
+Windows Commands
+Use these keystrokes for basic editing functions in Windows.
+
+Description	Braille Sign	DOTS Pattern
+ALT+TAB	LEFT SHIFT+DOTS 4-5	LEFT SHIFT+DOTS 4-5
+Paste from Clipboard	LEFT SHIFT+V	LEFT SHIFT+DOTS 1-2-3-6
+Copy to Clipboard	LEFT SHIFT+C	LEFT SHIFT+DOTS 1-4
+Cut to Clipboard	LEFT SHIFT+X	LEFT SHIFT+DOTS 1-3-4-6
+Undo	LEFT SHIFT+Z	LEFT SHIFT+DOTS 1-3-5-6
+Delete	LEFT SHIFT+D	LEFT SHIFT+DOTS 1-4-5
+JAWS Commands
+Use these keystrokes to perform some of the more common JAWS functions.
+
+Description	Braille Sign	DOTS Pattern
+JAWS Window	RIGHT SHIFT+J	RIGHT SHIFT+DOTS 2-4-5
+Quick Settings	RIGHT SHIFT+V	RIGHT SHIFT+DOTS 1-2-3-6
+List Frames	RIGHT SHIFT+9	RIGHT SHIFT+DOTS 3-5
+List Headings	RIGHT SHIFT+6	RIGHT SHIFT+DOTS 2-3-5
+List Links	RIGHT SHIFT+7	RIGHT SHIFT+DOTS 2-3-5-6
+Open Task List	RIGHT SHIFT+DOTS 3-5-6	RIGHT SHIFT+DOTS 3-5-6
+List System Tray Icons	RIGHT SHIFT+K	RIGHT SHIFT+DOTS 1-3
+Say System Time	RIGHT SHIFT DOTS 1-2-3	RIGHT SHIFT DOTS 1-2-3
+Drag and Drop	RIGHT SHIFT+DOTS 3-7 CHORD	–
+Refresh Screen	RIGHT SHIFT+Z	RIGHT SHIFT+DOTS 1-3-5-6
+Say Font	RIGHT SHIFT+F	RIGHT SHIFT+DOTS 1-2-4
+Toggle Keyboard Help	QUESTION MARK CHORD	DOTS 1-4-5-6 CHORD
+Windows Keys Help	RIGHT SHIFT+W	RIGHT SHIFT+DOTS 2-4-5-6
+Read Current Window	RIGHT SHIFT+B	RIGHT SHIFT+DOTS 1-2
+Default Button in Dialog	RIGHT SHIFT+E	RIGHT SHIFT+DOTS 1-5
+Shut DOWN JAWS	RIGHT SHIFT+4	RIGHT SHIFT+DOTS 2-5-6
+Select a Voice Profile	RIGHT SHIFT+S	RIGHT SHIFT+DOTS 2-3-4
+Temporarily Increase Speech Rate	LEFT or RIGHT SHIFT+RIGHT SELECT CHORD	–
+Temporarily Decrease Speech Rate	LEFT or RIGHT SHIFT+LEFT SELECT CHORD	–
+Permanently Increase Speech Rate	RIGHT SELECT CHORD	–
+Permanently Decrease Speech Rate	LEFT SELECT CHORD	–
+Toggle Speech On Demand	RIGHT SHIFT+M	RIGHT SHIFT+DOTS 1-3-4
+Silence Speech	LEFT or RIGHT SHIFT	–
+Cursor Functions
+Use these keystrokes to select one of the cursors used by JAWS.
+
+Description	Braille Sign	DOTS Pattern
+JAWS Cursor	J CHORD	DOTS 2-4-5 CHORD
+PC Cursor	P CHORD	DOTS 1-2-3-4 CHORD
+Touch Cursor	DOTS 1-2-5-6 CHORD	DOTS 1-2-5-6 CHORD
+Route JAWS to PC	RIGHT SHIFT+DOTS 3-6 (MINUS Sign)	RIGHT SHIFT+DOTS 3-6
+Route PC to JAWS	RIGHT SHIFT+ING Sign (PLUS Sign)	RIGHT SHIFT+DOTS 3-4-6
+Braille Follows Active	DOTS 1-2-6 CHORD	DOTS 1-2-6 CHORD
+Active Follows Braille	DOTS 1-2-7 CHORD	DOTS 1-2-7 CHORD
+Route Braille Cursor to PC Cursor	LEFT SHIFT+DOTS 3-4-6	LEFT SHIFT+DOTS 3-4-6
+Route Braille Cursor to Active Cursor	LEFT SHIFT+RIGHT SHIFT or LEFT SHIFT+DOTS 3-6	LEFT SHIFT+RIGHT SHIFT or LEFT SHIFT+DOTS 3-6
+Touch Cursor Functions
+Use these keystrokes to navigate using the Touch Cursor.
+
+Description	Braille Sign	DOTS Pattern
+Touch Cursor	DOTS 1-2-5-6 CHORD	DOTS 1-2-5-6 CHORD
+Prior Element	DOTS 1-2 CHORD	DOTS 1-2 CHORD
+Next Element	DOTS 4-5 CHORD	DOTS 4-5 CHORD
+Say Current Element	C CHORD	DOTS 1-4 CHORD
+Next Element by Type (specified in the navigation rotor)	LEFT or RIGHT ROCKER DOWN	LEFT or RIGHT ROCKER DOWN
+Prior Element by Type (specified in the navigation rotor)	LEFT or RIGHT ROCKER UP	LEFT or RIGHT ROCKER UP
+Move Forward Through Navigation Types	LEFT SELECT+LEFT ROCKER DOWN, RIGHT SELECT+LEFT ROCKER DOWN, LEFT SELECT+RIGHT ROCKER DOWN, or RIGHT SELECT+RIGHT ROCKER DOWN	LEFT SELECT+LEFT ROCKER DOWN, RIGHT SELECT+LEFT ROCKER DOWN, LEFT SELECT+RIGHT ROCKER DOWN, or RIGHT SELECT+RIGHT ROCKER DOWN
+Move Backward Through Navigation Types	LEFT SELECT+LEFT ROCKER UP, RIGHT SELECT+LEFT ROCKER UP, LEFT SELECT+RIGHT ROCKER UP, or RIGHT SELECT+RIGHT ROCKER UP	LEFT SELECT+LEFT ROCKER UP, RIGHT SELECT+LEFT ROCKER UP, LEFT SELECT+RIGHT ROCKER UP, or RIGHT SELECT+RIGHT ROCKER UP
+Move to First Element	LEFT PANNING+LEFT or RIGHT SELECT or L CHORD	LEFT PANNING+LEFT or RIGHT SELECT or DOTS 1-2-3 CHORD
+Move to Last Element	RIGHT PANNING+LEFT or RIGHT SELECT or DOTS 4-5-6 CHORD	LEFT PANNING+LEFT or RIGHT SELECT or DOTS 4-5-6 CHORD
+Activate Current Element	CURSOR ROUTING BUTTON	CURSOR ROUTING BUTTON
+Activate Text Review Mode	RIGHT SHIFT+DOT 7	RIGHT SHIFT+DOT 7
+Turn Off Text Review Mode	RIGHT SHIFT+DOT 1 or X CHORD	RIGHT SHIFT+DOT 1 or DOTS 1-3-4-6 CHORD
+Toggle Advanced Navigation	RIGHT SHIFT+DOT 3 or press and hold a cursor routing button	RIGHT SHIFT+DOT 3 or press and hold a cursor routing button
+Utility Functions
+Use these keystrokes for general utility functions.
+
+Description	Braille Sign	DOTS Pattern
+Run JAWS Manager	RIGHT SHIFT+2	RIGHT SHIFT+DOTS 2-3
+Set Frame Top LEFT	RIGHT SHIFT+OW Sign	RIGHT SHIFT+DOTS 2-4-6
+Set Frame Bottom RIGHT	RIGHT SHIFT+ER Sign	RIGHT SHIFT+DOTS 1-2-4-5-6
+Graphics Labeler	RIGHT SHIFT+G	RIGHT SHIFT+DOTS 1-2-4-5
+JAWS Find	RIGHT SHIFT+F CHORD	RIGHT SHIFT+DOTS 1-2-4 CHORD
+JAWS Find Next	RIGHT SHIFT+DOTS 2-5	RIGHT SHIFT+DOTS 2-5
+Using BrailleIn to Type with Contracted Braille
+The BrailleIn feature lets you type in contracted braille using your Perkins-style keyboard. The input is immediately translated back as normal text in your current e-mail, document, or form. If an application or specific edit box does not support contracted braille, JAWS announces “Computer Braille” when tutor messages are enabled. In addition, the Computer Braille start symbol, dots 4-5-6 followed by dots 3-4-6, is shown on the braille display to indicate when Computer Braille is required.
+
+Computer braille input is selected by default. To use contracted braille, do the following:
+
+Press INSERT+F2, and select Settings Center.
+To apply changes to all applications, press CTRL+SHIFT+D to load the JAWS default settings. To apply changes to a specific application, select it from the Applications combo box.
+In the Search edit box, type “Translation” without the quotes.
+Press DOWN ARROW to move to Translation in the filtered search results in the tree view and press ENTER to move focus to the Translation group. Press RIGHT ARROW to expand the group.
+Press SPACEBAR to cycle through the different settings in the Output combo box to configure the mode for reading braille on your display.
+The first option is always Computer Braille. The other available options depend on the currently selected language. For example, when the language is set to English United States, which is the default setting, the available output modes are U.S. English Grade 1, U.S. English Grade 2, Unified English Braille Grade 1, and Unified English Braille Grade 2. If you set the language to French, the available modes are French Grade 1 and French Grade 2. The default output mode is Computer Braille.
+Press SPACEBAR to cycle through the different settings in the Input combo box to specify the input mode used when typing braille from the Perkins-style keyboard on your display.
+The first option is always Computer Braille. The other available option depends on the currently selected output mode. For instance, if you have chosen to display Unified English Braille Grade 2, then you can choose to type in either Computer Braille or Unified English Braille Grade 2. The default input mode is Computer Braille. This setting is not available if the selected output mode is Computer Braille, or the selected output mode does not support input.
