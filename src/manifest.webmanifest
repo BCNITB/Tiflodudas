@@ -6,6 +6,36 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
+  "description": "Tu asistente para resolver dudas sobre tiflotecnología y accesibilidad.",
+  "categories": ["education", "accessibility", "reference"],
+  "shortcuts": [
+    {
+      "name": "Buscar en Tiflodudas",
+      "short_name": "Buscar",
+      "description": "Busca entre las dudas existentes",
+      "url": "/search",
+      "icons": [{ "src": "assets/icon/search.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Crear una nueva entrada",
+      "short_name": "Nueva",
+      "description": "Crea una nueva entrada de duda",
+      "url": "/new-entry",
+      "icons": [{ "src": "assets/icon/add.png", "sizes": "96x96" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/screenshots/screen1.png",
+      "type": "image/png",
+      "sizes": "1080x1920"
+    },
+    {
+      "src": "assets/screenshots/screen2.png",
+      "type": "image/png",
+      "sizes": "1080x1920"
+    }
+  ],
   "icons": [
     {
       "src": "assets/icon/icon-72x72.png",

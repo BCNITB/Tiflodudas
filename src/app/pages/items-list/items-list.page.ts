@@ -55,4 +55,8 @@ export class ItemsListPage implements OnInit {
   goBack(){
     this.navCtrl.back();
   }
+
+  trackByFn(index: number, item: Items): string {
+    return String(item.id);
+  }
 }

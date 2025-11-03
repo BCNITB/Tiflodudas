@@ -28,7 +28,7 @@
   </p>
 
   <ion-list *ngIf="resultsCount > 0">
-    <ion-item *ngFor="let item of pagedItems" class="item-bordered" button (click)="show(item.id)" detail="true">
+    <ion-item *ngFor="let item of pagedItems; trackBy: trackByFn" class="item-bordered" button (click)="show(item.id)" detail="true">
       <ion-label class="ion-text-wrap">
         {{ item.consult }} <sup *ngIf="item.answer === ''">(Por resolver)</sup>
       </ion-label>

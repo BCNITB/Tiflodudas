@@ -1,0 +1,2932 @@
+Manual de Usuario del Lector Orbit 20™
+21 de noviembre de 2018 Versión 2.3
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 2
+1 INTRODUCCIÓN ----------------------------------------------------------------------------------------------- 5
+2 COMO SE UTILIZA EL LECTOR ORBIT 20 ------------------------------------------------------------ 6
+2.1 “MODO LOCAL” --------------------------------------------------------------------------------------------- 6
+2.2 “MODO REMOTO” ------------------------------------------------------------------------------------------ 6
+3 BRAILLE TRANSCRITO ------------------------------------------------------------------------------------- 6
+4 TRANSCRIPCIÓN AUTOMÁTICA ------------------------------------------------------------------------- 7
+5 TRANSCRIPCIÓN BRAILLE -------------------------------------------------------------------------------- 7
+6 DOCUMENTACIÓN Y CONVENCIONES ---------------------------------------------------------------- 7
+7 EN LA CAJA ----------------------------------------------------------------------------------------------------- 8
+8 CARACTERÍSTICAS ------------------------------------------------------------------------------------------ 8
+9 ORIENTACIÓN -------------------------------------------------------------------------------------------------- 9
+9.1 POSICIONAMIENTO DE LAS TECLAS Y USO DEL DISPOSITIVO -------------------------------------- 10
+9.2 TECLAS DE DESPLAZAMIENTO (AVANCE/RETROCESO) --------------------------------------------- 11
+9.3 CELDAS BRAILLE DE 8-PUNTOS ----------------------------------------------------------------------- 11
+10 COMENZANDO ----------------------------------------------------------------------------------------------- 12
+10.1 CARGANDO EL DISPOSITIVO --------------------------------------------------------------------------- 12
+10.2 ENCENDIENDO Y APAGANDO --------------------------------------------------------------------------- 13
+10.3 INSERTANDO Y FORMATEANDO LA TARJETA SD ---------------------------------------------------- 13
+10.4 ACERCA DE LOS MENÚS Y NOMBRES DE FICHERO ------------------------------------------------- 14
+10.5 ENTRANDO Y SALIENDO DE LOS MENÚS ------------------------------------------------------------- 14
+10.6 MODOS DE OPERACIÓN DEL DISPOSITIVO ----------------------------------------------------------- 14
+11 EL MENÚ ------------------------------------------------------------------------------------------------------- 15
+11.1 DISPONIBILIDAD DEL MENÚ----------------------------------------------------------------------------- 15
+11.2 OPCIONES DEL MENÚ ----------------------------------------------------------------------------------- 15
+11.2.1
+11.2.1 Batería --------------------------------------------------------------------------------------------- 17
+11.2.2
+11.2.2 Parpadeo del Cursor (1) ---------------------------------------------------------------------- 17
+11.2.3
+11.2.3 Ordenar (Nombre: Ascendente) ------------------------------------------------------------- 17
+11.2.4
+11.2.4 Cortar Palabras (NO) -------------------------------------------------------------------------- 18
+11.2.5
+11.2.5 Filtrar Punto 7 (Sí) ------------------------------------------------------------------------------ 18
+11.2.6
+11.2.6 Suprimir Retornos (Sí) ------------------------------------------------------------------------- 18
+11.2.7
+11.2.7 Comprimir Espacios (Sí) ---------------------------------------------------------------------- 18
+11.2.8
+11.2.8 Cargar Idioma ----------------------------------------------------------------------------------- 19
+11.2.9
+11.2.9 Cambiar a Inglés -------------------------------------------------------------------------------- 19
+11.2.10
+11.2.10 Codificación -------------------------------------------------------------------------------------- 19
+11.2.11
+11.2.11 Versión -------------------------------------------------------------------------------------------- 20
+11.2.12
+11.2.12 Número de Serie -------------------------------------------------------------------------------- 20
+11.2
+11.2.13.13 Reinicializar -------------------------------------------------------------------------------------- 20
+11.2.14
+11.2.14 USB (HID) ---------------------------------------------------------------------------------------- 20
+11.2.15
+11.2.15 Bluetooth (Sí) ------------------------------------------------------------------------------------ 21
+11.2.1
+11.2.166 Emparejamiento (Automático) --------------------------------------------------------------- 21
+11.2.17
+11.2.17 Emular (NO) -------------------------------------------------------------------------------------- 21
+11.2.18
+11.2.18 “Modo Local” (Stand-Alone) ------------------------------------------------------------------ 22
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 3
+12 MODO LOCAL ------------------------------------------------------------------------------------------------ 22
+13 GESTOR DE FICHEROS ----------------------------------------------------------------------------------- 22
+13.1 COMANDOS DEL GESTOR DE FICHEROS ------------------------------------------------------------- 23
+13.2 MÁS ACERCA DEL COPIADO Y PEGADO DE FICHEROS --------------------------------------------- 26
+13.3 COMANDOS DE MOVIMIENTO DE FICHEROS --------------------------------------------------------- 26
+13.4 TIPOS DE FICHERO -------------------------------------------------------------------------------------- 27
+13.4.1
+13.4.1 Tipos de Fichero Soportados ---------------------------------------------------------------- 27
+13.5 PREPARANDO FICHEROS ------------------------------------------------------------------------------- 28
+14 EL LECTOR ---------------------------------------------------------------------------------------------------- 28
+14.1 COMANDOS DE LECTURA ------------------------------------------------------------------------------- 28
+14.2 GRAN DESPLAZAMIENTO HACIA ADELANTE O HACIA ATRÁS --------------------------------------- 32
+14.3 BUSCAR BRAILLE ---------------------------------------------------------------------------------------- 32
+15 CUADRO DE EDICIÓN ------------------------------------------------------------------------------------- 33
+15.1 COMANDOS DEL CUADRO DE EDICIÓN --------------------------------------------------------------- 34
+16 EL EDITOR ----------------------------------------------------------------------------------------------------- 34
+16.1 COMANDOS DEL EDITOR -------------------------------------------------------------------------------- 35
+16.2 COMANDOS DE EDICIÓN DE BLOQUE DE TEXTO ---------------------------------------------------- 38
+16.3 MENÚ DE CONTEXTO ------------------------------------------------------------------------------------ 38
+17 MODO REMOTO --------------------------------------------------------------------------------------------- 39
+17.1 ANTES DE CONECTAR ----------------------------------------------------------------------------------- 40
+17.2 UTILIZANDO LA CONEXIÓN BLUETOOTH -------------------------------------------------------------- 41
+17.3 GESTIONANDO LAS CONEXIONES --------------------------------------------------------------------- 42
+17.4 CONECTANDO A MÚLTIPLES ANFITRIONES ---------------------------------------------------------- 42
+17.5 USB ------------------------------------------------------------------------------------------------------- 43
+17.5.1
+17.5.1 Dispositivo de Interfaz Humana (HID) ----------------------------------------------------- 43
+17.5.2
+17.5.2 Serial ----------------------------------------------------------------------------------------------- 43
+17.5.3
+17.5.3 Disco Externo ------------------------------------------------------------------------------------ 44
+17.6 BUFFER DE ENTRADA DE TEXTO PARA DISPOSITIVOS REMOTOS -------------------------------- 44
+17.7 DISPOSITIVOS IOS --------------------------------------------------------------------------------------- 45
+17.7.1
+17.7.1 Conectando iOS con Bluetooth ------------------------------------------------------------- 45
+17.7.2
+17.7.2 Recursos iOS ------------------------------------------------------------------------------------ 46
+17.7.3
+17.7.3 Comandos iOS ---------------------------------------------------------------------------------- 46
+17.8 COMPUTADORES MAC ---------------------------------------------------------------------------------- 48
+17.8.1
+17.8.1 Conectando un Mac con USB --------------------------------------------------------------- 48
+17.8.2
+17.8.2 Conectando un Mac con Bluetooth --------------------------------------------------------- 48
+17.8.3
+17.8.3 Controlando el Lector Orbit 20 desde el Mac -------------------------------------------- 49
+17.9 DISPOSITIVOS ANDROID -------------------------------------------------------------------------------- 49
+17.9.1
+17.9.1 Conectando Android con Bluetooth -------------------------------------------------------- 49
+17.9.2
+17.9.2 Introduciendo y Mostrando Texto con BrailleBack ------------------------------------- 50
+17.9.3
+17.9.3 Comandos BrailleBack ------------------------------------------------------------------------ 51
+17.10 CHROMEBOOKS ------------------------------------------------------------------------------------------ 51
+17.10.1
+17.10.1 Conectando Chromebook con USB -------------------------------------------------------- 51
+17.10.2
+17.10.2 Ajustes/Comandos de ChromeVox --------------------------------------------------------- 51
+17.11 TABLETAS FIRE ------------------------------------------------------------------------------------------ 52
+17.12 WINDOWS PC’S ----------------------------------------------------------------------------------------- 52
+17.12.1
+17.12.1 Conectando Windows con USB ------------------------------------------------------------- 52
+17.12.2
+17.12.2 Conectando Windows con Bluetooth ------------------------------------------------------ 53
+17.12.3
+17.12.3 Non-Visual Desktop Access (NVDA) ------------------------------------------------------ 53
+17.12.4
+17.12.4 Job Access with Speech (JAWS) ----------------------------------------------------------- 54
+17.12.5
+17.12.5 System Access ---------------------------------------------------------------------------------- 58
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 4
+17.12.6
+17.12.6 Lector de Pantalla Dolphin ------------------------------------------------------------------- 58
+17.12.7
+17.12.7 Window-Eyes ------------------------------------------------------------------------------------ 59
+18 COMANDO DE BLOQUEO DE TECLADO ------------------------------------------------------------ 59
+19 ALERTAS DEL SISTEMA ---------------------------------------------------------------------------------- 59
+20 REINICIAR EL DISPOSITIVO ----------------------------------------------------------------------------- 60
+21 PROCEDIMIENTO DE ACTUALIZACIÓN DEL DISPOSITIVO----------------------------------- 60
+21.1 DESCARGAR EL SOFTWARE ---------------------------------------------------------------------------- 61
+21.2 INSTALACIÓN DEL SOFTWARE -------------------------------------------------------------------------- 61
+22 OPCIONES DE IDIOMA (LOCALIZACIÓN) ----------------------------------------------------------- 63
+22.1 OBTENER FICHEROS DE LOCALIZACIÓN -------------------------------------------------------------- 64
+22.2 CARGAR LOS FICHEROS EXISTENTES DE LOCALIZACIÓN ------------------------------------------ 64
+22.3 CAMBIAR LOS FICHEROS DE LOCALIZACIÓN --------------------------------------------------------- 65
+23 SOLUCIÓN DE PROBLEMAS ---------------------------------------------------------------------------- 65
+24 USO Y SUSTITUCIÓN DE LA BATERÍA -------------------------------------------------------------- 66
+25 INFORMACIÓN SOBRE ACCESORIOS --------------------------------------------------------------- 67
+26 ESPECIFICACIONES GENERALES -------------------------------------------------------------------- 67
+27 APÉNDICES --------------------------------------------------------------------------------------------------- 68
+27.1 APÉNDICE A – TABLA DE BRAILLE COMPUTARIZADO AMERICANA ------------------------------- 68
+27.2 APÉNDICE B – TABLA DE BRAILLE COMPUTARIZADO ESPAÑOLA --------------------------------- 71
+27.3 APÉNDICE C – AVISO SOBRE ATRIBUCIÓN Y PROPIEDAD DE MARCA REGISTRADA ---------- 83
+27.3.1
+27.3.1 Garantía Limitada del Dispositivo ----------------------------------------------------------- 83
+27.3.2
+27.3.2 EXCLUSIONES Y LIMITACIONES--------------------------------------------------------- 84
+27.4 APÉNDICE D – INFORMACIÓN DE LA FCC ------------------------------------------------------------ 86
+AVISO de la FCC --------------------------------------------------------------------------------------------- 86
+Precaución sobre la FCC ----------------------------------------------------------------------------------- 87
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 5
+Nota: Esta guía de usuario se aplica a la versión V01.01.53 y posteriores.
+1 Introducción
+El Lector Orbit 20 es un dispositivo portable, con línea braille electrónica incorporada que se puede emplear en “Modo Local” como dispositivo lector braille con las siguientes características:
+ Una línea braille de 20 celdas cuyos puntos representan con precisión los códigos braille en 6 u 8 puntos, de cualquier idioma y de cualquier disciplina.
+ Lee el contenido de los ficheros de su tarjeta SD™ (Secure Digital) en “Modo Local”.
+ Conectividad remota a PC’S y dispositivos móviles mediante el uso de un programa lector de pantalla.
+ Funciones sencillas de edición.
+ Signos braille de alta calidad.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 6
+2 Como se Utiliza el Lector Orbit 20
+2.1 “Modo Local”
+“Modo Local” – El contenido grabado en una tarjeta SD puede haber sido obtenido a través de dos métodos:
+ Enviado por una biblioteca
+ Preparado en un computador y copiado al dispositivo
+En “Modo Local”, el Lector Orbit muestra el contenido de los ficheros grabados en una tarjeta SD. No realiza ninguna transcripción o interpretación.
+Prepare sus ficheros con antelación en su computador y almacénelos en su tarjeta SD. Por ejemplo, si desea leer en Inglés Braille Unificado (UEB), prepare el título transcrito en UEB en su computador y guárdelo en la tarjeta SD.
+2.2 “Modo Remoto”
+Conecte el dispositivo a un computador o dispositivo portable con un programa lector de pantalla y realice alguna de las acciones siguientes:
+ Lea títulos comerciales disponibles para las plataformas Kindle™, Adobe® Digital Editions, o iBooks®.
+ Emplee cualquier tecnología accesible para navegar, utilidades y en educación.
+El programa de lector de pantalla presentará el texto en el código braille de su elección.
+3 Braille transcrito
+Existen múltiples fuentes de ficheros transcritos a braille de gran calidad. A continuación, le mostramos algunos ejemplos.
+ National Library Service (NLS) ofrece ficheros formateados en braille transcritos profesionalmente a través del proyecto Web Braille.
+ American Printing House for the Blind (APH) transcribe libros de texto para estudiantes K-12.
+ National Braille Press (NBP) Produce libros braille, libros de texto, textos e informaciones para adultos y niños.
+ Louis Database lista títulos producidos por más de 160 organizaciones.
+ Club ONCE aquí se podrán descargar los títulos en braille disponibles en la Biblioteca Braille de la ONCE.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 7
+4 Transcripción Automática
+Adicionalmente a los títulos transcritos de forma profesional, puede utilizar los procesos de transcripción automática para obtener ficheros en braille.
+El braille transcrito de forma automática puede ser apropiado para algunas formas de lectura:
+ NFB-NEWSLINE® es un servicio libre de información en audio que suministra ficheros braille descargables con contenido actualizado de más de 400 periódicos nacionales, internacionales y del estado.
+ Bookshare® genera automáticamente ficheros formateados de su biblioteca de títulos.
+5 Transcripción Braille
+ BrailleBlaster™ es un paquete de transcripción completo para producir braille formateado de calidad.
+ DAISY™ Pipeline suministra una completa solución para convertir documentos de texto en formatos accesibles, incluyendo ficheros braille en formato PEF (Portable Embosser Format).
+ Send to Braille es una herramienta que añade la posibilidad de transcripción braille al menú “Enviar” de Windows, que puede convertir ficheros de su computador en ficheros BRL (Braille Ready Format) sin formatear.
+ e-BRAI. Es una herramienta de transcripción braille para textos en español. Se puede descargar en: ftp://ftp.once.es/pub/utt/tiflosoftware/Aplicaciones%20CIDAT
+6 Documentación y Convenciones
+Para mayor consistencia y claridad, esta documentación utiliza las siguientes convenciones.
+Las teclas braille se indican por su número. Por ejemplo, si la documentación indica Punto 1, se muestra: Punto 1.
+Si se requiere el uso de teclas múltiples, la documentación indica estas teclas mostrando los números separados por un espacio de esta forma: Puntos 1 4.
+Cuando se utilizan teclas modificadoras, la documentación separa los modificadores del resto de las teclas con un signo de (+) de esta forma: Espacio + Punto 1. Recuerde que esos modificadores, como la tecla de Cambio a Mayúscula de un teclado estándar QWERTY, son teclas que deben mantener
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 8
+pulsadas mientras se pulsa otra tecla. Esto modifica el efecto de la tecla pulsada. En un teclado braille, la tecla Espaciadora se utiliza a menudo como modificadora para alterar el efecto de la pulsación de las teclas pulsadas.
+Los nemónicos de las teclas se escriben en mayúscula para darle énfasis, pero se escribirán en braille en minúscula (salvo que se indique lo contrario).
+Cuando una tecla sigue a otra, se muestran las dos teclas con una coma entre ellas. Por ejemplo, el comando Seleccionar, M significa que se debe pulsar y soltar la tecla Seleccionar, entonces pulsar y soltar la tecla M (puntos 1 3 4 simultáneamente).
+Los botones de dirección arriba, abajo, derecha, e izquierda del bloque de desplazamiento se denominan indistintamente como flechas, botones, botones de flecha, y teclas de fecha.
+Todos los mensajes del dispositivo se preceden con los puntos 2 5, 2 5 y un espacio. En la documentación, esto se indica por un guion doble.
+Las palabras “teclas y botones” se utilizan indistintamente.
+En la descripción de cada opción de menú, esta documentación indica su valor por defecto.
+Cualquier referencia de navegación por “página”, mientras navegamos en “Modo Local” se refiere a 1.000 caracteres (página = 1.000 caracteres).
+7 En la Caja
+Adicionalmente al paquete básico, que incluye el dispositivo ORBIT 20 y la guía rápida de puesta en marcha, están disponibles los siguientes accesorios para la venta:
+ Cable estándar-A a Micro-B USB.
+ Adaptador AC.
+ Tarjeta SD.
+ Guía Rápida de Inicio en Braille.
+Verifique que los distintos elementos están en su caja.
+8 Características
+Estas son algunas de las características que el Lector Orbit ofrece:
+ 20 celdas braille de 8 puntos.
+ Teclado braille de 8 teclas y barra espaciadora.
+ Teclado de desplazamiento con 4 botones de dirección (arriba, abajo, izquierda, derecha).
+ Puerto de carga de batería Micro-B USB.
+ Entrada para tarjeta SD.
+ Dos teclas tipo balancín para desplazamiento-revisión de la información (avance-retroceso de línea).
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 9
+ Tecnología inalámbrica Bluetooth.
+ Baterías recargables y reemplazables por el usuario.
+9 Orientación
+La presentación para el posicionamiento de botones, teclas, celdas, y ranuras para tarjetas es importante para comprender cómo opera el dispositivo y cómo se introduce y recibe la información.
+Para empezar la exploración del Lector Orbit, posicione el dispositivo en una superficie plana en frente de usted con la fila de celdas braille lo más cercano a usted. Esta es la orientación operacional apropiada.
+A medida que avanza desde la parte frontal a la trasera del dispositivo, de izquierda a derecha, encontramos el botón de encendido (izquierda) una ranura para la tarjeta SD (en medio), y un puerto Micro-B USB (derecha). (La imagen está invertida en la foto). Todos están empotrados en la mitad izquierda de la parte trasera. El botón de encendido sobresale suficientemente para hacerlo fácilmente identificable. La ranura de la tarjeta SD tiene dos pequeños puntos en relieve y el puerto USB tiene un sólo punto en su posición inferior.
+La ranura para la tarjeta SD es de tipo estándar con muelle para la extracción de la tarjeta. La tarjeta SD se introduce con sus contactos mirando hacia abajo. Para sacar la tarjeta, pulse y retire su dedo para permitir que la tarjeta sea expulsada.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 10
+El compartimento para la batería está localizado en la base del dispositivo.
+9.1 Posicionamiento de las teclas y Uso del dispositivo
+Cuando el dispositivo está orientado apropiadamente, las celdas de la línea braille estarán lo más cercanas posible a usted. Las teclas de avance/retroceso están a cada lado de la línea braille. Consulte la sección Teclas de avance/retroceso para mayor información.
+Con propósitos orientativos, hay tres marcas ligeramente levantadas encima de las celdas braille. Estas marcas de orientación están separadas cada cinco celdas braille. Por ejemplo, la primera marca a la izquierda está situada entre la quinta y sexta celda braille.
+Desplazándose hacia arriba y alejándose de usted, encontrará una fila de tres teclas, con una más ancha en el centro. La tecla más ancha es la tecla de la barra espaciadora. La tecla correspondiente al punto 7 está situada a la izquierda de la barra espaciadora, y la tecla correspondiente al punto 8 está situada a la derecha de la barra espaciadora.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 11
+Si continúa desplazándose hacia arriba por la parte superior de la línea, hay un grupo de teclas en medio, entre las teclas del teclado braille y la barra espaciadora, que se utilizan como teclado de desplazamiento (roseta de teclas).
+El teclado de desplazamiento contiene los cuatro botones direccionales (arriba, abajo, izquierda, derecha) y el botón Seleccionar (centro).
+Las seis teclas tradicionales del teclado braille están alineadas horizontalmente a lo largo del borde superior de la cara de la línea braille, puntos 3 2 1 a la izquierda y puntos 4 5 6 a la derecha.
+En “Modo Local”, las teclas braille se utilizan para el desplazamiento y la edición/escritura.
+En “Modo Remoto” cuando se utiliza la línea braille con un lector de pantalla en un dispositivo anfitrión, como puede ser un iPhone, las teclas braille se pueden utilizar para introducir texto o realizar funciones de control en las aplicaciones.
+9.2 Teclas de desplazamiento (avance/retroceso)
+Las teclas de avance/retroceso son dos teclas de balancín situadas a cada lado de la línea braille. Estas teclas controlan cómo se pueden leer líneas de texto: hacia adelante o hacia atrás. Pulsando uno de los extremos de cada tecla se producirá una acción, mientras que, pulsando el extremo opuesto, la acción resultante será la opuesta.
+Para leer la próxima línea de texto (avance), pulse la parte inferior de una de las teclas de balancín. Para leer la línea anterior del texto (retroceso), pulse la parte superior de una de las teclas de balancín.
+9.3 Celdas Braille de 8-puntos
+Si usted es nuevo en el uso de líneas braille electrónicas, puede que no esté familiarizado con las celdas de 8 puntos. Son similares a las celdas de 6 puntos con dos puntos adicionales por debajo del punto 3 y del punto 6. Estos dos puntos adicionales se denominan Punto 7 y Punto 8, y se utilizan para indicar que el carácter es mayúscula en el Código de Braille Computarizado, o para indicar algún atributo de texto o un cursor. Su uso exacto depende del programa que utilice con la línea braille. Verifique la documentación de uso de su programa.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 12
+El Braille Computarizado a 8 puntos es similar al braille literal, excepto que se corresponde signo s signo con cada uno de los signos de la tabla de texto de caracteres (ASCII).
+El Braille Computarizado no requiere de celdas adicionales para mostrar un prefijo de mayúscula. En vez de eso, se añade el punto 7 a la versión minúscula de la letra.
+Para las equivalencias entre ASCII y Braille, consulte el Apéndice A – Tabla de Braille Computarizado al final de este documento.
+10 Comenzando
+El Lector Orbit 20 tiene dos modos de operación: Un “Modo Local” y un “Modo Remoto”. En “Modo Local”, el dispositivo es un lector de libros que utiliza una tarjeta SD como soporte-medio de lectura. En “Modo Remoto”, el dispositivo trabaja, como cualquier otra línea braille, y necesita estar conectado a un computador a través de un programa de lectura de pantalla.
+Esta sección explica como cargar, encender y apagar el dispositivo, insertar la tarjeta SD, y entrar y salir de los menús. Consulte las secciones siguientes para soporte adicional.
+10.1 Cargando el Dispositivo
+Cuando reciba el Lector Orbit, puede que ya esté cargado; sin embargo, se recomienda cargarlo completamente antes o durante el primer uso. Puede utilizar el dispositivo y cargarlo al mismo tiempo, de esta manera no se interrumpe su tiempo de lectura.
+Cuando la batería del Lector Orbit, alcance el 10%, el punto 8 de la celda 20 de la línea braille parpadeará. Este comportamiento es normal, indicando que la batería está baja.
+Para cargar el dispositivo, utilice el cable estándar-A a Micro-B USB y el cargador. Inserte el extremo del cable en el puerto USB del Lector Orbit con los resaltes hacia abajo. Se debería deslizar sin resistencia; no lo fuerce. Inserte el otro extremo del cable en el puerto USB de un computador o en el adaptador de AC suministrado. Enchúfelo al conector de red.
+Si el dispositivo está encendido cuando conecte el cargador, la línea mostrará el mensaje: “– Cargador conectado”. Cuando desconecte el cargador, mostrará:
+“– cargador desconectado”. El mensaje de carga y descarga se mostrará brevemente cuando la unidad se apague. Para mayor información, consulte la sección Batería del Menú.
+Sí ha cargado el dispositivo más de 4 horas o más, y no se pone en marcha. Contacte con el Servicio de Usuario en techsupport@orbitresearch.com
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 13
+10.2 Encendiendo y Apagando
+El botón cuadrado de encendido/apagado se encuentra en el área empotrada de la parte posterior del dispositivo. Consulta la sección de Orientación para más información.
+Para encender el dispositivo, pulse y manténgalo pulsado durante 2 segundos. El Lector Orbit subirá y bajará todas las celdas braille de izquierda a derecha indicando que está poniéndose en marcha.
+Cuando encienda el dispositivo, el Lector Orbit reanuda su función desde la última posición del último fichero en uso. Si esta es la primera vez que está utilizando el dispositivo, o esta es la primera vez que inserta una nueva tarjeta SD, el Lector Orbit mostrará el primer fichero o la primera carpeta de la tarjeta SD.
+Si el modo de operación de la unidad utilizó Bluetooth cuando se apagó, el dispositivo volverá a activar el modo Bluetooth.
+El Lector Orbit mostrará el mensaje, “—No hay tarjeta SD” cuando no haya una tarjeta SD insertada.
+Para apagar el dispositivo, pulse y manténgalo pulsado durante dos segundos. Las celdas braille se levantarán y bajarán de izquierda a derecha como aviso.
+El Lector Orbit 20 dispone de un modo de espera/bajo consumo. Una pulsación rápida del botón de encendido dispondrá a la unidad en modo de espera. Pulsando el botón de encendido, mientras el dispositivo esté en modo de espera, encenderá inmediatamente el dispositivo. Mientras se está editando texto y conectado por medio de Bluetooth, si no se pulsa ninguna tecla durante 1 hora, la unidad automáticamente se dispondrá en modo de espera. Bajo cualquier otra circunstancia, el dispositivo entrará en modo de espera después de 10 minutos de inactividad. Después de 5 horas en modo de espera, la unidad se apagará completamente para conservar energía.
+10.3 Insertando y Formateando la tarjeta SD
+El dispositivo se suministra con una tarjeta SD insertada con algunos ficheros transcritos en braille, de forma que usted rápidamente aprenda a utilizar el dispositivo leyendo el material de texto almacenado.
+El Lector Orbit utiliza tarjetas SD de tamaño estándar de 4 a 32 GB de capacidad. La tarjeta debe de formatearse como FAT32. No hay forma de formatear la tarjeta en el dispositivo. La mayoría de las tarjetas ya vienen formateadas. Sin embargo, puede formatear una, con formato FAT32, en un computador para su utilización posterior en el Lector Orbit.
+Para insertar la tarjeta SD, busque la ranura larga en la parte posterior del dispositivo.
+Sobre una de los lados cortos de la tarjeta SD hay algunas ranuras denominadas dedos o dientes SD. Sitúe la tarjeta SD con los dientes mirando hacia abajo. Con el dispositivo en la correcta posición de uso, inserte el lado corto con los dientes hacia el dispositivo. La tarjeta SD debería entrar suavemente hasta casi un cuarto de pulgada de su longitud total. En ese punto debería sentir una suave resistencia.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 14
+La tarjeta trabaja como una tostadora, pulse suavemente la tarjeta SD hasta que perciba un “clic”. La tarjeta estar casi nivelada con la parte trasera del dispositivo.
+Para extraer la tarjeta, púlsela un poco hasta que salga (más de la mitad) y extráigala suavemente.
+10.4 Acerca de los Menús y Nombres de Fichero
+El Lector Orbit muestra los menús internos y los nombres de fichero en Braille Computarizado de 8 puntos. Consulte la sección de Celdas Braille para más información acerca del Braille computarizado de 8 puntos.
+Para una completa referencia de los caracteres utilizados en Braille Computarizado consulte el Apéndice B - Tabla de Braille Computarizado Español.
+10.5 Entrando y Saliendo de los Menús
+Para ...
+Pulse
+Abrir el menú
+Pulse Seleccionar + Flecha Arriba
+Salir del menú
+Pulse punto 7
+Desplazarse a través de las opciones de menú
+Pulse las flechas de Arriba o Abajo
+Ver las opciones del menú
+Utilice las flechas Derecha e Izquierda
+Seleccionar un elemento de menú
+Pulsar Seleccionar
+10.6 Modos de Operación del Dispositivo
+El Lector Orbit 20 tiene dos modos funcionales. Un modo se denomina “Modo Local”. El otro modo se denomina “Modo Remoto”, se utiliza mientras está conectado a otro dispositivo.
+El “Modo Local” es el modo de operación por defecto y le permite leer, editar, y revisar ficheros sin estar conectado a otro dispositivo. Una tarjeta SD debe estar insertada en el Lector Orbit mientras está en “Modo Local”. Consulte la sección “Modo Local” de este documento para una mayor información.
+El “Modo Remoto” le permite conectar el Lector Orbit a un dispositivo móvil iPhone®, iPad®, y Android™, así como a computadores de escritorio.
+En “Modo Remoto”, el Lector Orbit actúa como un dispositivo de entrada y salida con el dispositivo anfitrión conectado vía USB o Bluetooth. Consulte la sección “Modo Remoto” de este documento para mayor información.
+Para cambiar entre “Modo Local” y “Modo Remoto”, utilice los siguientes comandos:
+Para cambiar a “Modo Remoto”: pulse Seleccionar + Flecha derecha.
+Para cambiar a “Modo Local”: Pulse Seleccionar + Flecha izquierda.
+El “Modo Local” dispone de las siguientes funciones:
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 15
+ Menú
+ Gestor de Ficheros
+ Lector
+ Editor
+El “Modo Remoto” conecta a través de las siguientes formas:
+ Bluetooth
+ USB: HID, Serie, o como Disco Externo.
+11 El Menú
+El Lector Orbit 20 dispone de un menú para realizar ajustes, verificar la batería, y cambiar entre modos de operación.
+Para abrir el Menú, pulse Seleccionar + Flecha Arriba. El estado de la batería es la primera opción de menú. Algunos elementos de menú le permiten seleccionar entre un número de opciones. Por ejemplo, el elemento Ordenar le permite seleccionar una de las diferentes maneras de cómo deben aparecer los ficheros en el Gestor de Ficheros. Otro elemento de menú facilita información acerca del dispositivo, como puede ser el número de serie y la versión. La opción seleccionada se subraya con los puntos 7 y 8.
+Para navegar a través de otras posibles opciones, pulse la tecla de Flecha Derecha. Para seleccionar la opción pulse Seleccionar. El Lector Orbit responde subrayando la palabra con los puntos 7 y 8 para indicar esa selección.
+Para cerrar el menú y volver a su trabajo, pulse el punto 7.
+Para desplazarse a otra opción de menú. Pulse las teclas Flecha Arriba o Flecha Abajo. Cuando llegue al final de la lista de opciones y pulse la Flecha Abajo de nuevo, el Lector Orbit le devolverá al principio del Menú. De forma similar, cuando pulse Flecha Arriba en el primer elemento del Menú, el Lector Orbit le desplazará al último elemento de la lista. Esta característica les permite un rápido acceso a los últimos elementos del Menú. Esto es así, porque algunas opciones que se utilizan con frecuencia están localizadas cerca del final de la lista de Menú.
+11.1 Disponibilidad del Menú
+El Menú está disponible para los modos Remoto y Local. Pulse Seleccionar + Flecha Arriba para abrir el menú en cada modo.
+Para salir del menú y volver al modo anterior, pulse el punto 7.
+11.2 Opciones del Menú
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 16
+Unas pocas funciones del Menú tienen un valor asignado por defecto (indicado en la lista siguiente). Para la mayoría de estas funciones, puede desplazarse entre las diferentes alternativas pulsando las flechas Derecha e Izquierda y pulsando la tecla Seleccionar. Los elementos seleccionados están subrayados con los puntos 7 y 8 (Consulte la sección específica para mayor información).
+Batería
+Parpadeo del Cursor (1)
+Ordenar (Nombre: Ascendente)
+Cortar Palabra (NO)
+Filtrar Punto 7 (Sí)
+Suprimir retorno (NO)
+Comprimir Espacios (SÍ)
+Cargar Idioma
+Cambiar a Inglés
+Codificación
+Versión
+Número de Serie
+Reinicializar
+USB (HID)
+Bluetooth (AUTO)
+Emparejar (Automático)
+Emular (NO)
+Modo (“Modo Local”)
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 17
+11.2.1
+11.2.1 Batería
+El parámetro de “Batería” del Menú muestra la capacidad de energía (porcentaje) restante en su batería. Cuando la batería en el Lector Orbit alcanza el 10%, el punto 8 de la celda 20 de la línea braille parpadea arriba y abajo. Este comportamiento es normal, indicando que la batería está baja.
+También anuncia cuando la batería se está cargando. Por ejemplo, cuando el dispositivo está enchufado, se mostrará el mensaje “—Cargando XX%”, donde XX es el porcentaje de carga. Durante su uso por primera vez, se mostrará el mensaje “—Batería XX%”.
+11.2.2
+11.2.2 Parpadeo del Cursor (1)
+La opción de “Parpadeo del cursor” sólo trabaja cuando se está en “Modo Editor” o en un Cuadro de Edición. La opción ajusta el número de segundos entre parpadeo. El valor por defecto de Parpadeo de Cursor es 1, que corresponde a un segundo entre parpadeos. Las opciones elegibles son; 1, 5, 15, 30, y 60 segundos, y 0, que ajusta el cursor a no parpadeo. Para realizar una selección, pulse Seleccionar.
+11.2.3
+11.2.3 Ordenar (Nombre: Ascendente)
+El elemento de ordenación de los elementos de menú le permite cambiar el orden de presentación de los ficheros de la tarjeta SD en el Gestor de Ficheros del Lector Orbit. Las categorías son Nombre (ascendente/descendente), Fecha, Tamaño y Última lectura. El valor por defecto de ordenación es: Nombre: Ascendente. Para volver al Gestor de Ficheros, pulse punto 7 en el “Modo Local”. Para realizar una selección, pulse Seleccionar.
+No puede ordenar en “Modo Remoto”, pero puede ver y cambiar las opciones de Menú. En “Modo Remoto”, pulse Seleccionar + Flecha Arriba. Este comando le desplazará al Menú. Pulse Flecha Abajo hasta el elemento de lista: Ordenación.
+Si está en el Gestor de Ficheros o en El Lector, pulse Seleccionar + flecha Arriba para entrar en el Menú y pulse Flecha abajo hasta Ordenación.
+Si está en el Editor, salga (Seleccionar, E o Seleccionar, Seleccionar) y pulse Seleccionar + Flecha arriba para entrar en el menú y pulse Flecha Abajo hasta Ordenación.
+De forma adicional, Puede ordenar los ficheros de forma Ascendente o Descendente. Después de seleccionar una categoría, pulse Flecha Derecha hasta que alcance Ascendente o Descendente en la lista y pulse el botón Seleccionar. El Lector Orbit preparará los ficheros en el orden indicado. El valor por defecto en el menú es Ascendente (A a Z).
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 18
+11.2.4
+11.2.4 Cortar Palabras (NO)
+El valor por defecto para “Cortar Palabras” es “No”. En el ajuste por defecto, el Lector trata de poner cuanto más contenido de texto en la línea braille como sea posible sin cortar una palabra. Sin embargo, si desea completar las 20 celdas braille sin atender al contenido, ajuste Cortar Palabras a “Sí”. Cuando Cortar Palabras está en “Sí”, el Lector puede mostrar trozos de palabra. Cuando desplace la lectura a las siguientes 20 celdas braille, el resto de esa palabra aparecerá al principio de la línea. Para realizar una selección, pulse Seleccionar.
+11.2.5
+11.2.5 Filtrar Punto 7 (Sí)
+El valor por defecto para “Filtrar el Punto 7” es (Sí). El elemento de menú Filtrar el Punto 7 le permite desactivar la presentación del Punto 7 que frecuentemente aparece en algunos ficheros BRL o BRF.
+El Punto 7 se filtra por defecto, pero si desea utilizar ficheros BRL o BRF que utilicen 8 puntos braille, cambie este ajuste a “No”. Para realizar la selección, pulse Seleccionar.
+11.2.6
+11.2.6 Suprimir Retornos (Sí)
+El valor por defecto para “Suprimir Retorno” es (Sí). La opción de Suprimir Retorno es una forma que el Lector Orbit tiene de reformatear los ficheros ya formateados para su impresión.
+Normalmente, Los ficheros formateados en braille contienen un carácter de final de línea cada 38-40 caracteres, que comienzan una nueva línea. Esta opción elimina los espacios extra, haciendo más fácil la lectura sobre una línea braille de 20 caracteres. Para realizar la selección pulse Seleccionar.
+NOTA: Este parámetro es muy útil para leer libros en formato .BRA (formateados en español), ya que además de suprimir los comandos de retorno de carro, en el caso de que el carácter anterior sea un guion éste será eliminado para que la palabra afectada se vuelva a representar sin partición. Solo se respetarán los retornos de carro seguidos por la sangría de párrafo en braille.
+11.2.7
+11.2.7 Comprimir Espacios (Sí)
+Los cambios de línea, líneas en blanco y tabuladores producen espacios extra (o espacios en blanco) en un documento. Estos espacios ocupan una gran cantidad de espacio y hacen la lectura más lenta en la línea braille. La opción de Comprimir Espacios elimina las líneas y espacios en blanco superfluos. Si existen espacios o líneas en blanco en un fichero, éstos se comprimirán a un sólo espacio. Este ajuste es especialmente útil cuando se leen ficheros de textos formateados que contienen muchas líneas en blanco.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 19
+El valor por defecto para Comprimir Espacios es “Sí”. Para realizar una selección, pulse Seleccionar.
+11.2.8
+11.2.8 Cargar Idioma
+La tabla de traducción por defecto del Lector Orbit 20 es la tabla Braille ASCII Americana. Está precargada en el dispositivo. La opción de Cargar Idioma se utiliza para cargar los ficheros de idioma en la memoria “flash” del Lector Orbit 20. Esta opción tiene un submenú con tres opciones: Cargar Locale, Cargar sólo .loc. y Cargar sólo .lan. Pulse la tecla de Flecha Derecha para navegar por el submenú, pulse sobre la opción deseada. Para seleccionar la opción, pulse Seleccionar.
+ Cargar Locale – El Lector Orbit muestra la lista de nombres de código de región para los diferentes idiomas que tienen dos ficheros: El fichero de tablas (. lan) y el fichero de Mensajes del sistema (. loc) disponibles en la carpeta “locale” de la tarjeta SD, junto con la opción por defecto. Pulse Seleccionar sobre el fichero se su elección.
+ Cargar sólo .loc – El Lector Orbit muestra la lista de los ficheros de Mensaje del Sistema, junto con la opción por defecto. Pulse Seleccionar sobre el fichero de su elección.
+Nota: Necesita asegurarse que se ha cargado la tabla de ASCII Braille de su región.
+ Cargar sólo .lan – El Lector Orbit muestra la lista de ficheros de Tablas, junto con la opción por defecto. Pulse Seleccionar para escoger el fichero de su elección.
+Consulte la sección Cargar los Ficheros de Localización en la sección Opciones de Idioma (Localización) para información adicional.
+11.2.9
+11.2.9 Cambiar a Inglés
+Una vez que haya cargado un idioma en la memoria flash, puede utilizar la opción “Cambiar a inglés” cambiar entre el idioma cargado y el idioma inglés por defecto. Consulte la sección Opciones de Idioma (Localización) para una mayor información.
+11.2.10
+11.2.10 Codificación
+Los ficheros de texto se pueden crear con formato de codificación ASCII o UNICODE. Los ficheros de texto para algunos idiomas sólo se pueden crear en UNICODE. Cuando cree un fichero, en otras tablas de idiomas distintas de ASCII, debe seleccionar la opción UNICODE. Para seleccionar la opción, pulse Seleccionar.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 20
+ASCII será la opción por defecto. El usuario puede escoger entre los siguientes formatos de codificación para crear un nuevo fichero en el sistema:
+1. ASCII 2. UNICODE16LE 3. UNICODE16BE 4. UTF-8
+Si está tratando de crear ficheros BRF/BRL, debería escoger la opción ASCII. De otra manera, el fichero podría ser ilegible para otros programas.
+Este ajuste se aplica sólo a los ficheros creados con el comando “Crear nuevo fichero”. No tiene impacto sobre los ficheros ya abiertos para su edición. El formato no se puede cambiar mientras algún fichero esté abierto para su edición.
+11.2.11
+11.2.11 Versión
+El elemento de menú “Versión” muestra la versión de software que se está ejecutando en su dispositivo. Puede que necesite conocer el número de versión cuando hable con el Servicio de Atención al usuario. Consulte la última versión disponible en http://www.orbitresearch.com/support/orbit-reader-20-support/orbit-reader-firmware-download/
+11.2.12
+11.2.12 Número de Serie
+El elemento de menú “Número de Serie” muestra el número de serie individualizado de cada dispositivo que utilice. Este número puede ser importante para asuntos relacionados con la garantía.
+11.2.13
+11.2.13 Reinicializar
+El elemento de menú “Reinicializar” devuelve todos los ajustes de su equipo a los parámetros de fábrica. Para reinicializar a los ajustes por defecto de fábrica, pulse el botón Seleccionar. Esta acción reinicializa los ajustes a los valores por defecto y le sitúa en el primer elemento de la lista del Menú de Opciones (Estado de la Batería).
+11.2.14
+11.2.14 USB (HID)
+El elemento “USB” del Menú selecciona entre tres posibles protocolos de comunicación: Interfaz de Dispositivo Humano (HID), Serie, o como Disco Externo. El valor por defecto para USB es HID. Para seleccionar la opción, pulse Seleccionar.
+Para mayor información, consulte la sección Conectividad USB bajo “Modo Remoto”.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 21
+11.2.15
+11.2.15 Bluetooth (Sí)
+El valor por defecto para el ajuste “Bluetooth” es (Sí). Si el Lector Orbit se empareja con un dispositivo con conexión Bluetooth, se conecta automáticamente cuando el Lector Orbit se enciende de nuevo. Si no desea que se reconecte automáticamente con los dispositivos emparejados, seleccione otra opción.
+Hay tres opciones bajo este menú:
+ Bluetooth Sí (Auto)
+ Bluetooth manual
+ Bluetooth No
+El valor por defecto para “Bluetooth” es (Auto). Si hay alguna actividad en el programa lector de pantalla en el dispositivo emparejado, el lector ORBIT automáticamente establecerá la conexión remota bluetooth con el dispositivo. Si no desea que la comunicación se establezca de forma automática cambie a la opción “manual” Para desactivar la comunicación por bluetooth cambie su ajuste a “NO”. Para seleccionar otra opción pulse Seleccionar.
+Para una mayor información consulte Utilizando la Conexión Bluetooth bajo el “Modo Remoto”.
+11.2.16
+11.2.16 Emparejamiento (Automático)
+El elemento de menú de “Emparejamiento” selecciona un esquema de emparejamiento. El Lector Orbit utiliza el esquema seleccionado cuando se requiere una acción de emparejamiento desde un dispositivo anfitrión. Para seleccionar la opción, pulse Seleccionar.
+Las dos opciones disponibles son:
+1. Automático (Just Works) – Es el valor por defecto de emparejamiento Bluetooth. Cuando se utiliza este esquema, el Lector Orbit se empareja automáticamente al cualquier dispositivo que le pida emparejamiento.
+2. Código de Confirmación – Es el esquema de emparejamiento más seguro. Con este esquema, el Lector Orbit responde al emparejamiento requerido mostrando un número aleatorio en la línea braille del Lector Orbit y en el dispositivo anfitrión. Para confirmar la petición, asegúrese de que los números coinciden y pulse el punto 8 o para rechazarlo pulse el punto 7.
+11.2.17
+11.2.17 Emular (NO)
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 22
+La opción de “Emular” le permite escoger cómo se muestra el dispositivo a la aplicación de “Lector de Pantalla” del anfitrión mientras se está operando en “Modo Remoto”. Si se selecciona modo de emulación RB18 (Refreshabraille 18™), el Lector Orbit se comporta como si fuera una línea braille “Refreshabraille 18” y solo se utilizarán las primeras 18 celdas. Si el ajuste Emular está desactivado, se presenta como un Lector Orbit 20.
+El valor por defecto de “Emular” es (NO).
+11.2.18
+11.2.18 “Modo Local” (Stand-Alone)
+Por defecto, el Lector Orbit opera en “Modo Local” donde puede leer y escribir ficheros en la tarjeta SD. Para especificar un ajuste en otro modo, seleccione entre “Modo Local”, BT (para Bluetooth) o USB. El Lector Orbit trata de cambiar automáticamente a Bluetooth o USB dependiendo de la actividad del programa de Lector de Pantalla, si desea, por ejemplo, específicamente volver a “Modo Local” desde “Modo Remoto”, o cambiar la interfaz de Bluetooth a USB, utilice esta opción. Para seleccionar la opción, pulse Seleccionar.
+12 Modo Local
+El “Modo Local” es el modo operacional por defecto y le permite leer, editar, y navegar por los ficheros sin necesidad de conectarse a otro dispositivo. Se requiere el uso de una tarjeta insertada SD en el Lector Orbit mientras se opera en “Modo Local”. La tarjeta debe de contener los ficheros que desee leer. El “Modo Local” ofrece las siguientes posibilidades de trabajo:
+Gestor de Ficheros
+Menú
+Lector
+Editor
+13 Gestor de Ficheros
+El Gestor de Ficheros es donde se selecciona un fichero para su lectura y que está almacenado en la tarjeta SD del Lector Orbit. Puede también crear nuevos ficheros y carpetas, ver sus propiedades (como el tamaño del fichero y la posición actual de lectura) y copiar, renombrar, y borrar ficheros.
+Cuando se desplace por la lista de ficheros, el Lector Orbit muestra los primeros 20 caracteres del nombre de fichero. Debe de navegar por el resto de la información del fichero, como el resto de un nombre de fichero largo, su tamaño, la fecha, utilizando las teclas de desplazamiento para mover la ventana de la línea braille a través del resto de los contenidos de la línea de la lista de nombre de fichero.
+Cada elemento de la lista de ficheros incluye los siguientes elementos:
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 23
+ Nombre de fichero y extensión
+ Posición actual en el fichero en número de caracteres
+ Tamaño en KB (KILOBYTES)
+ Fecha de la última modificación
+ Protegido o Desprotegido
+Sólo se muestra una columna por línea (con desplazamiento si es necesario). Pulsando las teclas de Flecha Izquierda o Derecha se desplazará al encabezamiento de la columna anterior o siguiente (información de fichero). Cuando salga de una operación de lectura (punto 7), se le devolverá al mismo punto y columna del Gestor de Ficheros.
+13.1 Comandos del Gestor de Ficheros
+A continuación, se muestran los comandos que puede utilizar en el Gestor de Ficheros. La mayoría de los comandos de fichero funcionan también con las carpetas.
+Para...
+Pulse
+Información adicional
+Abrir un fichero o una carpeta
+Seleccionar o pulsar Punto 8
+Pulsando Seleccionar o Punto 8 abre el fichero o carpeta.
+Desplazarse al fichero o carpeta anterior o siguiente
+Flecha Arriba o Flecha abajo
+Pulsando Flecha Arriba o Abajo se desplazará al fichero anterior o siguiente en la lista de ficheros.
+Subir un nivel de carpeta
+Punto 7
+El Punto 7 actúa como tecla “volver” para salir de la actividad actual. Si ya está en el Gestor de Ficheros, pulsando Punto 7 desplazará el foco al nivel anterior, cuando tienen múltiples niveles de carpetas. Si está en el nivel raíz, Punto 7 no realizará acción alguna. Si está en alguna de las columnas de información, por ejemplo, tamaño o fecha, pulsando el Punto 7 vuelve al nombre de fichero.
+Desplazarse por la información de fichero
+Flecha Izquierda o Derecha
+Este comando le desplaza a través de la información de fichero por encabezamientos de columna. Consulte la sección de Gestor de Ficheros para más información.
+Abrir el Menú
+Seleccionar + Flecha Arriba
+Pulsando Seleccionar + Flecha Arriba abre el menú.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 24
+Navegar por el texto
+Teclas de desplazamiento Izquierda o Derecha
+Si el nombre de fichero es más largo que la longitud de la línea braille, las teclas de desplazamiento izquierda o derecha mostrarán más información del nombre de fichero. Cuando alcance el final del nombre de fichero, pulsando las teclas de desplazamiento se desplazará al siguiente elemento de información del fichero, como su posición, tamaño, fecha, y demás.
+Crear un Nuevo Fichero
+Espacio + N (puntos 1 3 4 5)
+El comando de Fichero Nuevo inicia el Modo Editor creando un nuevo fichero donde escribir texto. Para salir al Editor, pulse Seleccionar, Seleccionar.
+Crear una Nueva Carpeta
+Espacio + O (puntos 1 3 5)
+El comando de Nueva Carpeta abre un Cuadro de Edición donde debe escribir el nombre de la nueva carpeta. Pulsando Punto 8 guarda el nombre de la carpeta y vuelve a la lista de ficheros con esa carpeta seleccionada. Si no nombra la carpeta, pulsando Seleccionar se nombra a la carpeta como Carpeta Nueva. Pulse Seleccionar para salir sin realizar una nueva carpeta.
+Borrar un fichero o carpeta
+Espacio + D (puntos 1 4 5)
+Esta acción borra el fichero(s) o carpeta(s) seleccionadas. Sólo se pueden borrar las carpetas vacías. Se requiere confirmación antes de borrar el fichero o la carpeta. Cuando se muestre el mensaje “—Confirmar acción”, pulse Seleccionar o Punto 8 para confirmar; pulse Punto 7 para cancelar.
+Renombrar un fichero o carpeta
+Espacio + R (puntos 1 2 3 5)
+El comando Renombrar Fichero le permito cambiar el nombre del fichero o carpeta. Para utilizarlo, pulse el comando Renombrar. El Lector Orbit responderá mostrando un Cuadro de Edición conteniendo el nombre del fichero o carpeta original. Edite el nombre o pulse uno nuevo y pulse Punto 8. Pulse Seleccionar para salir sin renombrar un fichero o carpeta.
+Cortar un fichero
+Espacio + X (puntos 1 3 4 6)
+Esta acción corta el fichero(s) de su localización y lo(s) posiciona(n) en la papelera para su utilización con el comando pegar.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 25
+Copiar un fichero
+Espacio + C (Puntos 1 4)
+El comando Copiar Fichero realiza una copia del fichero(s) seleccionado(s) y lo(s) posiciona(n) en la papelera para su utilización con el comando pegar.
+Pegar un fichero
+Espacio + V (puntos 1 2 3 6)
+Esta acción pega el fichero(s) o carpeta(s) que se encuentra(n) en la papelera en la posición actual en el Gestor de Ficheros. Si no hay fichero o carpeta en la papelera, no se realiza ninguna acción.
+Marcar un fichero
+espacio + M (puntos 1 3 4)
+Cuando se van a desplazar múltiples ficheros, utilice el comando de Marcar Fichero para marcar cada fichero de forma individual antes de Cortar, Copiar, o Borrar. Para Marcar un fichero, pulse Flecha Abajo o Arriba y puse Espacio + M sobre él.
+Para borrar una marca de fichero, Pulse Espacio + M de nuevo.
+El Gestor de Ficheros indica los ficheros marcados levantando los Puntos 7 y 8 en la primera letra del nombre de fichero.
+Proteger o desproteger un fichero
+Espacio + P (Puntos 1 2 3 4)
+Para proteger un fichero de cambios accidentales, pulse Flecha Abajo hasta posicionarse en el fichero y pulse Espacio + P. Para quitar el estado de protección, seleccione el fichero y pulse Espacio + P de nuevo. Para determinar si un fichero está protegido, pulse Flecha Derecha o Flecha Izquierda hasta el encabezamiento Desproteger/Proteger.
+Editar el fichero actual
+Espacio + E (puntos 1 5)
+Cuando se está editando el fichero actual, el Lector Orbit cambia a Modo Editor, que se indica por un cursor en el punto de inserción de texto. El cursor se muestra en el primer carácter de la línea braille cuando se haya pulsado el comando de editar. Mientras escribe, todo se grabará en el fichero. Para salir, pulse Seleccionar, Seleccionar. Consulte la sección El Editor para más información.
+Editar el Último Fichero Editado
+Espacio + Puntos 1 2 4 6
+Reabre el último fichero editado y desplaza el cursor a su última posición en ese fichero.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 26
+Este comando es útil para tomar notas sobre lo que lea. Utilice el comando para volver rápidamente al Editor. Pulse Seleccionar, Seleccionar para cerrar el Editor y volver al título que este leyendo. Este comando no tiene efecto, si ya está editando un fichero. El dispositivo mostrará el mensaje de error “—Fichero no encontrado” cuando no se haya abierto un fichero anteriormente.
+13.2 Más Acerca del Copiado y Pegado de Ficheros
+Las acciones de copiado y pegado de ficheros dan como resultado otro fichero con el mismo nombre, El Gestor de Ficheros añade una extensión para indicar que el nuevo fichero es una copia. Por ejemplo: si copia “book.brf” a una carpeta que ya contiene “book.brf”, el nuevo fichero se denomina “book1.brf” y el original “book.brf” permanece sin alterar.
+Si la tarjeta SD se queda sin espacio antes de completar una operación con un fichero, el Gestor de Ficheros muestra el mensaje “—Error copiando fichero XXX” donde XXX es el nombre de fichero.
+Cuando se copia un número grande de ficheros, o ficheros de gran tamaño esto puede llevar tiempo, el Gestor de Ficheros muestra mensajes de progreso durante la operación de copia.
+Si el tiempo de copia supera los 5 segundos, el Gestor de Ficheros muestra el mensaje, “—Copiando XXX /YY%)” donde XXX es el nombre de fichero e YY es el porcentaje completado. Este porcentaje de progreso se actualiza en cantidades equivalentes a su 10%.
+Para consultar las teclas de comando, desplácese a la tabla Comandos del Gestor de Ficheros en la sección Gestor de Ficheros.
+13.3 Comandos de Movimiento de Ficheros
+Para ...
+Pulsar
+Información adicional
+Desplazamiento al primer fichero
+Pulse Espacio + Puntos 1 2 3
+Pulsando Espacio + Puntos 1 2 3 desplaza la selección del Gestor de Ficheros al primer fichero de la carpeta actual.
+Desplazamiento al último fichero
+Pulse Espacio + Puntos 4 5 6
+Pulsando Espacio + Puntos 4 5 6 desplaza la selección del Gestor de
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 27
+Ficheros al último fichero de la carpeta actual.
+Búsqueda incremental en la lista de ficheros
+Escriba el nombre de fichero rápidamente
+Para buscar un fichero, escriba rápidamente los primeros caracteres del nombre de fichero. El Gestor de Ficheros resaltará el primer fichero que contenga los primeros caracteres que pulse.
+13.4 Tipos de Fichero
+El Lector Orbit no transcribe o interpreta ningún fichero. Simplemente muestra el contenido de un fichero braille. De esta forma, si tiene un fichero de texto plano en la tarjeta SD, el Lector Orbit muestra ese fichero tal como fue escrito. De forma similar, si tiene un fichero tipo BRF (braille formateado) en la tarjeta SD, no importa el idioma o código en que esté escrito, el Lector Orbit muestra con precisión su contenido. Para utilizar ficheros Word o PDF, primero debe transcribirlos en un computador, y entonces transferirlos a la tarjeta SD.
+Los ficheros braille pueden contener cualquier tipo de braille, en seis u ocho puntos, en cualquier idioma y de cualquier materia. Puede crear estos ficheros en una computadora con su programa de transcripción braille, como Duxbury o LibLouis, o crearlos en el Editor del Lector Orbit.
+13.4.1
+13.4.1 Tipos de Fichero Soportados
+Extensión
+Tipo
+Explicación
+BRF o BRA
+Transcrito y formateado en braille
+Se muestra su representación exacta
+BRL
+Transcrito, pero no formateado en braille
+Se muestra todo el texto
+TXT
+Texto
+Se muestra en Código Braille Computarizado a 8 puntos
+Adicionalmente a los tipos de fichero soportados, el Lector Orbit muestra el contenido de cualquier fichero. Tenga cuidado, sin embargo, ya que algunos ficheros no contienen contenidos legibles. Esta característica es muy útil, ya que permite examinar ficheros con texto legible incluso si no son del tipo soportado.
+Hay varios sistemas de transcripción braille excelentes disponibles en U.S. Si obtiene libros de texto de APH o títulos transcritos de la NLS o NBP, el texto braille debería ser correcto y formateado. Puede obtener programas de transcripción braille que producen texto braille transcrito automáticamente utilizando programas como LibLouis o Bookshare a partir de títulos disponibles
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 28
+13.5 Preparando Ficheros
+Para preparar ficheros para almacenarlos en el Lector Orbit, siga estos pasos:
+ Determine el tipo de transcripción.
+ Transcriba el fichero.
+ Copie el fichero a la tarjeta SD o utilice el modo de Disco Externo para copiar ficheros desde su computador.
+Para copiar ficheros a la tarjeta SD, saque la tarjeta del Lector Orbit e introdúzcala en el lector de tarjetas de su computador, o conecte el cable USB del Lector Orbit a su computador y active el modo de Disco Externo pulsando Espacio + Puntos 5 7 o seleccionando Disco Externo en el menú de opción USB. Cuando utilice el protocolo de Disco Externo. El Lector Orbit se muestra como una unidad de disco en su computador, y no puede utilizar otras funciones del Lector Orbit.
+14 El Lector
+En el “Modo Local”, el Lector Orbit muestra el contenido de los ficheros almacenados en la tarjeta SD. No realiza ninguna transcripción o interpretación.
+El Lector Orbit 20 está diseñado para ser un sistema de lectura de libros independiente. Poniendo ficheros con contenido tipo BRF, BRL, BRA o TXT en su tarjeta SD insertada lo convertirá en un lector de libros portátil. Cuando lo ponga en marcha por primera vez, el Lector Orbit mostrará el contenido del primer fichero de la tarjeta SD. Para ir a la lista de ficheros, pulse Punto 7. Para seleccionar un fichero, pulse Flecha Arriba o Abajo. Pulse Punto 8 o Seleccionar para abrir el fichero. Utilice la Teclas de desplazamiento Izquierda o Derecha para leer. Hay muchas otras funciones en Modo Lectura como Buscar, Desplazamientos Grandes, Marcas de Libro, e incluso un Menú para ajustar preferencias. Las secciones siguientes describen los comandos y ajustes que se pueden utilizar durante la lectura.
+Cuando encienda el dispositivo, el Lector Orbit arranca en la última posición de lectura del fichero en uso. La primera vez de uso, muestra el primer fichero o carpeta de la tarjeta SD. Pulse el Punto 7 para cerrar el fichero y mostrar el Gestor de Ficheros, que mostrará la lista de los ficheros de la tarjeta SD. Si no hay tarjeta insertada, se mostrará el mensaje “—No hay tarjeta”.
+Cuando alcance el final de un fichero, el Lector mostrará el mensaje “—Final de fichero”. De forma similar, si está al principio del fichero mostrará el mensaje “—Principio de fichero”.
+14.1 Comandos de Lectura
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 29
+Mientras esté en “Modo Local”, estarán disponibles los siguientes comandos.
+Para ...
+Pulsar
+Información adicional
+Desplazarse a la porción de línea Anterior o Posterior
+Pulsar teclas de Desplazamiento
+Consulte la sección Teclas de desplazamientos información.
+Desplazarse al Carácter Anterior o Posterior
+Teclas de Fecha Izquierda o Derecha
+Si pulsa Flecha Derecha, la siguiente letra aparecerá en el lado derecho de la línea.
+Para adecuarse al uso de los comandos de desplazamiento de las líneas braille tradicionales, el Lector dispone del comando Espacio + Punto 3 y Espacio + Punto 6.
+Desplazarse a la Palabra Anterior o Posterior
+Espacio + Flecha Izquierda o Derecha
+Si pulsa Espacio + Flecha Derecha, la siguiente palabra aparecerá en la derecha de la línea braille. El Lector también soporta Espacio + punto 2 y Espacio + Punto 5.
+Desplazarse a la Página Anterior o Posterior
+Punto 3 o punto 6
+Pulsando punto 3 o punto 6 el cursor se desplaza hacia atrás o hacia adelante en el fichero a la marca de página (form feed) o un equivalente a 1.000 caracteres, lo que ocurra primero.
+Desplazarse al Principio o al Final del Fichero
+Punto 1 o Punto 4
+Pulsando Punto 1 se desplazará al principio del fichero; pulsando Punto 4 se desplazará al final del fichero. (Para compatibilizar con otros dispositivos, Espacio + Puntos 1 2 3 desplazará al principio de fichero y Espacio + Puntos 4 5 6 desplazará al final del fichero).
+Salir del Fichero
+Punto 7
+Si está leyendo un fichero, si pulsa Punto 7 le devolverá a su posición anterior.
+Abrir el Menú
+Seleccionar + Flecha Arriba
+Pulsando Seleccionar + Flecha Arriba se abre el menú
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 30
+Poner y Quitar una Marca de Lectura
+Espacio + M
+De forma adicional a la marca de lectura que se establece cuando cierra un fichero, el Lector Orbit le permite realizar Marcas de Lectura adicionales. El Lector muestra el mensaje “—Marca añadida” o “– Marca borrada”, si ya había alguna marca en esa posición.
+Desplazarse a la marca de Lectura Anterior o Posterior
+Punto 2 o Punto 5
+El Lector responde moviendo el cursor a la posición de la marca de lectura. La localización de lectura marcada aparecerá en el primer carácter de la línea braille. Si no hay marcas en la dirección indicada, se mostrará el mensaje “—no hay marcas”.
+Gran Desplazamiento/Búsqueda hacia Adelante y/o hacia Atrás
+Punto 8 + Flecha Abajo o Punto 8 + Flecha Arriba
+Pulsar Punto 8 + Flecha Arriba le desplazará hacia atrás. Pulsar Punto 8 + Flecha Abajo le desplazará hacia adelante. Consulte la sección Atrás para mayor información.
+Buscar Braille
+Espacio + F (Puntos 1 2 4)
+Pulsando Espacio + F abre un Cuadro de Edición en blanco con un cursor. Esto le permite realizar una búsqueda en un específico formato braille pulsando el texto en el mismo formato braille.
+Pulsando el Punto 8 comienza la búsqueda. Para salir del Cuadro de Edición sin realizar una búsqueda, pulse Seleccionar. Consulte las secciones Cuadro de Edición y Buscar Braille para más información.
+Buscar Braille Siguiente
+Punto 8 + flecha Derecha
+Pulsando el Punto 8 + Flecha Derecha repite una búsqueda anterior hacia adelante desde el punto del fichero donde esté. Si no hay texto en el Buffer de Edición de Búsqueda, el Lector utiliza el texto de la posición del
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 31
+cursor Consulte la sección Buscar Braille para mayor información.
+Buscar Braille Anterior
+Punto 8 + Flecha Izquierda
+Pulsando el Punto 8 + Flecha Izquierda repite una búsqueda anterior hacia atrás desde el punto del fichero donde esté. Si no hay texto en el Buffer de Edición de Búsqueda, el Lector utiliza el texto de la posición del cursor. Consulte la sección Buscar Braille para mayor información.
+Editar Fichero Actual
+Espacio + E
+Espacio + E editará el fichero que está leyendo actualmente. Pulse Seleccionar, Seleccionar para salir del Editor y continuar leyendo.
+Abrir Nuevo Fichero
+Espacio + N
+Espacio + N abre un fichero nuevo en el Editor para la edición/toma de notas. Pulse Seleccionar, Seleccionar para volver al fichero donde estaba leyendo.
+Editar el último Fichero Editado
+Espacio + Puntos
+1 2 4 6
+Utilizando este comando se reabre el último fichero que estuvo editando y pone el cursor en la última posición editada en ese fichero. El comando Editar Último Fichero Editado es útil para tomar notas sobre lo que está leyendo. Use el comando para cambiar rápidamente al editor. Cierre el Editor o vuelva al título que estaba leyendo. Este comando no tiene efecto si ya estaba editando el fichero. La línea braille muestra el mensaje de error “—Fichero no encontrado” cuando no se ha abierto previamente un fichero. Pulse Seleccionar, Seleccionar para volver al fichero que estaba leyendo.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 32
+14.2 Gran desplazamiento hacia Adelante o hacia Atrás
+El Lector Orbit dispone de comandos de gran desplazamiento que proporcionan un desplazamiento/búsqueda a través de grandes secciones del fichero para buscar una posición conocida en el documento. Un gran desplazamiento opera utilizando límites y desplazamientos del 50% de texto entre cada pulsación de comando. En esencia, un comando de gran desplazamiento para buscar en un fichero, busca la información utilizando un comando binario. Cuando puse Punto 8 + Flecha Abajo o Punto 8 + Flecha arriba, el Lector se desplazará de las siguientes maneras:
+La primera vez que se pulse, el cursor se desplazará a medio camino entre la posición actual y el principio (puntos 8 + flecha Arriba) o el final (Punto 8 + Flecha Abajo) del fichero, que actúan como límites de la búsqueda.
+Pulsaciones consecutivas tratan la posición desplazada como nuevo límite en esa dirección. Por lo tanto, si está al principio del archivo (0%) al pulsar el Punto 8 + Flecha Abajo, el lector mueve el cursor a medio camino entre 0% y 100%. Ahora está en el 50%, y se convierte en uno de los límites. El límite inicial está en la posición original de 0%. Por lo tanto, si pulsa Punto 8 + Flecha Arriba, se mueve a medio camino entre el 50% y el 0% para terminar en el 25%. O bien, si pulsa la Punto 8 + Flecha abajo, se mueve a medio camino entre el 50% y el 100% para terminar en el 75%.
+Cada vez que pulse las teclas Punto 8 + Flecha Arriba o Punto 8 + Flecha Abajo, el lector muestra el porcentaje en las primeras celdas de la línea de pantalla y rellena el resto de la línea con el texto en esa posición. Esto continúa hasta que pulse algo distinto de punto 8 + Flecha arriba o Punto 8 + Flecha Abajo o una tecla de Desplazamiento. Consulte la sección Teclas de Desplazamiento obtener más información.
+14.3 Buscar Braille
+Para localizar un texto específico en braille, utilice el comando Buscar (Espacio + F). El Lector Orbit responde abriendo un Cuadro de Edición con un cursor, que se indica por los Puntos 7 y 8. De forma diferente al método de Gran Desplazamiento, que busca texto dentro de una localización específica, el comando de Búsqueda busca en el fichero entero las instancias del texto en braille que introduzca en el Cuadro de Edición (consulte la sección Cuadro de Edición). Si ya ha buscado algo previamente, el texto aparece en el Cuadro de Edición con el cursor al final. Consulte la sección de Gran desplazamiento hacia Adelante y Atrás para mayor información.
+Consulte la sección de Gran Desplazamiento hacia Adelante y Atrás para mayor información.
+Pare realizar la búsqueda de una palabra, pulse Espacio + F para entrar en el Cuadro de Edición. Introduzca el texto braille que desea buscar, pulse Punto 8 para empezar la búsqueda. La palabra se muestra como la primera palabra en la línea braille. Si la palabra no se encuentra, se mostrará el mensaje “—no
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 33
+encontrado”. Pulse Punto 7 para borrar el mensaje. Para salir del Cuadro de Edición sin realizar una búsqueda, pulse Seleccionar.
+Después que se realice una búsqueda de palabra, para continuar buscando pulse Punto 8 + Flecha Derecha para buscar la siguiente ocurrencia (hacia adelante en el fichero) o Punto 8 + Flecha Izquierda para buscar una ocurrencia anterior (hacia el principio del fichero).
+Si está buscando texto en un archivo braille estenográfico, debe escribir el texto que desea buscar en braille estenográfico.
+Si está buscando en un archivo de texto plano, debe escribir el texto que desea buscar en Braille Computarizado. Consulte Apéndice B – Tabla de Braille Computarizado.
+Puede buscar términos de hasta 255 caracteres. Las búsquedas generalmente no distinguen entre mayúsculas y minúscula. Una búsqueda de la palabra “animal” encuentra versiones en minúscula y mayúscula de esa palabra (animal / Animal). Sin embargo, si desea encontrar palabras con mayúsculas, escriba el texto que desea buscar con las mayúsculas incluidas. Por ejemplo, una búsqueda de la palabra mayúscula “Animal” da los resultados de “Animal” (en mayúsculas), pero no “animal” (minúsculas).
+Además, las búsquedas coinciden con palabras completas y parciales. La búsqueda de “un” encuentra “un” (exacta) y “una” (coincidencia parcial).
+Para restringir búsquedas a palabras completas, agregue un espacio al principio y al final de la palabra. El lector entiende como espacio cualquier carácter que no sea de impresión, como espacios, tabuladores y cambios de línea.
+Lea la sección Cuadro de Edición para editar comandos y funciones de navegación.
+Cuando busca archivos, el lector mueve la posición de lectura del archivo a la siguiente aparición del texto buscado y lo muestra al principio de la línea braille. Si no puede encontrar el texto, el Lector Orbit muestra “- No encontrado” y le devuelve a su posición de lectura en el archivo donde estaba antes de la búsqueda. Si está buscando en un documento más grande, el Lector Orbit muestra “—Ocupado” mientras realiza la búsqueda.
+Para repetir una búsqueda avanzando hacia el final del archivo, pulse Punto 8 + Flecha Derecha.
+Para repetir la búsqueda retrocediendo hacia el principio del archivo, pulse Punto 8 + Flecha izquierda.
+15 Cuadro de Edición
+El Lector Orbit 20 presenta un diálogo de texto o un campo de entrada llamado Cuadro de edición cuando desea buscar texto o cambiar el nombre de un archivo. El Cuadro de Edición permite solo una línea de texto. Presione Espacio + F para comenzar una búsqueda o presione Espacio + R para cambiar el nombre de un archivo.
+Una vez en el cuadro de edición, inserte el texto escribiendo el texto braille deseado y luego utilice los comandos del cuadro de edición para navegar. El
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 34
+cuadro de edición muestra un cursor parpadeante (puntos 7 8) para indicar el comienzo del texto que está buscando o editando.
+Cuando el Lector Orbit 20 muestra un Cuadro de Edición, a menudo proporciona un texto predeterminado, como un nombre de archivo o un término de búsqueda introducido anteriormente. Para eliminar o reemplazar el texto seleccionado, escriba una letra o presione la tecla de retroceso (Punto 7). Para editar el texto existente en el modo de inserción, presione una de las teclas de flecha para mover el cursor letra por letra a la posición donde desea editar.
+15.1 Comandos del Cuadro de Edición
+Para...
+Pulsar
+Información adicional
+Desplazarse a la Izquierda o a la Derecha un carácter
+Flecha izquierda o Derecha
+Pulsando los comandos de movimiento desplaza el cursor en la dirección indicada. Cuando el cursor alcanza el final del Cuadro de Edición, se para y muestra “—No puedo desplazarme más”.
+Desplazarse al Principio o al Final del texto
+Flecha Arriba o Abajo
+Pulse Flecha Arriba o Ahajo para desplazar el cursor al principio o al final del texto.
+Retroceso
+Punto 7
+La tecla Retroceso Punto 7, borra el carácter inmediato por la izquierda del cursor. Utilice Retroceso cuando cometa un error de pulsación o para eliminar pequeñas cantidades de texto.
+Aceptar texto introducido
+Punto 8
+En esta instancia, pulsando Punto 8 actúa como una tecla de ENTER/OK.
+Cerrar el Cuadro de Edición
+Seleccionar
+Para cerrar el Cuadro de Edición, utilice el comando Cerrar. En los controles de una sola línea, Cerrar elimina lo que ha escrito. En los controles de varias líneas, todo el texto se guarda automáticamente en el editor.
+16 El Editor
+Además de servir como una herramienta para la lectura braille, el Lector Orbit ofrece la posibilidad de escribir y editar texto. Esta función le permite crear / editar archivos nuevos o existentes en la tarjeta SD.
+Mientras está en el Modo Editor, el cursor denota la posición actual parpadeando los Puntos 7 8. El valor predeterminado para el cursor es de 1 segundo. El parpadeo del cursor se puede desactivar en el menú.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 35
+El contenido del fichero depende de dos cuestiones:
+1. Codificación seleccionada desde el menú
+Si está creado un fichero BRF o BRA, utilice la codificación ANSI en el menú después de crear un nuevo fichero. El contenido del fichero puede codificar de otra manera. Si está creando un archivo de texto, puede elegir cualquier formato de codificación según sus requisitos. La selección de codificación del menú no tiene impacto en la edición de un archivo ya existente.
+2. Tablas de traducción utilizadas.
+Si su unidad está localizada, la tabla de traducción utilizada estaría basada en la tabla del archivo LAN. Si está utilizando la tabla inglesa predeterminada, la tabla de traducción que se utiliza será la Tabla de Braille computarizado, como se describe en el Apéndice A.
+Hay tres maneras de editar un archivo. Cada uno de estos tres comandos está disponible tanto en el Modo Lector como en el Gestor de Ficheros:
+1. Editar archivo nuevo: Espacio + N
+2. Editar el archivo actual: Espacio + E
+3. Cambiar al último archivo editado: Espacio + Puntos 1 2 4 6
+Para insertar texto, escriba o pegue el texto en la posición del cursor. El Editor agrega el texto escrito o pegado. Puede insertar cualquier texto en un archivo abierto utilizando las teclas braille (punto 1 a punto 8).
+Para salir del Editor, pulse Seleccionar, E o Seleccionar, Seleccionar. El cursor desaparece, devolviéndole al Lector en el archivo que estaba editando.
+Si sale de un archivo nuevo, el Editor automáticamente nombrará el archivo con los primeros 20 caracteres del archivo. Si ya existe un archivo con ese nombre, el Editor le agrega un número hasta que produzca un nombre único. Para cambiar el nombre de un archivo o agregar una extensión al nombre del archivo, resalte el nombre del archivo en el Gestor de Ficheros y utilice el comando Renombrar. Hay caracteres braille que no se pueden utilizar en el nombre de fichero, como una barra diagonal (/) o un asterisco (*), los caracteres se sustituyen por un guion bajo (_). Una vez que salga del Editor, el nuevo nombre de archivo en el Gestor de Ficheros estará seleccionado. Si desea cambiar el nombre del archivo, utilice el comando Renombrar (Espacio + R). Si desea dar al archivo un nombre específico, escriba ese nombre como la primera línea del archivo.
+16.1 Comandos del Editor
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 36
+Para...
+Pulsar
+Información adicional
+Editar un Fichero Nuevo
+Espacio + N
+Crea un fichero nuevo en el Editor, listo para introducir texto.
+Editar Fichero Actual
+Espacio + E
+Abre el fichero seleccionado para su edición.
+Cambiar al Último Fichero Editado
+Espacio + Puntos 1 2 4 6
+Abre el último fichero editado para ediciones adicionales.
+Añade una nueva línea (Enter)
+Punto 8
+Pulsando Punto 8 añade una nueva línea (introduce un retorno de carro) al final de un párrafo y posiciona el cursor de edición en la primera celda del párrafo siguiente.
+Borrar un carácter
+Punto 7
+Pulsando Punto 7 borra el carácter a la izquierda del cursor de edición.
+Salir del Editor
+Seleccionar, Seleccionar, o Seleccionar, E
+Cuando cierra un fichero, el Editor guarda el texto y le devuelve al Lector o al Gestor de Ficheros, dependiendo de su localización inicial. Automáticamente guarda su trabajo.
+Si abrió el fichero desde el Gestor de Ficheros, el Gestor de Ficheros convertirá al nuevo fichero como el fichero actual en la lista.
+Si editó un fichero existente, el Lector desplazará la posición de lectura al lugar donde estuvo el cursor.
+Guardar trabajo actual
+Seleccionar, S
+El Lector Orbit automáticamente guarda los ficheros cada 1 Kb de datos o cada 1.000 caracteres, cuando edita. Sin embargo, pequeños incrementos del fichero se podrían perder en ciertas ocasiones como, la extracción de la tarjeta SD, actualización del sistema o reinicializaciones del dispositivo. Pulsando Seleccionar, S guarda el fichero cuando considere necesario.
+Desplazarse al carácter anterior o siguiente
+Flecha izquierda o Derecha
+Pulsando Flecha izquierda o Derecha desplaza el cursor al carácter anterior o siguiente.
+Desplazarse a la palabra Anterior o Siguiente
+Espacio + Flecha izquierda o Derecha
+Pulsando Espacio + Flecha Izquierda o Derecha desplaza el cursor al principio del anterior o siguiente grupo de letras y dígitos.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 37
+Línea braille Anterior o Siguiente
+Tecla de desplazamiento Arriba o Abajo
+Pulsando la parte Superior o Inferior de las teclas de desplazamiento de balancín le permitirá desplazar la ventana de la línea braille a la porción anterior o siguiente de texto. Si pulsa la parte inferior de la tecla de balancín la línea se desplazará hacia adelante. Si pulsa la parte superior de la tecla de balancín, la línea braille se desplazará hacia atrás. El cursor de edición se sitúa en la primera celda. Consulte la sección Teclas de Desplazamiento para más información.
+Párrafo Anterior o Siguiente
+Flecha Arriba o Abajo
+Pulsando Flecha Arriba o Abajo desplaza el cursor de edición al principio de párrafo anterior o al siguiente. Si el comienzo del párrafo anterior o siguiente no está en la línea, la línea se desplazará para mostrar la primera celda del párrafo anterior o siguiente. El cursor de edición se situará en la primera celda.
+Comienzo o final de Párrafo
+Espacio + Punto 7 + Flecha izquierda o Derecha
+Pulsando Espacio + Punto 7 + Flecha Izquierda o Derecha desplaza el cursor al comienzo o al final del párrafo actual. Si el comienzo o final del párrafo en está en la ventana de la línea, la línea se desplazará para mostrar la primera celda en la línea. El cursor de edición se posiciona en la primera celda.
+Página Anterior o Siguiente
+Espacio + Punto 7 + Flecha Arriba o Abajo
+Pulsando Espacio + Punto 7 + Flecha Arriba o Abajo desplaza el cursor a la página anterior o siguiente. El primer carácter de la página, de la página anterior o siguiente, se muestra en la primera celda de la línea braille.
+Desplazarse al Principio o al Final del documento
+Pulsación larga de la tecla de Flecha Arriba o Abajo.
+Pulsación larga de la Flecha Arriba o Abajo desplaza el cursor al principio o al final del documento.
+Buscar Braille Siguiente
+Punto 8 + Flecha Derecha.
+Pulsando punto 8 más Flecha Derecha repite una búsqueda previa hacia adelante desde ese punto del fichero donde esté situado. Si no hay texto en le buffer de edición de búsqueda, el Editor utiliza el texto de la posición del cursor.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 38
+Buscar Braille Anterior
+Punto 8 + Flecha Izquierda
+Pulsando punto 8 más Flecha Izquierda repite una búsqueda previa hacia atrás desde ese punto del fichero donde esté situado. Si no hay texto en le buffer de edición de búsqueda, el Editor utiliza el texto de la posición del cursor.
+16.2 Comandos de Edición de Bloque de Texto
+Las operaciones de bloque del Editor dependen de una selección. La selección es el texto entre el cursor y la marca de ubicación.
+Nota: El límite de tamaño para una operación de corte / copia / pega es de 5 KB de datos.
+La adición de una marca de ubicación no cambia el contenido. Las marcas se utilizan para copiar / cortar una selección de texto. Para copiar o cortar con marcas, pulse Seleccionar, M para colocar una marca. Sólo se puede colocar / agregar una marca a la vez. Una vez colocada la marca, el texto entre el cursor y la marca se puede copiar (Seleccionar, C) o cortar (Seleccionar, X). Una vez copiado o cortado el texto, se borra la marca.
+Para...
+Pulsar
+Información adicional
+Ajustar o borrar Marca de Localización
+Seleccionar, M
+El Editor indica una marca levantando ambos Puntos 7 y 8 del carácter donde se sitúa la marca. Para ajustar o borrar una marca en el fichero, pulse el comando de Marca. Si había una marca previa en el cursor, el editor muestra en la línea el mensaje “—Marca borrada” y borra la marca. Si no había marca, muestra el mensaje “—Marca establecida” y añade la marca.
+Copiar
+Seleccionar , C
+El comando Copiar posiciona el texto seleccionado en la papelera para su utilización posterior en este u otro fichero.
+Cortar
+Seleccionar, X
+Para borrar el texto seleccionado en un documento y posicionarlo en la papelera, utilice el comando Cortar. Si desea poner ese texto en algún otro sitio, desplácese a la posición deseada y utilice el comando Pegar.
+Pegar
+Seleccionar, V
+Para pegar el contenido de la papelera antes de la posición del cursor, utilice el comando Pegar.
+16.3 Menú de Contexto
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 39
+El Menú de Contexto es un método para buscar comandos de uso en el Editor. Le brinda un acceso rápido a las funciones como cortar, copiar, y marcar.
+Mientras esté en el Editor, Pulse Seleccionar para abrir el Menú de Contexto. Hay dos formas de hacer una selección desde el Menú de Contexto después de abrirlo:
+1. Si no conoce el comando braille directo, pulse las teclas de Flecha Arriba o Abajo para navegar hasta la su selección y pulse Seleccionar.
+2. Si conoce el comando braille directo (la letra braille asociada con la función), pulse esa letra.
+Teclas Braille Directas
+Función
+E
+Salir
+F
+Buscar
+M
+Marcar
+C
+Copiar
+V
+Pegar
+X
+Cortar
+F
+Buscar
+S
+Guardar
+Puede pulsar también dos veces la tecla Seleccionar para abandonar el Editor. La primera pulsación abre el menú de Contexto; la segunda selecciona la primera opción del menú que es Salir.
+17 Modo Remoto
+Además de utilizar el Lector Orbit como una herramienta de lectura portátil y editor de texto, se conecta con dispositivos anfitriones (es decir, computadoras, teléfonos y tabletas) y la “Calculadora Gráfica Hablada “Orion TI-84”: http://tech.aph.org/gc_info.htm) para proporcionar entrada y salida en braille a ese dispositivo. El dispositivo anfitrión debe estar ejecutando un programa de lectura de pantalla que soporte braille.
+Dispositivo Anfitrión
+Lector de Pantalla
+Windows PCs
+JAWS®, Window-Eyes, System Access, NVDA, Dolphin ScreenReader™, Windows Narrator
+Computadoras Mac® computers y dispositivos iOS®
+VoiceOver
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 40
+Dispositivos Android
+BrailleBack, Braille TTY, Amazon VoiceView
+Chromebook
+ChromeVox
+Cuando utilice el Lector Orbit como línea braille para dichos anfitriones, el lector de pantalla en ese dispositivo proporcionará la transcripción y otros ajustes braille. Consulte la documentación de su lector de pantalla.
+Las únicas teclas de acceso rápido que se utilizan con el “Modo Remoto” que no se envían al dispositivo remoto son:
+ Al pulsar Seleccionar + Flecha Arriba se abren los menús del lector de Orbit.
+ Al pulsar Seleccionar + Flecha Izquierda, el Lector Orbit se dispondrá en “Modo Local”.
+ Al pulsar Seleccionar + Flecha Derecha, el Lector Orbit le devuelve al “Modo Remoto”.
+ Al pulsar Seleccionar + Flecha Abajo se abre un Cuadro de Edición donde puede escribir y enviar hasta 255 caracteres de texto al dispositivo remoto. Pulse Punto 8 para enviar o Seleccionar para cancelar.
+Cuando utilice el Lector Orbit no como línea braille para otros anfitriones, el lector de pantalla en el dispositivo anfitrión suministrará la transcripción y otros ajustes braille. Tome como referencia el manual del programa lector de pantalla.
+17.1 Antes de Conectar
+Antes de que conecte su Lector Orbit, es importante ajustar el dispositivo para que su lector de pantalla lo reconozca. Las nuevas versiones de los lectores de pantalla reconocen el Lector Orbit. La tabla a continuación muestra la primera versión de los lectores de pantalla que soportan el Lector Orbit directamente:
+Lector de Pantalla
+Versión
+VoiceOver en iOS
+10.2
+VoiceOver en Mac
+10.11
+NVDA
+2017.1
+ChromeVox
+61.0.3163.120
+System Access
+3.7.85
+JAWS
+17
+Dolphin ScreenReader
+16.05
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 41
+Si dispone de una versión anterior del programa lector de pantalla, o uno que todavía no soporte el Lector Orbit, puede ajustar el Lector Orbit para emular el dispositivo Refreshabraille 18.
+Nota: En la emulación Refreshabraille 18, sólo se utilizarán las primeras 18 celdas braille.
+Para ajustar el dispositivo para emular Refreshabraille 18, seleccione el parámetro Emulación en el menú del Lector Orbit y seleccione RB18. Si planea conectar múltiples dispositivos y alguno de sus Lectores de pantalla no soporta todavía el Lector Orbit, debe de ajustar la misma emulación para cada uno. Advierta que, si ya tiene ajustado el dispositivo en emulación y desea cambiar el ajuste, debe de desconectar primero el dispositivo del anfitrión. No debe alterar el ajuste de emulación mientras esté conectado activamente a un lector de pantalla. Temporalmente desconecte el soporte braille de su lector de pantalla antes de modificar el ajuste.
+Si ya tiene emparejado el Lector Orbit con Emulación Desactivada, desemparéjelo de cualquier conexión Bluetooth antes de utilizarlo de nuevo.
+17.2 Utilizando la Conexión Bluetooth
+Bluetooth es una tecnología que conecta dispositivos inalámbricos, como el Lector Orbit 20, a dispositivos anfitriones, como teléfonos, tabletas y computadoras. Por ejemplo, al utilizar un iPhone con VoiceOver, puede controlar el iPhone con las teclas y botones del Lector Orbit, y puede leer toda la interfaz en braille mientras interactúa con él.
+Si el Lector Orbit está encendido al despertar o encender el dispositivo anfitrión, se conecta automáticamente. Cuando el dispositivo anfitrión entra en el modo de reposo o se apaga, el Lector Orbit vuelve a mostrar contenido independiente o, si se conecta a un dispositivo a través del puerto USB, se volverá a conectar al lector de pantalla del otro dispositivo anfitrión.
+Actualmente no es posible despertar al anfitrión desde el teclado braille del Lector Orbit, como puede hacerlo con un teclado Bluetooth.
+Hay solamente dos maneras de despertar a un anfitrión:
+ Pulsando el botón de encendido.
+ Recibiendo una notificación.
+Antes de poder aprovechar las ventajas de Bluetooth, debe realizar el procedimiento único de emparejamiento del Lector Orbit con el dispositivo anfitrión. Con los dispositivos más nuevos, el Lector Orbit facilita el emparejamiento mediante el uso de un perfil Bluetooth llamado “Automático” (Just Works). Si utiliza un dispositivo anfitrión anterior que no admita este perfil, debe modificar esta configuración en el menú del Lector Orbit.
+Si establece Emulación en RB18, aparecerá en la lista de emparejamiento de dispositivos remotos como Refreshabraille #### (donde el signo # representa los últimos cuatro dígitos del número de serie de su Lector Orbit).
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 42
+Para vincular el Lector Orbit a un dispositivo anfitrión, consulte la sección Bluetooth para el tipo de dispositivo:
+Conectando iOS con Bluetooth
+Conectando Mac con Bluetooth
+Conectando Android con Bluetooth
+Conectando Windows con Bluetooth
+17.3 Gestionando las Conexiones
+Cuando utiliza Bluetooth, es posible interrumpir las actividades del Lector Orbit con un dispositivo anfitrión conectado. Cada vez que usted despierta el dispositivo anfitrión, el Lector Orbit también lo hará. Este comportamiento hace que sea muy conveniente interactuar con su anfitrión en braille, pero si utiliza el Lector Orbit en “Modo Local” o lo conecta a un lector de pantalla con USB, es posible que no desee la interrupción, cuando el teléfono recibe una llamada. Para devolver al Lector Orbit a lo que estaba haciendo antes de la interrupción, vuelva a poner a dormir al anfitrión pulsando el botón de encendido.
+Para evitar que se produzcan interrupciones, desactive Bluetooth en el menú del Lector Orbit o desactive temporalmente las notificaciones en el dispositivo anfitrión. Cuando esté listo para reanudar el uso de Bluetooth, vuelva a encenderlo desde el menú del Lector Orbit o utilice la tecla de acceso rápido Espacio + puntos 4 7 desde el “Modo Local” en el Lector Orbit.
+(Siempre puede volver al “Modo Local” pulsando Seleccionar + Flecha Izquierda en el Lector Orbit).
+17.4 Conectando a Múltiples Anfitriones
+Es posible asociar el Lector Orbit con más de un dispositivo. Por ejemplo, es posible que desee emparejarlo tanto con su teléfono como con su tableta, de modo que el dispositivo que utilice disponga de una interfaz en braille.
+Para utilizar más fácilmente Bluetooth con varios dispositivos, el lector de pantalla de cada uno de los dispositivos debe configurarse en la misma emulación. En otras palabras, si usted tiene un iPad con una versión anterior a 10.2, no reconoce el Lector Orbit. Por lo tanto, debe configurar todos los modos de emulación para que sean compatibles con la versión anterior. Si todos los anfitriones que está utilizando admiten el Lector Orbit directamente, desactive el modo de emulación. Si alguno de ellos no admite el Lector Orbit, configure el modo Emulación para todos ellos en RB18.
+Si bien es posible emparejarse con un dispositivo con Emulación desactivada y posteriormente emparejarse con un segundo dispositivo con Emulación activada, si establece la emulación de forma diferente entre los dispositivos, los comandos no funcionarán correctamente. Por lo tanto, es importante prestar especial atención cuando el Lector Orbit 20 está configurado para ser utilizado con varios dispositivos. El primer dispositivo parece funcionar, pero no funciona
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 43
+correctamente, ya que todavía utiliza órdenes del Lector Orbit en lugar de los comandos Refreshabraille, que el Lector Orbit espera cuando el modo de emulación se establece en RB18.
+Cuando se conecta a dispositivos anfitriones más antiguos que no soportan el Lector Orbit 20, para garantizar el correcto funcionamiento de los comandos entre el Lector Orbit y dispositivos anfitriones, establezca el Lector Orbit para emular RB18.
+Nota: En la emulación Refreshabraille 18, sólo se utilizan las primeras 18 celdas braille.
+17.5 USB
+Universal Serial Bus (USB) es una tecnología que facilita la conexión de dispositivos y anfitriones. Proporciona algunas ventajas sobre Bluetooth, ya que es más rápido y carga su Lector Orbit simultáneamente.
+El Lector Orbit admite tres tipos de conexiones USB (todas con el mismo cable incluido en la caja):
+1. Dispositivo de interfaz humana (HID) (recomendado).
+2. Serie.
+3. Disco Externo (para convertir la tarjeta SD del Lector Orbit en una unidad de disco de su computadora).
+17.5.1
+17.5.1 Dispositivo de Interfaz Humana (HID)
+Al utilizar el Lector Orbit con un lector de pantalla compatible con HID, siga estos pasos:
+1. Encienda El Lector Orbit. El Lector Orbit muestra el último texto braille que estaba leyendo.
+2. Conecte el cable USB al anfitrión en el Lector Orbit. Aparecerá “—Cargador conectado”.
+3. En Lector Orbit, pulse Espacio + Puntos 2 7. Se visualiza “—“Modo Remoto HID”.
+4. Inicie el lector de pantalla. El Lector Orbit responde mostrando lo que muestra el lector de pantalla. Si su lector de pantalla no es compatible con HID, consulte Serial a continuación.
+Para volver al “Modo Local” pulse Seleccionar + Flecha Izquierda.
+17.5.2
+17.5.2 Serial
+Cuando utilice un lector de pantalla que sólo admite protocolo serie, siga estos pasos:
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 44
+1. Encienda El Lector Orbit. Muestra el último texto leído.
+2. Conecte el cable USB. Aparecerá “—Cargador conectado”.
+3. En el Lector Orbit, pulse Espacio + Puntos 3 7. Aparecerá “—Modo serie remoto”.
+4. Instale los controladores necesarios. Vea la página Recursos del Lector Orbit o las páginas web de soporte del fabricante del lector de pantalla.
+5. Configure el lector de pantalla. Consulte la sección del lector de pantalla adecuado en esta documentación o consulte la documentación del lector de pantalla.
+17.5.3
+17.5.3 Disco Externo
+Para utilizar una tarjeta SD insertada en El Lector Orbit como una unidad de su computador, siga estos pasos:
+1. Encienda El Lector Orbit. Responde con el texto braille de su última actividad.
+2. Conecte el cable USB entre El Lector Orbit y su computador. Aparecerá “—Cargador conectado”.
+3. En el Lector Orbit, pulse Espacio + Puntos 5 7. Aparecerá “—Modo Disco Externo”. Según la configuración, el equipo también responde con una notificación de que una nueva unidad ya está disponible.
+4. Utilice su PC para leer y escribir archivos en la nueva unidad.
+Para volver al “Modo Local”, pulse Seleccionar + Flecha Izquierda. No vuelva al “Modo Local” mientras se estén realizando transferencias de archivos.
+Nota: Si tiene ficheros ocultos en su dispositivo, debería encontrar los siguientes ficheros:
+ . BKP-FILEHISTORY – Este fichero contiene información de la última posición de los últimos 100 ficheros que se abrieron en el dispositivo.
+ . BKP-RECENTHISTORY – Este fichero contiene información para que el programa genere la lista de ficheros recientes.
+ . Log file - Log file que contiene información para depurar el programa.
+No borre estos ficheros. Sólo los verá si tiene activado el atributo de ficheros ocultos.
+17.6 Buffer de Entrada de Texto para Dispositivos Remotos
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 45
+Si usted es un mecanógrafo rápido con el teclado braille, es posible que encuentre momentos en los que el dispositivo remoto se retrase, reduciendo su capacidad para introducir texto rápidamente. El Lector Orbit tiene un modo “Buffer” que le permite introducir texto de hasta 255 caracteres y enviarlos más rápidamente a un dispositivo remoto, evitando problemas con la velocidad de entrada de braille transcrito.
+Nota: La entrada de Buffer para textos solo funciona con Bluetooth.
+Para abrir un campo de entrada en Modo “Buffer”, pulse Seleccionar más Flecha Abajo. Una vez abierto, un cursor indica que puede empezar a introducir texto. Pulse Punto 8 para enviar todo el bloque de texto a un Cuadro de Edición abierto en el dispositivo remoto. Tenga en cuenta que no ocurre nada cuando envía texto sin un Cuadro de Edición abierto. Pulse Seleccionar para cancelar la acción y salir del Modo “Buffer”, sin enviar ningún texto.
+17.7 Dispositivos iOS
+Puede conectar con iOS utilizando Bluetooth solamente.
+17.7.1
+17.7.1 Conectando iOS con Bluetooth
+La conexión de El Lector Orbit a un dispositivo iOS proporciona retroalimentación en braille y la capacidad de escribir y controlar el dispositivo con el teclado y los botones direccionales del Lector Orbit.
+Si está utilizando una versión de iOS anterior a la 10.2, debe configurar El Lector Orbit para emular RB18 en el menú.
+En la configuración por defecto (Automática), el Lector Orbit está listo para emparejarse con iOS mediante Bluetooth. Siga estos pasos para sincronizar con Bluetooth:
+1. Active Bluetooth. Bluetooth se puede activar en el menú o pulsando Espacio + Puntos 4 7 en el Lector Orbit.
+2. En el dispositivo iOS, vaya a Ajustes> General> Accesibilidad> VoiceOver> Braille.
+3. Busque el nombre de la unidad en la lista de posibles pantallas braille. Se muestra como Lector Orbit o Refreshabraille18 más los últimos cuatro dígitos del número de serie.
+4. Active el dispositivo Lector Orbit 20 en la lista de emparejamiento.
+La configuración por confirmación de código muestra un número aleatorio en la pantalla Braille del Lector Orbit y en el dispositivo anfitrión. Para confirmar la solicitud, asegúrese de que coincidan los números y pulse el Punto 8 en el Lector Orbit. A continuación, pulse el botón Emparejar en su dispositivo iOS.
+Una vez que empareje la unidad, iOS debería comenzar a enviar información braille al Lector Orbit y puede utilizar las teclas de entrada y navegación del Lector Orbit para controlar su dispositivo iOS.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 46
+Nota: VoiceOver debe estar activado para poder enviar información al Lector Orbit.
+Para obtener más información acerca de las pantallas iOS y braille, consulte Líneas Braille para iOS en el sitio web de accesibilidad de Apple®.
+17.7.2
+17.7.2 Recursos iOS
+ http://cidat.once.es/home.cfm?id=1101&nivel=2
+ Apple Blind and Visually Impaired User Community
+ Andrea’s Head Wiki
+ TechVision Tutorials
+ Youtube Videos on iPad/iPhone and Braille
+ Braille Displays for iOS
+ Common braille commands for VoiceOver navigation using iPhone, iPad, and iPod® touch
+17.7.3
+17.7.3 Comandos iOS
+Comandos de Navegación iOS
+Función
+Teclas
+Desplazarse al elemento anterior
+Espacio + Punto 1 o Flecha Izquierda
+Desplazarse al elemento siguiente
+Espacio + Punto 4 o Flecha Derecha
+Desplazar línea braille a la izquierda
+Espacio + Punto 2
+Desplazar línea braille a la derecha
+Espacio + Punto 5
+Desplazarse al primer elemento
+Espacio + Puntos 1 2 3
+Desplazarse al último elemento
+Espacio + Puntos 4 5 6
+Desplazamiento de una página a la derecha
+Espacio + Puntos 1 3 5
+Desplazamiento de una página a la izquierda
+Espacio + Puntos 2 4 6
+Desplazamiento a la barra de estado
+Espacio + S (Puntos 2 3 4)
+Seleccionar ajuste de rotor anterior
+Espacio + Puntos 2 3
+Seleccionar ajuste de rotor siguiente
+Espacio + Puntos 5 6
+Desplazarse al elemento anterior utilizando el ajuste de rotor
+Espacio + Punto 3
+Desplazarse al elemento siguiente utilizando el ajuste de rotor
+Espacio + Punto 6
+Lanzar el conmutador de tareas
+Espacio + Puntos 1 2 5 dos veces rápidamente
+Desplazar una página hacia arriba
+Espacio + Puntos 3 4 5 6
+Desplazar una página abajo
+Espacio + Puntos 1 4 5 6
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 47
+Ir al Centro de Notificación
+Espacio + Puntos 4 6
+Ir al Centro de Control
+Espacio + Puntos 2 5
+Comandos de Lectura iOS
+Función
+Teclas
+Leer todo, comenzando en elemento seleccionado
+Espacio + R
+Leer todo, comenzado desde el principio
+Espacio + Puntos 2 4 5 6
+Pausa o continúe hablando
+Espacio + P
+Anunciar número de página o número de filas mostradas
+Espacio + Puntos 3 4
+Comandos Generales iOS
+Función
+Teclas
+Activar el botón Retroceder si está presente
+Espacio + B (Puntos 1 2)
+Activar la tecla de Borrado
+Espacio + D o Espacio + Punto 7
+Activar la tecla de Retorno
+Espacio + E o R Espacio + Punto 8
+Cambiar entre braille estenográfico y literal
+Espacio + Puntos 1 2 4 5
+Activar el botón Inicio (dos veces rápido para lanzar el conmutador de tareas)
+Espacio + H (Puntos 1 2 5)
+Activar /desactivar habla
+Espacio + M
+Activar la tecla Tab
+Espacio + T (Puntos 2 3 4 5)
+Menú de contexto
+Espacio + Puntos 3 5 6
+Cambiar la entrada en braille
+Espacio + Puntos 2 3 6
+Subir volumen
+Espacio + Puntos 3 4 5
+Bajar volumen
+Espacio + Puntos 1 2 6
+Activar/Desactivar cortina
+Espacio + Puntos 1 2 3 4 5 6
+Seleccionar todo
+Espacio + Puntos 2 3 5 6
+Cortar
+Espacio + X
+Copiar
+Espacio + C
+Pegar
+Espacio + V
+Deshacer lo pulsado
+Espacio + Puntos 1 3 5 6
+Rehacer lo pulsado
+Espacio + Puntos 2 3 4 6
+Activar la tecla Expulsar
+Espacio + Puntos 1 4 6
+Cambiar historial de anuncios
+Espacio + Puntos 1 3 4 5
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 48
+Comandos iPad iOS
+Función
+Teclas
+Desplazarse al contenedor anterior
+Espacio + Puntos 1 7
+Desplazarse al contenedor siguiente
+Espacio + Puntos 4 7
+17.8 Computadores Mac
+Para conectar El Lector Orbit a un Mac, hay dos métodos posibles. Uno es conectar con el cable USB que vino en la caja. La segunda es usar Bluetooth para una conexión inalámbrica.
+17.8.1
+17.8.1 Conectando un Mac con USB
+La forma más sencilla de conectar el Lector Orbit a un Mac es conectarlo utilizando un cable USB estándar-A a Micro-B. Primero, cambie el Lector Orbit al protocolo Serial, seleccionando Serial en la opción USB en el menú. A continuación, ejecute VoiceOver pulsando la tecla CMD de Apple + F5. Luego, conecte el extremo pequeño del cable USB al Lector Orbit 20 con los puntitos hacia abajo y el extremo grande al Mac. VoiceOver lo reconoce automáticamente y comienza a usar la pantalla.
+17.8.2
+17.8.2 Conectando un Mac con Bluetooth
+La configuración predeterminada para emparejarse con Mac a través de Bluetooth es Automática. Si se ha desactivado Bluetooth, se puede activar en el Menú o pulsando Espacio + Puntos 4 7 en el Lector Orbit.
+Si el Lector Orbit está en la conexión predeterminada, siga estos pasos para emparejar el dispositivo con un Mac:
+1. Active Bluetooth. Bluetooth se puede activar en el Menú o pulsando Espacio + Puntos 4 7 en el Lector Orbit.
+2. Cuando VoiceOver esté activado, abra la utilidad VoiceOver pulsando VO-F8.
+3. Haga clic en la categoría Braille, haga clic en Líneas y luego en el botón Más (+).
+4. Seleccione El Lector Orbit en la lista. VoiceOver filtra los dispositivos que detecta para listar sólo las líneas braille Bluetooth que están dentro del alcance de su computador y que parecen coincidir con un controlador de línea Braille VoiceOver.
+5. Active el dispositivo Lector Orbit 20 en la lista para emparejar.
+Ayuda de Teclado
+Espacio + Puntos 1 3
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 49
+La configuración con clave de paso requiere que escriba un número en el anfitrión para confirmar la solicitud de emparejamiento. Siga los pasos del 1 al 3, Mac le muestra un cuadro de diálogo con un código de seguridad. Para confirmar la petición compare los números del cuadro de diálogo Bluetooth en el Mac con el código mostrado en la línea. Para confirmar la solicitud, compare los números en el cuadro de diálogo Bluetooth del Mac con el código que aparece en la línea braille. Si son iguales, seleccione “Sí” en el cuadro de diálogo de Mac. Si los números no coinciden, seleccione “No” y pruebe el próximo Lector Orbit de la lista. El propósito de este procedimiento es permitir que más de un dispositivo de lector Orbit se empareje en la misma habitación, al mismo tiempo, sin emparejarse con el dispositivo incorrecto.
+Si el Lector Orbit no funciona con VoiceOver, es posible que no esté utilizando la última versión de Mac OS. Si este es el caso, tiene dos opciones:
+1. Poner el Lector Orbit 20 en modo de emulación Refreshabraille 18 (RB18). A continuación, conéctelo como un RB18.
+2. Busque actualizaciones. Le sugerimos que actualice a la última versión el sistema operativo.
+Si el Lector Orbit no aparece en la lista, asegúrese de haber activado Bluetooth en el Menú.
+17.8.3
+17.8.3 Controlando el Lector Orbit 20 desde el Mac
+Para controlar cómo VoiceOver trata la pantalla, siga estos pasos:
+1. Abra VoiceOver Utility pulsando Command + F8 mientras VoiceOver está en ejecución.
+2. Desplácese hacia abajo hasta la opción Braille.
+3. Seleccione la ficha de la línea Braille.
+Para activar el braille contraído (estenográfico), marque la casilla Braille no contraído (literal).
+Para conocer la documentación de Mac sobre cómo conectar y usar líneas braille, consulte Guía de información sobre VoiceOver.
+17.9 Dispositivos Android
+Puede conectar dispositivos Android solo utilizando Bluetooth.
+17.9.1
+17.9.1 Conectando Android con Bluetooth
+En la configuración predeterminada, el Lector Orbit está preparado para emparejarse a través de Bluetooth. Si Bluetooth se ha apagado, puede activarse en el Menú o pulsando Espacio + Puntos 4 7:
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 50
+1. Active Bluetooth. Bluetooth se puede activar en el Menú o pulsando Espacio + Puntos 4 7 en el Lector Orbit.
+2. Encienda el dispositivo Android. Android y BrailleBack hacen un sonido de conexión para indicar una comunicación exitosa.
+3. Compruebe si hay soporte.
+4. Cambie al Modo de Emulación si es necesario. Actualmente, para usar el Lector Orbit 20, debe cambiar el modo Emulación a Refreshabraille 18 (RB18) en el Menú. Una vez que el Lector Orbit 20 esté soportado por BrailleBack, ya no será necesario usar el modo Emulación.
+5. Configurar el dispositivo Android. Para configurar tu dispositivo Android, siga las instrucciones para Instalar y Habilitar BrailleBack que se encuentran en la página web de Google ™ Android Accessibility Help.
+17.9.2
+17.9.2 Introduciendo y Mostrando Texto con BrailleBack
+Para introducir texto con el teclado braille, habilite primero el teclado en la configuración de Android en Idioma e introducción. Si intenta utilizar el teclado antes de completar este paso, recibirá un mensaje para cambiar su configuración.
+Para editar un campo de texto, enfoque y active el campo de texto. A continuación, utilice las teclas de Flecha Arriba y Abajo para desplazarse por el campo de texto. Al editar texto, BrailleBack cambia a braille de ocho puntos conocido como Braille Computarizado. Actualmente, BrailleBack no admite ningún otro tipo de braille como entrada.
+De forma predeterminada, Android está configurado para mostrar Braille computarizado inglés.
+Para configurar BrailleBack para que muestre braille inglés unificado (UEB) - grado 2, siga los pasos a continuación:
+1. Pulse H para abrir la pantalla de inicio.
+2. Pulse la tecla de Flecha y seleccione Aplicaciones> Configuración> Accesibilidad> BrailleBack> Configuración.
+3. Desplácese a través de esta pantalla de elementos a “Tipo Braille” y selecciónelo.
+ Android genera una pantalla de diálogo que indica el tipo de braille que se muestra y ofrece dos opciones: Braille literario o Braille Computarizado.
+ El braille computarizado está marcado de forma predeterminada.
+4. Flecha a “Braille literario” y seleccione para verificar este elemento.
+ Cuando verifica “Braille literario”, regresa a la pantalla de ajustes BrailleBack.
+5. Flecha a “Tabla de braille literario” y seleccione.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 51
+ Otro cuadro de diálogo se abre con una selección de tablas de transcripción de salida.
+6. Seleccione inglés (UEB) - grado 2.
+ Volverá a la pantalla Configuración de BrailleBack.
+17.9.3
+17.9.3 Comandos BrailleBack
+Función
+Teclas
+Volver
+Espacio + B
+Inicio
+Espacio + H
+Ayuda BrailleBack
+Espacio + Puntos 1 2 3
+Notificaciones
+Espacio + N
+Aplicaciones Recientes
+Espacio + R
+Enter (en el campo de Edición)
+Espacio + Punto 8
+Retroceso (en el campo de Edición)
+Espacio + Punto 7
+17.10 Chromebooks
+Actualmente, solo puede utilizar USB para conectar una línea braille desde un notebook chromebook™ computer.
+17.10.1
+17.10.1 Conectando Chromebook con USB
+Para conectar a Chromebook con USB, siga estos pasos:
+1. Pulse puntos 2 7 + barra espaciadora para poner el Lector Orbit 20 en “Modo Remoto” HID. Alternativamente, pulse Flecha Arriba + Seleccionar en el menú, y pulse flecha hasta USB.
+2. Disponga al Lector Orbit en el puerto USB del Chromebook. Después de unos pocos segundos, el Chromebook detecta el dispositivo y pone en marcha el ChromeVox.
+17.10.2
+17.10.2 Ajustes/Comandos de ChromeVox
+Para ajustar ChromeVox o aprender sus comandos, consulte ’Utilice un dispositivo braille con su Chrombook’
+Consulte la página Web de ayuda sobre Chromebook (“:https://support.google.com/chromebook/answer/7020014?hl=en’
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 52
+17.11 Tabletas Fire
+Para emparejar el Lector Orbit con VoiceView en la tableta Fire siga estos pasos:
+1. Deslice el dedo hacia abajo desde la parte superior de la pantalla con dos dedos y toque dos veces en Configuración.
+2. Busque la configuración de accesibilidad y toque dos veces. Luego haga doble clic en el lector de pantalla VoiceView.
+3. Navega a Braille y toca dos veces. Luego, toque dos veces emparejar línea braille Bluetooth.
+4. Asegúrese de que su Lector Orbit 20 y Bluetooth estén activados, y luego toque dos veces en Escanear.
+5. Debería ver el Lector Orbit 20 seguido por su número de serie. Toque dos veces sobre él para enlazar.
+Para información adicional, consulte “Utilizar una línea braille con su tableta Fire” en la página Web de ayuda y de Servicio al Cliente de Amazon (https://www.amazon.com/gp/help/customer/display.html?nodeId=201829370)
+17.12 Windows PC’S
+Antes de conectar el Lector Orbit con un PC, debe decidir cómo desea conectar: a través de Bluetooth o USB. Es una preferencia personal. USB carga el dispositivo mientras lo utiliza, es una buena opción cuando su batería está baja. Bluetooth no utiliza cables, por lo que es una buena opción cuando está en movimiento.
+17.12.1
+17.12.1 Conectando Windows con USB
+Si su lector de pantalla no es compatible con HID, cambie al protocolo Serial en el Lector Orbit con la tecla de acceso rápido o seleccione Serial desde la opción USB en el menú.
+Para las versiones de Windows 7 y versiones posteriores, la interfaz serie requiere la instalación de dos controladores: uno para el USB y otro para que el puerto USB aparezca como un puerto COM. La única excepción es Windows XP. Debido a que es sólo serie, y se puede conectar. El segundo controlador es necesario porque muchos programas de lectura de pantalla manejan la línea braille como un dispositivo en serie. El controlador de asignación de puertos COM muestra el número de puerto asignado utilizado para comunicarse con la Línea Braille. Tome nota del número de puerto COM ahora para uso posterior. Si necesita buscarlo más tarde, vaya al Administrador de dispositivos mientras la línea braille esté
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 53
+conectada y consulte la sección de puertos: COM y LPT. Uno de los puertos COM está asignado al Lector Orbit 20. Necesitará utilizar ese número cuando configure su lector de pantalla.
+Una vez que la línea braille esté conectada al dispositivo que desea utilizar, configure el software para utilizar el Lector Orbit.
+17.12.2
+17.12.2 Conectando Windows con Bluetooth
+Cuando conecte el Lector Orbit con Bluetooth, primero debe seleccionar una configuración de emparejamiento.
+La configuración predeterminada es Automática (Just Works). Si el Lector Orbit está en la conexión predeterminada, siga estos pasos para emparejar el dispositivo:
+1. En el PC, realice una búsqueda Bluetooth.
+2. Seleccione el Lector Orbit en la lista de dispositivos Bluetooth.
+La configuración por confirmación de código muestra un número aleatorio en la línea Braille del Lector Orbit y en el dispositivo anfitrión. Siga los pasos 1 y 2; A continuación, para confirmar la solicitud, compare los números en el cuadro de diálogo Bluetooth del PC Windows con el código que aparece en la línea braille. Si son iguales, seleccione “Sí”. Si los números no coinciden, seleccione “No” y pruebe el próximo Lector Orbit de la lista. El propósito de este procedimiento es permitir que más de un dispositivo de Lector Orbit se empareje en la misma habitación, al mismo tiempo, sin emparejarse con el dispositivo incorrecto.
+El dispositivo se empareja con el Lector Orbit y un puerto serie virtual Bluetooth entrante configurado en el PC.
+A continuación, compruebe la lista Puertos en el Administrador de dispositivos de Windows para buscar el número de puerto COM asignado al puerto serie Bluetooth entrante. Tome nota de este número.
+En su lector de pantalla en el PC, configure el puerto COM de la línea Braille activa para utilizarlo como el número COM del puerto serie Bluetooth correspondiente.
+17.12.3
+17.12.3 Non-Visual Desktop Access (NVDA)
+Si tiene instalado NVDA (versión 2017.1 o posterior) en su PC, reconocerá automáticamente el Lector Orbit. Si NVDA no reconoce la línea braille, vaya al menú Preferencias de NVDA y seleccione Ajustes Braille en la lista. En el menú desplegable de la línea Braille, seleccione “Baum / Humanware / APH / Orbit Displays” y haga clic en OK.
+Nota: NVDA funciona sólo en HID, no en serie.
+Si el Lector Orbit 20 no es una de las líneas braille mostradas en la lista, actualice NVDA a la versión más reciente y repita el proceso.
+NVDA activa la salida braille cuando está configurada para la pantalla. Para desactivar el soporte Braille, seleccione “Sin Braille” en las opciones de línea Braille en el menú de Ajuste Braille.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 54
+17.12.3.1 Comandos NVDA
+Función
+Teclas
+Desplazarse una línea hacia arriba
+Flecha Arriba
+Desplazarse una línea hacia abajo
+Flecha Abajo
+Desplazarse un carácter a la izquierda
+Flecha Izquierda
+Desplazarse un carácter a la derecha
+Flecha Derecha
+Seleccionar
+Enter
+17.12.4
+17.12.4 Job Access with Speech (JAWS)
+Actualmente, el Lector Orbit 20 soporta las versiones 17, 18 y 2018 mediante un driver. La descarga e instrucciones para instalar el driver están disponibles en la página Web de soporte de Orbit Research.
+Para versiones de JAWS anteriores a la versión 17, debe utilizar el modo de emulación RB18 en el Lector Orbit.
+Cuando conecte el Lector Orbit 20 a JAWS mediante USB, se debe de utilizar el protocolo HID pulsando Espacio + puntos 2 7.
+Para conectar el Lector Orbit 20 por USB, siga estos pasos:
+1. Arranque o reinicialice JAWS.
+2. Pulse Insertar + J para desplegar el menú de JAWS.
+3. Pulse Enter sobre Opciones.
+4. Pulse Flecha Abajo hasta Braille y pulse Enter.
+5. Pulse Tab para añadir y pulse Enter.
+6. Pulse Flecha Arriba o Abajo para seleccionar Refreshabraille 18 y Pulse ESPACIO para verificar el cuadro de verificación y seleccionarlo.
+7. Pulse Tab sobre el botón Siguiente y pulse Enter.
+8. Seleccione USB.
+9. Pulse Tab para seleccionar el botón siguiente y pulse Enter.
+10. Seleccione ORBIT READER 20 18 como dispositivo primario.
+11. Pulse Tab para seleccionar el botón de Finalizar y pulse Enter.
+12. Reiniciar JAWS.
+Pasos alternativos para conectar por Bluetooth:
+1. Pulse Espacio + puntos 4 7.
+2. Siga los pasos del 1-7 de la conexión USB.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 55
+3. Seleccione le puerto COM donde se conecte el Lector Orbit (compruebe el gestor de dispositivos para verificar el puerto COM o utilice el puerto seleccionado en los pasos anteriores).
+4. Siga los pasos 9-12 de la conexión USB.
+Para desactivar la conexión con la línea braille, siga estos pasos:
+1. Pulsar Insertar + J para abrir el menú de JAWS.
+2. Pulse Enter sobre Opciones.
+3. Pulsar Flecha Abajo hasta Braille y pulse Enter.
+4. Pulse Flecha Arriba hasta ninguna Línea Braille.
+5. Pulse Tab para Ok y pulse Enter.
+6. Reiniciar JAWS.
+Nota: Para una descripción más extensa de cualquiera de los siguientes comandos, active el teclado de Ayuda pulsando Insertar + 1 y pulse el comando. Rápidamente pulse el comando dos veces para obtener incluso una descripción más detallada. Pulse Insertar + 1 de nuevo para salir del modo de ayuda de JAWS.
+17.12.4.1 Comandos de JAWS
+Comandos de Lectura de Jaws
+Función
+Teclas
+Desplazamiento de la línea braille a la izquierda
+Flecha Izquierda
+Desplazamiento de la línea braille a la derecha
+Flecha Derecha
+Desplazamiento de la línea braille hacia arriba una línea
+Flecha Arriba
+Desplazamiento de la línea braille hacia abajo una línea
+Flecha Abajo
+Desplazamiento de 1 ventana de la línea braille a la izquierda
+Barra de Avance Izquierda
+Desplazamiento de 1 ventana de la línea braille a la derecha
+Barra de Avance a la Derecha
+Parte superior de la ventana activa
+Seleccionar + Puntos 1 2 3
+Parte inferior de la ventana activa
+Seleccionar + Puntos 4 5 6
+Desplazar la línea braille al cursor activo
+R
+Leer la línea actual
+Espacio + Puntos 1 4
+Leer la palabra actual
+Espacio + Puntos 2 5
+Leer el carácter actual
+Espacio + Puntos 3 6
+Comandos de Navegación de Jaws
+Función
+Teclas
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 56
+Ventana de documento anterior
+Espacio + Puntos 1 3
+Ventana de documento siguiente
+Espacio + Puntos 4 6
+Principio de fichero
+Espacio + Puntos 1 2 3
+Final de fichero
+Espacio + Puntos 4 5 6
+Página Arriba
+Espacio + Puntos 1 2 3 4 5
+Página Abajo
+Espacio + Puntos 1 2 4 5 6
+Inicio
+Espacio + Puntos 1 2 3 4
+Final
+Espacio + Puntos 1 4 5 6
+Flecha Arriba
+Espacio + Punto 1
+Flecha Abajo
+Espacio + Punto 4
+Palabra Anterior
+Espacio + Punto 2
+Palabra Siguiente
+Espacio + Punto 5
+Carácter anterior
+Espacio + Punto 3
+Carácter siguiente
+Espacio + Punto 6
+Comandos de Edición de Jaws
+Función
+Teclas
+Retroceso (actúa como tecla de cambio de mayúscula cuando se escribe en braille)
+Espacio + Punto 7
+Enter
+Espacio + Punto 8
+Tabulador
+Espacio + Puntos 4 5
+May. + Tab.
+Espacio + Puntos 1 2
+Borrar carácter actual
+Espacio + D
+Seleccionar todo
+Espacio + Puntos 1 8
+Seleccionar al principio del documento
+Espacio + Puntos 1 2 3 7 8
+Seleccionar al final del documento
+Espacio + Puntos 4 5 6 7 8
+Seleccionar página anterior
+Espacio + Puntos 1 2 3 4 5 7 8
+Seleccionar página siguiente
+Espacio + Puntos 1 2 4 5 6 7 8
+Seleccionar al principio de línea
+Espacio + Puntos 1 2 3 4 7 8
+Seleccionar al final de línea
+Espacio + Puntos 1 4 5 6 7 8
+Seleccionar línea anterior
+Espacio + Puntos 1 7 8
+Seleccionar línea siguiente
+Espacio + Puntos 4 7 8
+Seleccionar palabra anterior
+Espacio + Puntos 2 7 8
+Seleccionar palabra siguiente
+Espacio + Puntos 5 7 8
+Seleccionar carácter anterior
+Espacio + Puntos 3 7 8
+Seleccionar carácter siguiente
+Espacio + Puntos 6 7 8
+Copiar a la papelera
+Espacio + Puntos 1 4 8
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 57
+Cortar a la papelera
+Espacio + Puntos 1 3 4 6 8
+Pegar papelera
+Espacio + Puntos 1 2 3 6 8
+Deshacer
+Espacio + Puntos 1 3 5 6 8
+Comandos de Jaws para Windows
+Función
+Teclas
+Menú de inicio
+Espacio + Puntos 1 3 4 7 8
+Cambiar al menú de barra
+Espacio + M
+Escape
+Espacio + Puntos 1 3 5 6
+Alt Tab
+Espacio + T
+Minimizar todas las aplicaciones
+Espacio + Puntos 1 4 5 7 8
+Comandos Generales de Jaws
+Función
+Teclas
+Conmutar teclado de ayuda
+Espacio + Puntos 1 4 5 6
+Conmutar modo de teclado
+Espacio + Puntos 1 2 3 4 5 6
+JAWS cursor
+Seleccionar + J
+PC cursor
+Seleccionar + P
+Desplazar el cursor de JAWS al cursor del PC
+Seleccionar + Puntos 1 4
+Leer todo hasta el final
+Espacio + Puntos 1 2 3 4 5 6 7 8
+Conmutar transcripción grado 2
+Espacio + G (Puntos 1 2 4 5)
+Conmutar transcripción de palabra actual a grado 2
+Seleccionar + W (Puntos 2 4 5 6)
+Mostrar el último mensaje flash
+Seleccionar + F
+Búsqueda de JAWS
+Espacio + F
+Búsqueda siguiente de JAWS
+Espacio + Puntos 2 5 7 8
+Búsqueda anterior de JAWS
+Espacio + Puntos 2 5 7 8
+Conmutar seguimiento activo del cursor a braille
+Seleccionar + Punto 1
+Conmutar seguimiento braille al cursor activo
+Seleccionar + Punto 4
+Menú circular de modos braille
+Seleccionar + M
+Mostrar braille de 6 puntos
+Seleccionar + Puntos 2 3 5
+Mostrar braille de 8 puntos
+Seleccionar + Puntos 2 3 6
+Conmutar forma de cursor
+Seleccionar + Puntos 1 4 6
+Restringir cursor braille
+Seleccionar + R
+Conmutar caracteres y atributos
+Seleccionar + Puntos 1 6
+Marcar color para Braille
+Seleccionar + Puntos 1 4
+Seleccionar atributos a presentar
+Seleccionar + Puntos 1 3
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 58
+Ajustar 8 caracteres por espacio
+Espacio + Puntos 2 3 6
+Ajustar caracteres ilimitados por espacio
+Espacio + Puntos 1 3 6
+Conmutar 8/caracteres ilimitados por espacio
+Seleccionar + Puntos 1 3 4 6
+Tabla circular de opciones de lectura
+Seleccionar + T
+Tabla circular de opciones de cabeceras
+Seleccionar + H
+Etiquetador de gráficos
+Seleccionar + G
+Ajustar opciones de JAWS
+Seleccionar + Puntos 1 2 3 6
+Ventana de JAWS
+Espacio + J
+Anunciar hora
+T+ Puntos 7 y 8
+Mostrar el nombre de fichero script
+Seleccionar + Puntos 1 2 3 4 5
+Ejecutar el Gestor de JAWS
+Espacio + 2 3 7 8
+Comandos especiales de JAWS
+Función
+Teclas
+Ctrl + A - Ctrl + Z
+Punto 8 + cualquier letra
+F1 - F10
+Punto 7 + número en braille computarizado 1 - 0 (0 = F10)
+Ctrl + F1 - Ctrl + F10
+Punto + número en braille computarizado 1 - 0
+17.12.5
+17.12.5 System Access
+Para conectar el Lector Orbit 20 a System Access, el dispositivo debe estar conectado mediante un cable USB estándar A a Micro-B y configurado en el modo de protocolo HID.
+1. Pulse Seleccionar + Flecha Arriba para abrir el Menú.
+2. Flecha Abajo a la selección USB.
+3. Flecha Derecha para seleccionar HID.
+4. Pulse Seleccionar.
+5. Pulse Punto 7 para volver a la última ubicación.
+Otra forma de cambiar rápidamente al modo HID es usar las teclas de acceso directo Espacio + puntos 2 7
+Después de ejecutar System Access en modo HID, conecte el cable USB y espere hasta 30 segundos. System Access anuncia cuando el Lector Orbit 20 está conectado.
+17.12.6
+17.12.6 Lector de Pantalla Dolphin
+Para conectar el Lector Orbit 20 al lector de pantalla Dolphin, el dispositivo debe conectarse por un cable Estandard-A a Micro-B USB y seleccionar el protocolo en modo HID.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 59
+1. Pulse Seleccionar + Flecha Arriba 2. Pulse Flecha Abajo para seleccionar USB 3. Pulsar Flecha Derecha para seleccionar HID 4. Pulse Seleccionar 5. Pulse punto 7 para regresar a la última posición
+El Lector Orbit detectará automáticamente al Lector Orbit 20 y comenzará a mostrar información en braille.
+Otra forma rápida de cambiar al modo HID es utilizar las teclas de acceso rápido Espacio + puntos 2 7.
+17.12.7
+17.12.7 Window-Eyes
+Window-Eyes ya no se está actualizando. Por esta razón, no hay drivers de Lector Orbit 20 para Window-Eyes. Para utilizar Window-Eyes con el Lector Orbit, debes emular Refreshabraille 18.
+Para conectarse a Window-Eyes mediante USB, el protocolo USB del Lector Orbit debe estar en serie. Para hacer esto, siga estos pasos:
+1. Pulse Seleccionar + Flecha Arriba para abrir el Menú.
+2. Flecha Abajo a USB y pulse Seleccionar.
+3. Pulse las teclas de Flecha Derecha o Izquierda para seleccionar.
+4. Pulse Seleccionar.
+5. Para salir, pulse Punto 7.
+Para seleccionar una línea braille, abra la opción Braille Display en el menú Window-Eyes File. No hay controlador para Window-Eyes para versiones anteriores a 7.1. Sin embargo, puede utilizar el Lector Orbit seleccionando cualquier línea Baum con teclas de entrada. El Vario Connect y el Braille Connect son dos dispositivos funcionales. Seleccione la línea braille y establezca el número de puerto COM establecido al conectarse a un PC con Windows.
+18 Comando de Bloqueo de Teclado
+El comando de teclado previene pulsaciones accidentales. El comando se activa pulsando los Puntos 7 8 durante dos segundos o más. Pulsando y soltando estas mismas teclas de nuevo, se desbloquea el teclado. También puede desbloquear el teclado apagando el dispositivo y volviendo a encender.
+19 Alertas del Sistema
+Las alertas del sistema, como “—Batería baja” se indican mediante un ciclo periódico de los ocho puntos en la última celda del dispositivo. Cualquier información en esa celda se muestra de nuevo después de la notificación.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 60
+Las alertas se ven invocando el Menú o el Menú Contextual del Editor. Si pulsa Seleccionar, aparecerá la siguiente alerta, si hay más. La alerta se elimina de la lista de alertas una vez que se ha mostrado.
+Si no hay más alertas en la lista, aparecerá el primer Menú o Menú de Contexto del Editor. Al pulsar Punto 7 se borran todas las alertas pendientes y se vuelve a colocar en el primer elemento del Menú o elemento de Contexto del Menú.
+Si la longitud del mensaje de alerta es superior a 20 caracteres, puede navegar por el mensaje utilizando las teclas de desplazamiento. Si ya se encuentra en el Menú o en el Menú contextual cuando ocurre una alerta, puede revisar la alerta pulsando la tecla Espacio.
+20 Reiniciar el Dispositivo
+Si el Lector Orbit de repente no responde a las pulsaciones de los botones y sabe que la batería no está completamente descargada, puede intentar reiniciar el dispositivo pulsando la tecla de Desplazamiento Inferior + Punto 8. No hay ninguna indicación del evento de reinicio. La unidad se apagará después de reiniciarse y debe encenderse antes de ser utilizada.
+21 Procedimiento de Actualización del Dispositivo
+Se deben realizar dos acciones para actualizar el dispositivo:
+1) descargar el software y,
+2) actualizar el Lector Orbit 20.
+Cada acción de actualización se explica en las dos secciones siguientes de este documento. Lea cuidadosamente cada sección antes de proceder.
+Se requiere lo siguiente para realizar la actualización del Lector Orbit 20:
+ Un dispositivo Lector Orbit
+ Un cable USB standard-A a Micro-B
+ Un PC ejecutando Windows XP o posterior
+ La utilidad Orbit Reader 20 Upgrade que se encuentra en la carpeta Orbit Reader 20 (Consulte la sección Descargar el Software).
+ El fichero Orbit Reader 20 Release Bin que se encuentra en la carpeta Orbit Reader 20 (consulte la sección Descargar el software).
+Para informarse acerca de errores, resoluciones y complementos al software, consulte las notas de las versiones de actualización del firmware de Orbit Research. Descárguelo en la página Web http://www.orbitresearch.com/support/orbit-reader-20-support/orbit-reader-firmware-download//
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 61
+21.1 Descargar el Software
+Para instalar esta versión necesita un PC ejecutando Microsoft® Windows XP o posterior. Para descargar un Firmware, paquete de actualización para el Lector Orbit realice lo siguiente:
+1. Vaya a la página Web de soporte de “Orbit Research” (http://www.orbitresearch.com/support/orbit-reader-20-support/).
+2. Para obtener la versión más actual, seleccione: “Download Most Recent Firmware”:http://www.orbitresearch.com/support/orbit-reader-20-support/orbit-reader-firmware-download/.
+3. Alternativamente, para descargar una versión Antigua, seleccione: “Download previous firmware release versions”: http://www.orbitresearch.com/old-software-releases-archive/, y selecciones el paquete de actualización de su gusto.
+4. Seleccione el paquete de actualización OR20 Firmware Upgrade Package vB0.00.00. XXrYY.
+5. Guarde el fichero .zip en su PC.
+Cuando la descarga se complete, siga estos pasos:
+1. Abra la carpeta en su computador donde descargó el firmware.
+2. Haga clic derecho sobre el fichero y escoja “Extraer todo” O seleccione el fichero situando el apuntador sobre ella. Pulse la Tecla de Aplicación y escoja “Extraer todo” en el Menú de Contexto.
+3. Siga los pasos para extraer los ficheros en la carpeta de su elección.
+Cuando termine, su carpeta escogida debería contener una carpeta con el nombre de la versión, por ejemplo, OR20_XX. XX. XX. Tome nota de la localización de esta carpeta para utilizarla en la siguiente sección de este documento.
+21.2 Instalación del Software
+Para actualizar el firmware, siga estos pasos:
+1. Asegúrese de que el Lector Orbit esté apagado.
+2. Conectar el Lector Orbit 20 al PC utilizando el cable USB.
+3. En la carpeta de actualización en su PC, ejecute la utilidad de actualización “Orbit Reader 20 Firmware Upgrade”. Si recibe un mensaje de error, consulte la sección Solución de problemas. La utilidad mostrará un mensaje “Nota: Conecte el dispositivo al PC y póngalo en
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 62
+modo de actualización. Para entrar, al modo de Actualización de Firmware, pulse y mantenga pulsada la parte inferior de la Tecla derecho de navegación más el “punto 5”. Pulse y despulse el “punto 8”. Las otras teclas se pueden despulsar después de realizar esta pulsación.
+4. Pulse y mantenga pulsada la parte inferior de la Tecla de navegación derecho más el punto 5, pulse y mantenga pulsado el punto 8. La utilidad muestra el mensaje “Orbit Reader 20 is connected” en el campo de estado del dispositivo. Se muestra el mensaje “Do you want to upgrade the device?” en el campo de mensaje de la parte inferior del cuadro de diálogo.
+5. Soltar primero el punto 8, y entonces soltar la Tecla de navegación derecho y el punto 5. Esto dispone al Lector Orbit en Modo de Actualización. Escuchara un tono en su PC.
+6. La utilidad muestra el número de serie del dispositivo y la versión de software en la esquina superior derecho de la ventana. Si el número de serie está en blanco, repita los pasos 4 y 5.
+7. Active el botón de exploración que se encuentra en el cuadro de diálogo.
+8. Navegue y seleccione el fichero .bin del software en su PC. El firmware está en la carpeta que descomprimió anteriormente.
+9. Una vea que haya seleccionado el fichero, el cuadro de diálogo mostrará la versión de software del fichero seleccionado.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 63
+10. Active el botón de Actualización.
+11. La utilidad comienza el proceso de actualización.
+12. No desconecte el cable. Espere al mensaje “Device upgrade has been completed” en la utilidad de actualización o hasta que el Lector Orbit se reinicie y se apague.
+13. El Lector Orbit 20 está actualizado. Enciéndalo para utilizar el dispositivo.
+Para verificar que la actualización fue exitosa, pulse Seleccionar más Flecha Arriba para abrir el Menú del Lector Orbit 20 y utilice las flechas para desplazarse a “versión” en la lista. El número de versión del firmware debería coincidir con el número del cuadro en la pantalla del PC.
+22 Opciones de Idioma (Localización)
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 64
+En el “Modo Local”, puede cambiar el idioma de funcionamiento para satisfacer sus necesidades de idioma (conocidas como localización). La tabla de traducción predeterminada utilizada es el inglés Braille ASCII. La tabla en inglés está disponible siempre en el dispositivo y puede utilizarse incluso después de realizar la localización. Sólo se puede cargar un idioma a la vez.
+Para realizar la localización del Lector Orbit 20, puede crear y cargar los archivos de localización o simplemente cargar archivos existentes en el dispositivo. Consulte en http://www.orbitresearch.com/support/orbit-reader-20-support/orbit-reader-localization-download/ para obtener instrucciones sobre cómo crear y cargar archivos de localización.
+Después de cargar los archivos de localización, puede cambiar los archivos para las diferentes opciones de idioma.
+22.1 Obtener Ficheros de Localización
+Para obtener los archivos de localización:
+1. Vaya a la página de soporte de Orbit http:/www.orbitresearch.com/support/orbit-reader-20-support/orbit-reader-localization-download/. Y descargar el idioma de su elección.
+2. Vaya al fichero de archivo descargado y extraiga el archivo .zip a una ubicación que usted escoja.
+3. Cree una carpeta en la tarjeta SD denominada Locale
+4. Copie los archivos solicitados en la carpeta Locale de la tarjeta SD.
+22.2 Cargar los Ficheros Existentes de Localización
+Para cargar archivos de localización existentes:
+1. Seleccione Cargar idioma en el menú Preferencia de Localización.
+2. Seleccione una de las tres opciones:
+• Cargar Locales - El Lector Orbit muestra la lista de nombres de códigos de región por idiomas que tienen Ficheros-Tabla (. LAN) y mensajes de Sistema (. loc) disponibles en la carpeta “locale” de la tarjeta SD junto con la opción predeterminada. Pulse Seleccionar el archivo de idioma que elija.
+• Cargar solamente .loc - El Lector Orbit muestra la lista de archivos de mensajes del sistema junto con la opción predeterminada. Pulse Seleccionar para el archivo de idioma que elija. Nota: Debe asegurarse de que se ha cargado la tabla ASCII Braille correcta de la región deseada.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 65
+• Cargar .lan Sólo - El Lector Orbit muestra la lista de Ficheros -Tabla, junto con la opción predeterminada. Pulse Seleccionar el archivo de idioma que elija.
+22.3 Cambiar los Ficheros de Localización
+Para cambiar los archivos de localización:
+1. Pulse Flecha Arriba + Seleccionar para abrir el Menú.
+2. Flecha hacia abajo para cambiar de idioma.
+3. Pulse Flecha derecha para cambiar a Locales.
+4. Pulse Seleccionar.
+5. Pulse Flecha Arriba o Abajo para navegar por las opciones.
+6. Pulse Seleccionar para escoger un idioma.
+Si sólo desea cambiar mensajes, siga los pasos 1 a 3 para cambiar los archivos de localización y pulse Flecha Derecha para ir a Cambiar .loc solamente. A continuación, pulse Seleccionar. Utilice las teclas de Flecha Arriba o Abajo para escoger una tabla de la lista y pulse Seleccionar para ejecutar la acción. El Lector Orbit mostrará el mensaje de “Localización efectuada”.
+Si sólo desea cambiar las tablas de idioma braille, siga los pasos 1-3 para cambiar los archivos de localización y pulse la Flecha Derecha dos veces. A continuación, pulse Seleccionar. Utilice las teclas de Flecha Arriba o Abajo para escoger una tabla de la lista y pulse Seleccionar para ejecutar la acción. El Lector Orbit mostrará el mensaje de “Localización efectuada”.
+NOTA: Los documentos transcritos con la antigua tabla ASCII española no se pueden leer de forma correcta con la actual tabla española cargada por defecto en el Lector ORBIT 20 (.OR20 es-ES-lan). Observaremos sobre todo cambios en las vocales acentuadas, eñe, etc. Para hacerlo es necesario cargar la tabla (.OR es-ESBRA6.lan). Para realizar el cambio siga el procedimiento anteriormente descrito.
+23 Solución de Problemas
+Si el Lector Orbit 20 no se pone en marcha o parece colgado intente las siguientes soluciones en el siguiente orden:
+Opción 1: Enchufe el dispositivo:
+ Enchufe la unidad a la toma de corriente AC con el cargador y el cable suministrad, para asegurar que la batería esté cargada. Esta es la fuente de energía más fiable.
+ Deje que la unidad se cargue durante al menos una hora o más.
+ Mantenga pulsado el botón de encendido durante al menos dos segundos. Si la unidad está encendida, debe apagarse. Si está apagado, debe encenderse.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 66
+
+Opción 2: Compruebe la tarjeta SD:
+ Retire la tarjeta SD.
+ Mantenga pulsado el botón de encendido durante dos segundos.
+Opción 3: Desconecte el dispositivo:
+ Si la unidad está enchufada, desenchufe el cable de alimentación.
+ Mantenga pulsado el botón de encendido durante al menos dos segundos.
+Opción 4: Restablecer el dispositivo:
+ Pulse el comando Reset (Punto 8 + tecla inferior de desplazamiento derecha). Nota: Al restablecer, la unidad no responde y no hay cambio en la pantalla.
+ Mantenga pulsado el botón de encendido durante al menos dos segundos.
+
+Opción 5: Retire la batería.
+Nota: Utilice esta opción como último recurso.
+ Llame al servicio de atención al cliente para realizar con seguridad la extracción de la batería.
+ Dejar desconectada durante unos minutos.
+ Vuelva a conectarlo y vuelva a intentar las opciones.
+Si ninguna de las opciones funciona y el dispositivo no se enciende, contacte con el Servicio de Atención al Usuario en techsupport@orbitresearch.com.
+24 Uso y Sustitución de la Batería
+El Lector Orbit incluye una batería recargable de iones de litio de 3.000 mAh. Se carga totalmente en unas tres horas en condiciones óptimas. Una carga completa de la batería dura aproximadamente tres días de uso típico. Puede comprobar el estado de la batería en el menú.
+Cuando la batería del Lector Orbit 20 llega al 10%, el punto 8 de la 20ª celda de la línea braille parpadea y se apaga. Este comportamiento es normal, lo que indica que la batería está baja.
+La batería del Lector Orbit debe durar varios años. Poco a poco, la batería comienza a mantener su carga cada vez menos tiempo. Cuando el tiempo de duración de la batería con carga completa sea reducido o se convierta en un inconveniente, es el momento de sustituirla.
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 67
+Para reemplazar la batería, siga estos pasos:
+1. Obtenga una batería de repuesto. Utilice sólo la batería diseñada para el Lector Orbit 20. Las baterías están disponibles en:
+ American Printing House for the Blind, Inc.
+ Orbit Research, Inc.
+2. Retire los tornillos de la puerta de la batería.
+3. Retire la tapa de la batería.
+4. Desenchufe cuidadosamente el conector. No tire del cable. Hágalo por el conector.
+5. Inserte la batería nueva.
+6. Vuelva a colocar la tapa y los tornillos.
+Para desechar las baterías adecuadamente, llame al centro de reciclaje al 1-800-822-8837.
+25 Información sobre Accesorios
+El Lector Orbit 20 tiene dos orificios en las esquinas inferiores frontales del dispositivo, uno en cada esquina. Los orificios están ahí para proporcionar un medio para fijar una correa al dispositivo, con el uso de anillos de llave. Los anillos de llave pueden ser de 10-40 mm de diámetro y hasta 3 mm de espesor.
+26 Especificaciones Generales
+Dimensiones (Largo-Alto-Ancho)
+6.61 x 1.4 x 4.41 inch. (168 x 35.56 x 112 mm.)
+Peso
+0.99 lbs. (450 gramos.)
+Celdas Braille
+20 celdas modificables de 8 puntos; Frecuencia de refresco bajo
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 68
+Teclado Braille
+Teclado braille de 8 teclas tipo Perkins, con barra espaciadora Teclado de alta calidad
+Teclas Adicionales
+Botón de Encendido/Apagado Roseta con cuatro teclas de cursor y tecla de Selección
+2 teclas de desplazamiento de tipo balancín
+Tipos de Soporte de Formato de Fichero
+.txt, .brl, .brf, bra.
+Sistemas Operativos Soportados
+Windows: NVDA, JAWS, Window-Eyes, System Access Mac OS X: Voiceover iOS: Voiceover Android: Brailleback Chromebook: ChromeVox
+Interfaces y Puertos
+1x Micro-puerto B USB, USB 2.0, para interfaz con anfitriones, Actualización de firmware y carga de batería, Bluetooth 2.1, Class 2
+Ranura para Tarjeta Flash Media
+1x SD tarjeta (4Gb. a 32Gb. de capacidad)
+Batería
+Sustituible por el usuario, batería recargable de ion-Litio; 2200 mAh.
+Autonomía de Batería
+3 días de uso típico
+Método de carga
+PC cargador: Carga por puerto USB – 5V., 500 mA. Max. Cargador de Corriente AC: Cargador para puerto USB – 5V., 1000 mA. Max.; cumpliendo la normativa de carga USB BC1.2
+Condiciones ambientales
+Temperatura de Operación: 5° C a 45° C Humedad relativa: 10% - 70% Temperatura de almacenamiento: -15° C a 70° C Humedad relativa: 5% - 90
+27 Apéndices
+27.1 Apéndice A – Tabla de Braille Computarizado Americana
+Código ASCII
+Carácter
+Combinación de puntos
+33
+!
+2-3-4-6
+34
+“
+5
+35
+#
+3-4-5-6
+36
+$
+1-2-4-6
+37
+%
+1-4-6
+38
+&
+1-2-3-4-6
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 69
+39
+‘
+3
+40
+(
+1-2-3-5-6
+41
+)
+2-3-4-5-6
+42
+*
+1-6
+43
++
+3-4-6
+44
+,
+6
+45
+-
+3-6
+46
+.
+4-6
+47
+/
+3-4
+48
+0
+3-5-6
+49
+1
+2
+50
+2
+2-3
+51
+3
+2-5
+52
+4
+2-5-6
+53
+5
+2-6
+54
+6
+2-3-5
+55
+7
+2-3-5-6
+56
+8
+2-3-6
+57
+9
+3-5
+58
+:
+1-5-6
+59
+;
+5-6
+60
+<
+1-2-6
+61
+=
+1-2-3-4-5-6
+62
+>
+3-4-5
+63
+?
+1-4-5-6
+64
+@
+4-7
+65
+A
+1-7
+66
+B
+1-2-7
+67
+C
+1-4-7
+68
+D
+1-4-5-7
+69
+E
+1-5-7
+70
+F
+1-2-4-7
+71
+G
+1-2-4-5-7
+72
+H
+1-2-5-7
+73
+I
+2-4-7
+74
+J
+2-4-5-7
+75
+K
+1-3-7
+76
+L
+1-2-3-7
+77
+M
+1-3-4-7
+78
+N
+1-3-4-5-7
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 70
+79
+O
+1-3-5-7
+80
+P
+1-2-3-4-7
+81
+Q
+1-2-3-4-5-7
+82
+R
+1-2-3-5-7
+83
+S
+2-3-4-7
+84
+T
+2-3-4-5-7
+85
+U
+1-3-6-7
+86
+V
+1-2-3-6-7
+87
+W
+2-4-5-6-7
+88
+X
+1-3-4-6-7
+89
+Y
+1-3-4-5-6-7
+90
+Z
+1-3-5-6-7
+91
+[
+2-4-6-7
+92
+\
+1-2-5-6-7
+93
+]
+1-2-4-5-6-7
+94
+^
+4-5-7
+95
+_
+4-5-6
+96
+‘
+4
+97
+a
+1
+98
+b
+1-2
+99
+c
+1-4
+100
+d
+1-4-5
+101
+e
+1-5
+102
+f
+1-2-4
+103
+g
+1-2-4-5
+104
+h
+1-2-5
+105
+i
+2-4
+106
+j
+2-4-5
+107
+k
+1-3
+108
+l
+1-2-3
+109
+m
+1-3-4
+110
+n
+1-3-4-5
+111
+o
+1-3-5
+112
+p
+1-2-3-4
+113
+q
+1-2-3-4-5
+114
+r
+1-2-3-5
+115
+s
+2-3-4
+116
+t
+2-3-4-5
+117
+u
+1-3-6
+118
+v
+1-2-3-6
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 71
+119
+w
+2-4-5-6
+120
+x
+1-3-4-6
+121
+y
+1-3-4-5-6
+122
+z
+1-3-5-6
+123
+{
+2-4-6
+124
+|
+1-2-5-6
+125
+}
+1-2-4-5-6
+126
+~
+4-5
+127
+4-5-6
+27.2 Apéndice B – Tabla de Braille Computarizado Española
+DECIMAL
+HEXADECIMAL
+CONTENIDO
+PUNTOS BRAILLE
+32
+20
+SIN PUNTOS
+33
+21
+!
+2,3,5,7
+34
+22
+“
+5,6
+35
+23
+#
+3,4,5,6
+36
+24
+$
+1,2,3,4,6,7
+37
+25
+%
+4,5,6
+38
+26
+&
+1,2,3,4,6
+39
+27
+‘
+4
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 72
+40
+28
+(
+1,2,6,8
+41
+29
+)
+3,4,5,7
+42
+2ª
+*
+2,5,6
+43
+2B
++
+2,3,5
+44
+2C
+,
+2
+45
+2D
+-
+3,6
+46
+2E
+.
+3
+47
+2F
+/
+3,4,7,8
+48
+30
+0
+3,4,6,7,8
+49
+31
+1
+1,6
+50
+32
+2
+1,2,6
+51
+33
+3
+1,4,6
+52
+34
+4
+1,4,5,6
+53
+35
+5
+1,5,6
+54
+36
+6
+1,2,4,6
+55
+37
+7
+1,2,4,5,6
+56
+38
+8
+1,2,5,6
+57
+39
+9
+2,4,6
+58
+3ª
+:
+2,5
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 73
+59
+3B
+;
+2,3
+60
+3C
+<
+2,3,6
+61
+3D
+=
+2,3,5,6
+62
+3E
+>
+3,5,6
+63
+3F
+?
+2,6
+64
+40
+@
+5
+65
+41
+A
+1,7
+66
+42
+B
+1,2,7
+67
+43
+C
+1,4,7
+68
+44
+D
+1,4,5,7
+69
+45
+E
+1,5,7
+70
+46
+F
+1,2,4,7
+71
+47
+G
+1,2,4,5,7
+72
+48
+H
+1,2,5,7
+73
+49
+I
+2,4,7
+74
+4ª
+J
+2,4,5,7
+75
+4B
+K
+1,3,7
+76
+4C
+L
+1,2,3,7
+77
+4D
+M
+1,3,4,7
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 74
+78
+4E
+N
+1,3,4,5,7
+79
+4F
+O
+1,3,5,7
+80
+50
+P
+1,2,3,4,7
+81
+51
+Q
+1,2,3,4,5,7
+82
+52
+R
+1,2,3,5,7
+83
+53
+S
+2,3,4,7
+84
+54
+T
+2,3,4,5,7
+85
+55
+U
+1,3,6,7
+86
+56
+V
+1,2,3,6,7
+87
+57
+W
+2,4,5,6,7
+88
+58
+X
+1,3,4,6,7
+89
+59
+Y
+1,3,4,5,6,7
+90
+5ª
+Z
+1,3,5,6,7
+91
+5B
+[
+2,3,6,7
+92
+5C
+\
+1,2,3,4,5,6
+93
+5D
+]
+3,5,6,8
+94
+5E
+^
+4,5
+95
+5F
+_
+6
+96
+60
+‘
+5,8
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 75
+97
+61
+a
+1
+98
+62
+b
+1,2
+99
+63
+c
+1,4
+100
+64
+d
+1,4,5
+101
+65
+e
+1,5
+102
+6
+f
+1,2,4
+103
+67
+g
+1,2,4,5
+104
+68
+h
+1,2,5
+105
+69
+i
+2,4
+106
+6ª
+j
+2,4,5
+107
+6B
+k
+1,3
+108
+6C
+l
+1,2,3
+109
+6D
+m
+1,3,4
+110
+6E
+n
+1,3,4,5
+111
+6F
+o
+1,3,5
+112
+70
+p
+1,2,3,4
+113
+71
+q
+1,2,3,4,5
+114
+72
+r
+1,2,3,5
+115
+73
+s
+2,3,4
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 76
+116
+74
+t
+2,3,4,5
+117
+75
+u
+1,3,6
+118
+76
+v
+1,2,3,6
+119
+77
+w
+2,4,5,6
+120
+78
+x
+1,3,4,6
+121
+79
+y
+1,3,4,5,6
+122
+7ª
+z
+1,3,5,6
+123
+7B
+{
+4,6
+124
+7C
+|
+4,5,6,8
+125
+7D
+}
+3,5
+126
+7E
+~
+5,7
+127
+7F
+7
+128
+80
+€
+1,2,3,5,8
+129
+81
+•
+3,5,8
+130
+82
+‘
+3,7
+131
+83
+ƒ
+1,2,4,8
+132
+84
+▀
+7,8
+133
+85
+…
+1,2,6,7
+134
+86
+†
+2,8
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 77
+135
+87
+‡
+2,3,4,5,8
+136
+88
+ˆ
+4,5,8
+137
+89
+‰
+4,5,6,7,8
+138
+8ª
+Š
+1,2,3,4,5,6,8
+139
+8B
+‹
+1,2,5,8
+140
+8C
+OE
+1,4,6,8
+141
+8D
+•
+3,5,7
+142
+8E
+Ž
+1,4,8
+143
+8F
+•
+2,7
+144
+90
+•
+6,8
+145
+91
+‘
+1,3,8
+146
+92
+’
+3,7,8
+147
+93
+“
+1,4,5,6,8
+148
+94
+”
+1,2,3,4,8
+149
+95
+•
+1,4,5,8
+150
+96
+–
+3,6,8
+151
+97
+—
+3,6,7,8
+152
+98
+˜
+1,3,4,5,6,8
+153
+99
+™
+2,4,6,7
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 78
+154
+9ª
+š
+1,2,5,6,7
+155
+9B
+›
+3,4,5,6,8
+156
+9C
+oe
+1,2,3,8
+157
+9D
+•
+2,5,6,7,8
+158
+9E
+ž
+2,5,6,8
+159
+9F
+Ÿ
+3,6,7
+160
+A0
+1,3,5,6,8
+161
+A1
+¡
+2,3,5,7,8
+162
+A2
+¢
+1,2,6,7,8
+163
+A3
+£
+2,3,7,8
+164
+A4
+¤
+2,5,6,7
+165
+A5
+¥
+1,4,5,6,7,8
+166
+A6
+¦
+4,7,8
+167
+A7
+§
+1,6,7
+168
+A8
+¨
+2,6,8
+169
+A9
+©
+2,3,5,6,7
+170
+AA
+ª
+2,3,5,6,8
+171
+AB
+«
+2,3,8
+172
+AC
+¬
+2,5,7
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 79
+173
+AD
+2,3,5,8
+174
+AE
+®
+2,3,6,8
+175
+AF
+¯
+2,4,5,6,8
+176
+B0
+°
+8
+177
+B1
+±
+1,2,4,6,7
+178
+B2
+²
+4,7
+179
+B3
+³
+5,6,8
+180
+B4
+´
+4,6,7
+181
+B5
+μ
+1,3,4,6,8
+182
+B6
+¶
+1,4,5,6,7
+183
+B7
+·
+1,4,6,7,8
+184
+B8
+¸
+1,2,3,4,5,6,7
+185
+B9
+¹
+2,3,7
+186
+BA
+º
+5,6,7,8
+187
+BB
+»
+5,6,7
+188
+BC
+¼
+1,4,6,7
+189
+BD
+½
+4,6,8
+190
+BE
+¾
+4,8
+191
+BF
+¿
+2,6,7
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 80
+192
+C0
+À
+1,2,3,5,6,7,8
+193
+C1
+Á
+1,2,3,5,6,7
+194
+C2
+Â
+1,7,8
+195
+C3
+Ã
+3,5,6,7
+196
+C4
+Ä
+3,4,5,7,8
+197
+C5
+Å
+1,2,3,6,8
+198
+C6
+Æ
+3,8
+199
+C7
+Ç
+1,2,3,4,6,7,8
+200
+C8
+È
+2,3,4,6,7,8
+201
+C9
+É
+2,3,4,6,7
+202
+CA
+Ê
+1,5,7,8
+203
+CB
+Ë
+1,2,4,6,7,8
+204
+CC
+Ì
+3,4,5
+205
+CD
+Í
+3,4,7
+206
+CE
+Î
+2,4,7,8
+207
+CF
+Ï
+1,2,4,5,6,7,8
+208
+D0
+Ð
+1,3,4,5,8
+209
+D1
+Ñ
+1,2,4,5,6,7
+210
+D2
+Ò
+2,4,5,8
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 81
+211
+D3
+Ó
+3,4,6,7
+212
+D4
+Ô
+1,3,5,7,8
+213
+D5
+Õ
+1,2,4,5,8
+214
+D6
+Ö
+2,4,6,7,8
+215
+D7
+×
+1,6,7,8
+216
+D8
+Ø
+3,4,5,6,7
+217
+D9
+Ù
+2,3,4,5,6,7,8
+218
+DA
+Ú
+2,3,4,5,6,7
+219
+DB
+Û
+1,3,6,7,8
+220
+DC
+Ü
+1,2,5,6,7,8
+221
+DD
+Ý
+1,5,6,7
+222
+DE
+Þ
+1,2,3,4,5,8
+223
+DF
+ß
+1,2,8
+224
+E0
+à
+1,2,3,5,6,8
+225
+E1
+á
+1,2,3,5,6
+226
+E2
+â
+1,8
+227
+E3
+ã
+1,6,8
+228
+E4
+ä
+3,4,5,8
+229
+E5
+å
+1,5,6,7,8
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 82
+230
+E6
+æ
+1,3,4,8
+231
+E7
+ç
+1,2,3,4,6,8
+232
+E8
+è
+2,3,4,6,8
+233
+E9
+é
+2,3,4,6
+234
+EA
+ê
+1,5,8
+235
+EB
+ë
+1,2,4,6,8
+236
+EC
+ì
+3,4,8
+237
+ED
+í
+3,4
+238
+EE
+î
+2,4,8
+239
+EF
+ï
+2,5,8
+240
+F0
+ð
+2,3,5,6,7,8
+241
+F1
+ñ
+1,2,4,5,6,8
+242
+F2
+ò
+3,4,6,8
+243
+F3
+ó
+3,4,6
+244
+F4
+ô
+1,3,5,8
+245
+F5
+õ
+4,5,6,7
+246
+F6
+ö
+2,4,6,8
+247
+F7
+÷
+2,5,7,8
+248
+F8
+ø
+4,5,7
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 83
+249
+F9
+ù
+2,3,4,5,6,8
+250
+FA
+ú
+2,3,4,5,6
+251
+FB
+û
+1,3,6,8
+252
+FC
+ü
+1,2,5,6,8
+253
+FD
+ý
+2,3,4,8
+254
+FE
+þ
+1,5,6,8
+255
+FF
+ÿ
+6,7
+27.3 Apéndice C – Aviso sobre Atribución y Propiedad de Marca Registrada
+Adobe® es una marca registrada o una marca comercial de Adobe Systems Incorporated en los Estados Unidos y / o en otros países.
+Android ™, Chromebook ™ y Google ™ son marcas comerciales de Google Inc.
+Apple®, iPad®, iPhone®, iPod® y Mac® son marcas registradas o marcas de servicio de Apple Inc., registradas en los Estados Unidos y en otros países.
+Bluetooth® es una marca registrada de Bluetooth SIG, Inc.
+Bookshare® es una marca registrada de Beneficent Technology, Inc.
+BrailleBlaster ™ y Refreshabraille 18 ™ son marcas comerciales de la American Printing House for the Blind, Inc.
+DAISY, A Better Way to Read es una marca comercial del Consorcio DAISY.
+IOS® es una marca registrada de CISCO en los Estados Unidos y en otros países y se utiliza bajo licencia de Apple Inc.
+JAWS® es una marca registrada de Freedom Scientific, Inc.
+Kindle ™ y todos los logotipos relacionados son marcas registradas de Amazon.com, Inc. o sus afiliados.
+Microsoft® y Windows® son marcas comerciales registradas de Microsoft Corporation en los Estados Unidos y / o en otros países.
+NFB-NEWSLINE® es una marca registrada de la Federación Nacional de Ciegos.
+El Lector Orbit 20 ™ es una marca registrada de Orbit Research.
+SD es una marca comercial o marca registrada de SD-3C, LLC en los Estados Unidos, en otros países o en ambos.
+27.3.1
+27.3.1 Garantía Limitada del Dispositivo
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 84
+Las obligaciones de garantía de Orbit Research para el Lector Orbit 20 se limitan a los términos establecidos a continuación:
+Orbit Research garantiza este producto de hardware contra defectos en materiales y mano de obra bajo uso normal por un período de UN (1) AÑO de la compra por el comprador original (“Período de Garantía”). Si surge un defecto de hardware y una reclamación válida es recibida por Orbit Research dentro del Período de Garantía, a su opción y en la medida permitida por la ley, Orbit Research:
+Reparará el producto sin cargo alguno, utilizando repuestos nuevos o renovados (o) lo reemplazará por otra unidad nueva o reparada al menos con una funcionalidad equivalente al producto original
+Cambiará el producto por un producto nuevo asumiendo la garantía restante del producto original o treinta (30) días a partir de la fecha de reemplazo o reparación, lo que proporcione una cobertura más prolongada. Las piezas provistas en cumplimiento de su obligación de garantía deben utilizarse en productos para los cuales se reclama el servicio de garantía.
+27.3.2
+27.3.2 EXCLUSIONES Y LIMITACIONES
+Esta garantía limitada se aplica solo al producto de hardware fabricado por Orbit Research LLC que puede identificarse con la marca registrada, el nombre comercial o el logotipo de “Orbit Research”. Orbit Research no es responsable de los daños que surjan por no seguir las instrucciones relacionadas con el uso del producto.
+Esta garantía no se aplica en los siguientes casos:
+1. Daños causados por accidente, abuso, mal uso, inundación, incendio, terremoto u otras causas externas
+2. Daños causados por operar el producto fuera de los usos permitidos o previstos descritos por Orbit Research LLC
+3. Daños causados por el servicio (incluidas las mejoras y ampliaciones) realizado por cualquier persona que no sea representante de Orbit Research.
+4. Un producto o pieza que ha sido modificado para alterar la funcionalidad o capacidad sin el permiso por escrito de Orbit Research.
+5. El número de serie ha sido eliminado o desfigurado
+EN LA MEDIDA QUE ESTÁ PERMITIDO POR LA LEY, ESTA GARANTÍA Y LOS RECURSOS ANUNCIADOS ANTERIORMENTE SON EXCLUSIVOS Y RESPONSABLES DE TODAS LAS OTRAS GARANTÍAS, RECURSOS Y CONDICIONES, YA SEAN ORALES O ESCRITOS, ESTATUTARIOS, EXPRESOS O IMPLICADOS.
+EXCEPTO LO DISPUESTO EN ESTA GARANTÍA Y EN LA MÁXIMA EXTENSIÓN PERMITIDA POR LA LEY, ORBIT RESEARCH NO ES RESPONSABLE DE DAÑOS DIRECTOS, ESPECIALES, INCIDENTALES O
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 85
+CONSECUENTES, RESULTANTES DE CUALQUIER INCUMPLIMIENTO DE GARANTÍA O CONDICIÓN, O DE CUALQUIER CASO DE PÉRDIDA DE USO; PÉRDIDA DE INGRESOS; PÉRDIDA DE BENEFICIOS ACTUALES O ANTICIPADOS (INCLUIDA LA PÉRDIDA DE BENEFICIOS POR CONTRATOS); PÉRDIDA DEL USO DEL DINERO; PÉRDIDA DE AHORROS ANTICIPADOS; PÉRDIDA DE NEGOCIOS; PÉRDIDA DE OPORTUNIDAD; PÉRDIDA DE BUENA VOLUNTAD; PÉRDIDA DE REPUTACIÓN; PÉRDIDA, DAÑO O CORRUPCIÓN DE DATOS; O CUALQUIER PÉRDIDA O DAÑOS INDIRECTOS O CONSECUENTES, SIN EMBARGO, INCLUYENDO EL REEMPLAZO DEL EQUIPO Y LA PROPIEDAD, CUALQUIER COSTO DE RECUPERACIÓN, PROGRAMACIÓN O REPRODUCCIÓN DE CUALQUIER PROGRAMA O DATOS ALMACENADOS EN EL PÁGINA WEB DEL PRODUCTO. LA LIMITACIÓN ANTERIOR NO SE APLICARÁ A RECLAMACIONES POR LESIONES PERSONALES O POR MUERTE O NINGUNA RESPONSABILIDAD ESTATUTARIA POR ACTOS Y / O OMISIONES NEGLIGENTES INTENCIONALES. ORBIT RESEARCH RECHAZA CUALQUIER REPRESENTACIÓN DE QUE PODRÁ REPARAR CUALQUIER PRODUCTO BAJO ESTA GARANTÍA O HACER UN CAMBIO DE PRODUCTO SIN RIESGO O PÉRDIDA DE PROGRAMAS O DATOS.
+LEYES DE PROTECCIÓN DEL CONSUMIDOR
+PARA LOS CONSUMIDORES QUE ESTÁN CUBIERTOS POR LAS LEYES O REGULACIONES DE PROTECCIÓN DEL CONSUMIDOR EN SU PAÍS DE COMPRA O, DE SER DIFERENTE, SU PAÍS DE RESIDENCIA, LOS BENEFICIOS CONFERIDOS POR ESTA GARANTÍA ESTÁN ADJUDICADOS A TODOS LOS DERECHOS Y RECURSOS QUE SE PROPORCIONAN EN EL ESTADO Algunos países, estados y provincias no permiten la exclusión o limitación de daños incidentales o consecuentes ni permiten limitaciones sobre la duración de una garantía o condición implícita, por lo que las limitaciones o exclusiones anteriores pueden no ser aplicables en su caso. Esta garantía le otorga derechos legales específicos, y también puede tener otros derechos que varían según el país, el estado o la provincia. Esta garantía limitada se rige e interpreta de acuerdo con las leyes del país en el que se realizó la compra del producto. ORBIT RESEARCH LLC., El garante bajo esta Garantía Limitada, se identifica al final de este documento según el país o la región en la que se realizó la compra del producto.
+OBTENCIÓN DEL SERVICIO DE GARANTÍA
+Acceda y revise los recursos de ayuda en línea a los que se hace referencia en la documentación que acompaña a este producto de hardware antes de buscar el servicio de garantía. Si el producto aún no funciona correctamente después de utilizar estos recursos, envíe un correo electrónico a: techsupport@orbitresearch.com, para obtener instrucciones sobre cómo obtener
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 86
+el servicio de garantía. Debe seguir los procedimientos de garantía de Orbit Research.
+ORBIT RESEARCH mantendrá y utilizará la información del cliente de acuerdo con su Política de privacidad.
+Si su producto es capaz de almacenar programas de software, datos y otra información, debe hacer copias de respaldo periódicas de la información contenida en el disco duro del producto u otros medios de almacenamiento para proteger los contenidos y como precaución contra posibles fallos operacionales. Antes de entregar su producto para el servicio de garantía, es su responsabilidad mantener una copia de seguridad del contenido por separado y deshabilitar cualquier contraseña de seguridad. ES POSIBLE QUE LOS CONTENIDOS EN EL DISPOSITIVO QUE SE ESTÁ MANTENIENDO SE PIERDAN O SE REFORMEN EN EL CURSO DEL SERVICIO DE GARANTÍA, Y ORBIT RESEARCH NO ES RESPONSABLE DE NINGÚN DAÑO O PÉRDIDA DE PROGRAMAS, DATOS U OTRA INFORMACIÓN CONTENIDA EN EL MEDIO O CUALQUIER PARTE DEL PRODUCTO MANTENIDO.
+Su producto le será devuelto como se compró originalmente, sujeto a las actualizaciones correspondientes. Usted será responsable de reinstalar todos los demás programas de software, datos y contraseñas. La recuperación y reinstalación de programas de software y datos de usuario no están cubiertos por esta Garantía Limitada.
+27.4 Apéndice D – Información de la FCC
+AVISO de la FCC
+Este equipo ha sido probado y cumple con los límites para un dispositivo digital de Clase B, de conformidad con la parte 15 de las normas de la FCC. Estos límites están diseñados para proporcionar una protección razonable contra interferencias perjudiciales en una instalación residencial. Este equipo genera usos y puede emitir energía de radiofrecuencia y, si no se instala y utiliza de acuerdo con las instrucciones, puede causar interferencias perjudiciales en las comunicaciones de radio. Sin embargo, no hay garantía de que no se produzcan interferencias en una instalación en particular. Si este equipo causa interferencias perjudiciales en la recepción de radio o televisión, lo cual puede determinarse encendiendo y apagando el equipo, se recomienda al usuario que intente corregir la interferencia mediante una o más de las siguientes medidas:
+ Reorientar o reubicar la antena receptora.
+ Aumentar la separación entre el equipo y el receptor.
+ Conecte el equipo a una toma de corriente en un circuito diferente al que está conectado el receptor.
+ Consulte con el distribuidor o con un técnico de radio / TV experimentado para obtener ayuda.
+Este dispositivo cumple con la Parte 15 de las Reglas de la FCC. La operación está sujeta a las siguientes dos condiciones:
+(1) Este dispositivo no puede causar interferencias perjudiciales, y
+Lector Orbit 20 – Manual de Usuario Versión 2.3
+Orbit Research Información y Propiedad Confidencial 87
+(2) Este dispositivo debe aceptar cualquier interferencia recibida, incluida la interferencia que pueda causar un funcionamiento no deseado.
+Precaución sobre la FCC
+Para garantizar el cumplimiento continuo, siga las instrucciones de instalación y este dispositivo debe instalarse con una computadora o dispositivo periférico certificado para cumplir con la Parte 15 de las reglas de la FCC para los límites de Clase B. Utilice únicamente cables de interfaz apantallados. Utilice el adaptador de corriente que se suministra con el dispositivo para cargar su batería interna.
+Cualquier cambio o modificación no aprobada expresamente por la parte responsable del cumplimiento podría anular la autoridad del usuario para operar este equipo.
+Información Avanzada
+Para obtener la información más reciente, especificaciones, consejos para la solución de problemas, instrucciones de actualización de software, información sobre cuidado y uso, información de garantía e instrucciones más detalladas, visite el sitio web de Orbit Reader 20 en www.orbitresearch.com/or20.

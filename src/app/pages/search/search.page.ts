@@ -76,4 +76,8 @@ export class SearchPage implements OnInit {
   show(page: any){
     this.navCtrl.navigateForward('/details/'+page);
   }
+
+  trackByFn(index: number, item: Items): string {
+    return String(item.id);
+  }
 }

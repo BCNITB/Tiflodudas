@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService } from 'src/app/services/item.service';
 import { Items } from 'src/app/interfaces/items';
-import { AlertController, ModalController, NavController } from '@ionic/angular';
+import { AlertController, ModalController, NavController, ToastController } from '@ionic/angular';
 
 import { SendSolutionPage } from 'src/app/modals/send-solution/send-solution.page';
 
@@ -22,7 +22,8 @@ export class DetailsPage implements OnInit {
     private itemsSrvc: ItemService,
     private navCtrl: NavController,
     private alertCtrl: AlertController,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private toastController: ToastController
   ) {
     this.items =[];
     this.cat = String(this.route.snapshot.paramMap.get('id'));
@@ -103,5 +104,33 @@ export class DetailsPage implements OnInit {
     });
 
     await alert.present();
-  } 
+  }
+
+  async shareItem() {
+    const currentItem = this.items.find(item => item.id === this.cat);
+
+    if (currentItem && navigator.share) {
+      try {
+        await navigator.share({
+          title: `Consulta: ${currentItem.consult}`,
+          text: `Solución: ${currentItem.answer || 'No hay solución disponible.'}`,
+          url: window.location.href,
+        });
+      } catch (error) {
+        console.error('Error sharing:', error);
+        // User cancelled share, or other error
+      }
+    } else {
+      this.presentToast('La función de compartir no está disponible en este dispositivo/navegador.', 'warning');
+    }
+  }
+
+  async presentToast(message: string, color: string = 'primary') {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 3000,
+      color: color,
+    });
+    toast.present();
+  }
 }

@@ -111,7 +111,7 @@
     <h2>Dudas sin resolver</h2>
   
     <div role="list">
-      <ng-container *ngFor="let item of items">
+      <ng-container *ngFor="let item of items; trackBy: trackByFn">
         <div class="flex-container" *ngIf="item.item === cat && item.category !== 'Solución Propuesta' && item.answer === '' " role="listitem">
           <p class="question">
             <abbr title="Pregunta">P</abbr>: {{ item.consult }}
@@ -127,7 +127,7 @@
   <!-- ONLY ADMIN -->
   <h2 *ngIf="cat === 'colaboración'">Nuevas propuestas para la Base de Datos</h2>
   <div role="list">
-    <ng-container *ngFor="let item of items; let i = index"> 
+    <ng-container *ngFor="let item of items; let i = index; trackBy: trackByFn"> 
       <div *ngIf="item.category === cat && i !== 0" class="flex-container" role="listitem">
         <p class="question">
           <abbr title="Pregunta">P</abbr>: {{ item.consult }}

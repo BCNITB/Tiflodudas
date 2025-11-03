@@ -91,7 +91,10 @@
 
   </ion-list>
 
-  <ion-button expand="block" (click)="enablePushNotifications()">Activar Notificaciones Push</ion-button>
+  <ion-item>
+    <ion-label>Notificaciones en Push</ion-label>
+    <ion-toggle [(ngModel)]="pushNotificationsEnabled" (ionChange)="togglePushNotifications()" aria-label="Activar o desactivar las notificaciones en push"></ion-toggle>
+  </ion-item>
 
   <ion-button expand="block" color="danger" (click)="resetSettings()">Restablecer valores</ion-button>
 

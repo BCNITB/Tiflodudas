@@ -20,6 +20,8 @@ export class SettingsPage implements OnInit {
   customTextColor: string;
   contrastRatio: number = 0;
 
+  pushNotificationsEnabled: boolean = false;
+
   constructor(private themeService: ThemeService, private toastController: ToastController) { }
 
   ngOnInit() {
@@ -31,40 +33,72 @@ export class SettingsPage implements OnInit {
     this.customBackgroundColor = localStorage.getItem('customBackgroundColor') || '#FFFFFF';
     this.customTextColor = localStorage.getItem('customTextColor') || '#000000';
     this.calculateContrastRatio();
+    this.checkPermissions();
   }
 
-  async enablePushNotifications() {
+  async checkPermissions() {
+    if (Capacitor.isNativePlatform()) {
+      const permStatus = await PushNotifications.checkPermissions();
+      this.pushNotificationsEnabled = permStatus.receive === 'granted';
+    }
+  }
+
+  togglePushNotifications() {
+    if (this.pushNotificationsEnabled) {
+      this.registerPushNotifications();
+    } else {
+      this.unregisterPushNotifications();
+    }
+  }
+
+  async registerPushNotifications() {
     if (Capacitor.isNativePlatform()) {
       let permStatus = await PushNotifications.requestPermissions();
 
       if (permStatus.receive === 'granted') {
         await PushNotifications.register();
         this.presentToast('Notificaciones push activadas.', 'success');
+        this.pushNotificationsEnabled = true;
       } else {
         this.presentToast('Permiso de notificaciones denegado.', 'danger');
+        this.pushNotificationsEnabled = false;
       }
 
-      PushNotifications.addListener('registration', (token) => {
+      PushNotifications.addListener('registration', (token: Token) => {
         console.log('Push registration success, token: ' + token.value);
         // TODO: Send this token to your backend server to associate with the user
       });
 
-      PushNotifications.addListener('registrationError', (error: any) => {
+      PushNotifications.addListener('registrationError', (error: RegistrationError) => {
         console.error('Error on registration: ' + JSON.stringify(error));
         this.presentToast('Error al registrar notificaciones.', 'danger');
+        this.pushNotificationsEnabled = false;
       });
 
-      PushNotifications.addListener('pushNotificationReceived', (notification) => {
+      PushNotifications.addListener('pushNotificationReceived', (notification: PushNotificationSchema) => {
         console.log('Push received: ' + JSON.stringify(notification));
         this.presentToast(`Notificación recibida: ${notification.title}`, 'primary');
       });
 
-      PushNotifications.addListener('pushNotificationActionPerformed', (notification) => {
+      PushNotifications.addListener('pushNotificationActionPerformed', (notification: ActionPerformed) => {
         console.log('Push action performed: ' + JSON.stringify(notification));
         // Handle notification tap
       });
     } else {
       this.presentToast('Las notificaciones push solo están disponibles en dispositivos móviles.', 'warning');
+      this.pushNotificationsEnabled = false;
+    }
+  }
+
+  async unregisterPushNotifications() {
+    if (Capacitor.isNativePlatform()) {
+      // En Capacitor 4 y 5, no hay un método directo para "desregistrar".
+      // La acción del usuario de deshabilitar las notificaciones en la configuración del sistema es la forma principal.
+      // Lo que podemos hacer es informar al usuario y, si tuviéramos un backend,
+      // podríamos eliminar el token de allí.
+      await PushNotifications.removeAllListeners();
+      this.presentToast('Notificaciones push desactivadas. Para reactivarlas, vuelve a activar el interruptor.', 'medium');
+      console.log('Push notifications unregistered (listeners removed).');
     }
   }
 
