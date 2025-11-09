@@ -17,7 +17,7 @@
     },
     {
       "name": "assets",
-      "installMode": "prefetch",
+      "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
         "files": [
@@ -28,6 +28,17 @@
     }
   ],
   "dataGroups": [
+    {
+      "name": "manuals-cache",
+      "urls": [
+        "/assets/manuals/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 10,
+        "maxAge": "7d",
+        "strategy": "performance"
+      }
+    },
     {
       "name": "api-cache",
       "urls": [

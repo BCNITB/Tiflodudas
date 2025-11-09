@@ -39,14 +39,11 @@ export class GeminiService {
 
       let dbContext = '';
       if (relevantItems.length > 0) {
-        dbContext = 'Contexto de la base de datos de Tiflodudas:\n';
+        dbContext = 'Información relevante de la base de datos de Tiflodudas:\n';
         relevantItems.forEach(item => {
-          dbContext += `Categoría: ${item.category}\n`;
-          dbContext += `Dispositivo: ${item.item}\n`;
-          dbContext += `Consulta: ${item.consult}\n`;
-          dbContext += `Respuesta: ${item.answer}\n`;
+          dbContext += `Para la categoría '${item.category}' y dispositivo '${item.item}', la consulta '${item.consult}' tiene la respuesta: '${item.answer}'.`;
           if (item.comments) {
-            dbContext += `Comentarios: ${item.comments}\n`;
+            dbContext += ` Comentarios adicionales: ${item.comments}.`;
           }
           dbContext += '\n';
         });
@@ -90,7 +87,7 @@ export class GeminiService {
       });
 
 
-      const finalPrompt = `${manualContext}${dbContext}Pregunta del usuario: ${prompt}`;
+      const finalPrompt = `${manualContext}${dbContext}\nBasándote en la información proporcionada, responde a la siguiente pregunta del usuario de forma concisa y sin repetir las etiquetas de contexto (Categoría, Dispositivo, Consulta, Respuesta). Solo proporciona la respuesta. Pregunta del usuario: ${prompt}`;
 
       const result = await this.model.generateContent(finalPrompt);
       const response = await result.response;

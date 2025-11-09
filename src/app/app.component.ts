@@ -3,6 +3,7 @@ import { Platform, AlertController } from '@ionic/angular';
 import { ThemeService } from './services/theme.service';
 import { UpdateService } from './services/update.service';
 import { Router } from '@angular/router';
+import { PushNotificationService } from './services/push-notification.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,14 @@ export class AppComponent {
   showTabs: boolean;
   menuCollapsed: boolean = false;
 
-  constructor(private platform: Platform, private themeService: ThemeService, private updateService: UpdateService, private alertController: AlertController, private router: Router) {
+  constructor(
+    private platform: Platform, 
+    private themeService: ThemeService, 
+    private updateService: UpdateService, 
+    private alertController: AlertController, 
+    private router: Router,
+    private pushNotificationService: PushNotificationService
+  ) {
     this.initializeApp();
     this.checkPlatform();
   }
@@ -38,6 +46,7 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(async () => {
       this.checkPlatform();
+      this.pushNotificationService.initPush();
       // Check for updates after platform is ready
       // const updateInfo = await this.updateService.checkForUpdates();
       // if (updateInfo) {
