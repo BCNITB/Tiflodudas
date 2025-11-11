@@ -32,13 +32,13 @@ export class AppComponent {
 
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
-    if (event.shiftKey && event.key === 'I') {
+    if (event.shiftKey && event.altKey && event.key === 'I') {
       this.router.navigate(['/']);
-    } else if (event.shiftKey && event.key === 'C') {
+    } else if (event.shiftKey && event.altKey && event.key === 'C') {
       this.router.navigate(['/tabs/consult']);
-    } else if (event.shiftKey && event.key === 'B') {
+    } else if (event.shiftKey && event.altKey && event.key === 'B') {
       this.router.navigate(['/tabs/search']);
-    } else if (event.shiftKey && event.key === 'O') {
+    } else if (event.shiftKey && event.altKey && event.key === 'O') {
       this.toggleMenuCollapse();
     }
   }
