@@ -45,6 +45,15 @@
                 <div *ngIf="menuCollapsed" class="custom-tooltip">Buscar en la Base de Datos</div>
               </ion-item>
 
+              <!-- Menu item for "Pregunta a Tiflo IA" -->
+              <ion-item [routerDirection]="'root'" [routerLink]="'/tabs/assistant'" role="menuitem">
+                <ion-icon slot="start" [name]="'bulb-outline'" aria-hidden="true"></ion-icon>
+                <ion-label>
+                  Pregunta a Tiflo IA
+                </ion-label>
+                <div *ngIf="menuCollapsed" class="custom-tooltip">Pregunta a Tiflo IA</div>
+              </ion-item>
+
               <ion-item [routerDirection]="'root'" [routerLink]="'/tabs/new-entry/colaboración'" role="menuitem">
                 <ion-icon slot="start" [name]="'send-outline'" aria-hidden="true"></ion-icon>
                 <ion-label>

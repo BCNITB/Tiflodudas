@@ -3,28 +3,52 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Asistente</ion-title>
+    <ion-title>Asistente Tiflo IA</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div class="chat-container">
-    <div *ngFor="let message of messages" class="message-wrapper {{ message.sender }}">
-      <div class="message" [innerHTML]="message.content"></div>
+  <div class="header-section">
+    <h1>Consulta a Tiflo IA</h1>
+    <p>Se han creado diferentes cuadernos de NotebookLM con los manuales de los dispositivos y programas relativos a la tiflotecnología. Selecciona una de las temáticas disponibles para poder acceder al cuaderno y realizar una búsqueda.</p>
+  </div>
+
+  <ion-item class="selector-item">
+    <ion-label position="stacked">Selecciona una IA</ion-label>
+    <ion-select [(ngModel)]="selectedIA" (ionChange)="onIAChange()" placeholder="Elige una categoría">
+      <ion-select-option *ngFor="let option of iaOptions" [value]="option.value">
+        {{ option.label }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div *ngIf="selectedOption" class="info-card-container">
+    <ion-card class="notebook-card">
+      <ion-card-header>
+        <div class="icon-container">
+          <ion-icon [name]="selectedOption.icon"></ion-icon>
+        </div>
+        <ion-card-title>{{ selectedOption.label }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>{{ selectedOption.description }}</p>
+        
+        <div class="action-section">
+          <ion-button expand="block" (click)="openNotebook()" class="open-button">
+            <ion-icon name="open-outline" slot="start"></ion-icon>
+            Abrir Cuaderno en NotebookLM
+          </ion-button>
+          <p class="hint-text">Se abrirá en una nueva pestaña para garantizar la mejor experiencia y acceso a tu cuenta de Google.</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="!selectedOption" class="placeholder-message">
+    <div class="pulse-container">
+      <ion-icon name="bulb-outline"></ion-icon>
     </div>
-    <div *ngIf="isLoading" class="message-wrapper bot">
-      <div class="message">...</div>
-    </div>
+    <p>Por favor, selecciona una categoría arriba para comenzar.</p>
   </div>
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <div class="chat-input-container">
-      <ion-input [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="Escribe un mensaje..."></ion-input>
-      <ion-button (click)="sendMessage()" [disabled]="isLoading">
-        <ion-icon name="send"></ion-icon>
-      </ion-button>
-    </div>
-  </ion-toolbar>
-</ion-footer>

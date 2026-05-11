@@ -74,3 +74,9 @@ ion-split-pane.split-pane-visible {
     margin-left: 60px; // Collapsed margin remains 60px
   }
 }
+
+.submenu-item {
+  padding-left: 20px; /* Indent submenu items */
+  font-size: 0.9em;   /* Slightly smaller font size */
+  --padding-start: 20px; /* Adjust Ionic's internal padding */
+}

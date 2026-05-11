@@ -1,0 +1,284 @@
+Atajos de Teclado de NVDA
+
+Atajos para Navegación Web
+Nota: El sistema de ayuda de NVDA incluye información detallada sobre el uso de Internet. En su navegador, mantenga pulsado INSERT y pulse F1 dos veces rápidamente. Una vez abierta la ayuda de NVDA, pulse F6 para moverse a la ventana de temas de ayuda.
+
+General
+
+Descripción	Atajo
+Retroceder una página	ALT+FLECHA IZQUIERDA o RETROCESO
+Avanzar una página	ALT+FLECHA DERECHA
+Leer barra de direcciones	INSERT+A
+Siguiente enlace	TAB
+Enlace anterior	SHIFT+TAB
+Abrir enlace	ENTER
+Listar marcos	INSERT+F9
+Listar enlaces	INSERT+F7
+Listar encabezados	INSERT+F6
+Encabezado de nivel n	1 hasta 6
+Funciones HTML virtuales	INSERT+F3
+Buscar siguiente y anterior	F3 y SHIFT+F3
+Asignar etiqueta personalizada	CTRL+INSERT+TAB
+ARIA Arrastrar y soltar	Tecla WINDOWS+CTRL+IGUAL
+ARIA Filtro de texto de región activa	Tecla WINDOWS+CTRL+GUION
+Abrir Asistente Web Flexible	INSERT+BARRA ESPACIADORA seguido de X
+Alternar navegación inteligente temporalmente	INSERT+X
+
+
+Atajos para Navegación por Pestañas
+
+Descripción	Atajo
+Abrir una nueva pestaña	CTRL+T
+Abrir nueva pestaña desde la barra de direcciones	ALT+ENTER (en la barra de direcciones)
+Cambiar a la siguiente pestaña	CTRL+TAB
+Cambiar a la pestaña anterior	CTRL+SHIFT+TAB
+Cambiar a un número de pestaña específico	CTRL+n, donde n es un dígito del 1 al 8
+Cambiar a la última pestaña	CTRL+9
+Cerrar pestaña actual	CTRL+W o CTRL+F4
+Cerrar todas las pestañas	ALT+F4
+Cerrar otras pestañas	CTRL+ALT+F4
+Abrir enlaces en una nueva pestaña en segundo plano	CTRL+ENTER
+Abrir enlaces en una nueva pestaña en primer plano	CTRL+SHIFT+ENTER
+
+Teclas Rápidas de Navegación
+Consejo: Si mantiene pulsado SHIFT antes de pulsar una de las siguientes Teclas Rápidas de Navegación, puede moverse a la instancia anterior de ese elemento; por ejemplo, pulse A para moverse al siguiente botón de opción, pulse SHIFT+A para moverse al botón de opción anterior. Además, si mantiene pulsado CTRL+INSERT mientras pulsa atajos con un asterisco (*), NVDA mostrará una lista de esos elementos en la página.
+
+Descripción	Atajo
+Siguiente botón de opción	A*
+Siguiente botón	B*
+Siguiente cuadro combinado, cuadro de lista o vista de árbol	C*
+Siguiente elemento diferente	D
+Siguiente cuadro de edición	E*
+Siguiente control de formulario	F
+Siguiente gráfico	G*
+Siguiente encabezado	H
+Siguiente elemento en una lista	I
+Saltar a línea	J*
+Siguiente marcador de posición	K*
+Siguiente lista	L*
+Siguiente marco	M
+Saltar enlaces	N
+Siguiente artículo	O*
+Siguiente párrafo	P*
+Moverse a la región principal	Q
+Siguiente región	R*
+Siguiente elemento igual	S
+Siguiente tabla	T*
+Siguiente enlace no visitado	U
+Siguiente enlace visitado	V
+Siguiente casilla de verificación	X*
+Siguiente división	Z*
+Siguiente control de pestañas	APÓSTROFE*
+Siguiente separador	GUION
+Siguiente elemento cliqueable	BARRA*
+Siguiente elemento con mouse over	PUNTO Y COMA*
+Siguiente elemento	SHIFT+PUNTO
+Elemento anterior	SHIFT+COMA
+
+Formularios
+
+Descripción	Atajo
+Entrar en modo formularios	ENTER
+Salir del modo formularios	MÁS DEL TECLADO NUMÉRICO
+Listar campos de formulario	INSERT+F5
+Primer campo de formulario	INSERT+CTRL+INICIO
+Siguiente campo de formulario	F
+Campo de formulario anterior	SHIFT+F
+Último campo de formulario	INSERT+CTRL+FIN
+Siguiente botón de opción	A
+Botón de opción anterior	SHIFT+A
+Listar botones de opción	CTRL+INSERT+A
+Siguiente botón	B
+Botón anterior	SHIFT+B
+Listar botones	CTRL+INSERT+B
+Siguiente cuadro combinado, cuadro de lista o vista de árbol	C
+Cuadro combinado, cuadro de lista o vista de árbol anterior	SHIFT+C
+Listar cuadros combinados, cuadros de lista o vistas de árbol	CTRL+INSERT+C
+
+Siguiente cuadro de edición 	E
+Cuadro de edición anterior	SHIFT+E
+Listar cuadros de edición	CTRL+INSERT+E
+Siguiente casilla de verificación	X
+Casilla de verificación anterior	SHIFT+X
+Listar casillas de verificación	CTRL+INSERT+X
+
+Tablas
+
+Descripción	Atajo
+Listar atajos para navegación de tablas	INSERT+BARRA ESPACIADORA, seguido de T, y luego SIGNO DE INTERROGACIÓN
+Siguiente tabla	T
+Tabla anterior	SHIFT+T
+Seleccionar tabla	F8
+Siguiente fila	Tecla WINDOWS+ALT+FLECHA ABAJO
+Fila anterior	Tecla WINDOWS+ALT+FLECHA ARRIBA
+Leer fila	Tecla WINDOWS+COMA o Tecla WINDOWS+5 DEL TECLADO NUMÉRICO
+Siguiente columna	Tecla WINDOWS+ALT+FLECHA DERECHA
+Columna anterior	Tecla WINDOWS+ALT+FLECHA IZQUIERDA
+Leer columna	Tecla WINDOWS+PUNTO
+Siguiente celda en la fila	ALT+CTRL+FLECHA DERECHA
+Celda anterior en la fila	ALT+CTRL+FLECHA IZQUIERDA
+Celda de abajo en la columna	ALT+CTRL+FLECHA ABAJO
+Celda de arriba en la columna	ALT+CTRL+FLECHA ARRIBA
+Saltar a celda de tabla	CTRL+Tecla WINDOWS+J
+Volver a la celda anterior	CTRL+Tecla WINDOWS+SHIFT+J
+
+Marcadores de Posición
+
+Descripción	Atajo
+Establecer marcador temporal	CTRL+Tecla WINDOWS+K
+Añadir, eliminar, editar o renombrar marcadores permanentes	CTRL+SHIFT+K
+Moverse al siguiente o anterior marcador	K o SHIFT+K
+Leer texto en marcadores 1 a 4	Teclas de la fila de números 7 a 0
+Moverse al marcador 1 a 4	SHIFT+ teclas de la fila de números 7 a 0
+Volver al marcador	ALT+Tecla WINDOWS+K
+Seleccionar texto desde el marcador hasta la posición del cursor	INSERT+BARRA ESPACIADORA seguido de M
+
+Elementos
+
+Descripción	Atajo
+Siguiente elemento igual	S
+Elemento igual anterior	SHIFT+S
+Siguiente elemento diferente	D
+Elemento diferente anterior	SHIFT+D
+Siguiente elemento	SHIFT+PUNTO
+Elemento anterior	SHIFT+COMA
+Seleccionar elemento completo	F8
+Mostrar elemento completo	SHIFT+INSERT+F1
+Mostrar información detallada del elemento	CTRL+SHIFT+INSERT+F1
+Activar Mouse Over	INSERT+CTRL+ENTER
+
+Atajos para Escritorio y Portátil
+
+Para Leer Texto
+
+Descripción	Atajo de Escritorio	Atajo de Portátil
+Decir carácter	5 DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+COMA
+Decir carácter fonéticamente	5 DEL TECLADO NUMÉRICO (2 veces rápido)	BLOQUEO MAYÚS+COMA (2 veces rápido)
+Decir carácter anterior	FLECHA IZQUIERDA	BLOQUEO MAYÚS+M
+Decir carácter siguiente	FLECHA DERECHA	BLOQUEO MAYÚS+PUNTO
+Decir palabra	INSERT+5 DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+K
+Deletrear palabra	INSERT+5 DEL TECLADO NUMÉRICO (2 veces rápido)	BLOQUEO MAYÚS+K (2 veces rápido)
+Decir palabra anterior	INSERT+FLECHA IZQUIERDA	BLOQUEO MAYÚS+J
+Decir palabra siguiente	INSERT+FLECHA DERECHA	BLOQUEO MAYÚS+L
+Decir línea	INSERT+FLECHA ARRIBA	BLOQUEO MAYÚS+I
+Deletrear línea	INSERT+FLECHA ARRIBA (2 veces rápido)	BLOQUEO MAYÚS+I (2 veces rápido)
+Decir línea anterior	FLECHA ARRIBA	BLOQUEO MAYÚS+U
+Decir línea siguiente	FLECHA ABAJO	BLOQUEO MAYÚS+O
+Decir frase	ALT+5 DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+H
+Decir frase anterior	ALT+MENOS DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+Y
+Decir frase siguiente	ALT+MÁS DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+N
+Decir párrafo	CTRL+5 DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+CTRL+I
+Decir párrafo anterior	CTRL+FLECHA ARRIBA	BLOQUEO MAYÚS+CTRL+U
+Decir párrafo siguiente	CTRL+FLECHA ABAJO	BLOQUEO MAYÚS+CTRL+O
+Decir hasta el cursor	INSERT+INICIO	BLOQUEO MAYÚS+SHIFT+J
+Decir desde el cursor	INSERT+AVANZAR PÁGINA	BLOQUEO MAYÚS+SHIFT+L
+Decir todo	INSERT+FLECHA ABAJO	BLOQUEO MAYÚS+A
+Retroceder durante Decir Todo	FLECHA IZQUIERDA	FLECHA IZQUIERDA
+Avanzar rápido durante Decir Todo	FLECHA DERECHA	FLECHA DERECHA
+Decir color	INSERT+5 en la fila de números	BLOQUEO MAYÚS+5
+Aumentar velocidad de voz durante Decir Todo	AVANZAR PÁGINA	AVANZAR PÁGINA
+Disminuir velocidad de voz durante Decir Todo	RETROCEDER PÁGINA	RETROCEDER PÁGINA
+Aumentar velocidad voz temporalmente (fuera de Decir Todo)	ALT+CTRL+AVANZAR PÁGINA	ALT+CTRL+AVANZAR PÁGINA
+Disminuir velocidad voz temporalmente (fuera de Decir Todo)	ALT+CTRL+RETROCEDER PÁGINA	ALT+CTRL+RETROCEDER PÁGINA
+Aumentar velocidad voz permanentemente (fuera de Decir Todo)	ALT+Tecla WINDOWS+CTRL+AVANZAR PÁGINA	ALT+Tecla WINDOWS+CTRL+AVANZAR PÁGINA
+Disminuir velocidad voz permanentemente (fuera de Decir Todo)	ALT+Tecla WINDOWS+CTRL+RETROCEDER PÁGINA	ALT+Tecla WINDOWS+CTRL+RETROCEDER PÁGINA
+Iniciar lectura rápida	CTRL+INSERT+FLECHA ABAJO	BLOQUEO MAYÚS+CTRL+FLECHA ABAJO
+Cambiar preferencias de lectura rápida	CTRL+SHIFT+INSERT+FLECHA ABAJO	BLOQUEO MAYÚS+CTRL+SHIFT+FLECHA ABAJO
+Alternar Voz completa, Voz bajo demanda o Silencio	INSERT+BARRA ESPACIADORA seguido de S	BLOQUEO MAYÚS+BARRA ESPACIADORA seguido de S
+Alternar Voz bajo demanda o Silencio	INSERT+BARRA ESPACIADORA seguido de SHIFT+S	BLOQUEO MAYÚS+BARRA ESPACIADORA seguido de SHIFT+S
+
+Información
+
+Descripción	Atajo de Escritorio	Atajo de Portátil
+Interrumpir el habla	CTRL	CTRL
+Decir fuente	INSERT+F	BLOQUEO MAYÚS+F
+Decir título de la ventana	INSERT+T	BLOQUEO MAYÚS+T
+Decir indicación de ventana y texto	INSERT+TAB	BLOQUEO MAYÚS+TAB
+Buscar	CTRL+INSERT+F	BLOQUEO MAYÚS+CTRL+F
+Buscar siguiente	INSERT+F3	BLOQUEO MAYÚS+F3
+Buscar anterior	INSERT+SHIFT+F3	BLOQUEO MAYÚS+SHIFT+F3
+Decir línea superior de la ventana	INSERT+FIN	BLOQUEO MAYÚS+SHIFT+Y
+Decir línea inferior de la ventana	INSERT+AVANZAR PÁGINA	BLOQUEO MAYÚS+SHIFT+N
+Decir texto seleccionado	INSERT+SHIFT+ FLECHA ABAJO	BLOQUEO MAYÚS+SHIFT+A
+Obtener versión de la aplicación	CTRL+INSERT+V	BLOQUEO MAYÚS+CTRL+V
+
+Para Cursores y Mouse
+
+Descripción	Atajo de Escritorio	Atajo de Portátil
+Cursor del PC	MÁS DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+PUNTO Y COMA
+Cursor de NVDA	MENOS DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+P
+Cursor táctil	SHIFT+MÁS DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+SHIFT+PUNTO Y COMA
+Llevar cursor del PC al cursor de NVDA	INSERT+MÁS DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+APÓSTROFE
+Llevar cursor de NVDA al cursor del PC	INSERT+MENOS DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+CORCHETE IZQUIERDO
+Botón izquierdo del mouse	BARRA DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+8
+Botón derecho del mouse	ASTERISCO DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+9
+Arrastrar y soltar	CTRL+INSERT+BARRA DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+CTRL+8
+Restringir cursor de NVDA	INSERT+R	BLOQUEO MAYÚS+R
+
+Para Cuadros de Diálogo
+
+Descripción	Atajo de Escritorio	Atajo de Portátil
+Decir botón predeterminado del cuadro de diálogo	INSERT+E	BLOQUEO MAYÚS+E
+Leer ventana de arriba a abajo	INSERT+B	BLOQUEO MAYÚS+B
+Leer palabra en contexto	INSERT+C	BLOQUEO MAYÚS+C
+Decir tecla rápida del control actual	SHIFT+5 DEL TECLADO NUMÉRICO	BLOQUEO MAYÚS+SHIFT+COMA
+Abrir cuadro combinado	ALT+FLECHA ABAJO	ALT+FLECHA ABAJO
+Cerrar cuadro combinado	ALT+FLECHA ARRIBA	ALT+FLECHA ARRIBA
+Anunciar estado de la barra de progreso	INSERT+TAB	BLOQUEO MAYÚS+TAB
+
+Para Ayuda
+
+Descripción	Atajo de Escritorio	Atajo de Portátil
+Búsqueda de comandos de NVDA	INSERT+BARRA ESPACIADORA seguido de J	BLOQUEO MAYÚS+BARRA ESPACIADORA seguido de J
+Ayuda sensible al contexto	INSERT+F1	BLOQUEO MAYÚS+F1
+Ayuda de teclado	INSERT+1	BLOQUEO MAYÚS+1
+Ayuda de NVDA para aplicaciones	INSERT+F1 (2 veces rápido)	BLOQUEO MAYÚS+F1 (2 veces rápido)
+Ayuda de teclas rápidas	INSERT+H	BLOQUEO MAYÚS+CTRL+SHIFT+H
+Ayuda de teclas de Windows	INSERT+W	BLOQUEO MAYÚS+W
+
+Miscelánea
+
+Descripción	Atajos de Escritorio	Atajos de Portátil
+Ventana de NVDA	INSERT+N	BLOQUEO MAYÚS+N
+Refrescar pantalla	INSERT+ESC	BLOQUEO MAYÚS+ESC
+Configuración rápida	INSERT+V	BLOQUEO MAYÚS+V
+Ejecutar el Gestor de NVDA	INSERT+F2	BLOQUEO MAYÚS+F2
+Cerrar NVDA	INSERT+Q	BLOQUEO MAYÚS+Q
+Diálogo de lista de ventanas	INSERT+F10	BLOQUEO MAYÚS+F10
+Diálogo de iconos de la bandeja del sistema	INSERT+F11	BLOQUEO MAYÚS+F11
+Decir hora del sistema	INSERT+F12	BLOQUEO MAYÚS+F12
+Etiquetador de gráficos	INSERT+G	BLOQUEO MAYÚS+G
+Etiquetador automático de gráficos	CTRL+INSERT+G	BLOQUEO MAYÚS+CTRL+G
+Pasar tecla a través de	INSERT+3 en la fila de números	BLOQUEO MAYÚS+3
+Virtualizar ventana	ALT+INSERT+W	ALT+BLOQUEO MAYÚS+W
+Virtualizar control actual	INSERT+SHIFT+V	BLOQUEO MAYÚS+SHIFT+V
+Seleccionar esquema	ALT+INSERT+S	ALT+BLOQUEO MAYÚS+S
+Seleccionar idioma	CTRL+Tecla WINDOWS+L	CTRL+Tecla WINDOWS+L
+Seleccionar perfil de voz 	CTRL+INSERT+S	BLOQUEO MAYÚS+CTRL+S
+Leer columnas 1 a 10 de una vista de lista	CTRL+INSERT+n, donde n es un valor del 1 al 0	BLOQUEO MAYÚS+CTRL+n, donde n es un valor del 1 al 0
+Copiar texto seleccionado al FSClipboard	INSERT+Tecla WINDOWS+C	BLOQUEO MAYÚS+Tecla WINDOWS+C
+Mostrar historial de voz	INSERT+BARRA ESPACIADORA seguido de H	BLOQUEO MAYÚS+BARRA ESPACIADORA seguido de H
+Alternar Audio Ducking	INSERT+BARRA ESPACIADORA seguido de D	BLOQUEO MAYÚS+BARRA ESPACIADORA seguido de D
+Alternar modo predeterminado	INSERT+BARRA ESPACIADORA seguido de Z	BLOQUEO MAYÚS+BARRA ESPACIADORA seguido de z
+Alternar cortina de pantalla	INSERT+BARRA ESPACIADORA seguido de F11	BLOQUEO MAYÚS+BARRA ESPACIADORA seguido de F11
+
+Gestos Táctiles
+
+Gestos para Navegación Táctil, Lectura de Texto y Ajustes de Voz
+Gesto	Navegación Táctil	Lectura de Texto	Ajustes de Voz
+Toque con un dedo	Dice el elemento en la posición actual	Dice el elemento en la posición actual	-
+Toque dividido	Dice el carácter en la posición actual	Dice el carácter en la posición actual	-
+Doble toque dividido	Dice la palabra en la posición actual	Dice la palabra en la posición actual	-
+Deslizar a derecha o izquierda	Siguiente elemento o anterior	Siguiente carácter o anterior	Aumentar o disminuir velocidad voz
+Deslizar abajo o arriba	Siguiente o anterior elemento	Siguiente o anterior línea	Disminuir o aumentar volumen principal
+Deslizar a derecha/izq con 2 dedos	Ciclar tipos de navegación de elementos	Siguiente o anterior palabra	-
+Deslizar arriba con 2 dedos	Decir elemento actual	Párrafo anterior	-
+Deslizar abajo con 2 dedos	Decir todo	Siguiente párrafo	-
+Triple toque	Seleccionar/limpiar ítem de lista	Alternar selección de texto	Activa/desactiva cursor táctil
+Triple toque con 2 dedos	Decir texto seleccionado	Decir texto seleccionado	-
+Deslizar derecha/izq con 3 dedos	Realiza TAB o SHIFT+TAB	Fin o inicio de línea actual	-
+Deslizar arriba/abajo con 3 dedos	Ciclar entre paneles de aplicación	Principio o fin del área de texto	-
+Deslizar arriba/abajo con 4 dedos	Primer o último elemento	Subir o bajar una página	-
+Deslizar abajo con 4 dedos	-	Decir todo	-
+Deslizar abajo-arriba con 4 dedos	Activa/desactiva teclado táctil de Windows	Activa/desactiva teclado táctil de Windows	-
+Doble toque con 4 dedos	Listar gestos para navegación táctil	Listar gestos para lectura de texto	Listar gestos para ajustes de voz

@@ -1,0 +1,182 @@
+JAWS® para Windows®
+Guía de inicio rápido
+
+PUBLICADO POR
+Freedom Scientific
+www.FreedomScientific.com
+La información contenida en este documento está sujeta a cambios sin previo aviso. Ninguna parte de esta publicación puede ser reproducida o transmitida de ninguna forma ni por ningún medio, ya sea electrónico o mecánico, para cualquier propósito, sin el permiso expreso por escrito de Freedom Scientific.
+Copyright © 2018 Freedom Scientific, Inc. Todos los derechos reservados.
+JAWS es una marca registrada de Freedom Scientific, Inc. en los Estados Unidos y otros países. Microsoft, Windows 10, Windows 8.1, Windows 7 y Windows Server son marcas registradas de Microsoft Corporation en los EE. UU. y/o en otros países.
+Sentinel® es una marca registrada de SafeNet, Inc.
+
+Índice
+Bienvenido a JAWS para Windows
+Requisitos del sistema
+Instalación de JAWS
+Activación de JAWS
+Autorización por mochila (Dongle)
+JAWS en Red
+Ejecución del Asistente de inicio de JAWS
+Instalación de voces Vocalizer Expressive
+FSReader y materiales de entrenamiento
+Inicio y uso de FSReader
+Actualización de JAWS
+Obtener ayuda
+Materiales de entrenamiento de JAWS
+Sistema de ayuda de JAWS
+Teclas para obtener ayuda dondequiera que esté
+Soporte técnico
+Guía para nuevos usuarios
+Lectura de pantallas y documentos
+Más comandos de lectura
+Trabajo con cuadros de diálogo
+Primeros pasos con Internet
+Lectura y desplazamiento por páginas web
+Navegación rápida y sencilla
+Visualización de listas de información
+Interacción con formularios
+
+Bienvenido a JAWS para Windows
+Freedom Scientific ha desarrollado una gama completa de software de lectura y magnificación de pantalla, anotadores, líneas braille y otros dispositivos para usuarios de ordenadores ciegos o con discapacidad visual. Con nuestros productos, los usuarios pueden acceder a todo un mundo de información, educación y aplicaciones laborales para navegar por la web, leer o escribir mensajes de correo electrónico, trabajar con hojas de cálculo o acceder a información en una base de datos. Nuestro software es el producto de elección para personas ciegas y con discapacidad visual en todo el mundo.
+Freedom Scientific lidera con el ejemplo, con software desarrollado por personas ciegas para personas ciegas. Muchos de nuestros desarrolladores, personal de soporte técnico y representantes de ventas son usuarios de nuestros productos. Estamos dedicados a permanecer a la vanguardia de la tecnología de asistencia, asegurando nuestro propio progreso además del de la comunidad de personas ciegas y con baja visión en general.
+JAWS ofrece una capacidad integral de lectura de pantalla para Windows que incluye una amplia personalización del producto a través de potentes gestores de utilidades.
+
+Requisitos del sistema
+Los requisitos del sistema para JAWS se enumeran a continuación.
+Especificación	Requisito mínimo
+Sistema operativo	Windows® 10, Windows 8.1, Windows 7 Service Pack 1, Windows Server® 2016, Windows Server 2012 y Windows Server 2008
+Velocidad del procesador	Procesador de mínimo 1,5 GHz
+Memoria (RAM)	4 GB recomendados (64 bits) o 2 GB recomendados (32 bits)
+Espacio requerido en disco duro	1,6 GB requeridos durante la instalación. De 20 MB a 690 MB requeridos por voz para instalar las voces Vocalizer Expressive (los tamaños de archivo variarán según la voz instalada)
+Vídeo	Un adaptador de pantalla capaz de una resolución de pantalla de al menos 800 x 600 con color de 16 bits (se recomienda una resolución de pantalla de 1024 x 768 con color de 32 bits)
+Sonido	Tarjeta de sonido compatible con Windows (para la voz)
+Las versiones anteriores de JAWS necesarias para las instalaciones de Windows XP y Windows Vista todavía están disponibles en el sitio web de Freedom Scientific.
+
+Instalación de JAWS
+Nota: 	Debe tener una conexión a Internet activa y haber iniciado sesión en una cuenta con privilegios de administrador para instalar JAWS.
+Si aún no ha descargado JAWS, puede obtenerlo en www.freedomscientific.com/Downloads/JAWS. Una vez que se complete la descarga, navegue hasta donde guardó el archivo ejecutable, selecciónelo y pulse ENTER.
+Se inicia el programa de instalación de JAWS. Escuchará que la instalación verbaliza las instrucciones a medida que aparecen en su pantalla. Siga estas instrucciones para completar la instalación de JAWS. Una vez completada la instalación, debe reiniciar su ordenador antes de usar JAWS.
+Si se trata de una nueva instalación de JAWS, el siguiente paso es completar el proceso de activación. De lo contrario, se abre el Asistente de inicio de JAWS. Úselo para configurar los parámetros básicos de JAWS.
+
+Activación de JAWS
+Nota: 	Esta sección se aplica a las licencias perpetuas (Profesional y Home). Si tiene una licencia anual, puede pasar a la siguiente sección.
+Internet License Manager le permite activar JAWS utilizando una conexión a Internet. El proceso de activación comienza automáticamente al iniciar JAWS. Para obtener información sobre otras formas de activación, elija Ayuda de activación cuando comience el proceso de activación.
+Para activar JAWS a través de Internet, haga lo siguiente:
+1. En el cuadro de diálogo de Activación, elija Iniciar activación.
+2. Lea el mensaje que se muestra y luego use las teclas de FLECHA para seleccionar Internet (RECOMENDADO) y pulse ENTER.
+3. Si su número de autorización de 20 dígitos no se muestra automáticamente, escríbalo en el cuadro de edición Número de autorización.
+4. Pulse ENTER para continuar. Se le pedirá que se conecte a Internet si aún no lo ha hecho. Debe establecer una conexión a Internet antes de continuar con la activación.
+5. Si no ha registrado JAWS, se le pedirá que lo haga ahora. Registrar JAWS le permite recibir soporte técnico. Elija Registrar ahora y complete el formulario de registro en línea siguiendo las instrucciones proporcionadas. Puede optar por registrarse más tarde, pero debe registrarse la próxima vez que active JAWS.
+6. Después de enviar su registro, Internet License Manager intenta activar JAWS. Este proceso puede tardar varios minutos. Cuando la activación sea exitosa, elija Finalizar.
+Nota: 	Si Internet License Manager no puede activar JAWS, es posible que deba reconfigurar su cortafuegos. Consulte la Ayuda de activación para obtener más información.
+
+Autorización por mochila (Dongle)
+Una mochila (dongle) es un dispositivo de hardware que puede conectar al puerto USB de un ordenador. Se puede usar una mochila para autorizar todos los productos de software de Freedom Scientific (JAWS, Fusion y ZoomText). El software está autorizado para ejecutarse en ese ordenador mientras la mochila permanezca conectada. Las mochilas son útiles si es un formador o consultor y utiliza frecuentemente el software de Freedom Scientific en muchos ordenadores diferentes, ya que no tiene que preocuparse por la activación.
+Cuando JAWS se inicia, primero determina si hay una mochila conectada al ordenador. Si hay una conectada, JAWS utiliza las funciones e información de la licencia asociada a la mochila para autorizar JAWS. Si no hay ninguna mochila conectada, JAWS busca la información de la licencia almacenada en el ordenador. Puede utilizar la utilidad Visor de mochila para ver información sobre la licencia asociada a la mochila conectada actualmente a su ordenador. Para iniciar esta utilidad, vaya al menú Utilidades ubicado en la ventana principal de JAWS, elija "Explorar carpeta de utilidades" y seleccione Visor de mochila.
+Las mochilas se venden por separado como un complemento para las licencias perpetuas ILM de JAWS y Fusion Professional y Home, así como para ZoomText. Para adquirir una, póngase en contacto con el departamento de ventas de Freedom Scientific. Las mochilas no están disponibles para añadirse a una licencia anual Home.
+
+JAWS en Red
+Si tiene una licencia de red multiusuario, su administrador de sistemas debe ir a www.fsactivate.com/network y descargar las herramientas de autorización de red y el servidor de licencias. Esta página también contiene instrucciones sencillas para configurar el servidor de licencias y activar la licencia de red.
+
+Ejecución del Asistente de inicio de JAWS
+El Asistente de inicio de JAWS es una herramienta útil que le permite configurar parámetros específicos de JAWS, como las preferencias de voz y braille, la configuración de verbosidad, las opciones de inicio de JAWS, así como instalar materiales de entrenamiento básicos. Durante una nueva instalación de JAWS, el Asistente de inicio aparece después de completar la activación del producto. Sin embargo, siempre se puede acceder a él más tarde desde el menú Ayuda de JAWS pulsando ALT+H y eligiendo Asistente de inicio.
+
+Instalación de voces Vocalizer Expressive
+Vocalizer Expressive proporciona un habla con un sonido más natural en una variedad de voces en varios idiomas. Para instalar estas voces, pulse INSERT+J para abrir la ventana de la aplicación JAWS, pulse ALT+H para abrir el menú Ayuda, pulse FLECHA ABAJO hasta llegar a Más voces y luego pulse ENTER. Esto abre la página de Sintetizadores en el sitio web de Freedom Scientific, donde puede escuchar muestras de voz y luego descargar e instalar voces.
+
+FSReader y materiales de entrenamiento
+Freedom Scientific ofrece materiales de entrenamiento básicos en un formato de documento digital conocido como DAISY (Digital Accessible Information System). Puede escuchar y leer los módulos de entrenamiento utilizando FSReader (el lector de libros DAISY de Freedom Scientific), que se instala automáticamente con JAWS. Por defecto, también se instala al menos un libro DAISY (FSReaderGettingStarted).
+Para instalar materiales de entrenamiento, haga lo siguiente:
+1. Pulse INSERT+J para abrir la ventana de la aplicación JAWS.
+2. Pulse ALT+H para elegir el menú Ayuda y luego pulse ENTER para elegir Entrenamiento.
+3. FSReader se abre y muestra el Índice de entrenamiento de JAWS, que contiene enlaces a todos los libros de entrenamiento DAISY disponibles. Use las teclas de FLECHA para navegar hasta el libro que desea descargar e instalar y luego pulse ENTER. FSReader descargará e instalará automáticamente el libro y luego lo abrirá.
+4. Repita este proceso para cada libro que desee descargar.
+
+Inicio y uso de FSReader
+A continuación se describe cómo iniciar FSReader y abrir un libro DAISY.
+1. Realice una de las siguientes acciones:
+* Desde la ventana de la aplicación JAWS, pulse ALT+H, T, o
+* Elija el acceso directo de FSReader disponible en su escritorio y luego pulse CTRL+J. Se abre el Índice de materiales de entrenamiento de JAWS. Cada libro DAISY está representado por un enlace.
+2. Seleccione un libro DAISY y pulse ENTER. El libro seleccionado aparece en FSReader.
+3. Pulse CTRL+P para comenzar a leer el libro. Pulse CTRL+P de nuevo para pausar la lectura del libro. Para avanzar rápidamente cinco segundos, pulse CTRL+PUNTO. Para retroceder el libro cinco segundos, pulse CTRL+COMA.
+Nota:	Mientras FSReader se esté ejecutando, CTRL+P alternará entre reproducción y pausa. Si desea imprimir mientras FSReader está activo, debe usar el comando Imprimir de una aplicación.
+4. Cuando haya terminado de leer el libro, pulse CTRL+J para abrir otro libro de entrenamiento de JAWS, pulse ALT+F, O para abrir un libro DAISY de otro proveedor, o pulse ALT+F, X para cerrar y salir de FSReader.
+
+Actualización de JAWS
+Freedom Scientific busca continuamente mejorar y ampliar JAWS para Windows. Periódicamente, se lanzarán actualizaciones de JAWS. Se recomienda que mantenga su software actualizado para que experimente el mejor rendimiento posible.
+Actualizar su software es rápido y sencillo. Para buscar actualizaciones de JAWS, haga lo siguiente:
+1. Establezca una conexión a Internet.
+2. Inicie JAWS.
+3. En el menú Ayuda, elija Buscar actualizaciones.
+4. JAWS busca actualizaciones en Internet y muestra una lista de las que estén disponibles para descargar. Use las teclas de FLECHA para desplazarse por la lista y pulse la BARRA ESPACIADORA para seleccionar la casilla de verificación junto a cualquier actualización que desee descargar e instalar.
+Nota: 	Si su ordenador tiene un software de cortafuegos activo (como el Cortafuegos de Windows), es posible que reciba una advertencia indicando que la aplicación FSAutoUpdate o FSAutoUpdate.exe está intentando acceder a Internet. Debe permitir que este proceso acceda a Internet a través del cortafuegos para poder recuperar las actualizaciones.
+5. Cuando haya terminado de seleccionar las actualizaciones, elija el botón Instalar. Es posible que deba reiniciar su ordenador. Si las actualizaciones no se instalan correctamente, repare su instalación de JAWS (consulte la ayuda en línea para obtener más información) y luego intente el procedimiento de nuevo.
+
+Obtener ayuda
+Freedom Scientific ofrece muchas formas de acceder a la ayuda cuando se utiliza JAWS. Con tantos formatos, siempre podrá recibir asistencia de la manera más cómoda posible.
+
+Materiales de entrenamiento de JAWS
+El Entrenamiento básico para JAWS y los materiales de entrenamiento de Novedades en JAWS se pueden descargar y leer utilizando el lector FSReader DAISY incluido con JAWS. Para iniciar FSReader, abra el menú Ayuda y elija Entrenamiento. Para obtener más información sobre el uso de FSReader, seleccione el libro DAISY "FSReaderGettingStarted" y pulse ENTER.
+Los materiales de entrenamiento se instalan en la siguiente carpeta: C:\Archivos de programa\Freedom Scientific\Training\JAWS\enu. Los módulos de Entrenamiento básico de JAWS le brindan el mejor comienzo posible en su camino para dominar Windows con JAWS. El conjunto lo lleva lógicamente desde el inicio de JAWS hasta el trabajo en el entorno Windows. Los módulos incluyen muestras reales de lo que escuchará mientras realiza varias operaciones de Windows y JAWS. Se anima a todos los usuarios a aprovechar este entrenamiento. Una vez que JAWS se esté ejecutando, debe escuchar todos los módulos y realizar las operaciones junto con ellos.
+
+Sistema de ayuda de JAWS
+Usar el sistema de ayuda de JAWS es rápido y sencillo. Para iniciar la Ayuda de JAWS, pulse INSERT+J para cambiar a la ventana de JAWS, pulse ALT+H para abrir el menú Ayuda y elija Temas de ayuda de JAWS.
+Cuando abre por primera vez la Ayuda de JAWS, el Índice aparece en el lado izquierdo de una ventana dividida. El Índice enumera una serie de libros y páginas. Los libros son categorías que contienen páginas. Las páginas son temas que contienen información. Use las teclas de FLECHA ARRIBA y ABAJO para moverse por el Índice. Use FLECHA DERECHA para abrir un libro y FLECHA IZQUIERDA para cerrar un libro. Pulse ENTER en una página seleccionada para mostrar el texto de ese tema y luego pulse F6 para moverse a la ventana del tema. Pulse F6 de nuevo para volver al Índice, o pulse ALT+C para volver al Índice desde cualquier sección del sistema de ayuda.
+Use CTRL+TAB para acceder a las pestañas de Índice y Búsqueda en el sistema de ayuda.
+En casi todas las aplicaciones de Windows, puede pulsar F1 para abrir la Ayuda de esa aplicación. Esto también es cierto en la ventana de JAWS y en los Gestores de JAWS (INSERT+F2), como el Gestor de teclado.
+
+Teclas para obtener ayuda dondequiera que esté
+La Ayuda sensible al contexto de JAWS proporciona información sobre el uso de varias opciones de cuadros de diálogo, botones y otros controles. Para activar esta función, muévase al control del que desea ayuda y pulse INSERT+F1. Esta es una forma rápida de obtener ayuda específica para el programa que está utilizando.
+La Ayuda de teclas de acceso rápido es una función que le brinda acceso rápido a las teclas de JAWS disponibles que podrían ser útiles. Detecta las aplicaciones que está utilizando, por lo que le brinda la ayuda adecuada en función de lo que esté haciendo en ese momento. Para activar la Ayuda de teclas de acceso rápido, pulse INSERT+H.
+Muchas aplicaciones populares tienen una función de ayuda adicional disponible. Pulsar INSERT+F1 dos veces rápidamente abre un tema de Ayuda de JAWS para la aplicación que se está ejecutando actualmente.
+A medida que aprende comandos, la Ayuda de teclado de JAWS es una herramienta beneficiosa. Proporciona información sobre combinaciones de teclas mientras trabaja en cualquier aplicación. Para activar la Ayuda de teclado de JAWS, pulse INSERT+1. JAWS dirá entonces: "Ayuda de teclado activada". Pulse cualquier combinación de teclas para escuchar una descripción de ese comando. Obtenga una descripción más extensa del comando manteniendo pulsada la primera tecla o teclas de la combinación y pulsando la última tecla dos veces rápidamente. Si el comando contiene solo una tecla, pulse esta tecla dos veces rápidamente. Por ejemplo, para obtener ayuda sobre el comando Verbalizar todo, pulse INSERT+FLECHA ABAJO dos veces rápidamente. Mientras la Ayuda de teclado está activa, las teclas que pulse no realizan ninguna acción realmente. Pulse INSERT+1 de nuevo para desactivar la Ayuda de teclado.
+También puede buscar comandos específicos utilizando la Búsqueda de comandos de JAWS. Pulse INSERT+BARRA ESPACIADORA, seguida de J para abrir la ventana Buscar comandos, comience a escribir texto relacionado con el tipo de comando que desea realizar y JAWS mostrará los comandos que coincidan con lo que ingresó junto con sus teclas.
+La última tecla para obtener ayuda es INSERT+W, que proporciona ayuda para algunas teclas de aplicaciones de Windows de uso común.
+
+Soporte técnico
+Nuestro personal de Soporte técnico brinda asistencia para la configuración de JAWS y otros productos de Freedom Scientific. El Soporte técnico continuo está disponible para aquellos usuarios que adquieren y registran JAWS. Antes de llamar al Soporte técnico, visite nuestro sitio web en www.FreedomScientific.com. También puede enviar un correo electrónico al soporte técnico a support@FreedomScientific.com, o llamarlos al (727) 803-8600. Cuando llame al Soporte técnico de Freedom Scientific, tenga listo su número de serie de JAWS. Para leer su número de serie de JAWS, cambie a la ventana de JAWS y pulse INSERT+AV PÁG para leer la barra de estado.
+
+Guía para nuevos usuarios
+Si es nuevo en JAWS, las siguientes secciones contienen un resumen de teclas útiles de lectura y navegación para ayudarlo a comenzar. Para obtener más información sobre el uso de JAWS, instale y escuche los archivos DAISY de Entrenamiento básico o abra el archivo de Ayuda de JAWS. Para obtener instrucciones sobre cómo instalar y localizar el Entrenamiento básico, consulte FSReader y materiales de entrenamiento o Materiales de entrenamiento de JAWS. Consulte Sistema de ayuda de JAWS para obtener más información sobre cómo abrir y usar la Ayuda.
+
+Lectura de pantallas y documentos
+Puede acceder a muchas funciones de voz en JAWS utilizando el teclado numérico (TECLADO NUM) ubicado en el extremo derecho de la mayoría de los teclados. JAWS utiliza la tecla INSERT en la parte inferior izquierda del TECLADO NUM en combinación con las otras teclas de este teclado para controlar lo que JAWS verbalizará.
+Para que JAWS comience a leer la pantalla, pulse la combinación de teclas INSERT+FLECHA ABAJO. Este es el comando Verbalizar todo. Mientras usa el comando Verbalizar todo, puede pulsar las teclas FLECHA IZQUIERDA o DERECHA para retroceder o avanzar rápidamente por el texto. También puede pulsar RE PÁG o AV PÁG para aumentar o disminuir la velocidad de la voz. Para detener el habla, pulse la tecla CTRL.
+Las siguientes son combinaciones de teclas adicionales que utilizan este teclado:
+* TECLADO NUM 5 - Verbalizar carácter
+* INSERT+TECLADO NUM 5 - Verbalizar palabra
+* INSERT+TECLADO NUM 5 dos veces - Deletrear palabra
+* INSERT+FLECHA IZQUIERDA - Verbalizar palabra anterior
+* INSERT+FLECHA DERECHA - Verbalizar palabra siguiente
+* INSERT+FLECHA ARRIBA - Verbalizar línea
+* INSERT+INICIO (la tecla 7) - Verbalizar hasta el cursor
+* INSERT+RE PÁG (la tecla 9) - Verbalizar desde el cursor
+* INSERT+AV PÁG (la tecla 3) - Verbalizar la línea inferior de la ventana
+* INSERT+FIN (la tecla 1) - Verbalizar la línea superior de la ventana
+
+Más comandos de lectura
+Hay más comandos de lectura además de los enumerados anteriormente. Puede usar las teclas FLECHA IZQUIERDA y DERECHA para moverse y leer el carácter siguiente o anterior. Las teclas FLECHA ARRIBA y ABAJO le permiten moverse y leer la línea anterior o siguiente. Mantenga pulsada la tecla ALT y pulse la tecla FLECHA ARRIBA o ABAJO para moverse por un documento por frases. Del mismo modo, mantenga pulsado CTRL y use las teclas FLECHA ARRIBA y ABAJO para moverse por un documento por párrafos.
+
+Trabajo con cuadros de diálogo
+Los cuadros de diálogo muestran información y le permiten interactuar con los programas de Windows. Para moverse por las diversas opciones en un cuadro de diálogo, pulse TAB o SHIFT+TAB. Si el cuadro de diálogo está dividido en pestañas, puede usar CTRL+TAB para moverse entre las pestañas. Pulse INSERT+TAB para escuchar una descripción de la opción seleccionada actualmente.
+
+Primeros pasos con Internet
+Los navegadores web como Internet Explorer, Firefox o Chrome le permiten ver páginas en Internet e interactuar con otras personas de varias maneras. JAWS utiliza el Cursor Virtual en las páginas web, lo que le permite leer como lo haría en un documento de procesamiento de textos. El Cursor Virtual también está disponible en otras aplicaciones, como sistemas de ayuda basados en HTML, archivos PDF y correos electrónicos en HTML. Muchas de las funciones analizadas en esta sección también están disponibles dondequiera que se utilice el Cursor Virtual. Para obtener información específica sobre qué funciones están disponibles, consulte el tema de ayuda de JAWS para la aplicación que está utilizando.
+
+Lectura y desplazamiento por páginas web
+Cuando inicia el navegador web, se abre su página de inicio. Si no tiene una página de inicio especificada, puede seleccionar una página web del menú Favoritos o Marcadores, o pulsar ALT+D para moverse a la Barra de direcciones y escribir la dirección de una página. Después de seleccionar una página, el navegador la carga y JAWS anuncia la presencia de marcos, enlaces, encabezados y formularios y comienza a verbalizar el texto en la pantalla. Para moverse por la página, use los comandos de lectura estándar de JAWS.
+Nota:	Si comienza a leer antes de que una página termine de cargarse, es posible que parte de la página no esté disponible.
+JAWS dice "Enlace" cuando encuentra un enlace a otro documento o parte de la página. Para seguir un enlace, pulse ENTER mientras está posicionado en el enlace. Para volver a la página anterior, pulse ALT+FLECHA IZQUIERDA o RETROCESO. Para avanzar una página después de haber retrocedido, pulse ALT+FLECHA DERECHA.
+
+Navegación rápida y sencilla
+JAWS proporciona comandos fáciles de usar y recordar para moverse por las páginas web. Puede pulsar una sola letra en su teclado para moverse a un elemento. Por ejemplo, puede pulsar T para tabla, F para control de formulario, V para enlace visitado, H para encabezado, etc. Añada SHIFT para moverse al elemento anterior de ese tipo. Para obtener una lista completa de estos comandos, consulte el sistema de ayuda de JAWS.
+
+Visualización de listas de información
+JAWS puede compilar listas de marcos, enlaces, encabezados o campos de formulario en una página web para que pueda encontrar rápidamente lo que necesita. Pulse INSERT+F9 para mostrar una lista de todos los marcos en la página actual. Pulse INSERT+F7 para mostrar una lista de todos los enlaces en la página actual. Pulse INSERT+F6 para mostrar una lista de todos los encabezados en la página actual. Pulse INSERT+F5 para mostrar una lista de todos los campos de formulario en la página actual. Use las teclas de FLECHA para seleccionar un elemento y pulse ENTER para moverse a él.
+Además, si mantiene pulsado CTRL+INSERT y pulsa una de las varias Teclas de navegación rápida, JAWS muestra una lista de esos elementos en la página actual. Luego puede seleccionar un elemento usando las teclas de FLECHA y pulsar ENTER para moverse a él. Por ejemplo, para mostrar una lista de casillas de verificación en la página actual, pulse CTRL+INSERT+X.
+Consejo: 	Pulsar INSERT+F3 le permite ver cualquiera de las listas de información que están disponibles para las páginas web.
+
+Interacción con formularios
+JAWS le permite trabajar fácilmente con formularios en la web. Cuando se mueve a un control de formulario, simplemente puede escribir en campos de edición o seleccionar elementos en cuadros combinados. Esto se conoce como Modo de formularios automático y está activado por defecto. Si desea tener más control sobre un formulario, puede desactivar el Modo de formularios automático pulsando INSERT+V y luego configurando la opción Modo de formularios automático en Manual o Semi-Automático. En Semi-Automático, el Modo de formularios solo se activa cuando navega a un campo de edición o cuadro combinado usando TAB o SHIFT+TAB.
+Para controlar manualmente un formulario, pulse F para moverse al siguiente control de formulario en la página. Pulse ENTER para activar el Modo de formularios. Pulse la tecla TAB para moverse entre los controles de formulario mientras está en el Modo de formularios. Escriba en los campos de edición, seleccione casillas de verificación y seleccione elementos de listas y cuadros combinados. Pulse TECLADO NUM MÁS para desactivar el Modo de formularios.
+Si lo desea, puede activar o desactivar el Modo de formularios automático en función de las páginas web que visite. Puede personalizar la configuración para páginas web específicas abriendo Configuraciones rápidas (INSERT+V), seleccionando el grupo Personalizar configuraciones web y luego configurando la opción Modo de formularios automático.

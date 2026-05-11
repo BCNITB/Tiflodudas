@@ -15,7 +15,16 @@ export class GeminiService {
   private genAI: GoogleGenerativeAI;
   private model: GenerativeModel;
   private chat: ChatSession | null = null;
-  private manuals = ['jaws_keystrokes.txt', 'nvda_keystrokes.txt'];
+  private manuals = [
+    'jaws_keystrokes.txt', 
+    'jaws_atajos.txt',
+    'nvda_keystrokes.txt', 
+    'nvda_atajos.txt',
+    'jaws_braille_commands.txt', 
+    'jaws_braille_commandos.txt',
+    'jaws_quickstart.txt', 
+    'orbit.txt'
+  ];
 
   constructor(
     private itemService: ItemService,
@@ -26,7 +35,7 @@ export class GeminiService {
     this.model = this.genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
   }
 
-  async generateTextWithContext(prompt: string): Promise<string> {
+  async generateTextWithContext(prompt: string, specializedMode?: string): Promise<string> {
     try {
       // Get context from the database
       const items = await firstValueFrom(this.itemService.getItems());
@@ -55,10 +64,8 @@ export class GeminiService {
         let content = await this.dataCache.get(cacheKey);
 
         if (content) {
-          console.log(`Manual ${manual} loaded from cache.`);
           return { manual, content: content as string };
         } else {
-          console.log(`Manual ${manual} not in cache, fetching from network.`);
           return firstValueFrom(
             this.http.get(`assets/manuals/${manual}`, { responseType: 'text' }).pipe(
               map(c => {
@@ -77,25 +84,65 @@ export class GeminiService {
       const manualContents = await Promise.all(manualPromises);
       
       let manualContext = '';
+      const promptWords = prompt.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+      
       manualContents.forEach(mc => {
-        if (mc.content && mc.content.toLowerCase().includes(prompt.toLowerCase())) {
-          if (manualContext === '') {
-            manualContext = 'Contexto de los manuales:\n';
+        if (mc.content) {
+          const contentLower = mc.content.toLowerCase();
+          const hasKeyword = promptWords.some(word => contentLower.includes(word));
+          
+          // New logic: include manual if keywords match OR if it's the right manual for the specialized mode
+          const isRelevantForMode = 
+            (specializedMode === 'lectores' && (mc.manual.includes('jaws') || mc.manual.includes('nvda'))) ||
+            (specializedMode === 'braille' && mc.manual.includes('orbit'));
+
+          if (hasKeyword || isRelevantForMode || contentLower.includes(prompt.toLowerCase())) {
+            if (manualContext === '') {
+              manualContext = 'Contexto de los manuales (pueden estar en inglés):\n';
+            }
+            
+            // If the manual is large, try to find the relevant part
+            let snippet = mc.content;
+            if (snippet.length > 5000) {
+              // Try to find a relevant section even if in different language (e.g. by technical terms)
+              const index = contentLower.indexOf(prompt.toLowerCase());
+              if (index !== -1) {
+                const start = Math.max(0, index - 2500);
+                const end = Math.min(snippet.length, index + 2500);
+                snippet = snippet.substring(start, end);
+              } else {
+                snippet = snippet.substring(0, 5000); // Default to beginning if no match
+              }
+            }
+            
+            manualContext += `Manual: ${mc.manual}\n...${snippet}...\n\n`;
           }
-          manualContext += `Manual: ${mc.manual}\n${mc.content}\n\n`;
         }
       });
 
+      let systemInstructions = 'Basándote en la información proporcionada, responde a la siguiente pregunta del usuario de forma concisa. Solo proporciona la respuesta.';
+      
+      if (specializedMode === 'lectores') {
+        systemInstructions = 'Eres el asistente experto en Lectores de Pantalla de Tiflo IA. Los manuales adjuntos están en inglés, pero debes traducir la información y responder siempre en CASTELLANO de forma clara y accesible.';
+      } else if (specializedMode === 'braille') {
+        systemInstructions = 'Eres el asistente experto en Líneas Braille de Tiflo IA. Los manuales adjuntos están en inglés, pero debes traducir la información y responder siempre en CASTELLANO de forma clara y accesible.';
+      }
 
-      const finalPrompt = `${manualContext}${dbContext}\nBasándote en la información proporcionada, responde a la siguiente pregunta del usuario de forma concisa y sin repetir las etiquetas de contexto (Categoría, Dispositivo, Consulta, Respuesta). Solo proporciona la respuesta. Pregunta del usuario: ${prompt}`;
+      const finalPrompt = `${manualContext}${dbContext}\n${systemInstructions}\nPregunta del usuario (en castellano): ${prompt}`;
 
       const result = await this.model.generateContent(finalPrompt);
       const response = await result.response;
       const text = response.text();
       return text;
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error al generar texto con Gemini:', error);
-      throw error;
+      // Fallback to basic generation without context
+      try {
+        const fallbackResult = await this.generateText(prompt);
+        return fallbackResult + '\n\n(Nota: Esta respuesta se generó sin el contexto completo debido a un error técnico)';
+      } catch (fallbackError: any) {
+        return `Error de Gemini: ${error.message || error}`;
+      }
     }
   }
 

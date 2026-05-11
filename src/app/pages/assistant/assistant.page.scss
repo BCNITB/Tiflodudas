@@ -1,63 +1,150 @@
-.chat-container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
+ion-content {
+  --background: var(--ion-color-light);
 }
 
-.message-wrapper {
-  margin-bottom: 10px;
-  display: flex;
-}
+.header-section {
+  margin-bottom: 30px;
+  padding: 0 10px;
 
-.message-wrapper.user {
-  justify-content: flex-end;
-}
+  h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+    text-align: center;
+    margin-bottom: 12px;
+  }
 
-.message-wrapper.bot {
-  justify-content: flex-start;
-}
-
-.message {
-  padding: 10px;
-  border-radius: 10px;
-  max-width: 80%;
-}
-
-.message-wrapper.user .message {
-  background-color: var(--ion-color-primary);
-  color: var(--ion-color-primary-contrast);
-}
-
-.message-wrapper.bot .message {
-  background-color: var(--ion-color-light); /* Use a light background for bot messages */
-  color: var(--ion-color-dark); /* Use dark text for contrast */
-  
-  // Dark mode styles for bot messages
-  :host-context(.ion-color-scheme-dark) & {
-    background-color: var(--ion-color-medium); /* A slightly darker background for dark mode */
-    color: var(--ion-color-light-contrast); /* Lighter text for contrast in dark mode */
+  p {
+    color: var(--ion-text-color, #000); // Improved contrast for accessibility
+    font-size: 1.05rem; // Slightly larger for better readability
+    line-height: 1.5;
+    text-align: left; // Left aligned as requested
   }
 }
 
-.chat-input-container {
-    display: flex;
-    align-items: center;
-    padding: 5px;
+.selector-item {
+  --background: var(--ion-card-background, #fff);
+  --color: var(--ion-text-color, #000);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  ion-label {
+    color: var(--ion-color-primary-shade, #3171e0) !important; // Darker primary for contrast
+    font-weight: 700;
+  }
+
+  ion-select {
+    --placeholder-color: var(--ion-color-dark-tint, #383a3e); // Higher contrast placeholder
+    --placeholder-opacity: 1;
+    width: 100%;
+    color: var(--ion-text-color, #000);
+    font-size: 1.1rem;
+  }
 }
 
-ion-input {
-    flex: 1;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 5px 15px !important;
-    margin-right: 10px;
-    --color: var(--ion-color-step-850, #000); /* Default to black for light mode */
-    --placeholder-color: var(--ion-color-step-600, #929292);
+.info-card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 
-    // Dark mode styles
-    :host-context(.ion-color-scheme-dark) & {
-      --color: var(--ion-color-step-100, #fff); /* White for dark mode */
-      --placeholder-color: var(--ion-color-step-400, #a6a6a6);
+.notebook-card {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  overflow: visible;
+
+  ion-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+
+    .icon-container {
+      width: 80px;
+      height: 80px;
+      background: var(--ion-color-primary-light, #f0f4ff);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: var(--ion-color-primary);
+      font-size: 40px;
     }
+
+    ion-card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  ion-card-content {
+    text-align: center;
+    padding: 20px 24px 30px;
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: var(--ion-text-color, #000); // Standard text color for contrast
+      margin-bottom: 24px;
+    }
+
+    .action-section {
+      .open-button {
+        --border-radius: 12px;
+        --padding-top: 16px;
+        --padding-bottom: 16px;
+        font-weight: bold;
+        height: 56px;
+        margin-bottom: 12px;
+      }
+
+      .hint-text {
+        font-size: 0.9rem;
+        color: var(--ion-color-dark-shade, #1e2023); // Higher contrast hint text
+        font-style: italic;
+      }
+    }
+  }
+}
+
+.placeholder-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  text-align: center;
+  color: var(--ion-color-medium);
+
+  .pulse-container {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+  }
+
+  p {
+    font-size: 1.1rem;
+    max-width: 250px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
 }

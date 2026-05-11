@@ -28,10 +28,14 @@ const routes: Routes = [
     loadChildren: () => import('./modals/send-solution/send-solution.module').then( m => m.SendSolutionPageModule)
   },
 
-  {
-    path: 'contact-modal',
-    loadChildren: () => import('./modals/contact-modal/contact-modal.module').then( m => m.ContactModalPageModule)
-  },
+    {
+
+      path: 'contact-modal',
+
+      loadChildren: () => import('./modals/contact-modal/contact-modal.module').then( m => m.ContactModalPageModule)
+
+    },
+
 
 
 

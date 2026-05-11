@@ -1,0 +1,261 @@
+Comandos de Braille
+JAWS® admite una serie de pulsaciones de teclas que le permiten introducir comandos braille y también controlar su ordenador (consulte la descripción de BrailleIn™ más adelante). A continuación se detallan las pulsaciones de teclas compatibles con las líneas braille Focus de Freedom Scientific. Para otras líneas braille, póngase en contacto con el fabricante para obtener una lista de comandos.
+
+Muchos de los comandos que aparecen aquí incluyen la palabra "ACORDE" (CHORD). Para realizar un comando de acorde, siempre debe incluir la BARRA ESPACIADORA como parte del comando. Por ejemplo, L ACORDE o PUNTOS 1-2-3 y la BARRA ESPACIADORA.
+
+Teclas Modificadoras
+Utilice las teclas modificadoras para simular combinaciones de teclas (pulsaciones) que incluyan CTRL, ALT, tecla WINDOWS, SHIFT o la tecla JAWS (INSERT). Para utilizar estos modificadores al escribir una pulsación de tecla, haga lo siguiente:
+
+Mantenga pulsado PUNTO 8 ACORDE y luego pulse las teclas modificadoras correspondientes en la pulsación. Las pulsaciones de modificadores se enumeran en la siguiente tabla.
+Después de crear la parte modificadora de la pulsación, suelte las teclas y pulse la parte restante de la pulsación. Por ejemplo, para realizar la pulsación CTRL+SHIFT+V, pulse PUNTOS 3-7-8 ACORDE, suelte las teclas y luego pulse V (PUNTOS 1-2-3-6).
+
+Nombre de la tecla	Pulsación
+Teclas de función (F1 a F12)
+Para más información, consulte la descripción de las Teclas de Función.	PUNTO 1
+INSERT	PUNTO 2
+CTRL	PUNTO 3
+Tecla WINDOWS	PUNTO 4
+Tecla JAWS	PUNTO 5
+ALT	PUNTO 6
+SHIFT	PUNTO 7
+En lugar de memorizar estas teclas por su posición de puntos, puede ser más fácil aprender el dedo con el que se asociaría cada tecla. Cuando todos sus dedos están en el teclado braille, la distribución sería:
+
+Nombre de la tecla	Posición del dedo
+Teclas de función (F1 a F12)	Dedo índice izquierdo
+Tecla WINDOWS	Dedo índice derecho
+INSERT	Dedo corazón izquierdo
+Tecla JAWS	Dedo corazón derecho
+CTRL	Dedo anular izquierdo
+ALT	Dedo anular derecho
+SHIFT	Dedo meñique izquierdo
+Observe que puede crear una correlación bastante libre entre pares de dedos en esta descripción. Por ejemplo, el dedo índice izquierdo son las Teclas de Función mientras que el dedo índice derecho es la tecla WINDOWS. Se puede establecer una correlación más fuerte con los dedos corazón izquierdo y derecho. La izquierda es la tecla INSERT y la derecha es la tecla JAWS, ambas sirviendo a menudo para el mismo propósito en el uso de JAWS. Por último, los dedos anular izquierdo y derecho son las teclas CTRL y ALT respectivamente, lo que hace que estas dos posiciones sean más fáciles de recordar.
+
+Una vez comprendida esta distribución, es fácil entender que cada vez que se utilice una tecla modificadora, o una combinación de teclas modificadoras como parte de un comando, siempre se incluirá PUNTO 8 ACORDE.
+
+Por último, pulsar cualquiera de estas teclas modificadoras con PUNTO 8 ACORDE es lo mismo que pulsar y mantener cualquiera de las teclas equivalentes en el teclado QWERTY. El ordenador está esperando la tecla o teclas que las teclas modificadoras modificarán. Así, pulsar PUNTOS 3-8 ACORDE es lo mismo que pulsar la tecla CTRL. Windows espera entonces la tecla que completará la combinación CTRL, como la letra A para hacer CTRL+A para seleccionar todo, o la letra C para hacer CTRL+C para copiar el texto seleccionado al portapapeles. La repetición de las pulsaciones de teclas utilizadas con frecuencia, como las combinaciones de teclas CTRL ya mencionadas, los comandos de Windows como Tecla WINDOWS+M y los comandos de JAWS como INSERT+T, deberían grabar firmemente estas asociaciones de teclas en su memoria.
+
+Teclas de Función
+Para simular las teclas de función (F1 a F12), pulse PUNTOS 1-8 ACORDE seguido de A hasta L (que corresponden a 1 hasta 12). Por ejemplo, para simular la tecla F6, pulse PUNTOS 1-8 ACORDE, luego F (PUNTOS 1-2-4). Si la tecla de función forma parte de una combinación de teclas, añada los modificadores adecuados mientras mantiene pulsado PUNTOS 1-8 ACORDE. Por ejemplo, para simular la pulsación INSERT+F2, pulse PUNTOS 1-2-8 ACORDE, luego B (PUNTOS 1-2).
+
+Teclas Especiales
+Utilice estas pulsaciones de teclas para simular ciertas teclas que no están disponibles en el teclado braille Focus. Estas teclas pueden combinarse con las teclas modificadoras descritas anteriormente. Para su comodidad, se proporcionan tanto las pulsaciones de teclas como los patrones de puntos braille. Si no hay un patrón de puntos equivalente disponible, aparece un guion en la celda de la tabla.
+
+Nombre de la tecla	Pulsación	Patrón de PUNTOS
+ESC	SHIFT DERECHO+PUNTO 1 o Z ACORDE	SHIFT DERECHO+PUNTO 1 o PUNTOS 1-3-5-6 ACORDE
+ALT	SHIFT DERECHO+PUNTO 2	–
+Tecla de APLICACIÓN	SHIFT DERECHO+PUNTO 2 ACORDE	–
+ASTERISCO DEL TECLADO NUMÉRICO	SHIFT DERECHO+PUNTO 3	–
+Tecla WINDOWS	SHIFT DERECHO+PUNTO 4	–
+BARRA DEL TECLADO NUMÉRICO	SHIFT DERECHO+PUNTO 7	SHIFT DERECHO+PUNTO 7
+BLOQUEO MAYÚSCULAS	SHIFT DERECHO+PUNTO 7 ACORDE	SHIFT DERECHO+PUNTO 7 ACORDE
+MÁS DEL TECLADO NUMÉRICO	SHIFT DERECHO+PUNTO 8	–
+RETROCESO	PUNTO 7	–
+ENTER	PUNTO 8	–
+CTRL+RETROCESO	PUNTOS 1-2-3-4-5-6-7 ACORDE	–
+TABULADOR	PUNTOS 4-5 ACORDE	–
+SHIFT+TABULADOR	B ACORDE	PUNTOS 1-2 ACORDE
+INICIO	K ACORDE	PUNTOS 1-3 ACORDE
+FIN	PUNTOS 4-6 ACORDE	–
+AVANZAR PÁGINA	SELECT IZQUIERDO+BARRA DESPLAZAMIENTO ARRIBA o SELECT DERECHO+BARRA DESPLAZAMIENTO ARRIBA o PUNTOS 2-3-7 ACORDE	–
+RETROCEDER PÁGINA	SELECT IZQUIERDO+BARRA DESPLAZAMIENTO ABAJO o SELECT DERECHO+BARRA DESPLAZAMIENTO ABAJO o PUNTOS 5-6-7 ACORDE	–
+SUPRIMIR	FOR ACORDE o SHIFT IZQUIERDO+D	PUNTOS 1-2-3-4-5-6 ACORDE o SHIFT IZQUIERDO+PUNTOS 1-4-5
+IGUAL	PUNTOS 1-2-3-4-5-6	–
+CORCHETE DERECHO	PUNTOS 1-2-4-5-6-7	–
+CORCHETE IZQUIERDO	PUNTOS 2-4-6-7	–
+BARRA INVERSA	PUNTOS 1-2-5-6-7	–
+BARRA	PUNTOS 3-4	–
+PARÉNTESIS IZQUIERDO	PUNTOS 1-2-3-5-6	–
+PARÉNTESIS DERECHO	PUNTOS 2-3-4-5-6	–
+APÓSTROFE	PUNTO 3	–
+GUION	PUNTOS 3-6	–
+ACENTO GRAVE	PUNTO 4	–
+PUNTO	PUNTOS 4-6	–
+SIGNO DE INTERROGACIÓN	PUNTOS 1-4-5-6	–
+SIGNO DE EXCLAMACIÓN	PUNTOS 2-3-4-6	–
+PUNTO Y COMA	PUNTOS 5-6	–
+COMA	PUNTO 6	–
+
+Comandos de Navegación
+Utilice estas pulsaciones de teclas para realizar varios comandos de navegación de JAWS. En la tabla se proporcionan tanto las pulsaciones de teclas como los patrones de puntos braille. Si no hay un patrón de puntos equivalente disponible, aparece un guion en la celda de la tabla.
+
+Descripción	Pulsación	Patrón de PUNTOS
+Decir Carácter Anterior	PUNTO 3 ACORDE	–
+Decir Carácter Siguiente	PUNTO 6 ACORDE	–
+Decir Carácter	PUNTOS 3-6 ACORDE	–
+Decir Palabra Anterior	PUNTO 2 ACORDE	–
+Decir Palabra Siguiente	PUNTO 5 ACORDE	–
+Decir Palabra	PUNTOS 2-5 ACORDE	–
+Decir Línea Anterior	PUNTO 1 ACORDE o BARRA DESPLAZAMIENTO IZQUIERDA ARRIBA	–
+Decir Línea Siguiente	PUNTO 4 ACORDE o BARRA DESPLAZAMIENTO IZQUIERDA ABAJO	–
+Decir Línea	C ACORDE	PUNTOS 1-4 ACORDE
+Decir Frase	SHIFT IZQUIERDO+SHIFT DERECHO+C	SHIFT IZQUIERDO+SHIFT DERECHO+PUNTOS 1-4
+Decir Párrafo Anterior	SHIFT DERECHO+BARRA DESPLAZAMIENTO IZQUIERDA ARRIBA	–
+Decir Párrafo Siguiente	SHIFT DERECHO+BARRA DESPLAZAMIENTO IZQUIERDA ABAJO	–
+Decir Párrafo	SHIFT IZQUIERDO+SHIFT DERECHO+PUNTOS 2-3-5-6-7-8	–
+Moverse al principio del archivo	L ACORDE	PUNTOS 1-2-3 ACORDE
+Moverse al final del archivo	PUNTOS 4-5-6 ACORDE	–
+Decir hasta el cursor	SHIFT DERECHO+PUNTOS 3-7	–
+Decir desde el cursor	SHIFT DERECHO+PUNTOS 6-8	–
+Decir todo	PUNTOS 1-2-4-5-6 ACORDE	–
+Decir línea superior de la ventana activa	BARRA DESPLAZAMIENTO IZQ ARRIBA+BARRA DESPLAZAMIENTO DER ARRIBA	–
+Decir línea inferior de la ventana activa	BARRA DESPLAZAMIENTO IZQ ABAJO+BARRA DESPLAZAMIENTO DER ABAJO	–
+Ventana de documento anterior	PUNTOS 2-3 ACORDE	–
+Ventana de documento siguiente	PUNTOS 5-6 ACORDE	–
+Abrir cuadro de lista	SHIFT IZQUIERDO+BARRA DESPLAZAMIENTO DERECHA ABAJO	–
+Cerrar cuadro de lista	SHIFT IZQUIERDO+BARRA DESPLAZAMIENTO DERECHA ARRIBA	–
+Salir del modo formularios	X ACORDE	PUNTOS 1-3-4-6 ACORDE
+Decir indicación de ventana y texto	G ACORDE	PUNTOS 1-2-4-5 ACORDE
+
+Teclas Rápidas de Navegación de Microsoft Word
+Utilice estas pulsaciones de teclas para navegar por documentos de Microsoft Word. Las teclas rápidas de navegación deben estar habilitadas para que estos comandos funcionen (PUNTO 8 ACORDE, PUNTO 2 seguido de PUNTOS 1-3-5-6). Tenga en cuenta que puede añadir PUNTO 7 a la mayoría de las pulsaciones de teclas de la tabla siguiente para desplazarse al elemento anterior de ese tipo en el documento. En la tabla se proporcionan tanto las pulsaciones de teclas como los patrones de puntos braille. Si no hay un patrón de puntos equivalente disponible, aparece un guion en la celda de la tabla.
+
+Descripción	Pulsación	Patrón de PUNTOS
+Siguiente error gramatical	A	PUNTO 1
+Siguiente marcador	B	PUNTOS 1-2
+Siguiente campo de formulario combinado	C	PUNTOS 1-4
+Siguiente nota al final	D	PUNTOS 1-4-5
+Siguiente campo de formulario de edición	E	PUNTOS 1-5
+Siguiente campo de formulario	F	PUNTOS 1-2-4
+Siguiente gráfico	G	PUNTOS 1-2-4-5
+Siguiente encabezado	H	PUNTOS 1-2-5
+Siguiente lista	L	PUNTOS 1-2-3
+Siguiente error ortográfico	M	PUNTOS 1-3-4
+Siguiente comentario	N	PUNTOS 1-3-4-5
+Siguiente nota al pie	O	PUNTOS 1-3-5
+Siguiente párrafo	P	PUNTOS 1-2-3-4
+Siguiente revisión	R	PUNTOS 1-2-3-5
+Siguiente sección	S	PUNTOS 2-3-4
+Siguiente tabla	T	PUNTOS 2-3-4-5
+Siguiente casilla de verificación de formulario	X	PUNTOS 1-3-4-6
+Siguiente página	BARRA ESPACIADORA	–
+Página anterior	RETROCESO	PUNTO 7
+
+Comandos de Selección
+Utilice estas pulsaciones de teclas para seleccionar caracteres, líneas y otros elementos de la página. En la tabla se proporcionan tanto las pulsaciones de teclas como los patrones de puntos braille. Si no hay un patrón de puntos equivalente disponible, aparece un guion en la celda de la tabla.
+
+Descripción	Pulsación	Patrón de PUNTOS
+Seleccionar carácter anterior	SHIFT IZQUIERDO+PUNTO 3 o PUNTOS 3-7 ACORDE	–
+Seleccionar carácter siguiente	SHIFT IZQUIERDO+PUNTO 6 o PUNTOS 6-7 ACORDE	–
+Seleccionar palabra anterior	PUNTOS 2-7 ACORDE	–
+Seleccionar palabra siguiente	PUNTOS 5-7 ACORDE	–
+Seleccionar línea anterior	SHIFT IZQUIERDO+PUNTO 1 o PUNTOS 1-7 ACORDE	–
+Seleccionar línea siguiente	SHIFT IZQUIERDO+PUNTO 4 o PUNTOS 4-7 ACORDE	–
+Seleccionar pantalla anterior	SHIFT IZQUIERDO+K	SHIFT IZQUIERDO+PUNTOS 1-3
+Seleccionar pantalla siguiente	SHIFT IZQUIERDO+PUNTOS 4-6	–
+Seleccionar desde el principio de la línea	SHIFT IZQUIERDO+PUNTO 2 o PUNTOS 1-3-7 ACORDE	–
+Seleccionar hasta el final de la línea	SHIFT IZQUIERDO+PUNTO 5 o PUNTOS 4-6-7 ACORDE	–
+Seleccionar desde arriba	SHIFT IZQUIERDO+L o L+PUNTO 7 ACORDE	SHIFT IZQUIERDO+PUNTOS 1-2-3 o PUNTOS 1-2-3-7 ACORDE
+Seleccionar hasta abajo	SHIFT IZQUIERDO+PUNTOS 4-5-6 o PUNTOS 4-5-6-7 ACORDE	–
+Seleccionar todo	SHIFT IZQUIERDO+Signo FOR	SHIFT IZQUIERDO+PUNTOS 1-2-3-4-5-6
+Moverse al principio de la línea	BARRA DESPLAZAMIENTO ARRIBA+BOTÓN DE DESPLAZAMIENTO LATERAL	–
+Moverse al final de la línea	BARRA DESPLAZAMIENTO ABAJO+BOTÓN DE DESPLAZAMIENTO LATERAL	–
+
+Comandos de Braille
+Utilice estas pulsaciones de teclas para configurar diversas funciones braille. En la tabla se proporcionan tanto las pulsaciones de teclas como los patrones de puntos braille.
+
+Descripción	Pulsación	Patrón de PUNTOS
+Grado 2 Expandir palabra actual	T ACORDE	PUNTOS 2-3-4-5 ACORDE
+Traducción Grado 2	PUNTOS 1-2-4-5-7 ACORDE	PUNTOS 1-2-4-5-7 ACORDE
+Alternar caracteres y atributos	Signo CH ACORDE	PUNTOS 1-6 ACORDE
+Ciclar entre los modos de la línea braille	M ACORDE	PUNTOS 1-3-4 ACORDE
+Alternar braille de 8/6 PUNTOS	8 ACORDE	PUNTOS 2-3-6 ACORDE
+Cambiar la forma del cursor	Signo SH ACORDE	PUNTOS 1-4-6 ACORDE
+Restringir el cursor braille	R ACORDE	PUNTOS 1-2-3-5 ACORDE
+Cambiar la tabla de traducción braille	PUNTOS 2-3-4-5-7 ACORDE	PUNTOS 2-3-4-5-7 ACORDE
+
+Comandos de Windows
+Utilice estas pulsaciones de teclas para las funciones básicas de edición en Windows.
+
+Descripción	Signo Braille	Patrón de PUNTOS
+ALT+TAB	SHIFT IZQUIERDO+PUNTOS 4-5	SHIFT IZQUIERDO+PUNTOS 4-5
+Pegar desde el portapapeles	SHIFT IZQUIERDO+V	SHIFT IZQUIERDO+PUNTOS 1-2-3-6
+Copiar al portapapeles	SHIFT IZQUIERDO+C	SHIFT IZQUIERDO+PUNTOS 1-4
+Cortar al portapapeles	SHIFT IZQUIERDO+X	SHIFT IZQUIERDO+PUNTOS 1-3-4-6
+Deshacer	SHIFT IZQUIERDO+Z	SHIFT IZQUIERDO+PUNTOS 1-3-5-6
+Suprimir	SHIFT IZQUIERDO+D	SHIFT IZQUIERDO+PUNTOS 1-4-5
+
+Comandos de JAWS
+Utilice estas pulsaciones de teclas para realizar algunas de las funciones más comunes de JAWS.
+
+Descripción	Signo Braille	Patrón de PUNTOS
+Ventana de JAWS	SHIFT DERECHO+J	SHIFT DERECHO+PUNTOS 2-4-5
+Configuración rápida	SHIFT DERECHO+V	SHIFT DERECHO+PUNTOS 1-2-3-6
+Listar marcos	SHIFT DERECHO+9	SHIFT DERECHO+PUNTOS 3-5
+Listar encabezados	SHIFT DERECHO+6	SHIFT DERECHO+PUNTOS 2-3-5
+Listar enlaces	SHIFT DERECHO+7	SHIFT DERECHO+PUNTOS 2-3-5-6
+Abrir lista de tareas	SHIFT DERECHO+PUNTOS 3-5-6	SHIFT DERECHO+PUNTOS 3-5-6
+Listar iconos de la bandeja del sistema	SHIFT DERECHO+K	SHIFT DERECHO+PUNTOS 1-3
+Decir hora del sistema	SHIFT DERECHO PUNTOS 1-2-3	SHIFT DERECHO PUNTOS 1-2-3
+Arrastrar y soltar	SHIFT DERECHO+PUNTOS 3-7 ACORDE	–
+Refrescar pantalla	SHIFT DERECHO+Z	SHIFT DERECHO+PUNTOS 1-3-5-6
+Decir fuente	SHIFT DERECHO+F	SHIFT DERECHO+PUNTOS 1-2-4
+Alternar ayuda de teclado	SIGNO DE INTERROGACIÓN ACORDE	PUNTOS 1-4-5-6 ACORDE
+Ayuda de teclas de Windows	SHIFT DERECHO+W	SHIFT DERECHO+PUNTOS 2-4-5-6
+Leer ventana actual	SHIFT DERECHO+B	SHIFT DERECHO+PUNTOS 1-2
+Botón por defecto en el diálogo	SHIFT DERECHO+E	SHIFT DERECHO+PUNTOS 1-5
+Cerrar JAWS	SHIFT DERECHO+4	SHIFT DERECHO+PUNTOS 2-5-6
+Seleccionar un perfil de voz	SHIFT DERECHO+S	SHIFT DERECHO+PUNTOS 2-3-4
+Aumentar temporalmente la velocidad de la voz	SHIFT IZQUIERDO o DERECHO+SELECT DERECHO ACORDE	–
+Disminuir temporalmente la velocidad de la voz	SHIFT IZQUIERDO o DERECHO+SELECT IZQUIERDO ACORDE	–
+Aumentar permanentemente la velocidad de la voz	SELECT DERECHO ACORDE	–
+Disminuir permanentemente la velocidad de la voz	SELECT IZQUIERDO ACORDE	–
+Alternar voz bajo demanda	SHIFT DERECHO+M	SHIFT DERECHO+PUNTOS 1-3-4
+Silenciar voz	SHIFT IZQUIERDO o DERECHO	–
+
+Funciones del Cursor
+Utilice estas pulsaciones de teclas para seleccionar uno de los cursores utilizados por JAWS.
+
+Descripción	Signo Braille	Patrón de PUNTOS
+Cursor de JAWS	J ACORDE	PUNTOS 2-4-5 ACORDE
+Cursor del PC	P ACORDE	PUNTOS 1-2-3-4 ACORDE
+Cursor táctil	PUNTOS 1-2-5-6 ACORDE	PUNTOS 1-2-5-6 ACORDE
+Llevar JAWS al PC	SHIFT DERECHO+PUNTOS 3-6 (Signo MENOS)	SHIFT DERECHO+PUNTOS 3-6
+Llevar PC a JAWS	SHIFT DERECHO+Signo ING (Signo MÁS)	SHIFT DERECHO+PUNTOS 3-4-6
+El braille sigue al activo	PUNTOS 1-2-6 ACORDE	PUNTOS 1-2-6 ACORDE
+El activo sigue al braille	PUNTOS 1-2-7 ACORDE	PUNTOS 1-2-7 ACORDE
+Llevar el cursor braille al cursor del PC	SHIFT IZQUIERDO+PUNTOS 3-4-6	SHIFT IZQUIERDO+PUNTOS 3-4-6
+Llevar el cursor braille al cursor activo	SHIFT IZQUIERDO+SHIFT DERECHO o SHIFT IZQUIERDO+PUNTOS 3-6	SHIFT IZQUIERDO+SHIFT DERECHO o SHIFT IZQUIERDO+PUNTOS 3-6
+
+Funciones del Cursor Táctil
+Utilice estas pulsaciones de teclas para navegar utilizando el cursor táctil.
+
+Descripción	Signo Braille	Patrón de PUNTOS
+Cursor táctil	PUNTOS 1-2-5-6 ACORDE	PUNTOS 1-2-5-6 ACORDE
+Elemento anterior	PUNTOS 1-2 ACORDE	PUNTOS 1-2 ACORDE
+Siguiente elemento	PUNTOS 4-5 ACORDE	PUNTOS 4-5 ACORDE
+Decir elemento actual	C ACORDE	PUNTOS 1-4 ACORDE
+Siguiente elemento por tipo (especificado en el rotor de navegación)	BARRA DESPLAZAMIENTO IZQ o DER ABAJO	BARRA DESPLAZAMIENTO IZQ o DER ABAJO
+Elemento anterior por tipo (especificado en el rotor de navegación)	BARRA DESPLAZAMIENTO IZQ o DER ARRIBA	BARRA DESPLAZAMIENTO IZQ o DER ARRIBA
+Avanzar a través de los tipos de navegación	SELECT IZQ+BARRA IZQ ABAJO, SELECT DER+BARRA IZQ ABAJO, SELECT IZQ+BARRA DER ABAJO, o SELECT DER+BARRA DER ABAJO	SELECT IZQ+BARRA IZQ ABAJO, SELECT DER+BARRA IZQ ABAJO, SELECT IZQ+BARRA DER ABAJO, o SELECT DER+BARRA DER ABAJO
+Retroceder a través de los tipos de navegación	SELECT IZQ+BARRA IZQ ARRIBA, SELECT DER+BARRA IZQ ARRIBA, SELECT IZQ+BARRA DER ARRIBA, o SELECT DER+BARRA DER ARRIBA	SELECT IZQ+BARRA IZQ ARRIBA, SELECT DER+BARRA IZQ ARRIBA, SELECT IZQ+BARRA DER ARRIBA, o SELECT DER+BARRA DER ARRIBA
+Moverse al primer elemento	DESPLAZAMIENTO IZQ+SELECT IZQ o DER o L ACORDE	DESPLAZAMIENTO IZQ+SELECT IZQ o DER o PUNTOS 1-2-3 ACORDE
+Moverse al último elemento	DESPLAZAMIENTO DER+SELECT IZQ o DER o PUNTOS 4-5-6 ACORDE	DESPLAZAMIENTO IZQ+SELECT IZQ o DER o PUNTOS 4-5-6 ACORDE
+Activar el elemento actual	BOTÓN DE DIRECCIONAMIENTO DEL CURSOR	BOTÓN DE DIRECCIONAMIENTO DEL CURSOR
+Activar el modo de revisión de texto	SHIFT DERECHO+PUNTO 7	SHIFT DERECHO+PUNTO 7
+Desactivar el modo de revisión de texto	SHIFT DERECHO+PUNTO 1 o X ACORDE	SHIFT DERECHO+PUNTO 1 o PUNTOS 1-3-4-6 ACORDE
+Alternar la navegación avanzada	SHIFT DERECHO+PUNTO 3 o mantener pulsado un botón de direccionamiento del cursor	SHIFT DERECHO+PUNTO 3 o mantener pulsado un botón de direccionamiento del cursor
+
+Funciones de Utilidad
+Utilice estas pulsaciones de teclas para funciones de utilidad general.
+
+Descripción	Signo Braille	Patrón de PUNTOS
+Ejecutar el Gestor de JAWS	SHIFT DERECHO+2	SHIFT DERECHO+PUNTOS 2-3
+Establecer el marco SUPERIOR IZQUIERDO	SHIFT DERECHO+Signo OW	SHIFT DERECHO+PUNTOS 2-4-6
+Establecer el marco INFERIOR DERECHO	SHIFT DERECHO+Signo ER	SHIFT DERECHO+PUNTOS 1-2-4-5-6
+Etiquetador de gráficos	SHIFT DERECHO+G	SHIFT DERECHO+PUNTOS 1-2-4-5
+Búsqueda de JAWS	SHIFT DERECHO+F ACORDE	SHIFT DERECHO+PUNTOS 1-2-4 ACORDE
+Buscar siguiente de JAWS	SHIFT DERECHO+PUNTOS 2-5	SHIFT DERECHO+PUNTOS 2-5
+
+Uso de BrailleIn para escribir con braille contraído
+La función BrailleIn le permite escribir en braille contraído utilizando su teclado estilo Perkins. La entrada se traduce inmediatamente como texto normal en su correo electrónico, documento o formulario actual. Si una aplicación o cuadro de edición específico no admite braille contraído, JAWS anuncia "Braille computarizado" cuando los mensajes de tutor están habilitados. Además, el símbolo de inicio de braille computarizado, puntos 4-5-6 seguidos de puntos 3-4-6, se muestra en la pantalla braille para indicar cuándo se requiere braille computarizado.
+
+La entrada de braille computarizado está seleccionada de forma predeterminada. Para utilizar braille contraído, haga lo siguiente:
+
+Pulse INSERT+F2 y seleccione el Centro de Configuración.
+Para aplicar los cambios a todas las aplicaciones, pulse CTRL+SHIFT+D para cargar los ajustes predeterminados de JAWS. Para aplicar los cambios a una aplicación específica, selecciónela en el cuadro combinado Aplicaciones.
+En el cuadro de edición Buscar, escriba "Traducción" sin las comillas.
+Pulse FLECHA ABAJO para ir a Traducción en los resultados de búsqueda filtrados en la vista de árbol y pulse ENTER para mover el foco al grupo Traducción. Pulse FLECHA DERECHA para expandir el grupo.
+Pulse BARRA ESPACIADORA para desplazarse por los diferentes ajustes en el cuadro combinado Salida para configurar el modo de lectura de braille en su pantalla.
+La primera opción es siempre Braille computarizado. Las otras opciones disponibles dependen del idioma seleccionado actualmente. Por ejemplo, cuando el idioma se establece en Inglés (Estados Unidos), que es el ajuste predeterminado, los modos de salida disponibles son Inglés de EE.UU. Grado 1, Inglés de EE.UU. Grado 2, Braille Inglés Unificado Grado 1 y Braille Inglés Unificado Grado 2. Si establece el idioma en Francés, los modos disponibles son Francés Grado 1 y Francés Grado 2. El modo de salida predeterminado es Braille computarizado.
+Pulse BARRA ESPACIADORA para desplazarse por los diferentes ajustes en el cuadro combinado Entrada para especificar el modo de entrada utilizado al escribir braille desde el teclado estilo Perkins de su pantalla.
+La primera opción es siempre Braille computarizado. La otra opción disponible depende del modo de salida seleccionado actualmente. Por ejemplo, si ha elegido mostrar Braille Inglés Unificado Grado 2, entonces puede elegir escribir en Braille computarizado o en Braille Inglés Unificado Grado 2. El modo de entrada predeterminado es Braille computarizado. Este ajuste no está disponible si el modo de salida seleccionado es Braille computarizado, o si el modo de salida seleccionado no admite la entrada.
