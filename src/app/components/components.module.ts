@@ -87,6 +87,8 @@ import { CtiComponent } from './cti/cti.component';
 import { AplicacionesComponent } from './aplicaciones/aplicaciones.component';
 import { RepositorioComponent } from './repositorio/repositorio.component';
 import { DispositivosComponent } from './dispositivos/dispositivos.component';
+import { BrailleSenseComponent } from './braille-sense/braille-sense.component';
+import { BrailleTouchComponent } from './braille-touch/braille-touch.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +98,8 @@ import { DispositivosComponent } from './dispositivos/dispositivos.component';
     BrailleComponent,
     BraillantComponent,
     BrailleLiteComponent,
+    BrailleSenseComponent,
+    BrailleTouchComponent,
     IndexComponent,
     PortathielComponent,
     ImpactoComponent,

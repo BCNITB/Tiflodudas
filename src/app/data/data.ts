@@ -16,8 +16,18 @@ export const CATEGORIES = [
     },
     {
         category:   'anotadores electrónicos',
-        item:       'Braillie Lite',
+        item:       'Braille Lite',
         value:      'braille lite'
+    },
+    {
+        category:   'anotadores electrónicos',
+        item:       'Braille Sense',
+        value:      'braille sense'
+    },
+    {
+        category:   'anotadores electrónicos',
+        item:       'BrailleNote Touch',
+        value:      'braille note touch'
     },
     {
         category:   'impresoras braille',
